@@ -1,0 +1,2 @@
+1. prompt user for positive integer
+2. 
