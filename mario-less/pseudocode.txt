@@ -1,3 +1,4 @@
 This program will build a pyramid using hashes for bricks.
 1. Prompt user for positive integer
-2. 
+2. For every number in int.
+3.      print hash x currentnumber
