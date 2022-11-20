@@ -1,4 +1,4 @@
 #include <cs50.h>
 #include <stdio.h>
-Console.Write("Provide input: ");
+get_int("Please provide a number.")
 for (integer = 1; integer <= n; integer++)
