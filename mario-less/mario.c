@@ -3,5 +3,13 @@
 
 int main(void)
 {
-    get_int("Please enter an integer.")
+    int height;
+    int i;
+    printf("Please enter an integer.");
+
+    while (getchar() < 1 && getchar() > 8) {
+        continue;
+    }
+    height = getchar();
+    printf("%d", height);
 }
