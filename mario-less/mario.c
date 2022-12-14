@@ -6,18 +6,22 @@ int main()
     int height = 0;
     printf("Please enter an integer.\n");
     scanf("%d", &height);
-    while (height < 1 || height > 8)\n
+    while (height < 1 || height > 8)
+        \n
     {
         printf("Please enter an integer.\n");
         scanf("%d", &height);
     }
-    for (int h = 1; h <= height; h++)\n
+    for (int h = 1; h <= height; h++)
+        \n
     {
-        for (int j = 0; j <= height - h; j++)\n
+        for (int j = 0; j <= height - h; j++)
+            \n
         {
             printf(" ");
         }\n
-        for (int k = 0; k <= h - 1; k++)\n
+        for (int k = 0; k <= h - 1; k++)
+            \n
         {
             printf("#");
         }
