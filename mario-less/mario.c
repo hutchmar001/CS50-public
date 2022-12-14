@@ -9,7 +9,7 @@ int main()
     while (height < 1 || height > 8) {
         printf("Please enter an integer.\n");
         scanf("%d", &height);
-    } printf("The height is %d.\n", height);
+    } 
     for (int h = 1; h <= height; h++) {
         for (int j = 0; j <= height - h; j++) {
             printf(" ");
