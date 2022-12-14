@@ -3,9 +3,6 @@
 #include <cs50.h>
 int main()
 {
-
-    int getHeight(void)
-{
     int height = 0;
     printf("Please enter an integer.\n");
     scanf("%d", &height);
@@ -21,9 +18,6 @@ int main()
             }
             printf("\n");
     }
-
-    return 0;
-}
 
     return 0;
 }
