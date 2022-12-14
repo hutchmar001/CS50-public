@@ -1,15 +1,23 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
+int getHeight(void)
 {
-    int height;
-    int i;
-    printf("Please enter an integer.");
-
-    while (getchar() < 1 && getchar() > 8) {
-        continue;
+    int height = 0;
+    printf("Please enter an integer.\n");
+    scanf("%d", &height);
+    while (height < 1 || height > 8) {
+        printf("Please enter an integer.\n");
+        scanf("%d", &height);
+    } printf("The height is %d.\n", height);
+    for (int h = 1; h <= height; h++) {
+        for (int j = 0; j <= height - h; j++) {
+            printf(" ");
+        } for (int k = 0; k <= h - 1; k++) {
+                printf("#");
+            }
+            printf("\n");
     }
-    height = getchar();
-    printf("%d", height);
+
+    return 0;
 }
