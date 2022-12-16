@@ -38,8 +38,10 @@ int main(void)
 int get_cents(void)
 {
     do {
-        get_int
+        int numCents = get_int("Input: ");
+        printf("%d", numCents);
     }
+    while (numCents > 0);
 }
 
 int calculate_quarters(int cents)
