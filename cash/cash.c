@@ -38,7 +38,8 @@ int main(void)
 int get_cents(void)
 {
     do {
-        int numCents = get_int("Input: ");
+        int numCents;
+        numCents = get_int("Input: ");
         printf("%d", numCents);
     }
     while (numCents > 0);
