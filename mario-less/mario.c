@@ -10,7 +10,8 @@ int main()
      {
         printf("Please enter an integer.\n");
         scanf("%d", &height);
-    } for (int h = 1; h <= height; h++) {
+    } \n
+    for (int h = 1; h <= height; h++) {
         for (int j = 1; j <= height - h; j++) {
             printf(" ");
         } for (int k = 0; k <= h - 1; k++) {
