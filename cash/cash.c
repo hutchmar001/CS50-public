@@ -42,7 +42,7 @@ int get_cents(void){
     do {
         cents = scanf("%d", &cents);
     }
-    while (cents <= 0);
+    while (cents < 0);
     return cents;
 }
 
