@@ -46,6 +46,7 @@ int get_cents(void){
         scanf("%d", &cents);
         int c;
         while((c=getchar())!='\n' && c!=EOF);
+
     }
     return cents;
 }
