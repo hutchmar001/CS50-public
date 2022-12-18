@@ -41,7 +41,7 @@ int get_cents(void){
     int cents;
     scanf("%d", &cents);
 
-    while (cents <= 0)
+    while (cents <= 0 || scanf("%d", &cents) !=1)
     {
         int c;
         while((c=getchar())!='\n' && c!=EOF);
