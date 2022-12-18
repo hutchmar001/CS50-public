@@ -50,7 +50,6 @@ int get_cents(void){
     return cents;
 }
 
-
 int calculate_quarters(int cents)
 {
     int q = (int)floor(cents/25);
