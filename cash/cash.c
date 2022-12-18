@@ -49,15 +49,6 @@ int get_cents(void){
     }
     return cents;
 }
-int get_cents(void){
-    printf("Please enter the amount of cents. ");
-    int cents;
-    do {
-        cents = scanf("%d", &cents);
-    }
-    while (cents < 0);
-    return cents;
-}
 
 
 int calculate_quarters(int cents)
