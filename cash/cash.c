@@ -39,7 +39,7 @@ int main(void)
 int get_cents(void){
     printf("Please enter the amount of cents. ");
     int cents;
-    scanf("%d", &cents);
+    scanf("%c", &cents);
     while (cents < 1 || cents != int)
     {
         printf("Please enter the amount of cents. ");
