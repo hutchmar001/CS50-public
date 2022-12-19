@@ -38,7 +38,6 @@ int main(void)
 
 int get_cents(void){
     int cents;
-    get_int("%d", cents);
     while (cents < 1)
     {
         cents = get_int("Enter an integer.");
