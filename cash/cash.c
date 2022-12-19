@@ -37,12 +37,10 @@ int main(void)
 }
 
 int get_cents(void){
-    printf("Please enter the amount of cents. ");
     int cents=0;
     get_int("%d", cents);
     while (cents < 1)
     {
-        printf("Please enter the amount of cents. ");
         get_int("%d", cents);
     }
     return cents;
