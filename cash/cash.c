@@ -41,7 +41,7 @@ int get_cents(void){
     get_int("%d", cents);
     while (cents < 1)
     {
-        cents = get_int("%d", cents);
+        cents = get_int("Enter an integer.");
     }
     return cents;
 }
