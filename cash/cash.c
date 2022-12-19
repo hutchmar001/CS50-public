@@ -38,10 +38,11 @@ int main(void)
 
 int get_cents(void){
     int cents;
-    while (cents < 1)
+    do
     {
         cents = get_int("Enter an integer.");
     }
+    while (cents < 1);
     return cents;
 }
 
