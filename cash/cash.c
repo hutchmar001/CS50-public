@@ -36,7 +36,8 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void){
+int get_cents(void)
+{
     int cents;
     do
     {
@@ -49,21 +50,21 @@ int get_cents(void){
 
 int calculate_quarters(int cents)
 {
-    int q = (int)floor(cents/25);
+    int q = (int)floor(cents / 25);
     printf("%d\n", q);
     return q;
 }
 
 int calculate_dimes(int cents)
 {
-    int d = (int)floor(cents/10);
+    int d = (int)floor(cents / 10);
     printf("%d\n", d);
     return d;
 }
 
 int calculate_nickels(int cents)
 {
-    int n = (int)floor(cents/5);
+    int n = (int)floor(cents / 5);
     printf("%d\n", n);
     return n;
 }
