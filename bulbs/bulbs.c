@@ -14,7 +14,7 @@ int convert2_num(string word)
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
-        num = strtol(str, NULL, 36) - 10; //Converts letter to number using base 36
+        num = strtol(str, NULL, 2); //Converts letter to number using base 2
     };
     return num;
 }
