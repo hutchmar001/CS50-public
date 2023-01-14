@@ -8,16 +8,17 @@ void print_bulb(int bit);
 
 int main(void)
 {
-string word1 = get_string("Player 1: ");
+    string word1 = get_string("Player 1: ");
+    int cvrted2num = convert2_num(word1);
         }
 
-int compute_score(string word)
+int convert2_num(string word)
 {
     int i;
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
-        int num = strtol(str, NULL, 36) - 10; //Converts letter to number using base 36
+        int  = strtol(str, NULL, 36) - 10; //Converts letter to number using base 36
     };
     return num;
 }
