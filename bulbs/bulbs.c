@@ -8,13 +8,25 @@ void print_bulb(int bit);
 
 int main(void)
 {
+
+        }
+
+int compute_score(string word)
+{
     int i;
     int pts = 0;
     for (i = 0; i < (strlen(word)); i++)
+    {
+        if (isupper(word[i]) || (islower(word[i]))) // As long as character is upper or lower case
         {
             char str[] = {word[i]}; // Makes character into string
             int num = strtol(str, NULL, 36) - 10; //Converts letter to number using base 36
+            pts += POINTS[num]; //Adds value found at index in POINTS, determined by num
         }
+    };
+    return pts;
+    // TODO: Compute and return score for string
+}
 
 void print_bulb(int bit)
 {
