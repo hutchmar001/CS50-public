@@ -8,7 +8,8 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+    char str[] = {word[i]}; // Makes character into string
+    int num = strtol(str, NULL, 36) - 10; //Converts letter to number using base 36
 }
 
 void print_bulb(int bit)
