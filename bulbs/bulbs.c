@@ -10,8 +10,8 @@ int main(void)
 {
     string word1 = get_string("Player 1: ");
     int cvrted2num = convert2_num(word1);
-    printf("%i, num);
-        }
+    printf("%i", num);
+        };
 
 int convert2_num(string word)
 {
