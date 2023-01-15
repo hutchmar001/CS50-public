@@ -11,7 +11,7 @@ struct MyStruct {
     int dec[100];
     };
 
-struct convert2_num(string wrd)
+struct convert2_num(word1);
 {
     int i;
     int num;
