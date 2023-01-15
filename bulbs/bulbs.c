@@ -18,8 +18,9 @@ int convert2_num(string word)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        dec[i] = num;
-        printf("%d\n", dec[i]);
+        struct Mystruct s1;
+        s1.dec[i] = num;
+        printf("%d\n", s1.dec[i]);
     };
     return dec;
 }
