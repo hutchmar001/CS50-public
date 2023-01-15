@@ -20,7 +20,7 @@ int convert2_num(string word)
         dec[i] = num;
 
     };
-    printf("%i\n", dec);
+    printf("%d\n", dec);
     return num;
 }
 
