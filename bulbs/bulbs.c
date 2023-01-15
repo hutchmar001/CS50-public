@@ -11,12 +11,12 @@ int convert2_num(string word)
 {
     int i;
     int num;
-    char dec[50];
+    char dec[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        
+
     };
     return num;
 }
