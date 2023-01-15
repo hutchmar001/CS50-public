@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <conio.h>
 
 const int BITS_IN_BYTE = 8;
 
@@ -11,16 +12,16 @@ int convert2_num(string word)
 {
     int i;
     int num;
-    struct MyStruct {
-        int dec[50];
-    };
-    struct Mystruct s1;
+
     for (i = 0; i < (strlen(word)); i++)
     {
+        struct MyStruct {
+        int dec[50];
+    };
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        s1.dec[i] = num;
-        printf("%d\n", s1.dec[i]);
+        dec[i] = num;
+        printf("%d\n", dec[i]);
     };
     return MyStruct;
 }
