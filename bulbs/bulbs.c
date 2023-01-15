@@ -15,12 +15,12 @@ int convert2_num(string word)
 
     for (i = 0; i < (strlen(word)); i++)
     {
-        struct MyStruct {
-        int dec[50];
-    };
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        dec[i] = num;
+        struct MyStruct {
+        int dec[50];
+    } dec[i] = num;
+
         printf("%d\n", dec[i]);
     };
     return MyStruct;
