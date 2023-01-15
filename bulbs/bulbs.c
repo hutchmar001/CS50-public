@@ -16,8 +16,9 @@ int convert2_num(string word)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-
+        dec[i] = num;
     };
+    printf("%c\n", dec);
     return num;
 }
 
