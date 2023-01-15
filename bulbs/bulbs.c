@@ -8,7 +8,7 @@ const int BITS_IN_BYTE = 8;
 void print_bulb(int bit);
 
 struct MyStruct {
-            int dec[100];
+    int dec[100];
     };
 
 int convert2_num(string word)
