@@ -22,7 +22,7 @@ int convert2_num(string word)
         s1.dec[i] = num;
         printf("%d\n", s1.dec[i]);
     };
-    return dec;
+    return MyStruct;
 }
 
 int main(void)
