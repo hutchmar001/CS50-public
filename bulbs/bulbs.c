@@ -11,7 +11,7 @@ struct MyStruct {
     int dec[100];
     };
 
-struct convert2_num func(word)
+struct convert2_num string(word)
 {
     int i;
     int num;
