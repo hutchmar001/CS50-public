@@ -11,7 +11,7 @@ int convert2_num(string word)
 {
     int i;
     int num;
-    char dec[] = "";
+    char dec[50];
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
