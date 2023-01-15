@@ -11,6 +11,14 @@ struct MyStruct {
         int dec[100];
     };
 
+
+
+int main(void)
+{
+    string word1 = get_string("Player 1: ");
+    int cvrted2num = convert2_num(word1);
+    printf("%i\n", cvrted2num);
+        };
 int convert2_num(string word)
 {
     int i;
@@ -24,13 +32,6 @@ int convert2_num(string word)
     };
     return MyStruct;
 }
-
-int main(void)
-{
-    string word1 = get_string("Player 1: ");
-    int cvrted2num = convert2_num(word1);
-    printf("%i\n", cvrted2num);
-        };
 
 void print_bulb(int bit)
 {
