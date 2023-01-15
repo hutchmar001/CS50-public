@@ -11,7 +11,7 @@ int convert2_num(string word)
 {
     int i;
     int num;
-    char dec[strlen(word)];
+    int dec[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
@@ -20,7 +20,7 @@ int convert2_num(string word)
         dec[i] = num;
 
     };
-    printf("%s\n", dec);
+    printf("%i\n", dec);
     return num;
 }
 
