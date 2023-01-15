@@ -11,7 +11,9 @@ int convert2_num(string word)
 {
     int i;
     int num;
-    int dec[strlen(word)];
+    struct MyStruct {
+        int dec[strlen(word)];
+    };
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
