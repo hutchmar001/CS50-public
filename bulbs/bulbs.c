@@ -8,19 +8,19 @@ const int BITS_IN_BYTE = 8;
 void print_bulb(int bit);
 
 struct MyStruct {
-        int dec[50];
-    } dec = {num};
-    
+        int dec[100];
+    };
+
 int convert2_num(string word)
 {
     int i;
     int num;
-
+    struct myStructure s1;
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-
+    s1.dec[i] = num;
     };
     return MyStruct;
 }
