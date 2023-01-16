@@ -7,7 +7,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-int convert2_num(string word)
+int& convert2_num(string word)
 {
     int i;
     int num;
