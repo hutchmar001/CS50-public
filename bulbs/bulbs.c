@@ -7,15 +7,6 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-
-int main(void)
-{
-    string word1 = get_string("Player 1: ");
-    int* array[strlen(word)];
-    int* cvrted2num = convert2_num(word1);
-    printf("%p\n", cvrted2num);
-        };
-
 int* convert2_num(string word)
 {
     int i;
@@ -30,6 +21,13 @@ int* convert2_num(string word)
     return *array;
 }
 
+int main(void)
+{
+    string word1 = get_string("Player 1: ");
+  
+    int* cvrted2num = convert2_num(word1);
+    printf("%p\n", cvrted2num);
+        };
 
 void print_bulb(int bit)
 {
