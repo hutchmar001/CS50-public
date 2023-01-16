@@ -7,7 +7,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-int convert2_num(string word)
+int* convert2_num(string word)
 {
     int i;
     int num;
@@ -18,7 +18,7 @@ int convert2_num(string word)
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[i] = &num;
     };
-    return array;
+    return *array;
 }
 
 int main(void)
