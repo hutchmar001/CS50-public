@@ -17,8 +17,8 @@ int main(void)
         int array[strlen(word)];
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        
-        printf("%p\n", array);
+        array[0] = num;
+        printf("%d\n", *array);
     }
 };
 
