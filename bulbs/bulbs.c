@@ -7,26 +7,21 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-int* convert2_num(string word)
+int main(void)
 {
     int i;
     int num;
-    int* array[strlen(word)];
-    for (i = 0; i < (strlen(word) -1); i++)
+    string word = get_string("Player 1: ");
+    for (i = 0; i < (strlen(word)); i++)
     {
+        int array[strlen(word)];
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        *array[i] = num;
-    };
-    return *array;
-}
-
-int main(void)
-{
-    string word1 = get_string("Player 1: ");
-    int *cvrted2num = convert2_num(word1);
-    printf("%p\n", cvrted2num);
+        array[i] = num;
+        printf("%p\n", array);
+    }
 };
+
 void print_bulb(int bit)
 {
     if (bit == 0)
