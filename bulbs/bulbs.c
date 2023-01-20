@@ -18,22 +18,19 @@ int main(void)
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
-        printf("%d\n", *array);
-        int binary1;
-        int binary2;
-        int binary3;
+        int binary[3];
         int j;
         for (j = 0; j < 3; j++)
         {
             if(array[j] % 2 == 0)
             {
-                binary = 0;
-                printf("%i\n", binary);
+                binary[j] = 0;
+                printf("%d\n", *binary);
             }
             else
             {
-                binary +=1;
-                printf("%i\n", binary);
+                binary[j] =1;
+                printf("%d\n", *binary);
             }
         }
     }
