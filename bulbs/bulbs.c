@@ -19,7 +19,20 @@ int main(void)
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         printf("%d\n", *array);
+        int binary;
+        for (i = 0; i < 3; i++)
+        {
+            if(array[i] % 2 == 0)
+            {
+                binary = 0;
+            }
+            else
+            {
+                binary +=1;
+            }
+        }
     }
+
 };
 
 void print_bulb(int bit)
