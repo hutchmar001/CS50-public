@@ -21,7 +21,7 @@ int main(void)
         printf("%d\n", *array);
         int binary;
         int j;
-        for (j = 0; j < 3; j++)
+        for (j = 0; j < (strlen(*array); j++)
         {
             if(array[j] % 2 == 0)
             {
