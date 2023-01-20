@@ -20,15 +20,18 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
         int binary;
-        for (i = 0; i < 3; i++)
+        int j;
+        for (j = 0; j < 3; j++)
         {
-            if(array[i] % 2 == 0)
+            if(array[j] % 2 == 0)
             {
                 binary = 0;
+                printf("%i\n", binary);
             }
             else
             {
                 binary +=1;
+                printf("%i\n", binary);
             }
         }
     }
