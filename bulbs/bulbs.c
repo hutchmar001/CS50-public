@@ -18,6 +18,7 @@ int main(void)
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
+        printf("%d\n", *array);
         int binary[3];
         int k = 0;
         while (array[0] % 2 == 0 || (array[0] > 0))
