@@ -30,7 +30,6 @@ int main(void)
         binary[j] = 1;
         printf("%d\n", *binary);
     }
-
 };
 
 void print_bulb(int bit)
