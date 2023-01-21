@@ -15,23 +15,19 @@ int main(void)
     int array[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
     {
-
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         printf("%d\n", *array);
-
     }
     while (array[0] % 2 == 0 || (array[0] > 0))
             {
                 int binary[3];
                 int k = 0;
-                binary[k] = 0;
                 printf("%d\n", *binary);
                 array[0] /= 2;
                 printf("%d\n", array[0]);
             }
-        binary[0] = 1;
 };
 
 void print_bulb(int bit)
