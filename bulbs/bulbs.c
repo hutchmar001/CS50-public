@@ -11,7 +11,6 @@ int main(void)
 {
     int i;
     int j;
-    int k = 0;
     int num;
     int binary[100];
     string word = get_string("Player 1: ");
@@ -26,12 +25,11 @@ int main(void)
     for (j = 0; j < 3; j++) {
         if (array[j] % 2 == 0 || (array[j] > 0))
             {
-                binary[k] = 0;
+                binary[j] = 0;
             } else {
-                binary[k] = 1;
+                binary[j] = 1;
             }
          array[j] /= 2;
-         k++;
     }
     printf("%d\n", *binary);
 };
