@@ -29,6 +29,7 @@ int main(void)
                 array[j] /= 2;
                 binary[k] = 0;
                 k++;
+                continue;
             } else {
                 binary[k] = 1;
                 k++;
