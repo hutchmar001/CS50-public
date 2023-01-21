@@ -19,16 +19,15 @@ int main(void)
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         int binary[3];
-        int j = 0;
         int k = 0;
-        while (array[j] % 2 == 0 || (array[j] > 0))
+        while (array[0] % 2 == 0 || (array[0] > 0))
             {
                 binary[k] = 0;
                 printf("%d\n", *binary);
-                array[j] /= 2;
-                printf("%d\n", array[j]);
+                array[0] /= 2;
+                printf("%d\n", array[0]);
             }
-        binary[j] = 1;
+        binary[0] = 1;
     }
 };
 
