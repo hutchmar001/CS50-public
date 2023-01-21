@@ -10,6 +10,7 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
+    int j = 0;
     int num;
     string word = get_string("Player 1: ");
     int array[strlen(word)];
@@ -20,13 +21,12 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    while (array[0] % 2 == 0 || (array[0] > 0))
+    while (array[j] % 2 == 0 || (array[0] > 0))
             {
                 int binary[3];
-                int k = 0;
-                printf("%d\n", *binary);
-                array[0] /= 2;
-                printf("%d\n", array[0]);
+                array[j] /= 2;
+                j++;
+
             }
 };
 
