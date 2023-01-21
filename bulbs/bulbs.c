@@ -28,11 +28,11 @@ int main(void)
             {
                 binary[k] = 0;
                 array[k] /= 2;
-                printf("%d\n", array[k]);
+                printf("%d\n", binary[k]);
             } else {
                 binary[k] = 1;
                 array[k] /= 2;
-                printf("%d\n", array[k]);
+                printf("%d\n", binary[k]);
             }
 
     }
