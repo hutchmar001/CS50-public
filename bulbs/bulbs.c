@@ -20,7 +20,7 @@ int main(void)
         array[0] = num;
         int binary[3];
         int j;
-        for (j = 0; j < 3; j++)
+        for (j = 0; j < 1; j++)
         {
             if(array[j] % 2 == 0)
             {
