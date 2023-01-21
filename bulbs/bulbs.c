@@ -24,9 +24,9 @@ int main(void)
         printf("%d\n", *array);
     }
     for (i = 0; i < (strlen(word)); i++) {
-        if (array[j] % 2 == 0 || (array[j] > 0))
+        if (array[i] % 2 == 0 || (array[i] > 0))
             {
-                array[j] /= 2;
+                array[i] /= 2;
                 binary[k] = 0;
                 k++;
             } else {
