@@ -22,9 +22,12 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    while (array[j] % 2 == 0 || (array[j] > 0))
+    if (array[j] % 2 == 0 || (array[j] > 0))
         {
             array[j] /= 2;
+            binary[j] 
+        } else {
+
         }
 };
 
