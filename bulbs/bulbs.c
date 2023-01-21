@@ -10,7 +10,7 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
-    int j = 0;
+    int j;
     int k = 0;
     int num;
     int binary[10];
@@ -23,10 +23,10 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    for (i = 0; i < (strlen(word)); i++) {
-        if (array[i] % 2 == 0 || (array[i] > 0))
+    for (j = 0; j < 10; j++) {
+        if (array[j] % 2 == 0 || (array[j] > 0))
             {
-                array[i] /= 2;
+                array[j] /= 2;
                 binary[k] = 0;
                 k++;
             } else {
