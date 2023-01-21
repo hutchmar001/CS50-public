@@ -23,7 +23,7 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    for (j = 0; j < 6; j++) {
+    for (j = 0; j < 8; j++) {
         if (array[k] % 2 == 0 && (array[k] > 1))
             {
                 binary[j] = 0;
