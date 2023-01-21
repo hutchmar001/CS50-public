@@ -29,7 +29,7 @@ int main(void)
             binary[k] = 0;
             k++;
         } else {
-            binary[k] = 0;
+            binary[k] = 1;
             k++;
         }
 };
