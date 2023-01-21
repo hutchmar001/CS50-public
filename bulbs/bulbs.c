@@ -11,8 +11,9 @@ int main(void)
 {
     int i;
     int j = 0;
+    int k = 0;
     int num;
-    int binary[3];
+    int binary[10];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
@@ -25,9 +26,11 @@ int main(void)
     if (array[j] % 2 == 0 || (array[j] > 0))
         {
             array[j] /= 2;
-            binary[j] 
+            binary[k] = 0;
+            k++;
         } else {
-
+            binary[k] = 0;
+            k++;
         }
 };
 
