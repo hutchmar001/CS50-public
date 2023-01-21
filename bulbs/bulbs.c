@@ -26,13 +26,13 @@ int main(void)
     for (j = 0; j < 6; j++) {
         if (array[k] % 2 == 0 && (array[k] > 1))
             {
-                binary[k] = 0;
+                binary[j] = 0;
                 array[k] /= 2;
-                printf("%d\n", binary[k]);
+                printf("%d\n", binary[j]);
             } else {
-                binary[k] = 1;
+                binary[j] = 1;
                 array[k] /= 2;
-                printf("%d\n", binary[k]);
+                printf("%d\n", binary[j]);
             }
 
     }
