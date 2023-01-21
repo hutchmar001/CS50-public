@@ -12,18 +12,20 @@ int main(void)
     int i;
     int num;
     string word = get_string("Player 1: ");
+    int array[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
     {
-        int array[strlen(word)];
+
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         printf("%d\n", *array);
-        int binary[3];
-        int k = 0;
 
-    } while (array[0] % 2 == 0 || (array[0] > 0))
+    }
+    while (array[0] % 2 == 0 || (array[0] > 0))
             {
+                int binary[3];
+                int k = 0;
                 binary[k] = 0;
                 printf("%d\n", *binary);
                 array[0] /= 2;
