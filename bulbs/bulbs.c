@@ -19,7 +19,7 @@ int main(void)
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         int binary[3];
-        int j;
+        int j = 0;
         while (array[j] % 2 == 0)
             {
                 binary[j] = 0;
