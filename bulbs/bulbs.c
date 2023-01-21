@@ -24,7 +24,7 @@ int main(void)
         printf("%d\n", *array);
     }
     for (j = 0; j < 6; j++) {
-        if (array[k] % 2 == 0 && (array[k] > 0))
+        if (array[k] % 2 == 0 && (array[k] > 1))
             {
                 binary[k] = 0;
                 array[k] /= 2;
