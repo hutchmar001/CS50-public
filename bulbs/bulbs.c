@@ -26,10 +26,12 @@ int main(void)
         if (array[j] % 2 == 0 || (array[j] > 0))
             {
                 binary[j] = 0;
+                array[j] /= 2;
             } else {
                 binary[j] = 1;
+                array[j] /= 2;
             }
-         array[j] /= 2;
+
     }
     printf("%d\n", *binary);
 };
