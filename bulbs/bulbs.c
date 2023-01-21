@@ -23,15 +23,17 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    if (array[j] % 2 == 0 || (array[j] > 0))
-        {
-            array[j] /= 2;
-            binary[k] = 0;
-            k++;
-        } else {
-            binary[k] = 1;
-            k++;
-        }
+    for (i = 0; i < (strlen(word)); i++) {
+        if (array[j] % 2 == 0 || (array[j] > 0))
+            {
+                array[j] /= 2;
+                binary[k] = 0;
+                k++;
+            } else {
+                binary[k] = 1;
+                k++;
+            }
+    }
 };
 
 void print_bulb(int bit)
