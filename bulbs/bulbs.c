@@ -13,7 +13,7 @@ int main(void)
     int j;
     int k = 0;
     int num;
-    int binary[10];
+    int binary[100];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
