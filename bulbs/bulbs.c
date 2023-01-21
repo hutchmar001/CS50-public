@@ -21,18 +21,13 @@ int main(void)
         int binary[3];
         int j;
         while (array[j] % 2 == 0)
-        {
             {
                 binary[j] = 0;
                 printf("%d\n", *binary);
                 array[j] /= 2;
             }
-            else
-            {
-                binary[j] = 1;
-                printf("%d\n", *binary);
-            }
-        }
+        binary[j] = 1;
+        printf("%d\n", *binary);
     }
 
 };
