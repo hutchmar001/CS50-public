@@ -21,7 +21,8 @@ int main(void)
         printf("%d\n", *array);
         int binary[3];
         int k = 0;
-        while (array[0] % 2 == 0 || (array[0] > 0))
+
+    } while (array[0] % 2 == 0 || (array[0] > 0))
             {
                 binary[k] = 0;
                 printf("%d\n", *binary);
@@ -29,7 +30,6 @@ int main(void)
                 printf("%d\n", array[0]);
             }
         binary[0] = 1;
-    }
 };
 
 void print_bulb(int bit)
