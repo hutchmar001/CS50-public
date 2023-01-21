@@ -26,8 +26,6 @@ int main(void)
                 binary[k] = 0;
                 printf("%d\n", *binary);
                 array[j] /= 2;
-                j++;
-                k++;
             }
         binary[j] = 1;
         printf("%d\n", *binary);
