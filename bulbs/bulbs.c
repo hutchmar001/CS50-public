@@ -25,7 +25,6 @@ int main(void)
             {
                 int binary[3];
                 array[j] /= 2;
-                j++;
 
             }
 };
