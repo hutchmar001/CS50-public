@@ -29,7 +29,7 @@ int main(void)
             }
             else
             {
-                binary[j] =1;
+                binary[j] = 1;
                 printf("%d\n", *binary);
             }
         }
