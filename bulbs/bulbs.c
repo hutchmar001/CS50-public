@@ -34,6 +34,7 @@ int main(void)
                 k++;
             }
     }
+    printf("%d\n", *binary);
 };
 
 void print_bulb(int bit)
