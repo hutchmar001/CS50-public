@@ -26,14 +26,12 @@ int main(void)
     for (j = 0; j < 3; j++) {
         if (array[j] % 2 == 0 || (array[j] > 0))
             {
-                array[j] /= 2;
                 binary[k] = 0;
-                k++;
-                continue;
             } else {
                 binary[k] = 1;
-                k++;
             }
+         array[j] /= 2;
+         k++;
     }
     printf("%d\n", *binary);
 };
