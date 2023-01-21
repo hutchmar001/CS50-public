@@ -13,7 +13,7 @@ int main(void)
     int j;
     int k = 0;
     int num;
-    int binary[];
+    int binary[100];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
     for (i = 0; i < (strlen(word)); i++)
@@ -23,7 +23,7 @@ int main(void)
         array[0] = num;
         printf("%d\n", *array);
     }
-    for (j = 0; j < 10; j++) {
+    for (j = 0; j < 3; j++) {
         if (array[j] % 2 == 0 || (array[j] > 0))
             {
                 array[j] /= 2;
