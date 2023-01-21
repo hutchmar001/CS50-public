@@ -20,12 +20,14 @@ int main(void)
         array[0] = num;
         int binary[3];
         int j = 0;
+        int k = 0;
         while (array[j] % 2 == 0 || (array[j] > 0))
             {
-                binary[j] = 0;
+                binary[k] = 0;
                 printf("%d\n", *binary);
                 array[j] /= 2;
                 j++;
+                k++;
             }
         binary[j] = 1;
         printf("%d\n", *binary);
