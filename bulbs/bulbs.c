@@ -34,8 +34,7 @@ int main(void)
                 array[k] /= 2;
                 printf("%d\n", binary[j]);
             }
-
-    }
+    }  printf("%d\n", *binary);
 };
 
 void print_bulb(int bit)
