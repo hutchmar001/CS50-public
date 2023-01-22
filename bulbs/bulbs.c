@@ -18,13 +18,15 @@ int main(void)
     int binary[100];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
+
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[0] = num;
         printf("%d\n", *array);
-    }
+    } //Makes array of ASCII numbers
+
     for (j = 0; j < 7; j++) {
         if (array[k] % 2 == 0 && (array[k] > 1))
             {
@@ -36,10 +38,15 @@ int main(void)
                 array[k] /= 2;
                 printf("%d\n", binary[j]);
             }
-    }
+    } //Turns ASCII into binary (backwards)
+
     for (i = 7; i += 0; i--) {
         revarray[l] = array[i];
         l++;
+    } //Flips binary to forwards
+
+    for (i = 0; i == 7; i++) {
+        printf("%d\n", revarray[i]);
     }
 };
 
