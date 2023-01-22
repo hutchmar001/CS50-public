@@ -13,6 +13,7 @@ int main(void)
     int j;
     int k = 0;
     int l = 0;
+    int m;
     int revarray[8];
     int num;
     int binary[100];
@@ -40,8 +41,8 @@ int main(void)
             }
     } //Turns ASCII into binary (backwards)
 
-    for (i = 7; i == 0; i--) {
-        revarray[l] = binary[i];
+    for (m = 7; i == m; m--) {
+        revarray[l] = binary[m];
         l++;
         printf("%d\n", revarray[l]);
     } //Flips binary to forwards
