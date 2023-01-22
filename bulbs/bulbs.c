@@ -40,7 +40,7 @@ int main(void)
             }
     } //Turns ASCII into binary (backwards)
 
-    for (i = 7; i == 0; i--) {
+    for (i = 6; i == 0; i--) {
         revarray[l] = array[i];
         l++;
         printf("%d\n", revarray[l]);
