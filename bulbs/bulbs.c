@@ -10,6 +10,7 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
+    int j;
     int k = 0;
     int l = 0;
     int revarray[8];
@@ -26,7 +27,8 @@ int main(void)
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
 
-    for (i =0; i < )
+    for (j =0; j < ; j++)
+    {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
@@ -44,7 +46,7 @@ int main(void)
         l++;
     } //Flips binary to forwards
 };
-
+}
 void print_bulb(int bit)
 {
     if (bit == 0)
