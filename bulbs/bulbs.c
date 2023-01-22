@@ -44,7 +44,7 @@ int main(void)
     for (m = 7; i == m; m--) {
         revarray[l] = binary[m];
         l++;
-        printf("%d\n", revarray[l]);
+        printf("%d\n", l);
     } //Flips binary to forwards
 
 };
