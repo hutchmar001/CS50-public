@@ -27,7 +27,7 @@ int main(void)
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
 
-    for (j = 0; j < ; j++)
+    for (j = 0; j < 3; j++)
     {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
