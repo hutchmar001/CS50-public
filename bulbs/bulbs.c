@@ -28,7 +28,7 @@ int main(void)
     } //Makes array of ASCII numbers
 
     for (j = 0; j < 8; j++) {
-        if (array[k] % 2 == 0 && (array[k] ))
+        if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[j] = 0;
                 array[k] /= 2;
