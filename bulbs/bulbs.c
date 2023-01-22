@@ -44,9 +44,9 @@ int main(void)
     for (m = 8; m > 0; m--) {
         revarray[l] = binary[m];
         l++;
-        printf("%d\n", revarray[l]);
-    } //Flips binary to forwards
 
+    } //Flips binary to forwards
+    printf("%d\n", revarray[2]);
 };
 
 void print_bulb(int bit)
