@@ -27,6 +27,8 @@ int main(void)
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
 
+    for (j = 0; j < ; j++)
+    {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
@@ -43,6 +45,7 @@ int main(void)
         printf("%i\n", revarray[l]);
         l++;
     } //Flips binary to forwards
+    }
 };
 
 void print_bulb(int bit)
