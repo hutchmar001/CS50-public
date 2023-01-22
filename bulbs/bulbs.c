@@ -12,6 +12,7 @@ int main(void)
     int i;
     int j;
     int k = 0;
+    int l = 0;
     int num;
     int binary[100];
     string word = get_string("Player 1: ");
