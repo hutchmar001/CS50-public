@@ -31,11 +31,9 @@ int main(void)
             {
                 binary[i] = 0;
                 array[k] /= 2;
-                printf("%d\n", binary[i]);
             } else {
                 binary[i] = 1;
                 array[k] /= 2;
-                printf("%d\n", binary[i]);
             }
     } //Turns ASCII into binary (backwards
 
