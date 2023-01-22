@@ -10,10 +10,8 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
-    int j;
     int k = 0;
     int l = 0;
-    int m;
     int revarray[8];
     int num;
     int binary[100];
@@ -28,25 +26,25 @@ int main(void)
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
 
-    for (j = 0; j < 8; j++) {
+    for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
-                binary[j] = 0;
+                binary[i] = 0;
                 array[k] /= 2;
-                printf("%d\n", binary[j]);
+                printf("%d\n", binary[i]);
             } else {
-                binary[j] = 1;
+                binary[i] = 1;
                 array[k] /= 2;
-                printf("%d\n", binary[j]);
+                printf("%d\n", binary[i]);
             }
     } //Turns ASCII into binary (backwards)
 
-    for (m = 7; m > 0; m--) {
-        revarray[l] = binary[m];
+    for (i = 7; i > 0; i--) {
+        revarray[l] = binary[i];
         l++;
-
+        printf("%d\n", revarray[i]);
     } //Flips binary to forwards
-    printf("%d\n", revarray[0]);
+
 };
 
 void print_bulb(int bit)
