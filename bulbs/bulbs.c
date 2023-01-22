@@ -41,7 +41,7 @@ int main(void)
             }
     } //Turns ASCII into binary (backwards)
 
-    for (m = 8; m > 0; m--) {
+    for (m = 7; m > 0; m--) {
         revarray[l] = binary[m];
         l++;
 
