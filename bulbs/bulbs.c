@@ -13,6 +13,7 @@ int main(void)
     int j;
     int k = 0;
     int l = 0;
+    int revarray[8];
     int num;
     int binary[100];
     string word = get_string("Player 1: ");
@@ -36,8 +37,9 @@ int main(void)
                 printf("%d\n", binary[j]);
             }
     }
-    for (l = 7; l += 0; l--) {
-        
+    for (i = 7; i += 0; i--) {
+        revarray[l] = array[i];
+        l++;
     }
 };
 
