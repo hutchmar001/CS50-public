@@ -36,6 +36,7 @@ int main(void)
                 printf("%d\n", binary[j]);
             }
     }
+    for ()
 };
 
 void print_bulb(int bit)
