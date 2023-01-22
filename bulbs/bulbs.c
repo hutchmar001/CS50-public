@@ -43,7 +43,6 @@ int main(void)
         printf("%i\n", revarray[l]);
         l++;
     } //Flips binary to forwards
-    }
 };
 
 void print_bulb(int bit)
