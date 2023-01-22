@@ -37,15 +37,12 @@ int main(void)
                 array[k] /= 2;
                 printf("%d\n", binary[i]);
             }
-    } //Turns ASCII into binary (backwards)
-
-    for (i = 0; i < 8; i++){
-        printf("%d\n", binary[i]);
-    }
+    } //Turns ASCII into binary (backwards
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
         l++;
+        printf("%d\n", revarray[l]);
     } //Flips binary to forwards
 };
 
