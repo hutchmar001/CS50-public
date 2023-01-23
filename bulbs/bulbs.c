@@ -27,6 +27,9 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         array[j] = num;
     } //Makes array of ASCII numbers
 }
+    for (i = 0; i < 3; i++) {
+        printf("%d\n", array[i]);
+    }
 
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
