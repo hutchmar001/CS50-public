@@ -51,7 +51,7 @@ for (k = 0; k < 3; k++){
         l++;
     } //Flips binary to forwards
     printf("\n");
-    print_bulb(binary[i]);
+    print_bulb(binary);
 }
 }
 
