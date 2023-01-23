@@ -49,8 +49,8 @@ for (k = 0; k < 3; k++){
         revarray[l] = binary[i];
         printf("%i", revarray[l]);
         l++;
-    } //Flips binary to forwards
-} \n
+    } printf("\n"); //Flips binary to forwards
+}
 }
 
 
