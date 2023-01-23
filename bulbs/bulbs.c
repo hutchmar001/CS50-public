@@ -19,13 +19,14 @@ int main(void)
     string word = get_string("Player 1: ");
     int array[strlen(word)];
 
-
+for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[i] = num;
     } //Makes array of ASCII numbers
+}
 
     for (i = 0; i < 3; i++) {
         printf("%d\n", array[i]);
