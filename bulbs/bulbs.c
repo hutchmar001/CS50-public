@@ -49,9 +49,10 @@ for (k = 0; k < 3; k++){
         revarray[l] = binary[i];
         printf("%i", revarray[l]);
         l++;
+        print_bulb(revarray[l]);
     } //Flips binary to forwards
     printf("\n");
-    print_bulb(binary);
+
 }
 }
 
