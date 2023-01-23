@@ -27,18 +27,18 @@ int main(void)
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
 
-for (j = 0; j < sizeof(array); j++)
-    {
+for (j = 0; j < sizeof(array); j++) {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[i] = 0;
                 array[k] /= 2;
+                k++;
             } else {
                 binary[i] = 1;
                 array[k] /= 2;
+                k++;
             }
-        k++;
     } //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
@@ -46,7 +46,6 @@ for (j = 0; j < sizeof(array); j++)
         printf("%i", revarray[l]);
         l++;
     } //Flips binary to forwards
-    }
 };
 
 void print_bulb(int bit)
