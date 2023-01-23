@@ -32,16 +32,17 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         printf("%d\n", array[i]);
     }
 
+for (k = 0; k < 3; k++){
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[i] = 0;
                 array[k] /= 2;
-                k++;
+
             } else {
                 binary[i] = 1;
                 array[k] /= 2;
-                k++;
+            }
             }
         } //Turns ASCII into binary (backwards)
 
