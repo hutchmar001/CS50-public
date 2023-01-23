@@ -19,15 +19,16 @@ int main(void)
     string word = get_string("Player 1: ");
     int array[strlen(word)];
 
+for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
     for (i = 0; i < (strlen(word)); i++)
     {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-        array[0] = num;
+        array[j] = num;
         printf("%d\n", *array);
     } //Makes array of ASCII numbers
+}
 
-for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
@@ -47,7 +48,7 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         l++;
     } //Flips binary to forwards
 }
-}
+
 
 
 void print_bulb(int bit)
