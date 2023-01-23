@@ -36,7 +36,7 @@ int main(void)
                 binary[i] = 1;
                 array[k] /= 2;
             }
-    } //Turns ASCII into binary (backwards
+    } //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
