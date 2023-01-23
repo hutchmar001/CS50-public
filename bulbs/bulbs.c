@@ -50,7 +50,7 @@ for (k = 0; k < 3; k++){
         printf("%i", revarray[l]);
         l++;
     } //Flips binary to forwards
-}
+} \n
 }
 
 
