@@ -32,6 +32,7 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         printf("%d\n", array[i]);
     }
 
+for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
@@ -43,7 +44,8 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
                 array[k] /= 2;
                 k++;
             }
-    } //Turns ASCII into binary (backwards)
+    }
+} //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
