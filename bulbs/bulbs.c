@@ -47,7 +47,7 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         l++;
     } //Flips binary to forwards
 }
-};
+}
 
 
 void print_bulb(int bit)
