@@ -31,7 +31,7 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         if (islower(word[i]))
         {
             char str[] = {word[i]}; // Makes character into string
-            num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
+            num = strtol(str, NULL, 36) + 87; //Converts letter to number using base 10
             array[i] = num;
         }
     } //Makes array of ASCII numbers
