@@ -47,15 +47,12 @@ for (k = 0; k < 3; k++){
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
-        l++;
         print_bulb(revarray[l]);
+        l++;
     }  //Flips binary to forwards
     printf("\n");
-
 }
 }
-
-
 
 void print_bulb(int bit)
 {
