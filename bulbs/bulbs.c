@@ -37,6 +37,7 @@ for (j = 0; j < len(array); j++)
                 binary[i] = 1;
                 array[k] /= 2;
             }
+        k++;
     } //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
