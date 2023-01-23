@@ -49,7 +49,7 @@ for (k = 0; k < 3; k++){
         revarray[l] = binary[i];
         l++;
         print_bulb(revarray[l]);
-    } //Flips binary to forwards
+    }  //Flips binary to forwards
     printf("\n");
 
 }
