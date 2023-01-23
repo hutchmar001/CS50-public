@@ -43,7 +43,6 @@ for (k = 0; k < 3; k++){
                 binary[i] = 1;
                 array[k] /= 2;
             }
-            }
         } //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
@@ -51,6 +50,7 @@ for (k = 0; k < 3; k++){
         printf("%i", revarray[l]);
         l++;
     } //Flips binary to forwards
+}
 }
 
 
