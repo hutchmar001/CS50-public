@@ -25,7 +25,6 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
         char str[] = {word[i]}; // Makes character into string
         num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
         array[j] = num;
-        printf("%d\n", *array);
     } //Makes array of ASCII numbers
 }
 
