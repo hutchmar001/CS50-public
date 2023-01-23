@@ -40,12 +40,13 @@ for (j = 0; j < sizeof(array)/sizeof(array[0]); j++) {
                 k++;
             }
     } //Turns ASCII into binary (backwards)
-}
+
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
         printf("%i", revarray[l]);
         l++;
     } //Flips binary to forwards
+}
 };
 
 
