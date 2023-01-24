@@ -85,17 +85,17 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
             {
                 binary[i] = 0;
                 array[k] /= 2;
-
+                printf("%d", binary[i]);
             } else {
                 binary[i] = 1;
                 array[k] /= 2;
+                printf("%d", binary[i]);
             }
         } //Turns ASCII into binary (backwards)
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
         print_bulb(revarray[l]);
-        printf("%d", revarray[l]);
         l++;
     }  //Flips binary to forwards
     printf("\n");
