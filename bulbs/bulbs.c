@@ -91,10 +91,10 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
             }
         } //Turns ASCII into binary (backwards)
 
-    for (i = 7; i == 0; i--) {
+    for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
-        printf("%d", revarray[l]);
         print_bulb(revarray[l]);
+        printf("%i", revarray[l]);
         l++;
     }  //Flips binary to forwards
     printf("\n");
