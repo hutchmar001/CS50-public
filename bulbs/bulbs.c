@@ -99,9 +99,7 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
     }  //Flips binary to forwards
     printf("\n");
 }
-    for (i = 0; i < 8; i++) {
-        printf("%d\n", revarray[i]);
-    }
+
 }
 
 void print_bulb(int bit)
