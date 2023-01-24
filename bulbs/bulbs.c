@@ -93,10 +93,12 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
 
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
-        print_bulb(revarray[l]);
         l++;
     }  //Flips binary to forwards
-    printf("\n");
+    for (i = 0; i < 8; i++) {
+        print_bulb(revarray[i]);
+    }
+
 
 }
 
