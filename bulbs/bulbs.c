@@ -80,15 +80,14 @@ int main(void)
     }
 
 for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
+    for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[i] = 0;
                 array[k] /= 2;
-                i++;
             } else {
                 binary[i] = 1;
                 array[k] /= 2;
-                i++;
             }
         } //Turns ASCII into binary (backwards)
 
@@ -98,6 +97,8 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
         l++;
     }  //Flips binary to forwards
     printf("\n");
+
+}
 
 }
 
