@@ -91,7 +91,7 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
                 array[k] /= 2;
             }
         } //Turns ASCII into binary (backwards)
-
+    
     for (i = 7; i >= 0; i--) {
         revarray[l] = binary[i];
         print_bulb(revarray[l]);
