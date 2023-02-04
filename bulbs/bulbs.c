@@ -64,14 +64,7 @@ int main(void)
         }
         else
         {
-            char str[] = {word[i]}; // Makes character into string
-            num = strtol(str, NULL, 36) + 55; //Converts letter to number using base 10
-            array[i] = num;
-            if (islower(word[i]))
-            {
-                num2 = num + 32; //Converts letter to number using base 10
-                array[i] = num2;
-            }
+            
         }
 } //Makes array of ASCII numbers
 
