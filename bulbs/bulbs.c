@@ -26,26 +26,29 @@ int main(void)
         array[i] = (int)word[i];
     } //Makes array of ASCII numbers
 
-for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
-    for (i = 0; i < 8; i++) {
-        if (array[k] % 2 == 0 && (array[k] != 1))
+    for (k = 0; k < sizeof(array) / sizeof(array[0]); k++)
+    {
+        for (i = 0; i < 8; i++)
+        {
+            if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[i] = 0;
-            } else {
+            }
+            else
+            {
                 binary[i] = 1;
-}
+            }
             array[k] /= 2;
 
         } //Turns ASCII into binary (backwards)
-for (i = 7; i >= 0; i--) {
-        print_bulb(binary[i]);
-    }  //Flips binary to forwards
+        for (i = 7; i >= 0; i--)
+        {
+            print_bulb(binary[i]);
+        }  //Flips binary to forwards
+        printf("\n");
+    }
 
-    printf("\n");
-
-}
-
-}
+    }
 
 void print_bulb(int bit)
 {
