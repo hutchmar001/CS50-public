@@ -47,8 +47,7 @@ int main(void)
         }  //Flips binary to forwards
         printf("\n");
     }
-
-    }
+}
 
 void print_bulb(int bit)
 {
