@@ -64,7 +64,7 @@ int main(void)
         }
         else
         {
-            
+            array[i] = 63;
         }
 } //Makes array of ASCII numbers
 
