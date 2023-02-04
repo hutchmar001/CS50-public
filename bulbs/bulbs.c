@@ -75,10 +75,6 @@ int main(void)
         }
 } //Makes array of ASCII numbers
 
-    for (i = 0; i < sizeof(array)/sizeof(array[0]); i++) {
-        printf("%d\n", array[i]);
-    }
-
 for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
     for (i = 0; i < 8; i++) {
         if (array[k] % 2 == 0 && (array[k] != 1))
@@ -88,7 +84,7 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
                 binary[i] = 1;
 }
             array[k] /= 2;
-            printf("%d", binary[i]);
+
         } //Turns ASCII into binary (backwards)
 for (i = 7; i >= 0; i--) {
         print_bulb(binary[i]);
