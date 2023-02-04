@@ -84,13 +84,12 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
         if (array[k] % 2 == 0 && (array[k] != 1))
             {
                 binary[i] = 0;
-                array[k] /= 2;
-                printf("%d", binary[i]);
             } else {
                 binary[i] = 1;
-                array[k] /= 2;
-                printf("%d", binary[i]);
+
             }
+            array[k] /= 2;
+            printf("%d", binary[i]);
         } //Turns ASCII into binary (backwards)
 for (i = 0; i <= 7; i++) {
         revarray[l] = binary[i];
