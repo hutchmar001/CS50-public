@@ -22,9 +22,9 @@ int main(void)
     int array[strlen(word)];
 
     for (i = 0; i < (strlen(word)); i++)
-        {
-            array[i] = (int)word[i];
-        } //Makes array of ASCII numbers
+    {
+        array[i] = (int)word[i];
+    } //Makes array of ASCII numbers
 
 for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
     for (i = 0; i < 8; i++) {
