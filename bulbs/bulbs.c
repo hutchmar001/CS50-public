@@ -91,9 +91,7 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
             printf("%d", binary[i]);
         } //Turns ASCII into binary (backwards)
 for (i = 0; i <= 7; i++) {
-        revarray[l] = binary[i];
         print_bulb(binary[i]);
-        l++;
     }  //Flips binary to forwards
 
     printf("\n");
