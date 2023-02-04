@@ -86,8 +86,7 @@ for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
                 binary[i] = 0;
             } else {
                 binary[i] = 1;
-
-            }
+}
             array[k] /= 2;
             printf("%d", binary[i]);
         } //Turns ASCII into binary (backwards)
