@@ -21,52 +21,10 @@ int main(void)
     string word = get_string("Player 1: ");
     int array[strlen(word)];
 
-    for (i = 0; i < (strlen(word)); i++) {
-        if (strcmp(&word[i], " ") == 0)
-        {
-            array[i] = 32;
-        }
-        else if (strcmp(&word[i], "!") == 0)
-        {
-            array[i] = 33;
-        }
-        else if (strcmp(&word[i], "'") == 0)
-        {
-            array[i] = 39;
-        }
-        else if (strcmp(&word[i], ")") == 0)
-        {
-            array[i] = 41;
-        }
-        else if (strcmp(&word[i], ",") == 0)
-        {
-            array[i] = 44;
-        }
-        else if (strcmp(&word[i], ".") == 0)
-        {
-            array[i] = 46;
-        }
-        else if (strcmp(&word[i], "0") == 0)
-        {
-            array[i] = 48;
-        }
-        else if (strcmp(&word[i], "5") == 0)
-        {
-            array[i] = 53;
-        }
-        else if (strcmp(&word[i], ":") == 0)
-        {
-            array[i] = 58;
-        }
-        else if (strcmp(&word[i], "?") == 0)
-        {
-            array[i] = 63;
-        }
-        else
+    for (i = 0; i < (strlen(word)); i++)
         {
             array[i] = (int)word[i];
-        }
-} //Makes array of ASCII numbers
+        } //Makes array of ASCII numbers
 
 for (k = 0; k < sizeof(array)/sizeof(array[0]); k++){
     for (i = 0; i < 8; i++) {
