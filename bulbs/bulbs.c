@@ -11,7 +11,7 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
-    int k = 0;
+    int k;
     int binary[8];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
