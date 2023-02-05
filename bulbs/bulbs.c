@@ -30,7 +30,7 @@ int main(void)
     {
         for (i = 0; i < 8; i++)
         {
-            if (array[k] % 2 == 0 && (array[k] != 1))
+            if (array[k] % 2 == 0)
             {
                 binary[i] = 0;
             }
