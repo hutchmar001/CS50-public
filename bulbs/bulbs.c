@@ -11,12 +11,7 @@ void print_bulb(int bit);
 int main(void)
 {
     int i;
-    int j;
     int k = 0;
-    int l = 0;
-    int revarray[8];
-    int num;
-    int num2;
     int binary[8];
     string word = get_string("Player 1: ");
     int array[strlen(word)];
