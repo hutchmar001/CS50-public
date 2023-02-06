@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int count_letters(string text);
+int count_letters(string text){
+    printf("Hi");
+}
 int main(void)
 {
     string txt = get_string("Text: ");
