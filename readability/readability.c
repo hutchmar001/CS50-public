@@ -3,7 +3,7 @@
 int count_letters(string text);
 int main(void)
 {
-    string text = get_string("Text: ");
-    printf("%s\n", text);
-    count_letters(text);
+    string txt = get_string("Text: ");
+    printf("%s\n", txt);
+    count_letters(txt);
 }
