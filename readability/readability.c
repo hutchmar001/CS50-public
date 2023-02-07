@@ -89,6 +89,8 @@ int main(void)
     printf("%d\n", sentences);
     int L = letters / words * 100;
     int S = sentences / words * 100;
+    printf("%d\n", L);
+    printf("%d\n", S);
     int index = 0.058 * L - 0.296 * S - 15.8;
     printf("%d\n", index);
     return index;
