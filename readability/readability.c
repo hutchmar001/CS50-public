@@ -13,7 +13,7 @@ int count_letters(string text){
         blank[0] = ' ';
         int result = strcmp(txt, blank);
         if (result >= 0) {
-            count++;
+            count++; //Counting amount of letters w/o spaces
         }
                 }
     return count;
@@ -29,7 +29,7 @@ int count_words(string text){
         blank[0] = ' ';
         int result = strcmp(txt, blank);
         if (result <= 0) {
-            count2++;
+            count2++; //Counting amount of spaces w/ 1 added
         }
                 }
     return count2;
