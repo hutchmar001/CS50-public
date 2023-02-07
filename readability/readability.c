@@ -64,6 +64,9 @@ int main(void)
     int letters = count_letters(txt);
     int words = count_words(txt);
     int sentences = count_sentences(txt);
+    printf("%d\n", letters);
+    printf("%d\n", words);
+    printf("%d\n", sentences);
     int index = 0.058 * (letters/words*100) - 0.296 * (sentences/words*100) - 15.8;
     printf("%d\n", index);
     return index;
