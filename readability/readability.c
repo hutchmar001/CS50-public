@@ -14,8 +14,9 @@ int count_letters(string text){
         int result = strcmp(txt, blank);
         if (result != 32) {
             count++;
-            printf("%d\n", count);
+            
         }
+        printf("%s\n", txt);
                 }
     return count;
 }
