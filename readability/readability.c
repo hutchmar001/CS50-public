@@ -3,8 +3,10 @@
 #include <ctype.h>
 
 int count_letters(string text){
-    printf("Hi");
+    printf("no\n");
+    return 4;
 }
+
 int main(void)
 {
     string txt = get_string("Text: ");
