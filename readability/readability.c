@@ -20,7 +20,7 @@ int count_letters(string text)
         char questionmark[1];
         questionmark[0] = '?';
         char apostrophe[1];
-        apostrophe[0] = '\'\';
+        apostrophe[0] = '\'';
         int result1 = memcmp(txt, blank, 1);
         int result2 = memcmp(txt, period, 1);
         int result3 = memcmp(txt, expoint, 1);
