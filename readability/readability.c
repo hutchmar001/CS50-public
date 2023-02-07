@@ -3,8 +3,11 @@
 #include <ctype.h>
 
 int count_letters(string text){
-    printf("no\n");
-    return 4;
+    int count = 0;
+    for i in range(0, len(text)):
+        if(text[i] != " "):
+            count += 1;
+    return count;
 }
 
 int main(void)
