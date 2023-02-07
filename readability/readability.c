@@ -20,7 +20,11 @@ int count_letters(string text){
     return count;
 }
 
-
+int count_words(string text){
+    int count = 0;
+    int j;
+    
+}
 
 int main(void)
 {
