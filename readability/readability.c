@@ -33,7 +33,6 @@ int count_words(string text){
         }
                 }
     count2 +=1;
-    printf("%d\n", count2);
     return count2;
 }
 
@@ -46,7 +45,7 @@ int count_sentences(string text){
         char blank[1];
         blank[0] = ' ';
         int result = strcmp(txt, blank);
-        if (result <= 0) {
+        if (result == 46) {
             count3++;
         }
                 }
