@@ -5,7 +5,7 @@
 int count_letters(string text){
     int count = 0;
     int i;
-    for (i in range(0, len(text))) {
+    for (i = 0; i < len(text); i++) {
         if(text[i] != " ")
             {
                 count += 1;
