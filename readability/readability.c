@@ -7,7 +7,7 @@ int count_letters(string text){
     int count = 0;
     int i;
     for (i = 0; i < strlen(text); i++) {
-        if(int strcmp (const char* text[i], const char* " ") == 0)
+        int strcmp (const char* text[i], const char* " ") != 0)
             {
                 count += 1;
             }
