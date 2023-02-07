@@ -7,8 +7,9 @@ int count_letters(string text){
     int count = 0;
     int i;
     for (i = 0; i < strlen(text); i++) {
-        char txt[1] = text[i];
-        int result = strcmp(txt, ' ');
+        char txt[1];
+        txt[0] = text[i];
+        int result = strcmp(&txt[0], ' ');
         if (result != 32) {
             count++;
             printf("%d\n", count);
