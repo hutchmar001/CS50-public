@@ -31,8 +31,9 @@ int count_words(string text){
         if (result <= 0) {
             count2++;
         }
-        printf("%d\n", count2);
                 }
+    count2 +=1;
+    printf("%d\n", count2);
     return count2;
 }
 
