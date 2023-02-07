@@ -51,7 +51,7 @@ int count_sentences(string text){
         int result2 = memcmp(txt, expoint, 1);
         int result3 = memcmp(txt, questionmark, 1); //Switch to memcmp to compare strings
         printf("%d\n", result1);
-        if (result1 == 0 ) {
+        if (result1 == 0 || result2 == 0 || result3 == 0) {
             count3++;
         }
                 }
