@@ -15,7 +15,6 @@ int count_letters(string text){
         if (result >= 0) {
             count++;
         }
-        printf("%d\n", count);
                 }
     return count;
 }
@@ -23,7 +22,18 @@ int count_letters(string text){
 int count_words(string text){
     int count = 0;
     int j;
-    
+    for (j = 0; j < strlen(text); j++) {
+        char txt[1];
+        txt[0] = text[j];
+        char blank[1];
+        blank[0] = ' ';
+        int result = strcmp(txt, blank);
+        if (result >= 0) {
+            count++;
+        }
+        printf("%d\n", count);
+                }
+    return count;
 }
 
 int main(void)
