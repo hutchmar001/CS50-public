@@ -67,4 +67,6 @@ int main(void)
     count_letters(txt);
     count_words(txt);
     count_sentences(txt);
+    
+    int index = 0.0588 * L - 0.296 * S - 15.8
 }
