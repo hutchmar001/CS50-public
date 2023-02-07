@@ -12,11 +12,10 @@ int count_letters(string text){
         char blank[1];
         blank[0] = ' ';
         int result = strcmp(txt, blank);
-        printf("%d\n", result);
-        if (result != 32) {
+        if (result >= 0) {
             count++;
-            
         }
+        printf("%d\n", count);
                 }
     return count;
 }
