@@ -41,4 +41,5 @@ int main(void)
     string txt = get_string("Text: ");
     printf("%s\n", txt);
     count_letters(txt);
+    count_words(txt);
 }
