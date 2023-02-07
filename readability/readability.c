@@ -20,7 +20,7 @@ int count_letters(string text){
 }
 
 int count_words(string text){
-    int count = 0;
+    int count2 = 0;
     int j;
     for (j = 0; j < strlen(text); j++) {
         char txt[1];
@@ -29,11 +29,11 @@ int count_words(string text){
         blank[0] = ' ';
         int result = strcmp(txt, blank);
         if (result >= 0) {
-            count++;
+            count2++;
         }
-        printf("%d\n", count);
+        printf("%d\n", count2);
                 }
-    return count;
+    return count2;
 }
 
 int main(void)
