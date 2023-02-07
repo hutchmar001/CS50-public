@@ -42,9 +42,10 @@ int count_sentences(string text){
         char txt[1];
         txt[0] = text[k];
         char blank[1];
-        blank[0] = ' ';
+        blank[0] = '.';
         int result = strcmp(txt, blank);
-        if (result == 46) {
+        printf("%d\n", result);
+        if (result == 0) {
             count3++;
         }
                 }
