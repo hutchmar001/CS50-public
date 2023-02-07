@@ -16,6 +16,7 @@ int count_letters(string text){
             count++; //Counting amount of letters w/o spaces, space returns neg.
         }
                 }
+                printf("%d\n", count);
     return count;
 }
 
@@ -32,7 +33,6 @@ int count_words(string text){
             count2++; //Counting amount of spaces w/ 1 added, space returns neg.
         }
                 }
-    printf("%d\n", count2);
     return count2;
 
 }
