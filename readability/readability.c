@@ -43,7 +43,6 @@ int count_sentences(string text){
         txt[0] = text[k];
         char blank[1];
         blank[0] = '.';
-        printf("%c\n", txt[0]);
         int result = strcmp(txt, blank);
         printf("%d\n", result);
         if (result == 0) {
