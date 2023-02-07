@@ -16,7 +16,6 @@ int count_letters(string text){
             count++; //Counting amount of letters w/o spaces, space returns neg.
         }
                 }
-                printf("%d\n", count);
     return count;
 }
 
@@ -56,17 +55,16 @@ int count_sentences(string text){
             count3++;
         }
                 }
-    printf("%d\n", count3);
     return count3;
 }
 
 int main(void)
 {
     string txt = get_string("Text: ");
-    printf("%s\n", txt);
-    count_letters(txt);
-    count_words(txt);
-    count_sentences(txt);
-    
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int letters = count_letters(txt);
+    int words = count_words(txt);
+    int sentences = count_sentences(txt);
+    int index = 0.058 * (letters/words*100) - 0.296 * (sentences/words*100) - 15.8;
+    printf("%d\n", index);
+    return index;
 }
