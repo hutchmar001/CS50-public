@@ -20,6 +20,8 @@ int count_letters(string text){
     return count;
 }
 
+
+
 int main(void)
 {
     string txt = get_string("Text: ");
