@@ -33,6 +33,7 @@ int count_words(string text){
         }
                 }
     return count2;
+    printf("%d\n", count2);
 }
 
 int count_sentences(string text){
@@ -55,7 +56,6 @@ int count_sentences(string text){
             count3++;
         }
                 }
-    printf("%d\n", count3);
     return count3;
 }
 
