@@ -27,8 +27,8 @@ int count_words(string text){
         txt[0] = text[j];
         char blank[1];
         blank[0] = ' ';
-        int result = strcmp(txt, blank);
-        if (result <= 0) {
+        int result = memcmp(txt, blank, 1);
+        if (result == 0) {
             count2++; //Counting amount of spaces w/ 1 added, space returns neg.
         }
                 }
@@ -48,7 +48,7 @@ int count_sentences(string text){
         expoint[0] = '!';
         char questionmark[1];
         questionmark[0] = '?';
-        int result1 = memcmp(txt, blank, 1); //Switch to memcmp to compare strings
+        int result1 = memcmp(txt, period, 1);
         int result2 = memcmp(txt, expoint, 1);
         int result3 = memcmp(txt, questionmark, 1);
         if (result1 == 0 || result2 == 0 || result3 == 0) {
