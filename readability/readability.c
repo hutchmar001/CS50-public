@@ -20,7 +20,7 @@ int count_letters(string text){
 }
 
 int count_words(string text){
-    int count2 = 0;
+    int count2 = 1;
     int j;
     for (j = 0; j < strlen(text); j++) {
         char txt[1];
@@ -32,7 +32,6 @@ int count_words(string text){
             count2++;
         }
                 }
-    count2 +=1;
     return count2;
 }
 
