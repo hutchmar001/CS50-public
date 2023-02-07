@@ -13,7 +13,7 @@ int count_letters(string text){
         blank[0] = ' ';
         int result = strcmp(txt, blank);
         if (result >= 0) {
-            count++; //Counting amount of letters w/o spaces
+            count++; //Counting amount of letters w/o spaces, space returns neg.
         }
                 }
     return count;
@@ -29,7 +29,7 @@ int count_words(string text){
         blank[0] = ' ';
         int result = strcmp(txt, blank);
         if (result <= 0) {
-            count2++; //Counting amount of spaces w/ 1 added
+            count2++; //Counting amount of spaces w/ 1 added, space returns neg.
         }
                 }
     return count2;
@@ -43,7 +43,7 @@ int count_sentences(string text){
         txt[0] = text[k];
         char blank[1];
         blank[0] = '.';
-        int result = memcmp(txt, blank, 1);
+        int result = memcmp(txt, blank, 1); //Switch to memcmp to compare strings
         printf("%d\n", result);
         if (result == 0) {
             count3++;
