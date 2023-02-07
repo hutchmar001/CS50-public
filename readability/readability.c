@@ -11,8 +11,8 @@ int count_letters(string text){
         txt[0] = text[i];
         char blank[1];
         blank[0] = ' ';
-        int result = memcmp(txt, blank, 1);
-        if (result == 0) {
+        int result = strcmp(txt, blank);
+        if (result >= 0) {
             count++; //Counting amount of letters w/o spaces, space returns neg.
         }
                 }
