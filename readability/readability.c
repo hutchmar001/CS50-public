@@ -37,10 +37,28 @@ int count_words(string text){
     return count2;
 }
 
+int count_sentences(string text){
+    int count3 = 0;
+    int k;
+    for (k = 0; k < strlen(text); k++) {
+        char txt[1];
+        txt[0] = text[k];
+        char blank[1];
+        blank[0] = ' ';
+        int result = strcmp(txt, blank);
+        if (result <= 0) {
+            count3++;
+        }
+                }
+    printf("%d\n", count3);
+    return count3;
+}
+
 int main(void)
 {
     string txt = get_string("Text: ");
     printf("%s\n", txt);
     count_letters(txt);
     count_words(txt);
+    count_sentences(txt);
 }
