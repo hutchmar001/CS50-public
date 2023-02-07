@@ -5,11 +5,12 @@
 int count_letters(string text){
     int count = 0;
     int i;
-    for (i in range(0, len(text));
+    for (i in range(0, len(text))) {
         if(text[i] != " ")
             {
                 count += 1;
             }
+                }
     return count;
 }
 
