@@ -28,7 +28,7 @@ int count_words(string text){
         char blank[1];
         blank[0] = ' ';
         int result = strcmp(txt, blank);
-        if (result >= 0) {
+        if (result <= 0) {
             count2++;
         }
         printf("%d\n", count2);
