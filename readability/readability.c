@@ -11,8 +11,8 @@ int count_letters(string text){
         txt[0] = text[i];
         char blank[1];
         blank[0] = ' ';
-        int result = strcmp(txt, blank);
-        if (result >= 0) {
+        int result = memcmp(txt, blank, 1);
+        if (result == 0) {
             count++; //Counting amount of letters w/o spaces, space returns neg.
         }
                 }
@@ -42,8 +42,8 @@ int count_sentences(string text){
     for (k = 0; k < strlen(text); k++) {
         char txt[1];
         txt[0] = text[k];
-        char blank[1];
-        blank[0] = '.';
+        char period[1];
+        period[0] = '.';
         char expoint[1];
         expoint[0] = '!';
         char questionmark[1];
