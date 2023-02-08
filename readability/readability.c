@@ -85,13 +85,8 @@ int main(void)
     double letters = count_letters(txt);
     double words = count_words(txt);
     double sentences = count_sentences(txt);
-    printf("%f\n", letters);
-    printf("%f\n", words);
-    printf("%f\n", sentences);
     double L = letters / words * 100;
     double S = sentences / words * 100;
-    printf("%f\n", L);
-    printf("%f\n", S);
     double index = 0.058 * L - 0.296 * S - 15.8;
     index = round(index);
     int idx = index;
