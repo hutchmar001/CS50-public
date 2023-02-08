@@ -22,12 +22,15 @@ int count_letters(string text)
         questionmark[0] = '?';
         char apostrophe[1];
         apostrophe[0] = '\'';
+        char doublequotes[1];
+        doublequotes[0] = '\"';
         int result1 = memcmp(txt, blank, 1);
         int result2 = memcmp(txt, period, 1);
         int result3 = memcmp(txt, expoint, 1);
         int result4 = memcmp(txt, questionmark, 1);
         int result5 = memcmp(txt, apostrophe, 1);
-        if (result1 != 0 && result2 != 0 && result3 != 0 && result4 != 0 && result5 != 0)
+        int result6 = memcmp(txt, doublequotes, 1);
+        if (result1 != 0 && result2 != 0 && result3 != 0 && result4 != 0 && result5 != 0 && result6 != 0)
         {
             count++;
         }
