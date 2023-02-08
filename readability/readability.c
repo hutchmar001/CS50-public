@@ -94,6 +94,6 @@ int main(void)
     printf("%f\n", S);
     double index = 0.058 * L - 0.296 * S - 15.8;
     index = round(index);
-    printf("%f\n", index);
+    printf("%s%f\n", "Grade ", index);
     return index;
 }
