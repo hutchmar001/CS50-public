@@ -95,7 +95,7 @@ int main(void)
     int idx = index;
     if (idx < 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1\n");
     }
     else if (idx > 15)
     {
