@@ -32,7 +32,7 @@ int count_letters(string text)
         int result6 = memcmp(txt, doublequotes, 1);
         if (result1 != 0 && result2 != 0 && result3 != 0 && result4 != 0 && result5 != 0 && result6 != 0)
         {
-            count++;
+            count++;    //if a letter is not blank, ., !, ?, ', or ", add to letter count
         }
     }
     return count;
@@ -51,7 +51,7 @@ int count_words(string text)
         int result = memcmp(txt, blank, 1);
         if (result == 0)
         {
-            count2++;
+            count2++;   //if a letter is a blank, add to word count
         }
     }
     return count2;
