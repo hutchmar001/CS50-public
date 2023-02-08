@@ -93,6 +93,17 @@ int main(void)
     double index = 0.058 * L - 0.296 * S - 15.8;
     index = round(index);
     int idx = index;
+    if (idx < 1)
+    {
+        printf("Before Grade 1...");
+    }
+    else if (idx > 15)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
     printf("%s%d\n", "Grade ", idx);
+    }
     return 0;
 }
