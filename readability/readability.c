@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 int count_letters(string text)
 {
@@ -92,6 +93,7 @@ int main(void)
     printf("%f\n", L);
     printf("%f\n", S);
     double index = 0.058 * L - 0.296 * S - 15.8;
+    index = round(index);
     printf("%f\n", index);
     return index;
 }
