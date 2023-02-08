@@ -91,7 +91,7 @@ int main(void)
     double S = sentences / words * 100;
     printf("%f\n", L);
     printf("%f\n", S);
-    int index = 0.058 * L - 0.296 * S - 15.8;
-    printf("%d\n", index);
+    double index = 0.058 * L - 0.296 * S - 15.8;
+    printf("%f\n", index);
     return index;
 }
