@@ -81,12 +81,12 @@ int count_sentences(string text)
 int main(void)
 {
     string txt = get_string("Text: ");
-    int letters = count_letters(txt);
-    int words = count_words(txt);
-    int sentences = count_sentences(txt);
-    printf("%d\n", letters);
-    printf("%d\n", words);
-    printf("%d\n", sentences);
+    double letters = count_letters(txt);
+    double words = count_words(txt);
+    double sentences = count_sentences(txt);
+    printf("%f\n", letters);
+    printf("%f\n", words);
+    printf("%f\n", sentences);
     int L = letters / words * 100;
     int S = sentences / words * 100;
     printf("%d\n", L);
@@ -94,4 +94,4 @@ int main(void)
     int index = 0.058 * L - 0.296 * S - 15.8;
     printf("%d\n", index);
     return index;
-}i
+}
