@@ -103,7 +103,7 @@ int main(void)
     }
     else
     {
-    printf("%s%d\n", "Grade ", idx);
+        printf("%s%d\n", "Grade ", idx);
     }
     return 0;
 }
