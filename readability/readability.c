@@ -87,10 +87,10 @@ int main(void)
     printf("%f\n", letters);
     printf("%f\n", words);
     printf("%f\n", sentences);
-    int L = letters / words * 100;
-    int S = sentences / words * 100;
-    printf("%d\n", L);
-    printf("%d\n", S);
+    double L = letters / words * 100;
+    double S = sentences / words * 100;
+    printf("%f\n", L);
+    printf("%f\n", S);
     int index = 0.058 * L - 0.296 * S - 15.8;
     printf("%d\n", index);
     return index;
