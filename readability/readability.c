@@ -90,7 +90,7 @@ int main(void)
     double sentences = count_sentences(txt);
     double L = letters / words * 100;
     double S = sentences / words * 100;
-    double index = 0.058 * L - 0.296 * S - 15.8;
+    double index = 0.058 * L - 0.296 * S - 15.8;    // Coleman-Liau index formula
     index = round(index);
     int idx = index;
     if (idx < 1)
