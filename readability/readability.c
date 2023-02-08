@@ -94,4 +94,4 @@ int main(void)
     int index = 0.058 * L - 0.296 * S - 15.8;
     printf("%d\n", index);
     return index;
-}
+}i
