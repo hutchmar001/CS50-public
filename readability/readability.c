@@ -88,11 +88,11 @@ int main(void)
     double letters = count_letters(txt);
     double words = count_words(txt);
     double sentences = count_sentences(txt);
-    double L = letters / words * 100;
-    double S = sentences / words * 100;
+    double L = letters / words * 100;   //average letters per 100 words
+    double S = sentences / words * 100;     //average sentences per 100 words
     double index = 0.058 * L - 0.296 * S - 15.8;    // Coleman-Liau index formula
-    index = round(index);
-    int idx = index;
+    index = round(index);   //index rounded to nearest whole number
+    int idx = index;    //index changed to int
     if (idx < 1)
     {
         printf("Before Grade 1\n");
