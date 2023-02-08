@@ -48,7 +48,7 @@ int count_words(string text)
         int result = memcmp(txt, blank, 1);
         if (result == 0)
         {
-            count2++; // Counting amount of spaces w/ 1 added, space returns neg.
+            count2++;
         }
     }
     return count2;
