@@ -91,5 +91,5 @@ int main(void)
     index = round(index);
     int idx = index;
     printf("%s%d\n", "Grade ", idx);
-    return idx;
+    return 0;
 }
