@@ -8,7 +8,7 @@ sort2 uses: merge sort
 
 How do you know?: Fastest method gets fastest times.
 
-sort3 uses: select sort
+sort3 uses: selection sort
 
 How do you know?: Although it has the same Omicron as sort1 (O(n^2)), select sort
 performs less swaps. So it gets faster times when testing random.
