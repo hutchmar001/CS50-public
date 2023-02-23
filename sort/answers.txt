@@ -1,11 +1,13 @@
-sort1 uses: TODO
+sort1 uses: Bubble
 
-How do you know?: TODO
+How do you know?:
 
-sort2 uses: TODO
+sort2 uses: Merge
 
-How do you know?: TODO
+How do you know?: Fastest method gets fastest times.
 
-sort3 uses: TODO
+sort3 uses: Select
 
-How do you know?: TODO
+How do you know?: Although it has the same Omega as sort1 (O(n^2)), select sort
+performs less swaps. It has faster times when testing random.
+Has different 
