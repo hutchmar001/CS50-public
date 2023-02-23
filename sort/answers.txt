@@ -1,14 +1,14 @@
-sort1 uses: select
+sort1 uses: merge
 
 How do you know?: Although it has the same Omicron as sort3 (O(n^2)), bubble sort
 performs more swaps. So it gets slower times when testing random.
 Has different Omega than sort3 (Ω(n)), so it gets faster times.
 
-sort2 uses: bubble
+sort2 uses: select
 
 How do you know?: Fastest method gets fastest times.
 
-sort3 uses: merge
+sort3 uses: bubble
 
 How do you know?: Although it has the same Omicron as sort1 (O(n^2)), select sort
 performs less swaps. So it gets faster times when testing random.
