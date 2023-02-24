@@ -2,7 +2,7 @@ sort1 uses: bubble sort
 
 How do you know?: Although it has the same Omicron as sort3 (O(n^2)), bubble sort
 performs more swaps. So it gets slower times when testing random.
-Has different Omega than sort3 (Ω(n)), so it gets faster times.
+Has different Omega than sort3 (Ω(n)), so it gets faster times when testing sorted.
 
 sort2 uses: merge sort
 
@@ -12,4 +12,4 @@ sort3 uses: selection sort
 
 How do you know?: Although it has the same Omicron as sort1 (O(n^2)), select sort
 performs less swaps. So it gets faster times when testing random.
-Has different Omega than sort3 (Ω(n^2)), so it gets slower times.
+Has different Omega than sort3 (Ω(n^2)), so it gets slower times when testing sorted.
