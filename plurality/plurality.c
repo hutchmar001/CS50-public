@@ -70,7 +70,7 @@ bool vote(string name)
     for (i = 0; i < candidate_count; i++)
 {
         int result = strcmp(name, candidates[i].name);
-        printf("%d/n", result);
+        printf("%d\n", result);
         if (result == 0)
         {
             candidates[i].votes += 1;
