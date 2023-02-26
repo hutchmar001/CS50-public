@@ -89,9 +89,9 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    if (candidates[1].votes > 0)
+    if (candidates[0].votes > 0)
     {
-        printf("Bob wins!");
+        printf("A wins!");
     }
     return;
 }
