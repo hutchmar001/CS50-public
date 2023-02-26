@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int j;
-    for (j = 0; j < 8; j++)
+    for (j = 0; j < candidate_count; j++)
 {
         int result = strcmp(name, candidates[1].name);
         printf("%s\n", candidates[j].name);
