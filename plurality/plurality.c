@@ -69,7 +69,7 @@ bool vote(string name)
     int j;
     for (j = 0; j < 8; j++)
 {
-        int result = strcmp(name, candidates[j].name);
+        int result = strcmp(name, candidates[1].name);
         printf("%s\n", candidates[j].name);
         printf("%d\n", result);
         if (result == 0)
