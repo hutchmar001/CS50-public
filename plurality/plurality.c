@@ -67,12 +67,14 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int j = 0;
+    int result;
     while (j < candidate_count)
 {
-        j++;
         printf("%d\n", j);
-        int result = strcmp(name, candidates[j].name);
+        result = strcmp(name, candidates[j].name);
         printf("%d\n", result);
+        j++;
+}
         if (result == 0)
         {
             candidates[j].votes += 1;
@@ -82,8 +84,6 @@ bool vote(string name)
         {
             return false;
         }
-}
-    return 0;
 }
 
 // Print the winner (or winners) of the election
