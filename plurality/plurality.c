@@ -77,6 +77,7 @@ bool vote(string name)
     {
         return false;
     }
+    return 0;
 }
 
 // Print the winner (or winners) of the election
