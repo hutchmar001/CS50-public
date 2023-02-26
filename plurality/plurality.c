@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    int j = -1;
+    int j = 0;
     while (j < candidate_count)
 {
         j++;
@@ -82,7 +82,6 @@ bool vote(string name)
         {
             return false;
         }
-
 }
     return 0;
 }
