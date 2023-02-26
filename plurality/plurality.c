@@ -93,7 +93,7 @@ void print_winner(void)
 {
     if (candidates[1].votes > 0)
     {
-        printf("You win!");
+        printf("Bob wins!");
     }
     return;
 }
