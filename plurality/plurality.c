@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int i;
-    for (i = 0; i < 9; i++)
+    for (i = 0; i < argc - 1; i++)
     if (name == candidates[i].name)
     {
         candidates[i].votes += 1;
