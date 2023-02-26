@@ -70,6 +70,7 @@ bool vote(string name)
     int result;
     while (j < candidate_count)
 {
+        j++;
         printf("%d\n", j);
         result = strcmp(name, candidates[j].name);
         printf("%d\n", result);
@@ -84,7 +85,6 @@ bool vote(string name)
             return false;
             continue;
         }
-        j++;
 }
     return 0;
 }
