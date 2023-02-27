@@ -22,6 +22,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
+int find_winner(int )
 
 int main(int argc, string argv[])
 {
@@ -87,6 +88,10 @@ bool vote(string name)
 }
 
 int find_winner()
+{
+    
+}
+
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
