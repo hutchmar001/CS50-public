@@ -21,9 +21,8 @@ int candidate_count;
 
 // Function prototypes
 bool vote(string name);
-void print_winner(void);
+void print_winner(int);
 int size;
-int max;
 
 int main(int argc, string argv[])
 {
@@ -75,7 +74,7 @@ int main(int argc, string argv[])
         }
 
     // Display winner of election
-    print_winner();
+    print_winner(max);
 }
 
 // Update vote totals given a new vote
@@ -100,7 +99,7 @@ bool vote(string name)
 }
 
 // Print the winner (or winners) of the election
-void print_winner()
+void print_winner(max)
 {
     for(int k = 1; k < size; k++)
         if (candidates[k].votes == max)
