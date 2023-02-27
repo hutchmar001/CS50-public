@@ -59,10 +59,10 @@ int main(int argc, string argv[])
         }
     }
 
-    int arr[voter_count];
-    for (i = 0; i < voter_count; i++)
+    int arr[candidate_count];
+    for (int j = 0; j < candidate_count; j++)
     {
-        arr[i] = 
+        arr[j] = candidates[j].name;
     }
 
     // Display winner of election
@@ -72,16 +72,16 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    int j;
+    int k;
     int result;
-    for (j = 0; j < candidate_count; j++)
+    for (k = 0; k < candidate_count; k++)
 {
-        printf("%d\n", j);
-        result = strcmp(name, candidates[j].name);
+        printf("%d\n", k);
+        result = strcmp(name, candidates[k].name);
         printf("%d\n", result);
         if (result == 0)
         {
-            candidates[j].votes += 1;
+            candidates[k].votes += 1;
             return true;
         }
         else
