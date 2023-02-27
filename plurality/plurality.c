@@ -66,7 +66,7 @@ int main(int argc, string argv[])
         array[j] = candidates[j].votes;
     }
 
-    int most_votes(int arr[]);
+    int most_votes(array);
 
     // Display winner of election
     print_winner();
