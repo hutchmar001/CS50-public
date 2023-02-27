@@ -89,7 +89,7 @@ bool vote(string name)
 
 int find_winner(int votes)
 {
-    int arr[];
+    int arr[voter_count];
     int arr_size = sizeof(arr) / sizeof(arr[0]);
 }
 
