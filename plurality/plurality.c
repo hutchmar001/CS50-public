@@ -95,7 +95,7 @@ bool vote(string name)
 }
 
 // Find candidate with most votes
-void most_votes(int arr[candidate_count], int size)
+void most_votes(int arr[], int size)
 {
     int max = arr[0];
     for(int k = 1; k < size; k++)
