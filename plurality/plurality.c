@@ -22,6 +22,8 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
+int size;
+int max;
 
 int main(int argc, string argv[])
 {
@@ -65,9 +67,8 @@ int main(int argc, string argv[])
     {
         arr[j] = candidates[j].votes;
     }
-
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int max = arr[0];
+    size = sizeof(arr) / sizeof(arr[0]);
+    max = arr[0];
     for(int k = 1; k < size; k++)
         if (max < arr[k]) {
             max = arr[k];
