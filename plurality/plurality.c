@@ -80,9 +80,7 @@ bool vote(string name)
     int result;
     for (k = 0; k < candidate_count; k++)
 {
-        printf("%d\n", k);
         result = strcmp(name, candidates[k].name);
-        printf("%d\n", result);
         if (result == 0)
         {
             candidates[k].votes += 1;
@@ -104,6 +102,7 @@ int most_votes(int arr[], int size)
         if (max < arr[k]) {
             max = arr[k];
         }
+    printf("%d\n", max);
     return max;
 }
 
