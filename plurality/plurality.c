@@ -67,7 +67,7 @@ int main(int argc, string argv[])
         arr[j] = candidates[j].votes;
     }
     size = sizeof(arr) / sizeof(arr[0]);
-    max = arr[0];
+    int max = arr[0];
     for(int k = 1; k < size; k++)
         if (max < arr[k]) {
             max = arr[k];
