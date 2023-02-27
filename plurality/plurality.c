@@ -97,7 +97,8 @@ bool vote(string name)
 void most_votes(int arr[])
 {
     int max = arr[0];
-    for(int k = 1; k < sizeof(arr) / sizeof(arr[0]); k++)
+    int size = sizeof(arr) / sizeof(arr[0];
+    for(int k = 1; k < size); k++)
         if (max < arr[k]) {
             max = arr[k];
             printf("%d\n", max);
