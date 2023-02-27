@@ -66,7 +66,6 @@ int main(int argc, string argv[])
         arr[j] = candidates[j].votes;
     }
 
-    // Find candidate with most votes
     int most_votes();
 
     // Display winner of election
@@ -96,6 +95,7 @@ bool vote(string name)
     return 0;
 }
 
+// Find candidate with most votes
 int most_votes(int[] arr, int size)
 {
     int max = arr[0];
