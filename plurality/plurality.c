@@ -100,8 +100,8 @@ bool vote(string name)
 int most_votes(int arr[], int size)
 {
     int max = arr[0];
-    for(int k = 1; k < size, k++)
-        if max < arr[k] {
+    for(int k = 1; k < size; k++)
+        if (max < arr[k]) {
             max = arr[k];
         }
     return max;
