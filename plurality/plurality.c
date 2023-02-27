@@ -67,7 +67,7 @@ int main(int argc, string argv[])
     }
 
     int size = sizeof(arr) / sizeof(arr[0]);
-    void most_votes(int arr[candidate_count], int size);
+    void most_votes(int arr[], int size);
 
     // Display winner of election
     print_winner();
@@ -98,7 +98,6 @@ bool vote(string name)
 void most_votes(int arr[], int size)
 {
     int max = arr[0];
-    printf("%d\n", max);
     for(int k = 1; k < size; k++)
         if (max < arr[k]) {
             max = arr[k];
