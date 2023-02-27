@@ -60,13 +60,13 @@ int main(int argc, string argv[])
     }
 
     // Make array of votes for each candidate
-    int arr[candidate_count];
+    int array[candidate_count];
     for (int j = 0; j < candidate_count; j++)
     {
-        arr[j] = candidates[j].votes;
+        array[j] = candidates[j].votes;
     }
 
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size = sizeof(array) / sizeof(array[0]);
     int most_votes(int[] arr, int size);
 
     // Display winner of election
