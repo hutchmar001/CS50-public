@@ -66,7 +66,7 @@ int main(int argc, string argv[])
         arr[j] = candidates[j].votes;
     }
 
-    int size = size_of(arr) / size_of(arr[0]);
+    int size = sizeof(arr) / sizeof(arr[0]);
     int most_votes(int[] arr, int size);
 
     // Display winner of election
