@@ -70,7 +70,7 @@ int main(int argc, string argv[])
     int most_votes(int arr[], int size);
 
     // Display winner of election
-    print_winner();
+    print_winner(max);
 }
 
 // Update vote totals given a new vote
@@ -107,7 +107,7 @@ int most_votes(int arr[], int size)
 }
 
 // Print the winner (or winners) of the election
-void print_winner(void)
+void print_winner(int max)
 {
     if (candidates[0].votes > max)
     {
