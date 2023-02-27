@@ -106,22 +106,6 @@ bool vote(string name)
     return 0;
 }
 
-// Find candidate with most votes
-void most_votes(int arr[], int size)
-{
-    int max = arr[0];
-    for(int k = 1; k < size; k++)
-        if (max < arr[k]) {
-            max = arr[k];
-            printf("%d\n", max);
-        }
-    for(int k = 1; k < size; k++)
-        if (candidates[k].votes == max)
-        {
-            printf("A wins!");
-        }
-}
-
 // Print the winner (or winners) of the election
 void print_winner()
 {
