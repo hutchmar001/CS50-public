@@ -90,6 +90,7 @@ bool vote(string name)
 int find_winner(int votes)
 {
     int arr[];
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
 }
 
 // Print the winner (or winners) of the election
