@@ -72,12 +72,6 @@ int main(int argc, string argv[])
         if (max < arr[k]) {
             max = arr[k];
         }
-    for(int k = 1; k < size; k++)
-        if (candidates[k].votes == max)
-        {
-            printf("%d\n", max);
-            printf("A wins!");
-        }
 
     void most_votes(int arr[], int size);
 
@@ -109,6 +103,11 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner()
 {
-
+    for(int k = 1; k < size; k++)
+        if (candidates[k].votes == max)
+        {
+            printf("%d\n", max);
+            printf("A wins!");
+        }
     return;
 }
