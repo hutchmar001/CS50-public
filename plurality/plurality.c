@@ -64,6 +64,7 @@ int main(int argc, string argv[])
     for (int j = 0; j < candidate_count; j++)
     {
         arr[j] = candidates[j].votes;
+        return arr[];
     }
 
     void most_votes(int arr[]);
