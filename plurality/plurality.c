@@ -67,7 +67,7 @@ int main(int argc, string argv[])
     }
 
     int size = sizeof(array) / sizeof(array[0]);
-    int most_votes(int[] arr, int size);
+    int most_votes();
 
     // Display winner of election
     print_winner();
