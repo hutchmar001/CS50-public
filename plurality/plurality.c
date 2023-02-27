@@ -22,7 +22,6 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
-int find_winner(int votes);
 
 int main(int argc, string argv[])
 {
@@ -60,6 +59,12 @@ int main(int argc, string argv[])
         }
     }
 
+    int arr[voter_count];
+    for (i = 0; i < voter_count; i++)
+    {
+        arr[i] = 
+    }
+
     // Display winner of election
     print_winner();
 }
@@ -87,11 +92,6 @@ bool vote(string name)
     return 0;
 }
 
-int find_winner(int votes)
-{
-    int arr[voter_count];
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
-}
 
 // Print the winner (or winners) of the election
 void print_winner(void)
