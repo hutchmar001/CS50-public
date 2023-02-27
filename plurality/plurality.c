@@ -109,7 +109,7 @@ int most_votes(int arr[], int size)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    if (candidates[0].votes > 0)
+    if (candidates[0].votes > max)
     {
         printf("A wins!");
     }
