@@ -89,7 +89,7 @@ bool vote(string name)
 
 int find_winner(int votes)
 {
-    
+    int arr[];
 }
 
 // Print the winner (or winners) of the election
