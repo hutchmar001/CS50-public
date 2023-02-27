@@ -98,7 +98,12 @@ bool vote(string name)
 
 int most_votes(int[] arr, int size)
 {
-    
+    int max = arr[0];
+    for(int k = 1; k < size, k++)
+        if max < arr[i] {
+            max = arr[i];
+        }
+    return max;
 }
 
 // Print the winner (or winners) of the election
