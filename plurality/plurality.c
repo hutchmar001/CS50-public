@@ -86,6 +86,7 @@ bool vote(string name)
     return 0;
 }
 
+int find_winner()
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
