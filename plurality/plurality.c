@@ -74,8 +74,6 @@ int main(int argc, string argv[])
             max = arr[k];
         }
 
-    void most_votes(int arr[], int size);
-
     // Display winner of election
     print_winner();
 }
