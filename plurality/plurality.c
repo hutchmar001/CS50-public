@@ -101,12 +101,13 @@ void most_votes(int arr[], int size)
     for(int k = 1; k < size; k++)
         if (max < arr[k]) {
             max = arr[k];
+            printf("%d\n", max);
         }
-    printf("%d\n", max);
-    if (candidates[0].votes == max)
-    {
-        printf("A wins!");
-    }
+    for(int k = 1; k < size; k++)
+        if (candidates[k].votes == max)
+        {
+            printf("A wins!");
+        }
 }
 
 // Print the winner (or winners) of the election
