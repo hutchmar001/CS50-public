@@ -60,16 +60,9 @@ int main(int argc, string argv[])
         }
     }
 
-    // Make array of votes for each candidate
-    int arr[candidate_count];
-    for (int j = 0; j < candidate_count; j++)
-    {
-        arr[j] = candidates[j].votes;
-    }
-    size = sizeof(arr) / sizeof(arr[0]);
-    int max = arr[0];
-    for(int k = 1; k < size; k++)
-        if (max < arr[k]) {
+    for(int k = 1; k < candidate_count; k++)
+        int max = candidates[0].votes;
+        if (max < candidates[k].votes) {
             max = arr[k];
         }
 
