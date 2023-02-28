@@ -59,8 +59,16 @@ int main(int argc, string argv[])
         }
     }
 
+    int max = candidates[0].votes;
+    for(int k = 0; k < candidate_count; k++)
+    {
+        if (max < candidates[k].votes) {
+            max = candidates[k].votes;
+        }
+    }
+
     // Display winner of election
-    print_winner();
+    print_winner(max);
 }
 
 // Update vote totals given a new vote
