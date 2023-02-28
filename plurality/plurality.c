@@ -61,7 +61,7 @@ int main(int argc, string argv[])
     }
 
     int max;
-    for(int k = 1; k < candidate_count; k++)
+    for(int k = 0; k < candidate_count; k++)
     {
         max = candidates[0].votes;
         if (max < candidates[k].votes) {
