@@ -21,7 +21,7 @@ int candidate_count;
 
 // Function prototypes
 bool vote(string name);
-void print_winner(max);
+void print_winner(int);
 
 int main(int argc, string argv[])
 {
