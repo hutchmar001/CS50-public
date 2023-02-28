@@ -67,7 +67,6 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%d\n", max);
     // Display winner of election
     print_winner(max);
 }
