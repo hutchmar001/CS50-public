@@ -60,11 +60,14 @@ int main(int argc, string argv[])
         }
     }
 
+    int max;
     for(int k = 1; k < candidate_count; k++)
-        int max = candidates[0].votes;
+    {
+        max = candidates[0].votes;
         if (max < candidates[k].votes) {
-            max = arr[k];
+            max = candidates[k].votes;
         }
+    }
 
     // Display winner of election
     print_winner(max);
