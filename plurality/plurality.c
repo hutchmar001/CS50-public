@@ -89,6 +89,7 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    // Selection sort is fastest for finding highest int
     int max = candidates[0].votes;
     for (int k = 0; k < candidate_count; k++)
     {
@@ -97,6 +98,8 @@ void print_winner(void)
             max = candidates[k].votes;
         }
     }
+
+    // Find candidates which match max score
     for (int l = 0; l < candidate_count; l++)
         if (candidates[l].votes == max)
         {
