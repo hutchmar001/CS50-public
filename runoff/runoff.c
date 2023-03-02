@@ -145,6 +145,14 @@ bool vote(int voter, int rank, string name)
             }
     }
     }
+    int arr[3][2];
+    for(int j=0; j<3; j++) {
+    // inner loop for column
+    for(int k=0; k<2; k++) {
+      printf("%d ", arr[i][j]);
+    }
+    printf("\n"); // new line
+  }
     return 0;
 }
 
