@@ -128,8 +128,9 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    int i = 0;
-    int result = strcmp(name, candidates[i].name);
+    for (int j = 0; j < candidate_count; j++)
+    {
+    int result = strcmp(name, candidates[j].name);
     if (result == 0)
     {
     printf("%d\n", result);
@@ -137,6 +138,7 @@ bool vote(int voter, int rank, string name)
     else
     {
     continue;
+    }
     }
     return 0;
 }
