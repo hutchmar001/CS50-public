@@ -70,7 +70,6 @@ bool vote(string name)
 {
     int j;
     int result;
-    char temp[20];
     for (j = 0; j < candidate_count; j++)
     {
         result = strcmp(name, candidates[j].name);
