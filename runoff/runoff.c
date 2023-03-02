@@ -153,7 +153,7 @@ bool vote(int voter, int rank, string name)
     }
     printf("\n"); // new line
   }
-    return 0;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
