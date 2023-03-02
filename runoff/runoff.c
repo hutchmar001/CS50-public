@@ -135,7 +135,7 @@ bool vote(int voter, int rank, string name)
     int result = strcmp(name, candidates[k].name);
     if (result == 0)
     {
-    preferences[j][k] = strcopy(name
+    memcpy(preferences[j][k],"name",sizeof("name"));
     }
     else
     {
