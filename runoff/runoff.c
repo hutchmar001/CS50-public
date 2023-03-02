@@ -130,17 +130,17 @@ bool vote(int voter, int rank, string name)
 {
     for (int j = 0; j < candidate_count; j++)
     {
-    for (int k = 0; k < candidate_count; k++)
-    {
-    int result = strcmp(name, candidates[k].name);
-    if (result == 0)
-    {
-    memcpy(preferences[j][k],"name",sizeof("name"));
-    }
-    else
-    {
-    continue;
-    }
+        for (int k = 0; k < candidate_count; k++)
+            {
+            int result = strcmp(name, candidates[k].name);
+            if (result == 0)
+            {
+            memcpy(preferences[j][k],"name",sizeof("name"));
+            }
+            else
+            {
+            continue;
+            }
     }
     }
     return 0;
