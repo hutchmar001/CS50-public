@@ -131,6 +131,7 @@ bool vote(int voter, int rank, string name)
 
             int result = strcmp(name, candidates[rank].name);
             printf("%d\n", result);
+            for (j = 0; j < )
             if (result == 0)
             {
             preferences[j][k] = preferences[voter][rank];
