@@ -152,9 +152,10 @@ return false;
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    for (int l = 0; l < candidate_count; l++)
+    for (int l = 0; l < voter_count; l++)
     {
-    printf("%d\n", candidates[l].votes);
+        for (int m = 0; l < voter_count; l++)
+    printf("%d\n", preferences[l][k]);
     }
     return;
 }
