@@ -139,7 +139,7 @@ bool vote(int voter, int rank, string name)
             }
             else
             {
-            continue;
+            return false;
             }
 return 0;
 }
