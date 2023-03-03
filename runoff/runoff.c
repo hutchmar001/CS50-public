@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
             printf("%d\n", result);
             if (result == 0)
             {
-            preferences[j][k] = preferences[voter][rank];
+            preferences[j][k] = candidates[k];
             printf("%d\n", preferences[j][k]);
             return true;
             }
