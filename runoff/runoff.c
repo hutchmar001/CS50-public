@@ -134,14 +134,15 @@ bool vote(int voter, int rank, string name)
             {
             int result = strcmp(name, candidates[k].name);
             printf("%d\n", result);
-            while (result != 0)
+            if (result == 0)
             {
-            return false;
-            }
-
             preferences[j][k] = preferences[voter][rank];
             return true;
-
+            }
+            else
+            {
+            continue;
+            }
             }
 
 }
