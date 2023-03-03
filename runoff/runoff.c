@@ -136,13 +136,12 @@ bool vote(int voter, int rank, string name)
             printf("%d\n", result);
             while (result != 0)
             {
-            break;
+            return false;
             }
-            else
-            {
+
             preferences[j][k] = preferences[voter][rank];
             return true;
-            }
+
             }
 
 }
