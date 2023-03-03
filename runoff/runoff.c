@@ -129,9 +129,10 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
             int k = 0;
-            int l = 0;
             int result = strcmp(name, candidates[k].name);
             printf("%d\n", result);
+            for (int l = 0; l < candidate_count; l++)
+            {
             if (result == 0)
             {
             preferences[k][l] = preferences[voter][rank];
@@ -139,7 +140,8 @@ bool vote(int voter, int rank, string name)
             }
             else
             {
-            return false;
+            continue;
+            }
             }
 return 0;
 }
