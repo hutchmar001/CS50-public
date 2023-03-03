@@ -144,7 +144,6 @@ bool vote(int voter, int rank, string name)
             continue;
             }
             }
-            return false;
 }
 return 0;
 }
