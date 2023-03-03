@@ -154,8 +154,10 @@ void tabulate(void)
 {
     for (int l = 0; l < voter_count; l++)
     {
-        for (int m = 0; l < voter_count; l++)
-    printf("%d\n", preferences[l][k]);
+        for (int m = 0; m < voter_count; m++)
+        {
+            printf("%d\n", preferences[l][m]);
+        }
     }
     return;
 }
