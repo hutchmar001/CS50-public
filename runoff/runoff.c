@@ -137,6 +137,7 @@ bool vote(int voter, int rank, string name)
             if (result == 0)
             {
             preferences[j][k] = preferences[voter][rank];
+            printf("%d\n", preferences[j][k]);
             return true;
             }
             else
