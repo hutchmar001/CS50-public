@@ -129,7 +129,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
 
-            int result = strcmp(name, candidates[k].name);
+            int result = strcmp(name, candidates[rank].name);
             printf("%d\n", result);
             if (result == 0)
             {
