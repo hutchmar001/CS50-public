@@ -141,10 +141,7 @@ bool vote(int voter, int rank, string name)
             printf("%d\n", preferences[j][k]);
             printf("%d\n", j);
             printf("%d\n", k);
-            printf("%d\n", preferences[0][0]);
-            printf("%d\n", preferences[0][1]);
-            printf("%d\n", preferences[1][0]);
-            printf("%d\n", preferences[1][1]);
+            l++;
             return true;
             }
             else
