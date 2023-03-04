@@ -159,6 +159,7 @@ return false;
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
+    int max = candidates[0].votes;
     for (int m = 0; m < voter_count; m++)
     {
         for (int n = 0; n < candidate_count; n++)
