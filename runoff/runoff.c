@@ -168,6 +168,7 @@ void tabulate(void)
 
         }
     }
+    return 0;
 }
 
 // Print the winner of the election, if there is one
