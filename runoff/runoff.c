@@ -145,11 +145,12 @@ bool vote(int voter, int rank, string name)
             continue;
             }
             }
+
+}
             printf("%d\n", preferences[0][0]);
             printf("%d\n", preferences[0][1]);
             printf("%d\n", preferences[1][0]);
             printf("%d\n", preferences[1][1]);
-}
 return false;
 }
 
