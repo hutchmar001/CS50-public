@@ -164,9 +164,9 @@ void tabulate(void)
     {
         for (int n = 0; n < candidate_count; n++)
         {
-            if (max < candidates[k].votes)
+            if (max < candidates[n].votes)
         {
-            max = candidates[k].votes;
+            max = candidates[n].votes;
         }
         }
     }
