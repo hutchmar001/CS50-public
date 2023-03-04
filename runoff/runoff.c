@@ -151,6 +151,7 @@ return false;
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
+{
         {
             printf("%d\n", preferences[0][0]);
         }
