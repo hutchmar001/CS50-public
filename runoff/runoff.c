@@ -164,9 +164,10 @@ void tabulate(void)
     {
         for (int n = 0; n < candidate_count; n++)
         {
-            int top = preferences[m][n]; //not the real top; just testing
-            printf("%d\n", top);
-
+            if (max < candidates[k].votes)
+        {
+            max = candidates[k].votes;
+        }
         }
     }
     return;
