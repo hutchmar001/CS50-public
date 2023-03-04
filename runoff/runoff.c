@@ -137,10 +137,10 @@ bool vote(int voter, int rank, string name)
             printf("%d\n", result);
             if (result == 0)
             {
-            preferences[j][k] = l;
-            printf("%d\n", preferences[j][k]);
-            printf("%d\n", j);
-            printf("%d\n", k);
+            preferences[voter][rank] = l;
+            printf("%d\n", preferences[voter][rank]);
+            printf("%d\n", voter);
+            printf("%d\n", rank);
             l++;
             return true;
             }
