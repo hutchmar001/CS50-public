@@ -165,16 +165,15 @@ void tabulate(void)
         for (int n = 0; n < candidate_count; n++)
         {
             o = preferences[m][n];
-            if (candidates[o].eliminated == false)
+            if (candidates[o].eliminated == true)
             {
-
-                candidates[o].votes +=1;
-                printf("%d\n", candidates[o].votes);
-                break;
+                continue;
             }
             else
             {
-                continue;
+                candidates[o].votes +=1;
+                printf("%d\n", candidates[o].votes);
+                break;
             }
         }
     }
