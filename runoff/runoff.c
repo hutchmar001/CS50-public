@@ -160,7 +160,7 @@ return false;
 void tabulate(void)
 {
     int o;
-    for (int m = 0; m < voter_count; m++)
+    for (int m = 0; m == voter_count; m++)
     {
         for (int n = 0; n < candidate_count; n++)
         {
