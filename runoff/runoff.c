@@ -173,7 +173,7 @@ void tabulate(void)
             {
                 candidates[o].votes +=1;
                 printf("%d\n", candidates[o].votes);
-                break;
+                continue;
             }
     }
 }
