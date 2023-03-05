@@ -172,10 +172,14 @@ void tabulate(void)
             }
         }
     }
-    
     int min = candidates[0].votes;
     for (int p = 1; p < candidate_count; p++)
         {
+            if (candidates[p].votes / 
+            {
+
+            }
+
             if (min > candidates[p].votes)
         {
             min = candidates[p].votes;
