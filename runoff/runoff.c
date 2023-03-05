@@ -162,16 +162,13 @@ void tabulate(void)
     int o;
     for (int m = 0; m < voter_count; m++)
     {
-        for (int n = 0; n < candidate_count; n++)
-        {
-            if (candidates[n].eliminated == false)
+            if (candidates[m].eliminated == false)
             {
-                o = preferences[m][n];
+                o = preferences[m][0];
                 candidates[o].votes +=1;
                 printf("%d\n", candidates[o].votes);
                 break;
             }
-        }
     }
 }
 
