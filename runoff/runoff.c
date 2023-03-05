@@ -169,7 +169,7 @@ void tabulate(void)
             max = preferences[m][n];
         }
         }
-        max = candidates[m].votes;
+        candidates[m].votes ;
         printf("%d\n", candidates[m].votes);
     }
     return;
