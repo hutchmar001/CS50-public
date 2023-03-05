@@ -166,9 +166,11 @@ void tabulate(void)
             if (candidates[n].eliminated == false)
             {
                 candidates[n].votes +=1;
+                break;
             }
         }
     }
+    printf("%d\n", rank);
     return;
 }
 
