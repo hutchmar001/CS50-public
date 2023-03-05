@@ -177,7 +177,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    for (int q = 1; q < candidate_count; q++)
+    for (int q = 0; q < candidate_count; q++)
     {
         if (candidates[q].votes / voter_count > 0.5)
             {
