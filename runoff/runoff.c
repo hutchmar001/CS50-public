@@ -174,6 +174,10 @@ void tabulate(void)
     }
     printf("%d\n", candidates[0].votes);
     printf("%d\n", candidates[1].votes);
+    for (int p = 0; p < candidate_count; p++)
+        {
+            
+        }
     return;
 }
 
