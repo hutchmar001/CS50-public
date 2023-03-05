@@ -159,14 +159,14 @@ return false;
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    int max = candidates[0].votes;
+    int max = 0;
     for (int m = 0; m < voter_count; m++)
     {
         for (int n = 0; n < candidate_count; n++)
         {
             if (max < preferences[m][n])
         {
-            max = candidates[n].votes;
+            max = preferences[m][n];
             printf("%d\n", max);
         }
         }
