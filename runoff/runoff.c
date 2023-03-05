@@ -159,13 +159,15 @@ return false;
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
+    int o;
     for (int m = 0; m < voter_count; m++)
     {
         for (int n = 0; n < candidate_count; n++)
         {
             if (candidates[n].eliminated == false)
             {
-                candidates[n].votes +=1;
+                o = preferences[m][n];
+                candidates[o].votes +=1;
                 break;
             }
         }
