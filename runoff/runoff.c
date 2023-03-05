@@ -132,28 +132,26 @@ bool vote(int voter, int rank, string name)
     for (int j = 0; j < voter_count; j++)
     {
         for (int k = 0; k < candidate_count; k++)
-            {
+        {
             int result = strcmp(name, candidates[k].name);
             printf("%d\n", result);
             if (result == 0)
             {
-            preferences[voter][rank] = l;
-            printf("%d\n", preferences[voter][rank]);
-            printf("%d\n", voter);
-            printf("%d\n", rank);
-            l++;
-            return true;
+                preferences[voter][rank] = l;
+                printf("%d\n", preferences[voter][rank]);
+                printf("%d\n", voter);
+                printf("%d\n", rank);
+                l++;
+                return true;
             }
             else
             {
-            l++;
-            continue;
+                l++;
+                continue;
             }
-            }
-
-}
-
-return false;
+        }
+    }
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
@@ -171,7 +169,7 @@ void tabulate(void)
             }
             else
             {
-                candidates[o].votes +=1;
+                candidates[o].votes += 1;
                 printf("%d\n", candidates[o].votes);
                 break;
             }
@@ -187,14 +185,14 @@ bool print_winner(void)
         float answer = (double)candidates[p].votes / voter_count;
         printf("%f\n", answer);
         if (answer > 0.5)
-            {
-                printf("%s\n", candidates[p].name);
-                return true;
-            }
-    else
-    {
-        continue;
-    }
+        {
+            printf("%s\n", candidates[p].name);
+            return true;
+        }
+        else
+        {
+            continue;
+        }
     }
     return false;
 }
@@ -204,12 +202,12 @@ int find_min(void)
 {
     int min = candidates[0].votes;
     for (int q = 1; q < candidate_count; q++)
-        {
-            if (min > candidates[q].votes && candidates[q].eliminated == false)
+    {
+        if (min > candidates[q].votes && candidates[q].eliminated == false)
         {
             min = candidates[q].votes;
         }
-        }
+    }
     return min;
 }
 
@@ -218,23 +216,23 @@ bool is_tie(int min)
 {
     int max = candidates[0].votes;
     for (int r = 0; r < candidate_count; r++)
-        {
-            if (max < candidates[r].votes && candidates[r].eliminated == false)
+    {
+        if (max < candidates[r].votes && candidates[r].eliminated == false)
         {
             max = candidates[r].votes;
         }
-        }
+    }
     for (int s = 0; s < candidate_count; s++)
+    {
+        if (candidates[s].votes < max && candidates[s].eliminated == false)
         {
-            if (candidates[s].votes < max && candidates[s].eliminated == false)
-            {
-                return false;
-            }
-            else
-            {
-                continue;
-            }
+            return false;
         }
+        else
+        {
+            continue;
+        }
+    }
     return true;
 }
 
@@ -242,11 +240,11 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     for (int t = 0; t < candidate_count; t++)
+    {
+        if (candidates[t].votes == min)
         {
-            if (candidates[t].votes == min)
-            {
-                candidates[t].eliminated = true;
-            }
+            candidates[t].eliminated = true;
         }
+    }
     return;
 }
