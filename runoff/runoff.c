@@ -160,11 +160,10 @@ return false;
 void tabulate(void)
 {
     int o;
-    int n = 0;
     for (int m = 0; m < voter_count; m++)
     {
-            while (n < candidate_count)
-            {
+        {
+            int n = 0;
             o = preferences[m][n];
             if (candidates[o].eliminated == true)
             {
@@ -175,9 +174,9 @@ void tabulate(void)
             {
                 candidates[o].votes +=1;
                 printf("%d\n", candidates[o].votes);
-                continue;
+                break;
             }
-            }
+        }
     }
 }
 
