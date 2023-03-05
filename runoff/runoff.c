@@ -181,8 +181,6 @@ bool print_winner(void)
 {
     for (int p = 0; p < candidate_count; p++)
     {
-        printf("%d\n", candidates[p].votes);
-        printf("%d\n", voter_count);
         float answer = (double)candidates[p].votes / voter_count;
         printf("%f\n", answer);
         if (answer > 0.5)
