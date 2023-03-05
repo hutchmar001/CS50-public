@@ -180,7 +180,7 @@ bool print_winner(void)
     for (int q = 1; q < candidate_count; q++)
     if (candidates[q].votes / voter_count > 0.5)
             {
-                printf("%d\n", candidates[q].name);
+                printf("%s\n", candidates[q].name);
                 return true;
             }
     else
