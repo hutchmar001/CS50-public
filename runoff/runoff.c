@@ -159,9 +159,9 @@ return false;
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    int max = 0;
     for (int m = 0; m < voter_count; m++)
     {
+        int max = 0;
         for (int n = 0; n < candidate_count; n++)
         {
             if (max < preferences[m][n])
