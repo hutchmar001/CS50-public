@@ -167,6 +167,7 @@ void tabulate(void)
             if (max < candidates[n].votes)
         {
             max = candidates[n].votes;
+            printf("%d\n", max);
         }
         }
     }
