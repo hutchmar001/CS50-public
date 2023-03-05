@@ -161,16 +161,13 @@ void tabulate(void)
 {
     for (int m = 0; m < voter_count; m++)
     {
-        int max = 0;
         for (int n = 0; n < candidate_count; n++)
         {
-            if (max < preferences[m][n])
-        {
-            max = preferences[m][n];
+            if (candidate[n].eliminated = false)
+            {
+                candidate[n]
+            }
         }
-        }
-        candidates[m].votes ;
-        printf("%d\n", candidates[m].votes);
     }
     return;
 }
