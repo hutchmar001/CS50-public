@@ -185,7 +185,7 @@ bool print_winner(void)
         printf("%d\n", voter_count);
         float answer = (double)candidates[p].votes / voter_count;
         printf("%f\n", answer);
-        if (candidates[p].votes / voter_count > 0.5)
+        if (answer > 0.5)
             {
                 printf("%s\n", candidates[p].name);
                 return true;
