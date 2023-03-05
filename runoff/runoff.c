@@ -167,7 +167,7 @@ void tabulate(void)
                 o = preferences[m][0];
                 candidates[o].votes +=1;
                 printf("%d\n", candidates[o].votes);
-                break;
+                continue;
             }
     }
 }
