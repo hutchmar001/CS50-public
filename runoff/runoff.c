@@ -177,11 +177,11 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    for (int q = 0; q < candidate_count; q++)
+    for (int p = 0; p < candidate_count; p++)
     {
-        if (candidates[q].votes / voter_count > 0.5)
+        if (candidates[p].votes / voter_count > 0.5)
             {
-                printf("%s\n", candidates[q].name);
+                printf("%s\n", candidates[p].name);
                 return true;
             }
     else
@@ -196,13 +196,13 @@ bool print_winner(void)
 int find_min(void)
 {
     int min = candidates[0].votes;
-    for (int p = 1; p < candidate_count; p++)
+    for (int q = 1; q < candidate_count; q++)
         {
-            if (min > candidates[p].votes)
+            if (min > candidates[q].votes)
         {
-            min = candidates[p].votes;
+            min = candidates[q].votes;
         }
-        eliminate(min);
+        return min;
         }
     return 0;
 }
