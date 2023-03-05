@@ -177,7 +177,8 @@ void tabulate(void)
         {
             if (candidates[p].votes / voter_count > 0.5)
             {
-
+                print_winner();
+                return;
             }
 
             if (min > candidates[p].votes)
@@ -187,7 +188,7 @@ void tabulate(void)
         }
         eliminate(min);
         }
-    return;
+
 }
 
 // Print the winner of the election, if there is one
