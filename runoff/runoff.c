@@ -166,7 +166,7 @@ void tabulate(void)
         {
             if (candidates[n].eliminated == false)
             {
-                o = preferences[m][0];
+                o = preferences[m][n];
                 candidates[o].votes +=1;
                 printf("%d\n", candidates[o].votes);
                 break;
