@@ -217,18 +217,18 @@ bool is_tie(int min)
             max = candidates[r].votes;
         }
         }
-    for (int s = 1; s < candidate_count; s++)
+    for (int s = 0; s < candidate_count; s++)
         {
             if (candidates[s].votes < max)
             {
-                return true;
+                return false;
             }
             else
             {
                 continue;
             }
         }
-    return false;
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
