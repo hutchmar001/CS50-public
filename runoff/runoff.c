@@ -178,7 +178,8 @@ void tabulate(void)
 bool print_winner(void)
 {
     for (int q = 1; q < candidate_count; q++)
-    if (candidates[q].votes / voter_count > 0.5)
+    {
+        if (candidates[q].votes / voter_count > 0.5)
             {
                 printf("%s\n", candidates[q].name);
                 return true;
@@ -187,6 +188,8 @@ bool print_winner(void)
     {
         return false;
     }
+    }
+    
 }
 
 // Return the minimum number of votes any remaining candidate has
