@@ -172,6 +172,10 @@ void tabulate(void)
                 printf("%d\n", candidates[o].votes);
                 break;
             }
+            else
+            {
+                
+            }
         }
     }
 }
