@@ -181,7 +181,8 @@ bool print_winner(void)
 {
     for (int p = 0; p < candidate_count; p++)
     {
-        printf("%d\n", candidates[p].votes / voter_count);
+        printf("%d\n", candidates[p].votes);
+        printf("%d\n", voter_count);
         if (candidates[p].votes / voter_count > 0.5)
             {
                 printf("%s\n", candidates[p].name);
