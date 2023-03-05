@@ -168,6 +168,7 @@ void tabulate(void)
             {
                 o = preferences[m][n];
                 candidates[o].votes +=1;
+                printf("%d\n", candidates[o].votes);
                 break;
             }
         }
