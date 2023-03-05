@@ -179,8 +179,8 @@ void tabulate(void)
         {
             min = candidates[p].votes;
             printf("%d\n", min);
-            eliminate(min);
         }
+        eliminate(min);
         }
     return;
 }
