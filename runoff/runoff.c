@@ -172,16 +172,6 @@ void tabulate(void)
             }
         }
     }
-    int min = candidates[0].votes;
-    for (int p = 1; p < candidate_count; p++)
-        {
-            if (min > candidates[p].votes)
-        {
-            min = candidates[p].votes;
-        }
-        eliminate(min);
-        }
-
 }
 
 // Print the winner of the election, if there is one
@@ -202,7 +192,15 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    int min = candidates[0].votes;
+    for (int p = 1; p < candidate_count; p++)
+        {
+            if (min > candidates[p].votes)
+        {
+            min = candidates[p].votes;
+        }
+        eliminate(min);
+        }
     return 0;
 }
 
