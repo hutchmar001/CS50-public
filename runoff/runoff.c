@@ -172,8 +172,6 @@ void tabulate(void)
             }
         }
     }
-    printf("%d\n", candidates[0].votes);
-    printf("%d\n", candidates[1].votes);
     int min = candidates[0].votes;
     for (int p = 1; p < candidate_count; p++)
         {
@@ -181,6 +179,7 @@ void tabulate(void)
         {
             min = candidates[p].votes;
             printf("%d\n", min);
+            eliminate(min);
         }
         }
     return;
