@@ -8,6 +8,10 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     pixel.rgbtRed = 50;
     for (int h = 0; h < 5; h++)
         for (int w = 0; w < 5; w++)
-            image[h][w] = image[0][0];
+        {
+            image[h][w].rgbtBlue = pixel.rgbtBlue;
+            image[h][w].rgbtGreen = pixel.rgbtGreen;
+            image[h][w].rgbtRed = pixel.rgbtRed;
+        }
     // Change all black pixels to a color of your choosing
 }
