@@ -3,9 +3,9 @@
 void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE pixel = image[0][0];
-    pixel.rgbtBlue = 250;
-    pixel.rgbtGreen = 250;
-    pixel.rgbtRed = 50;
+    pixel.rgbtBlue = 25;
+    pixel.rgbtGreen = 0;
+    pixel.rgbtRed = 250;
     for (int h = 0; h < 5; h++)
         for (int w = 0; w < 5; w++)
             if (image[h][w].rgbtBlue == 0 && image[h][w].rgbtGreen == 0 && image[h][w].rgbtRed == 0)
