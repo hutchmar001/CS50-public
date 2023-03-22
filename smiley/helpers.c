@@ -14,5 +14,5 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
                 image[h][w].rgbtGreen = pixel.rgbtGreen;
                 image[h][w].rgbtRed = pixel.rgbtRed;
             }
-        // Change all black pixels to a color of your choosing
+    // Change all black pixels to a color of your choosing
 }
