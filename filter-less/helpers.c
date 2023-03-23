@@ -41,9 +41,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                         image[h][w].rgbtBlue = 255;
                     }
             }
-            printf("%i\n", image[0][0].rgbtRed);
-                printf("%i\n", image[0][0].rgbtGreen);
-                printf("%i\n", image[0][0].rgbtBlue);
     return;
 }
 
@@ -64,6 +61,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 image[h][w].rgbtBlue = image[h][oppwidth].rgbtBlue;
                 image[h][oppwidth].rgbtBlue = tmp3;
                 oppwidth --;
+                image[h][w].rgbtRed = filteredRed;
+                image[h][w].rgbtGreen = filteredGreen;
+                image[h][w].rgbtBlue = filteredBlue;
                 printf("%i\n", image[h][w].rgbtRed);
                 printf("%i\n", image[h][w].rgbtGreen);
                 printf("%i\n", image[h][w].rgbtBlue);
