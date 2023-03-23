@@ -61,6 +61,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 image[h][w].rgbtBlue = image[h][oppwidth].rgbtBlue;
                 image[h][oppwidth].rgbtBlue = tmp3;
                 oppwidth --;
+                printf("%i\n", image[h][w].rgbtRed);
+                printf("%i\n", image[h][w].rgbtGreen);
+                printf("%i\n", image[h][w].rgbtBlue);
             }
     return;
 }
