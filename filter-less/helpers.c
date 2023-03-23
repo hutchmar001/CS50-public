@@ -51,9 +51,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int w = 0; w < width; w++)
             {
                 int oppwidth = width;
-                int tmp = w;
-                image[h][w] = image[h][oppwidth];
-                image[h][oppwidth] = image[h][tmp];
+                int tmp = image[h][w].rgbtRed;
+                image[h][w].rgbtRed = image[h][oppwidth].rgbtRed;
+                image[h][oppwidth].rgbtRed = tmp;
                 oppwidth --;
             }
     return;
