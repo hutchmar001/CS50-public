@@ -47,9 +47,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-
+    int oppwidth = width;
     for (int h = 0; h < height; h++)
-        int oppwidth = width;
         for (int w = 0; w < (width / 2); w++)
             {
                 int tmp = image[h][w].rgbtRed;
