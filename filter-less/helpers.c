@@ -52,21 +52,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int w = 0; w < (width / 2); w++)
             {
                 int tmp = image[h][w].rgbtRed;
-                image[h][w].rgbtRed = image[h][oppwidth].rgbtRed;
+                int filteredRed = image[h][oppwidth].rgbtRed;
                 image[h][oppwidth].rgbtRed = tmp;
                 int tmp2 = image[h][w].rgbtGreen;
-                image[h][w].rgbtGreen = image[h][oppwidth].rgbtGreen;
+                int filteredGreen = image[h][oppwidth].rgbtGreen;
                 image[h][oppwidth].rgbtGreen = tmp2;
                 int tmp3 = image[h][w].rgbtBlue;
-                image[h][w].rgbtBlue = image[h][oppwidth].rgbtBlue;
+                int filteredBlue = image[h][oppwidth].rgbtBlue;
                 image[h][oppwidth].rgbtBlue = tmp3;
-                oppwidth --;
                 image[h][w].rgbtRed = filteredRed;
                 image[h][w].rgbtGreen = filteredGreen;
                 image[h][w].rgbtBlue = filteredBlue;
-                printf("%i\n", image[h][w].rgbtRed);
-                printf("%i\n", image[h][w].rgbtGreen);
-                printf("%i\n", image[h][w].rgbtBlue);
+                
+                oppwidth --;
             }
     return;
 }
