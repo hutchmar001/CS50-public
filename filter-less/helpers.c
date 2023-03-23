@@ -53,12 +53,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 int tmp = image[h][w].rgbtRed;
                 int filteredRed = image[h][oppwidth].rgbtRed;
-                image[h][oppwidth].rgbtRed = tmp;
+
                 int tmp2 = image[h][w].rgbtGreen;
                 int filteredGreen = image[h][oppwidth].rgbtGreen;
-                image[h][oppwidth].rgbtGreen = tmp2;
+
                 int tmp3 = image[h][w].rgbtBlue;
                 int filteredBlue = image[h][oppwidth].rgbtBlue;
+                image[h][oppwidth].rgbtRed = tmp;
+                image[h][oppwidth].rgbtGreen = tmp2;
                 image[h][oppwidth].rgbtBlue = tmp3;
                 image[h][w].rgbtRed = filteredRed;
                 image[h][w].rgbtGreen = filteredGreen;
