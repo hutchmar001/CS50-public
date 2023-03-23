@@ -42,6 +42,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                     }
             }
     printf("%i\n", image[0][0].rgbtRed);
+    printf("%i\n", image[0][0].rgbtGreen);
+    printf("%i\n", image[0][0].rgbtBlue);
     return;
 }
 
