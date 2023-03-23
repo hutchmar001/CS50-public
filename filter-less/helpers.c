@@ -19,9 +19,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    printf("%i\n", image[0][0].rgbtRed);
-    printf("%i\n", image[0][0].rgbtGreen);
-    printf("%i\n", image[0][0].rgbtBlue);
+
     for (int h = 0; h < height; h++)
         for (int w = 0; w < width; w++)
             {
@@ -44,9 +42,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                         image[h][w].rgbtBlue = 255;
                     }
             }
-    printf("%i\n", image[0][0].rgbtRed);
-    printf("%i\n", image[0][0].rgbtGreen);
-    printf("%i\n", image[0][0].rgbtBlue);
+
     return;
 }
 
