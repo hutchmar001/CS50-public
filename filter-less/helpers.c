@@ -64,6 +64,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 image[h][w].rgbtGreen = filteredGreen;
                 image[h][w].rgbtBlue = filteredBlue;
                 oppwidth --;
+                if (oppwidth == (width /2))
+                {
+                    oppwidth = width;
+                }
             }
     return;
 }
