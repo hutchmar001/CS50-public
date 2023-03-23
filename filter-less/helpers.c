@@ -49,7 +49,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int oppwidth = width;
     for (int h = 0; h < height; h++)
-        for (int w = 0; w < round(width-30); w++)
+        for (int w = 0; w < round(width-); w++)
             {
                 int tmp = image[h][w].rgbtRed;
                 int filteredRed = image[h][oppwidth].rgbtRed;
