@@ -54,6 +54,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 int tmp = image[h][w].rgbtRed;
                 image[h][w].rgbtRed = image[h][oppwidth].rgbtRed;
                 image[h][oppwidth].rgbtRed = tmp;
+                int tmp2 = image[h][w].rgbtGreen;
+                image[h][w].rgbtGreen = image[h][oppwidth].rgbtGreen;
+                image[h][oppwidth].rgbtGreen = tmp2;
+                int tmp3 = image[h][w].rgbtBlue;
+                image[h][w].rgbtBlue = image[h][oppwidth].rgbtBlue;
+                image[h][oppwidth].rgbtBlue = tmp3;
                 oppwidth --;
             }
     return;
