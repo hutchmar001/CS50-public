@@ -70,5 +70,114 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
+    for (int h = 0; h < height; h++)
+        for (int w = 0; w < width; w++)
+        {
+            if (h == 0 && w == 0)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h][w + 1].rgbtRed
+                                           + image[h + 1][w + 1].rgbtRed + image[h + 1][w].rgbtRed) / 4;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h][w + 1].rgbtGreen
+                                             + image[h + 1][w + 1].rgbtGreen + image[h + 1][w].rgbtGreen) / 4;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h][w + 1].rgbtBlue
+                                            + image[h + 1][w + 1].rgbtBlue + image[h + 1][w].rgbtBlue) / 4;
+            }
+            else if (h == 0 && w == width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
+                                           + image[h + 1][w - 1].rgbtRed + image[h][w - 1].rgbtRed) / 4;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h + 1][w].rgbtGreen
+                                             + image[h + 1][w - 1].rgbtGreen + image[h][w - 1].rgbtGreen) / 4;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue
+                                            + image[h + 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue) / 4;
+            }
+            else if (h == height - 1 && w == 0)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h - 1][w].rgbtRed
+                                           + image[h - 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed) / 4;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h - 1][w].rgbtGreen
+                                             + image[h - 1][w + 1].rgbtGreen + image[h][w + 1].rgbtGreen) / 4;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h - 1][w].rgbtBlue
+                                            + image[h - 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue) / 4;
+            }
+            else if (h == height - 1 && w == width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h - 1][w].rgbtRed
+                                           + image[h][w - 1].rgbtRed + image[h - 1][w - 1].rgbtRed) / 4;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h - 1][w].rgbtGreen
+                                             + image[h][w - 1].rgbtGreen + image[h - 1][w - 1].rgbtGreen) / 4;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h - 1][w].rgbtBlue
+                                            + image[h][w - 1].rgbtBlue + image[h - 1][w - 1].rgbtBlue) / 4;
+            }
+            else if (h == 0 && 0 < w < width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
+                                           + image[h + 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed
+                                           + image[h][w - 1].rgbtRed + image[h + 1][w - 1].rgbtRed) / 6;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h + 1][w].rgbtGreen
+                                             + image[h + 1][w + 1].rgbtGreen + image[h][w + 1].rgbtGreen
+                                             + image[h][w - 1].rgbtGreen + image[h + 1][w - 1].rgbtGreen) / 6;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue
+                                            + image[h + 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue
+                                            + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 6;
+            }
+            else if (0 < h < height - 1 && w == width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
+                                           + image[h - 1][w].rgbtRed + image[h - 1][w - 1].rgbtRed
+                                           + image[h][w - 1].rgbtRed + image[h + 1][w - 1].rgbtRed) / 6;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h + 1][w].rgbtGreen
+                                             + image[h - 1][w].rgbtGreen + image[h - 1][w - 1].rgbtGreen
+                                             + image[h][w - 1].rgbtGreen + image[h + 1][w - 1].rgbtGreen) / 6;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue
+                                            + image[h - 1][w].rgbtBlue + image[h - 1][w - 1].rgbtBlue
+                                            + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 6;
+            }
+            else if (h == height - 1 && 0 < w < width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h][w + 1].rgbtRed
+                                           + image[h - 1][w + 1].rgbtRed + image[h - 1][w].rgbtRed
+                                           + image[h - 1][w - 1].rgbtRed + image[h][w - 1].rgbtRed) / 6;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h][w + 1].rgbtGreen
+                                             + image[h - 1][w + 1].rgbtGreen + image[h - 1][w].rgbtGreen
+                                             + image[h - 1][w - 1].rgbtGreen + image[h][w - 1].rgbtGreen) / 6;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h][w + 1].rgbtBlue
+                                            + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue
+                                            + image[h - 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue) / 6;
+            }
+            else if (0 < h < height - 1 && w == 0)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
+                                           + image[h + 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed
+                                           + image[h - 1][w + 1].rgbtRed + image[h - 1][w].rgbtRed) / 6;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h + 1][w].rgbtGreen
+                                             + image[h + 1][w + 1].rgbtGreen + image[h][w + 1].rgbtGreen
+                                             + image[h - 1][w + 1].rgbtGreen + image[h - 1][w].rgbtGreen) / 6;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue
+                                            + image[h + 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue
+                                            + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue) / 6;
+            }
+            else if (0 < h < height - 1 && 0 < w < width - 1)
+            {
+                copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed + image[h + 1][w + 1].rgbtRed
+                                           + image[h][w + 1].rgbtRed + image[h - 1][w + 1].rgbtRed + image[h - 1][w].rgbtRed
+                                           + image[h - 1][w - 1].rgbtRed + image[h][w - 1].rgbtRed + image[h + 1][w - 1].rgbtRed) / 9;
+                copy[h][w].rgbtGreen = round(image[h][w].rgbtGreen + image[h + 1][w].rgbtGreen + image[h + 1][w + 1].rgbtGreen
+                                             + image[h][w + 1].rgbtGreen + image[h - 1][w + 1].rgbtGreen + image[h - 1][w].rgbtGreen
+                                             + image[h - 1][w - 1].rgbtGreen + image[h][w - 1].rgbtGreen + image[h + 1][w - 1].rgbtGreen) / 9;
+                copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue + image[h + 1][w + 1].rgbtBlue
+                                            + image[h][w + 1].rgbtBlue + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue
+                                            + image[h - 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 9;
+
+            }
+            else
+            {
+
+            }
+        image[h][w].rgbtRed = copy[h][w].rgbtRed;
+        image[h][w].rgbtGreen = copy[h][w].rgbtGreen;
+        image[h][w].rgbtBlue = copy[h][w].rgbtBlue;
+        }
     return;
 }
