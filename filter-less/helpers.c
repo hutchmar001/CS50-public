@@ -158,7 +158,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                             + image[h + 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue
                                             + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue) / 6;
             }
-            else if (0 < h < height - 1 && 0 < w < width - 1)
+            else
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed + image[h + 1][w + 1].rgbtRed
                                            + image[h][w + 1].rgbtRed + image[h - 1][w + 1].rgbtRed + image[h - 1][w].rgbtRed
@@ -170,9 +170,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                             + image[h][w + 1].rgbtBlue + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue
                                             + image[h - 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 9;
 
-            }
-            else
-            {
+            
 
             }
         image[h][w].rgbtRed = copy[h][w].rgbtRed;
