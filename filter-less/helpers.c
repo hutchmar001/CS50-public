@@ -83,7 +83,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h][w + 1].rgbtBlue
                                             + image[h + 1][w + 1].rgbtBlue + image[h + 1][w].rgbtBlue) / 4;
             }
-            else if (h == 0 && w == width - 1)
+            else if (h == 0 && w == width)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
                                            + image[h + 1][w - 1].rgbtRed + image[h][w - 1].rgbtRed) / 4;
@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h + 1][w].rgbtBlue
                                             + image[h + 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue) / 4;
             }
-            else if (h == height - 1 && w == 0)
+            else if (h == height && w == 0)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h - 1][w].rgbtRed
                                            + image[h - 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed) / 4;
@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h - 1][w].rgbtBlue
                                             + image[h - 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue) / 4;
             }
-            else if (h == height - 1 && w == width - 1)
+            else if (h == height && w == width)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h - 1][w].rgbtRed
                                            + image[h][w - 1].rgbtRed + image[h - 1][w - 1].rgbtRed) / 4;
@@ -110,7 +110,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 copy[h][w].rgbtBlue = round(image[h][w].rgbtBlue + image[h - 1][w].rgbtBlue
                                             + image[h][w - 1].rgbtBlue + image[h - 1][w - 1].rgbtBlue) / 4;
             }
-            else if (h == 0 && 0 < w < width - 1)
+            else if (h == 0 && 0 < w < width)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
                                            + image[h + 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed
@@ -122,7 +122,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                             + image[h + 1][w + 1].rgbtBlue + image[h][w + 1].rgbtBlue
                                             + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 6;
             }
-            else if (0 < h < height - 1 && w == width - 1)
+            else if (0 < h < height && w == width)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
                                            + image[h - 1][w].rgbtRed + image[h - 1][w - 1].rgbtRed
@@ -134,7 +134,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                             + image[h - 1][w].rgbtBlue + image[h - 1][w - 1].rgbtBlue
                                             + image[h][w - 1].rgbtBlue + image[h + 1][w - 1].rgbtBlue) / 6;
             }
-            else if (h == height - 1 && 0 < w < width - 1)
+            else if (h == height && 0 < w < width)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h][w + 1].rgbtRed
                                            + image[h - 1][w + 1].rgbtRed + image[h - 1][w].rgbtRed
@@ -146,7 +146,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                             + image[h - 1][w + 1].rgbtBlue + image[h - 1][w].rgbtBlue
                                             + image[h - 1][w - 1].rgbtBlue + image[h][w - 1].rgbtBlue) / 6;
             }
-            else if (0 < h < height - 1 && w == 0)
+            else if (0 < h < height && w == 0)
             {
                 copy[h][w].rgbtRed = round(image[h][w].rgbtRed + image[h + 1][w].rgbtRed
                                            + image[h + 1][w + 1].rgbtRed + image[h][w + 1].rgbtRed
