@@ -77,7 +77,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             if (h == 0 && w == 0) //upper left corner
             {
                 copy[h][w].rgbtRed = (round((double)(image[h][w].rgbtRed + image[h][w + 1].rgbtRed
-                                           + image[h + 1][w + 1].rgbtRed + image[h + 1][w].rgbtRed) / 4));
+                                                     + image[h + 1][w + 1].rgbtRed + image[h + 1][w].rgbtRed) / 4));
                 copy[h][w].rgbtGreen = (round((double)(image[h][w].rgbtGreen + image[h][w + 1].rgbtGreen
                                              + image[h + 1][w + 1].rgbtGreen + image[h + 1][w].rgbtGreen) / 4));
                 copy[h][w].rgbtBlue = (round((double)(image[h][w].rgbtBlue + image[h][w + 1].rgbtBlue
