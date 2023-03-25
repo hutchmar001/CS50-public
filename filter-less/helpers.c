@@ -7,12 +7,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int h = 0; h < height; h++)
         for (int w = 0; w < width; w++)
-            {
-                int greyscale = round((image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3.0);
-                image[h][w].rgbtBlue = greyscale;
-                image[h][w].rgbtGreen = greyscale;
-                image[h][w].rgbtRed = greyscale;
-            }
+        {
+            int greyscale = round((image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3.0);
+            image[h][w].rgbtBlue = greyscale;
+            image[h][w].rgbtGreen = greyscale;
+            image[h][w].rgbtRed = greyscale;
+        }
     return;
 }
 
@@ -21,26 +21,26 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int h = 0; h < height; h++)
         for (int w = 0; w < width; w++)
-            {
-                int sepiaRed = round(.393 * image[h][w].rgbtRed + .769 * image[h][w].rgbtGreen + .189 * image[h][w].rgbtBlue);
-                int sepiaGreen = round(.349 * image[h][w].rgbtRed + .686 * image[h][w].rgbtGreen + .168 * image[h][w].rgbtBlue);
-                int sepiaBlue = round(.272 * image[h][w].rgbtRed + .534 * image[h][w].rgbtGreen + .131 * image[h][w].rgbtBlue);
-                image[h][w].rgbtRed = sepiaRed;
-                image[h][w].rgbtGreen = sepiaGreen;
-                image[h][w].rgbtBlue = sepiaBlue;
-                if (sepiaRed > 255)
-                    {
-                        image[h][w].rgbtRed = 255;
-                    }
-                if (sepiaGreen > 255)
-                    {
-                        image[h][w].rgbtGreen = 255;
-                    }
-                if (sepiaBlue > 255)
-                    {
-                        image[h][w].rgbtBlue = 255;
-                    }
-            }
+        {
+            int sepiaRed = round(.393 * image[h][w].rgbtRed + .769 * image[h][w].rgbtGreen + .189 * image[h][w].rgbtBlue);
+            int sepiaGreen = round(.349 * image[h][w].rgbtRed + .686 * image[h][w].rgbtGreen + .168 * image[h][w].rgbtBlue);
+            int sepiaBlue = round(.272 * image[h][w].rgbtRed + .534 * image[h][w].rgbtGreen + .131 * image[h][w].rgbtBlue);
+            image[h][w].rgbtRed = sepiaRed;
+            image[h][w].rgbtGreen = sepiaGreen;
+            image[h][w].rgbtBlue = sepiaBlue;
+            if (sepiaRed > 255)
+                {
+                    image[h][w].rgbtRed = 255;
+                }
+            if (sepiaGreen > 255)
+                {
+                    image[h][w].rgbtGreen = 255;
+                }
+            if (sepiaBlue > 255)
+                {
+                    image[h][w].rgbtBlue = 255;
+                }
+        }
     return;
 }
 
@@ -50,20 +50,20 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int oppwidth = width - 1;
     for (int h = 0; h < height; h++)
         for (int w = 0; w < (width - w - 1); w++)
-            {
-                int tmp = image[h][w].rgbtRed;
-                int tmp2 = image[h][w].rgbtGreen;
-                int tmp3 = image[h][w].rgbtBlue;
-                int filteredRed = image[h][oppwidth - w].rgbtRed;
-                int filteredGreen = image[h][oppwidth - w].rgbtGreen;
-                int filteredBlue = image[h][oppwidth - w].rgbtBlue;
-                image[h][oppwidth - w].rgbtRed = tmp;
-                image[h][oppwidth - w].rgbtGreen = tmp2;
-                image[h][oppwidth - w].rgbtBlue = tmp3;
-                image[h][w].rgbtRed = filteredRed;
-                image[h][w].rgbtGreen = filteredGreen;
-                image[h][w].rgbtBlue = filteredBlue;
-            }
+        {
+            int tmp = image[h][w].rgbtRed;
+            int tmp2 = image[h][w].rgbtGreen;
+            int tmp3 = image[h][w].rgbtBlue;
+            int filteredRed = image[h][oppwidth - w].rgbtRed;
+            int filteredGreen = image[h][oppwidth - w].rgbtGreen;
+            int filteredBlue = image[h][oppwidth - w].rgbtBlue;
+            image[h][oppwidth - w].rgbtRed = tmp;
+            image[h][oppwidth - w].rgbtGreen = tmp2;
+            image[h][oppwidth - w].rgbtBlue = tmp3;
+            image[h][w].rgbtRed = filteredRed;
+            image[h][w].rgbtGreen = filteredGreen;
+            image[h][w].rgbtBlue = filteredBlue;
+    }
     return;
 }
 
