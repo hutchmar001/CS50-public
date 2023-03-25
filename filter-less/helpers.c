@@ -174,8 +174,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         image[h][w].rgbtGreen = copy[h][w].rgbtGreen;
         image[h][w].rgbtBlue = copy[h][w].rgbtBlue;
         printf("%i\n", copy[h][w].rgbtRed);
-        printf("%i\n", copy[h][w].rgbtRed);
-        printf("%i\n", copy[h][w].rgbtRed);
+        printf("%i\n", copy[h][w].rgbtGreen);
+        printf("%i\n", copy[h][w].rgbtBlue);
         printf("%i\n", image[h][w].rgbtRed);
         printf("%i\n", image[h][w].rgbtGreen);
         printf("%i\n", image[h][w].rgbtBlue);
