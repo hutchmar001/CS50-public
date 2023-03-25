@@ -29,17 +29,17 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtGreen = sepiaGreen;
             image[h][w].rgbtBlue = sepiaBlue;
             if (sepiaRed > 255)
-                {
-                    image[h][w].rgbtRed = 255;
-                }
+            {
+                image[h][w].rgbtRed = 255;
+            }
             if (sepiaGreen > 255)
-                {
-                    image[h][w].rgbtGreen = 255;
-                }
+            {
+                image[h][w].rgbtGreen = 255;
+            }
             if (sepiaBlue > 255)
-                {
-                    image[h][w].rgbtBlue = 255;
-                }
+            {
+                image[h][w].rgbtBlue = 255;
+            }
         }
     return;
 }
@@ -63,7 +63,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtRed = filteredRed;
             image[h][w].rgbtGreen = filteredGreen;
             image[h][w].rgbtBlue = filteredBlue;
-    }
+        }
     return;
 }
 
