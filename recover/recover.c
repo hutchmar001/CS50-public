@@ -4,7 +4,8 @@
 int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    char buffer[33];
+    while (fread(&buffer, sizeof(char), 33, file) == file)
 {
 
 
