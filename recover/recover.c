@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     for (i = 0; i < 1000; i++)
     {
-        (fwrite(&buffer, sizeof(char), 512, file) == 512)
+        fwrite(&buffer, sizeof(char), 512, file);
     }
 
 }
