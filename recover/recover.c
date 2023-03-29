@@ -4,8 +4,8 @@
 int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
-    char buffer[512];
-    while (fread(&buffer, sizeof(char), 512, file) == 512)
+    char buffer[5000];
+    while (fread(&buffer, sizeof(char), 5000, file) == 5000)
 {
     if (buffer[0] == 0xff)
         {
