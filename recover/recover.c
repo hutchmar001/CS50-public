@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     if (buffer[0] == 255)
         {
-            printf("%s\n", &buffer[0]);
+            printf("%c\n", buffer[0]);
         }
 }
 }
