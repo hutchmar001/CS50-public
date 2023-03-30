@@ -11,6 +11,8 @@ int main(int argc, char *argv[])
 }
 for (int i = 0; i < 4; i++)
 {
+    if (buffer[i] == 255) {
 printf("%c\n", buffer[i]);
+}
 }
 }
