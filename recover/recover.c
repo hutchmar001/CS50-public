@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
 {
         fread(buffer, sizeof(char), 5000, file);
 }
-for (int i = 0; i < 16; i++)
+for (int i = 0; i < 4; i++)
 {
-printf("%s\n", buffer[i]);
+printf("%c\n", buffer[i]);
 }
 }
