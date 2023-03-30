@@ -8,6 +8,9 @@ int main(int argc, char *argv[])
     while (fread(&buffer, sizeof(char), 5000, file) == 5000)
 {
         fread(buffer, sizeof(char), 5000, file);
-        printf("%c\n", buffer[0]);
+}
+for (int i = 0; i < 16; i++)
+{
+printf("%c\n", buffer[i]);
 }
 }
