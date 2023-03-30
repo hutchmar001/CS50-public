@@ -12,14 +12,9 @@ int main(int argc, char *argv[])
 }
 for (int i = 0; i < 5000; i++)
 {
-    if (strcmp(&buffer[i], "V") == 0)
+    if (strcmp(&buffer[i], "E") == 0)
     {
-
+    printf("%c\n", buffer[i]);
     }
-
 }
- for (int i = 0; i < 16; i++)
-    {
-        printf("%c\n", buffer[i]);
-    }
 }
