@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -9,10 +10,11 @@ int main(int argc, char *argv[])
 {
         fread(buffer, sizeof(char), 5000, file);
 }
-for (int i = 0; i < 4; i++)
+for (int i = 0; i < 5000; i++)
 {
-    if (buffer[i] == "255") {
-printf("%c\n", buffer[i]);
-}
+    if (strcmp(&buffer[i], "!") == 0)
+    {
+    printf("%c\n", buffer[i]);
+    }
 }
 }
