@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     char buffer[5000];
     while (fread(buffer, sizeof(char), 5000, file) == 5000)
 {
-        fread(buffer, sizeof(char), 5000, file);
+        sprintf(buffer, sizeof(char), 5000, file);
 }
 for (int i = 0; i < 5000; i++)
 {
