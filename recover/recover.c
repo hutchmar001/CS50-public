@@ -8,11 +8,11 @@ int main(int argc, char *argv[])
     char buffer[5000];
     while (fread(buffer, sizeof(char), 5000, file) == 5000)
 {
-        sprintf(buffer, sizeof(char), 5000, file);
+        fread(buffer, sizeof(char), 5000, file);
 }
 for (int i = 0; i < 5000; i++)
 {
-    if (strcmp(&buffer[i], "E") == 0)
+    if (strcmp(&buffer[i], "I") == 0)
     {
     printf("%c\n", buffer[i]);
     }
