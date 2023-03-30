@@ -11,6 +11,6 @@ int main(int argc, char *argv[])
 }
 for (int i = 0; i < 16; i++)
 {
-printf("%c\n", buffer[i]);
+printf("%s\n", buffer[i]);
 }
 }
