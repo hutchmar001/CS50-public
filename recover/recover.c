@@ -7,9 +7,9 @@ int main(int argc, char *argv[])
     char buffer[5000];
     while (fread(&buffer, sizeof(char), 5000, file) == 5000)
 {
-    if (buffer[0] == "0xff")
+    if (buffer[0] == 255)
         {
-            printf("%c\n", &buffer[0]);
+            printf("%s\n", &buffer[0]);
         }
 }
 }
