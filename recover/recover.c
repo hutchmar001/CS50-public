@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     int i = 0;
     unsigned char buffer[10000];
 
-    while (fread(buffer, 1, 1, file) == 1)
+    while (fread(buffer, 512, 1, file) == 1)
 {
     if (buffer[0] == 255 && buffer[1] == 0xd8 && buffer[2] == 0xff)
     {
