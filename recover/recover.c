@@ -6,6 +6,9 @@ int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
     unsigned char buffer[10000];
+    int *ptr1 = new int;
+   int *ptr2 = new int[10];
+
     while (fread(buffer, sizeof(char), 512, file) == 512)
 {
         fread(buffer, sizeof(char), 512, file);
