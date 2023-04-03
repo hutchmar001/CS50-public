@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
     {
         fread(buffer, 1, 1, file);
-        printf("%d\n%d\n", buffer[0], buffer[1], buffer[2]);
+        printf("%d\n%d\n%d\n", buffer[0], buffer[1], buffer[2]);
 
 
     }
