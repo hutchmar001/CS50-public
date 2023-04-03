@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
     d_array = (int *)malloc(sizeof(double)*100);
 
 
-    while (fread(buffer, sizeof(char), 512, file) == 512)
+    while (fread(buffer, 1, 512, file) == 512)
 {
-        fread(buffer, sizeof(char), 512, file);
+        fread(buffer, 1, 512, file);
 }
 for (int i = 0; i < 10000; i++)
 {
