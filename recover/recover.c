@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, 1, file) == 1)
 {
-    if (buffer[i] == 0xFF)
+    if (buffer[i] == 255)
     {
         fread(buffer, 1, 1, file);
     }
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 for (i = 0; i < 10000; i++)
     if (buffer[i] == 0xFF)
     {
-        printf("%x\n%x\n", buffer[i], buffer[i+1]);
+        printf("%d\n%d\n", buffer[i], buffer[i+1]);
     }
 
 }
