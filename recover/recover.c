@@ -5,13 +5,9 @@
 int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
-    unsigned char buffer[10000];
 
-    int    *p_array;
-    double *d_array;
-    p_array = (int *)malloc(sizeof(int)*50);
-    d_array = (int *)malloc(sizeof(double)*100);
-
+    int    *buffer;
+    buffer = (int *)malloc(sizeof(int)*50);
 
     while (fread(buffer, 1, 512, file) == 512)
 {
