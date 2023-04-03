@@ -14,7 +14,7 @@ for (int i = 0; i < 5000; i++)
 {
     if (buffer[i] == 255)
     {
-    printf("%d\n", buffer[i]);
+    printf("%d\n%d\n", buffer[i], buffer[i+1]);
     }
 }
 }
