@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 for (i = 0; i < 10000; i++)
     if (buffer[i] == 0xFF)
     {
-        printf("%x\n%x", buffer[i], buffer[i+1]);
+        printf("%x\n%x\n", buffer[i], buffer[i+1]);
     }
 
 }
