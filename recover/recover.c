@@ -16,5 +16,9 @@ int main(int argc, char *argv[])
         fread(buffer, 1, 512, file);
     }
 }
+for (i = 0; i < 10; i++)
+    {
+        printf("%c\n", buffer[i]);
+    }
 
 }
