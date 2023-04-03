@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
 {
         fread(buffer, sizeof(char), 5000, file);
 }
-for (int i = 0; i < 20; i++)
+for (int i = 0; i < 5000; i++)
 {
-
+    if (strcmp())
     printf("%x\n", buffer[i]);
 
 }
