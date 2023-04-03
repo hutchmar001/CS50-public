@@ -8,11 +8,11 @@ int main(int argc, char *argv[])
     int i = 0;
     unsigned char buffer[10000];
 
-    while (fread(buffer, sizeof(char), 512, file) == 512)
+    while (fread(buffer, 1, 1, file) == 1)
 {
     if (buffer[i] == 0xFF)
     {
-        fread(buffer, sizeof(char), 512, file);
+        fread(buffer, 1, 1, file);
     }
 }
 for (i = 0; i < 10000; i++)
