@@ -6,8 +6,12 @@ int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
     unsigned char buffer[10000];
-    int *ptr1 = new int;
-   int *ptr2 = new int[10];
+
+    int    *p_array;
+    double *d_array;
+    p_array = (int *)malloc(sizeof(int)*50);
+    d_array = (int *)malloc(sizeof(double)*100);
+
 
     while (fread(buffer, sizeof(char), 512, file) == 512)
 {
