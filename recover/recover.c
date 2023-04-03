@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 }
 for (int i = 0; i < 5000; i++)
 {
-    if (strcmp(&buffer[i], "d9") == 0)
+    if (strcmp(buffer[i], "d9") == 0)
     {
     printf("%x\n", buffer[i]);
     }
