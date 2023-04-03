@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 }
 for (int i = 0; i < 10000; i++)
 {
-    if (buffer[i] == 216)
+    if (&buffer[i] == 216)
     {
     printf("%d\n%d\n%d\n", buffer[i], buffer[i+1], buffer[i+2]);
     }
