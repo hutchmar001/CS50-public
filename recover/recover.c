@@ -5,15 +5,16 @@
 int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
-    char buffer[10000];
-    while (fread(buffer, sizeof(char), 10000, file) == 5000)
+    unsigned char buffer[10000];
+    while (fread(buffer, sizeof(char), 10000, file) == 10000)
 {
         fread(buffer, sizeof(char), 10000, file);
 }
-for (int i = 0; i < 50; i++)
+for (int i = 0; i < 10000; i++)
 {
-
-    printf("%p\n%p\n%p\n", &buffer[i], &buffer[i+1], &buffer[i+2]);
-
+    if (buffer[i] == 0xff)
+    {
+    printf("%d\n%d\n%d\n", buffer[i], buffer[i+1], buffer[i+2]);
+    }
 }
 }
