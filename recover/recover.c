@@ -10,11 +10,10 @@ int main(int argc, char *argv[])
 {
         fread(buffer, sizeof(char), 10000, file);
 }
-for (int i = 0; i < 10000; i++)
+for (int i = 0; i < 10; i++)
 {
-    if (&buffer[i] == 216)
-    {
-    printf("%d\n%d\n%d\n", buffer[i], buffer[i+1], buffer[i+2]);
-    }
+
+    printf("%s\n%s\n%s\n", &buffer[i], &buffer[i+1], &buffer[i+2]);
+
 }
 }
