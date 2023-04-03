@@ -6,8 +6,7 @@ int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
     int i = 0;
-    unsigned char *buffer;
-    buffer = (unsigned char *)malloc(sizeof(unsigned char)*1000000);
+    unsigned char buffer[10000];
 
     while (fread(buffer, 1, 512, file) == 512)
 {
