@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
     }
 }
 for (i = 0; i < 10000; i++)
-    if (buffer[i] == 255)
+    if (buffer[i] == 0xff)
     {
-        printf("%d\n%d\n%d\n", buffer[i], buffer[i+1], buffer[i+2]);
+        printf("%d\n%d\n", buffer[i], buffer[i+1]);
     }
 
 }
