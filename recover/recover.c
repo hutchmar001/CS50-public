@@ -19,10 +19,7 @@ int main(int argc, char *argv[])
     {
         char jpegs[50];
         sprintf(jpegs, "%03i.jpg", i);
-    }
-    for (int i = 0; i <= 50; i++)
-    {
-    printf("%c\n", jpegs[i]);
+        printf("%c\n", jpegs[i]);
     }
 }
 }
