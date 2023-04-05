@@ -16,6 +16,6 @@ int main(int argc, char *argv[])
     {
         sprintf(buffer, "%03i.jpg", i)
     }
-    i++
+    i++;
 }
 }
