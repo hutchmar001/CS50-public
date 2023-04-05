@@ -21,7 +21,9 @@ int main(int argc, char *argv[])
         sprintf(&jpegs[i], "%03i.jpg", i);
 
     }
-    
-    printf("%s\n", &jpegs[i]);
+    for (int i = 0; i <= 50; i++)
+    {
+    printf("%c\n", jpegs[i]);
+    }
 }
 }
