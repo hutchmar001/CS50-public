@@ -15,8 +15,9 @@ int main(int argc, char *argv[])
     while (fread(buffer, 512, 1, file) == 1)
 {
     fread(buffer, 512, 1, file);
-    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-        for (int i = 0; i <= 50; i++)
+    for (int i = 0; i <= 50; i++)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+
     {
         sprintf(jpegs, "%03i.jpg\n", i);
         printf("%c", jpegs[i]);
