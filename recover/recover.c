@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
     }
     unsigned char buffer[1000];
     int i = 0;
-    while (fread(buffer, 512, 1, file) == 1)
+    while (fread(buffer, 1, 512, file) == 512)
 {
-    fread(buffer, 512, 1, file);
+    fread(buffer, 1, 512, file);
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
         char jpegs[50];
