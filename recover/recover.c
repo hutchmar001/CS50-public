@@ -14,13 +14,15 @@ int main(int argc, char *argv[])
     while (fread(buffer, 512, 1, file) == 1)
 {
     fread(buffer, 512, 1, file);
+
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-        int i = 0;
+        for (int i = 0; i <= 50; i++)
+        {
         char jpegs[50];
         sprintf(&jpegs[i], "%03i.jpg", i);
         printf("%s\n", &jpegs[i]);
-        i++;
+        }
     }
 }
 }
