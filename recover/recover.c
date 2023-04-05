@@ -10,11 +10,11 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 512, 1, file) == 1)
 {
-    FILE *000.jpeg;
+    FILE jpegs;
     fread(buffer, 512, 1, file);
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-
+        
     }
     i++;
 }
