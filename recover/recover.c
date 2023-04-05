@@ -24,5 +24,5 @@ int main(int argc, char *argv[])
     }
 }
 }
-fp = fopen( "file.txt" , "w" );
+   fp = fopen( "file.txt" , "w" );
    fwrite(str , 1 , sizeof(str) , fp );
