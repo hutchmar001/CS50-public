@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     {
         sprintf(jpegs, "%03i.jpg", i);
         i++;
+        printf("%c", jpegs[i]);
     }
 }
 }
