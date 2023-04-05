@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         printf("File cannot be opened for reading.");
         return 1;
     }
-    unsigned char buffer[100];
+    unsigned char buffer[1000];
     int i = 0;
     while (fread(buffer, 512, 1, file) == 1)
 {
