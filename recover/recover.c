@@ -10,10 +10,12 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 512, 1, file) == 1)
 {
+    int i = 0;
     fread(buffer, 512, 1, file);
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-        printf("%d\n%d\n%d\n%d\n", buffer[0], buffer[1], buffer[2], buffer[3]);
+        sprintf(buffer, "%03i.jpg", i)
     }
+    i++
 }
 }
