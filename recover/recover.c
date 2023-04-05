@@ -10,16 +10,17 @@ int main(int argc, char *argv[])
         printf("File cannot be opened for reading.");
         return 1;
     }
-    unsigned char buffer[10000];
+    unsigned char buffer[100];
+    int i = 0;
     while (fread(buffer, 512, 1, file) == 1)
 {
     fread(buffer, 512, 1, file);
-    int i = 0;
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
         char jpegs[50];
         sprintf(&jpegs[i], "%03i.jpg", i);
         printf("%s\n", &jpegs[i]);
+        i++;
     }
 }
 }
