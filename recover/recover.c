@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     {
         char jpegs[50];
         sprintf(&jpegs[i], "%03i.jpg", i);
-        FILE *img = fopen(jpegs, "w");
+        FILE *img = fopen(&jpegs[i], "w");
         i++;
     }
 }
