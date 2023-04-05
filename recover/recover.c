@@ -19,10 +19,8 @@ int main(int argc, char *argv[])
         char jpegs[50];
         sprintf(&jpegs[i], "%03i.jpg", i);
         FILE *img = fopen(&jpegs[i], "w");
-        fwrite( )
+        fwrite(&buffer[0], 1, 512, img);
         i++;
     }
 }
 }
-   fp = fopen( "file.txt" , "w" );
-   fwrite(str , 1 , sizeof(str) , fp );
