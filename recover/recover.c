@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         for (int i = 0; i <= 50; i++)
     {
-        sprintf(jpegs, "%03i.jpg\n", i);
+        sprintf(&jpegs[i], "%03i.jpg\n", i);
         printf("%c", jpegs[i]);
     }
 }
