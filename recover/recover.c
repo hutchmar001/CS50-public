@@ -11,14 +11,15 @@ int main(int argc, char *argv[])
         return 1;
     }
     unsigned char buffer[10000];
-
+    int i = 0;
     while (fread(buffer, 512, 1, file) == 1)
 {
-    FILE jpegs;
+    FILE *jpegs;
     fread(buffer, 512, 1, file);
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-        
+        sprintf(jpegs, "%03i.jpg", i);
+        i++;
     }
 }
 }
