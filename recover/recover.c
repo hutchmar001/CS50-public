@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        fwrite(&buffer[i], 1, 512, img);
+        continue;
     }
 }
 fclose(file);
