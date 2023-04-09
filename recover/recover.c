@@ -29,6 +29,9 @@ int main(int argc, char *argv[])
         else
         {
             fclose(img);
+            char jpegs[1000];
+            sprintf(&jpegs[i], "%03i.jpg", i);
+            img = fopen(&jpegs[i], "w");
         }
     }
     else
