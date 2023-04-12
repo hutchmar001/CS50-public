@@ -39,9 +39,17 @@ bool valid(string password)
             {
                 upper = true;
             }
-            if (40 < array[i] && array[i] < 91)
+            if (96 < array[i] && array[i] < 123)
             {
-                upper = true;
+                lower = true;
+            }
+            if (47 < array[i] && array[i] < 58)
+            {
+                num = true;
+            }
+            if (96 < array[i] && array[i] < 123)
+            {
+                lower = true;
             }
 
         }
