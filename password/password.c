@@ -30,34 +30,34 @@ bool valid(string password)
     bool num = false;
     bool sym = false;
     for (int i = 0; i < (strlen(password)); i++)
-        {
-            array[i] = (int)password[i];
-        }
+    {
+        array[i] = (int)password[i];
+    }
     for (int i = 0; i < (strlen(password)); i++)
+    {
+        if (65 < array[i] && array[i] < 91)
         {
-            if (65 < array[i] && array[i] < 91)
-            {
-                upper = true;
-            }
-            if (96 < array[i] && array[i] < 123)
-            {
-                lower = true;
-            }
-            if (47 < array[i] && array[i] < 58)
-            {
-                num = true;
-            }
-            if (32 < array[i] && array[i] < 48)
-            {
-                sym = true;
-            }
+            upper = true;
         }
+        if (96 < array[i] && array[i] < 123)
+        {
+            lower = true;
+        }
+        if (47 < array[i] && array[i] < 58)
+        {
+            num = true;
+        }
+        if (32 < array[i] && array[i] < 48)
+        {
+            sym = true;
+        }
+    }
     if (upper == true && lower == true && num == true && sym == true)
     {
         return true;
     }
     else
     {
-    return false;
+        return false;
     }
 }
