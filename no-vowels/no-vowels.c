@@ -37,20 +37,25 @@ string replace(string string)
 {
     for (int i = 0; i < strlen(string); i++)
     {
-        switch (string[i])
+        if (string[i] == c1)
         {
-            case c1:
-                string[i] = c2;
-                break;
-            case c3:
-                string[i] = c4;
-                break;
-            case c5:
-                string[i] = c6;
-                break;
-            case c7:
-                string[i] = c8;
-                break;
+            (string[i] = c2);
+        }
+        else if (string[i] == c3)
+        {
+            (string[i] = c4);
+        }
+        else if (string[i] == c5)
+        {
+            (string[i] = c6);
+        }
+        else if (string[i] == c7)
+        {
+            (string[i] = c8);
+        }
+        else
+        {
+            continue;
         }
     }
     return string;
