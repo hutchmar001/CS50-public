@@ -32,6 +32,6 @@ int convert(string input)
     }
     else
     {
-        return atoi(input);
+        return stoi(input);
     }
 }
