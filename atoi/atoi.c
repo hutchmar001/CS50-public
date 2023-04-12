@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 int convert(string input);
+int total = 0;
 
 int main(void)
 {
@@ -26,7 +27,6 @@ int main(void)
 
 int convert(string input)
 {
-    int total = 0;
     int i = strlen(input) -1;
     if (i < 0)
     {
