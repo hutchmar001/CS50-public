@@ -26,7 +26,7 @@ int main(void)
 
 int convert(string input)
 {
-    int i = strlen(input);
+    int i = strlen(input) -2;
     printf("%i\n", i);
     if (i < 0)
     {
@@ -34,7 +34,7 @@ int convert(string input)
     }
     else
     {
-        int result = input[0] - '0';
+        int result = input[i] - '0';
         return result;
         i--;
     }
