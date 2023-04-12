@@ -4,6 +4,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 bool valid(string password);
 
@@ -23,10 +24,13 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    int array[strlen(password)];
     bool upper = false;
     bool lower = false;
     bool num = false;
     bool sym = false;
-    
+    array[0] = (int)password[0];
+    printf("%i\n", array[0]);
+
     return false;
 }
