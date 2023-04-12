@@ -38,7 +38,7 @@ int convert(string input)
     {
         int result = input[i] - '0';
         input[i] = '\0';
-        total = result * 10 ^ j;
+        total = result * pow(10, j);
         printf("total is %i\n", result);
         j++;
         convert(input);
