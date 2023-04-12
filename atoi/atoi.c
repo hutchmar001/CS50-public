@@ -35,8 +35,10 @@ int convert(string input)
     else
     {
         int result = input[i] - '0';
+        int total = 0;
+        total += result;
         input[i] = '\0';
         convert(input);
-        return result;
+        return total;
     }
 }
