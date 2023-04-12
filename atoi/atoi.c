@@ -26,8 +26,8 @@ int main(void)
 
 int convert(string input)
 {
+    int total = 0;
     int i = strlen(input) -1;
-    printf("i is %i\n", i);
     if (i < 0)
     {
         return 0;
@@ -36,7 +36,9 @@ int convert(string input)
     {
         int result = input[i] - '0';
         input[i] = '\0';
+        printf("%i\n", result);
+        total += result;
         convert(input);
-        return result;
+        return total;
     }
 }
