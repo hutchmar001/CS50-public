@@ -49,10 +49,9 @@ bool valid(string password)
             }
             if (96 < array[i] && array[i] < 123)
             {
-                lower = true;
+                sym = true;
             }
-
         }
-
+    if ()
     return false;
 }
