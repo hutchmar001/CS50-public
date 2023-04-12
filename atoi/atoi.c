@@ -27,6 +27,7 @@ int main(void)
 int convert(string input)
 {
     int i = strlen(input);
+    printf("%i\n", i);
     if (i < 0)
     {
         return 0;
