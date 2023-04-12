@@ -42,7 +42,7 @@ string replace(string string)
             case c1:
                 string[i] = c2;
                 break;
-            case c1:
+            case c2:
                 string[i] = c2;
                 break;
         }
