@@ -27,7 +27,7 @@ int main(void)
 int convert(string input)
 {
     int i = strlen(input) -1;
-    printf("%i\n", i);
+    printf("i is %i\n", i);
     if (i < 0)
     {
         return 0;
@@ -36,7 +36,7 @@ int convert(string input)
     {
         int result = input[i] - '0';
         input[i] = '\0';
-        printf("%c\n", input[i]);
+        printf("input at i is %c\n", input[i]);
         convert(input);
         return result;
     }
