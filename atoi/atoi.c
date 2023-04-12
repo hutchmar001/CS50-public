@@ -36,7 +36,6 @@ int convert(string input)
     {
         int result = input[i] - '0';
         input[i] = '\0';
-        printf("input at i is %c\n", input[i]);
         convert(input);
         return result;
     }
