@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int convert(string input);
 
@@ -25,13 +26,14 @@ int main(void)
 
 int convert(string input)
 {
-    int i;
+    int i = 0;
     if (i < 0)
     {
         return 0;
     }
     else
     {
-        return stoi(input);
+        return atoi(input);
+        i--;
     }
 }
