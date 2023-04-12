@@ -38,21 +38,21 @@ string replace(string string)
     for (int i = 0; i < strlen(string); i++)
     {
         if (string[i] == c1)
-            {
-                (string[i] = c2);
-            }
+        {
+            (string[i] = c2);
+        }
         else if (string[i] == c3)
-            {
-                (string[i] = c4);
-            }
+        {
+            (string[i] = c4);
+        }
         else if (string[i] == c5)
-            {
-                (string[i] = c6);
-            }
+        {
+            (string[i] = c6);
+        }
         else if (string[i] == c7)
-            {
-                (string[i] = c8);
-            }
+        {
+            (string[i] = c8);
+        }
         else
         {
             continue;
