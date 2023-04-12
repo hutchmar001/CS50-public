@@ -23,6 +23,10 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool upper = false;
+    bool lower = false;
+    bool num = false;
+    bool sym = false;
     
     return false;
 }
