@@ -52,6 +52,12 @@ bool valid(string password)
                 sym = true;
             }
         }
-    if ()
+    if (upper == true && lower == true && num == true && sym == true)
+    {
+        return true;
+    }
+    else
+    {
     return false;
+    }
 }
