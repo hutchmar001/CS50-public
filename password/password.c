@@ -35,7 +35,7 @@ bool valid(string password)
         }
     for (int i = 0; i < (strlen(password)); i++)
         {
-            if (40 < array[i] && array[i] < 91)
+            if (65 < array[i] && array[i] < 91)
             {
                 upper = true;
             }
@@ -47,7 +47,7 @@ bool valid(string password)
             {
                 num = true;
             }
-            if (96 < array[i] && array[i] < 123)
+            if (32 < array[i] && array[i] < 48)
             {
                 sym = true;
             }
