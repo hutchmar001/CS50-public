@@ -37,5 +37,6 @@ int convert(string input)
         int result = input[i] - '0';
         return result;
         i--;
+        convert(input);
     }
 }
