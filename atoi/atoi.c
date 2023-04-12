@@ -34,7 +34,7 @@ int convert(string input)
     }
     else
     {
-        return atoi(&input[i-1]);
+        return atoi(input[i-1]);
         i--;
     }
 }
