@@ -42,25 +42,15 @@ string replace(string string)
             case c1:
                 string[i] = c2;
                 break;
-            case c2:
-                string[i] = c2;
+            case c3:
+                string[i] = c4;
                 break;
-        }
-        else if (string[i] == c3)
-        {
-            (string[i] = c4);
-        }
-        else if (string[i] == c5)
-        {
-            (string[i] = c6);
-        }
-        else if (string[i] == c7)
-        {
-            (string[i] = c8);
-        }
-        else
-        {
-            continue;
+            case c5:
+                string[i] = c6;
+                break;
+            case c7:
+                string[i] = c8;
+                break;
         }
     }
     return string;
