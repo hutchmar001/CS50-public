@@ -25,5 +25,5 @@ int main(void)
 
 int convert(string input)
 {
-    int result = atoi
+    
 }
