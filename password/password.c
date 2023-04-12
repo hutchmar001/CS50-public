@@ -29,8 +29,14 @@ bool valid(string password)
     bool lower = false;
     bool num = false;
     bool sym = false;
-    array[0] = (int)password[0];
-    printf("%i\n", array[0]);
+    for (int i = 0; i < (strlen(password)); i++)
+        {
+            array[i] = (int)password[i];
+        }
+    for (int i = 0; i < (strlen(password)); i++)
+        {
+            if ()
+        }
 
     return false;
 }
