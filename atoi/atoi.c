@@ -7,6 +7,7 @@
 
 int convert(string input);
 int total = 0;
+int j = 0;
 
 int main(void)
 {
@@ -28,7 +29,7 @@ int main(void)
 int convert(string input)
 {
     int i = strlen(input) -1;
-    int j = 0;
+
     if (i < 0)
     {
         return 0;
