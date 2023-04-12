@@ -40,7 +40,6 @@ int convert(string input)
         input[i] = '\0';
         printf("%i\n", result);
         total = result * 10 ^ j;
-        printf("total is %i\n", result);
         j++;
         convert(input);
         return total;
