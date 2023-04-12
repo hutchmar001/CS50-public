@@ -25,5 +25,13 @@ int main(void)
 
 int convert(string input)
 {
-    
+    int i;
+    if (input[i] < 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return atoi(input);
+    }
 }
