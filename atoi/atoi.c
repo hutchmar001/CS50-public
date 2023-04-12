@@ -38,6 +38,7 @@ int convert(string input)
         input[i] = '\0';
         printf("%i\n", result);
         total += result * 10;
+        printf("total is %i\n", result);
         convert(input);
         return total;
     }
