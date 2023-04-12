@@ -26,14 +26,14 @@ int main(void)
 
 int convert(string input)
 {
-    int i = 0;
+    int i = strlen(input);
     if (i < 0)
     {
         return 0;
     }
     else
     {
-        return atoi(input);
+        return atoi(&input[i-1]);
         i--;
     }
 }
