@@ -33,7 +33,7 @@ int convert(string input)
     }
     else
     {
-        return convert(atoi(input));
+        return atoi(input);
         i--;
     }
 }
