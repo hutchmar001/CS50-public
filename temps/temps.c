@@ -63,12 +63,13 @@ int main(void)
 void sort_cities(void)
 {
     // Selection sort is fastest for finding highest int
-    int max = candidates[0].votes;
-    for (int k = 0; k < candidate_count; k++)
+    int max = temps[0].temp;
+    for (int k = 0; k < NUM_CITIES; k++)
     {
-        if (max < candidates[k].votes)
+        if (max < temps[k].temp)
         {
-            max = candidates[k].votes;
+            max = temps[k].temp;
         }
+        printf("%i\n", max);
     }
 }
