@@ -4,7 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-#define NUM_CITIES 10
+#define NUM_CITIES 11
 
 typedef struct
 {
@@ -26,39 +26,33 @@ int main(void)
 
     temps[1].city = "Boston";
     temps[1].temp = 82;
-    temps[1].elim = false;
 
     temps[2].city = "Chicago";
     temps[2].temp = 85;
-    temps[2].elim = false;
 
     temps[3].city = "Denver";
     temps[3].temp = 90;
-    temps[3].elim = false;
 
     temps[4].city = "Las Vegas";
     temps[4].temp = 105;
-    temps[4].elim = false;
 
     temps[5].city = "Los Angeles";
     temps[5].temp = 82;
-    temps[5].elim = false;
 
     temps[6].city = "Miami";
     temps[6].temp = 97;
-    temps[6].elim = false;
 
     temps[7].city = "New York";
     temps[7].temp = 85;
-    temps[7].elim = false;
 
     temps[8].city = "Phoenix";
     temps[8].temp = 107;
-    temps[8].elim = false;
 
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
-    temps[9].elim = false;
+
+    temps[10].city = "0";
+    temps[10].temp = 0;
 
     sort_cities();
 
@@ -73,16 +67,15 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    struct temps temporary;
         for (int j = 0; j < NUM_CITIES; j++)
     {
         for (int k = 0; k < NUM_CITIES; k++)
         {
         if (temps[j].temp < temps[j + 1].temp)
             {
-                temporary = temps[j];
+                temps[10] = temps[j];
                 temps[j] = temps[j + 1];
-                temps[j + 1] = temporary;
+                temps[j + 1] = temps[10];
             }
     }
 }
