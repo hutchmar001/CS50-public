@@ -4,7 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-#define NUM_CITIES 11
+#define NUM_CITIES 10
 
 typedef struct
 {
