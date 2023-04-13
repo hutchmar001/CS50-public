@@ -80,12 +80,12 @@ void sort_cities(void)
     {
         for (int k = 0; k < NUM_CITIES; k++)
         {
-            if (max < temps[k].temp)
+            if (max < temps[k].temp && temps[j].elim == false)
             {
                 max = temps[k].temp;
             }
         }
-        if (max == temps[j].temp && temps[j].elim == false)
+        if (max == temps[j].temp)
             {
                 temps[j] = temps[l];
                 temps[j].elim = true;
