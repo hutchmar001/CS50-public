@@ -70,6 +70,5 @@ void sort_cities(void)
         {
             max = temps[k].temp;
         }
-        printf("%i\n", max);
     }
 }
