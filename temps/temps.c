@@ -74,23 +74,17 @@ int main(void)
 void sort_cities(void)
 {
     // Selection sort is fastest for finding highest int
-    int max = temps[0].temp;
         for (int j = 0; j < NUM_CITIES; j++)
     {
         for (int k = 0; k < NUM_CITIES; k++)
         {
-            if (max < temps[k].temp && temps[j].elim == false)
+        if (temps[j].temp < temps[j + 1].temp)
             {
-                max = temps[k].temp;
+                temp = temps[j];
+                temps[j] = temps[j + 1];
+                temps[j + 1] = temp;
             }
-        }
-        for (int l = 0; l < NUM_CITIES; l++)
-        {
-        if (max == temps[l].temp)
-            {
-                temps[l] = temps[j];
-                temps[l].elim = true;
-            }
-        }
+
     }
+}
 }
