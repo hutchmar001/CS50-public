@@ -67,6 +67,7 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
+        // Bubble sort for sorting list of ints
         for (int j = 0; j < NUM_CITIES; j++)
     {
         for (int k = 0; k < NUM_CITIES; k++)
