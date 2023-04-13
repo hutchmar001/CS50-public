@@ -10,6 +10,7 @@ typedef struct
 {
     string city;
     int temp;
+    bool elim;
 }
 avg_temp;
 
@@ -21,33 +22,43 @@ int main(void)
 {
     temps[0].city = "Austin";
     temps[0].temp = 97;
+    temps[0].elim = false;
 
     temps[1].city = "Boston";
     temps[1].temp = 82;
+    temps[1].elim = false;
 
     temps[2].city = "Chicago";
     temps[2].temp = 85;
+    temps[2].elim = false;
 
     temps[3].city = "Denver";
     temps[3].temp = 90;
+    temps[3].elim = false;
 
     temps[4].city = "Las Vegas";
     temps[4].temp = 105;
+    temps[4].elim = false;
 
     temps[5].city = "Los Angeles";
     temps[5].temp = 82;
+    temps[5].elim = false;
 
     temps[6].city = "Miami";
     temps[6].temp = 97;
+    temps[6].elim = false;
 
     temps[7].city = "New York";
     temps[7].temp = 85;
+    temps[7].elim = false;
 
     temps[8].city = "Phoenix";
     temps[8].temp = 107;
+    temps[8].elim = false;
 
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
+    temps[9].elim = false;
 
     sort_cities();
 
@@ -65,7 +76,6 @@ void sort_cities(void)
     // Selection sort is fastest for finding highest int
     int max = temps[0].temp;
     int l = 0;
-    bool elim = false;
         for (int j = 0; j < NUM_CITIES; j++)
     {
         for (int k = 0; k < NUM_CITIES; k++)
@@ -75,9 +85,10 @@ void sort_cities(void)
                 max = temps[k].temp;
             }
         }
-        if (max == temps[j].temp)
+        if (max == temps[j].temp && temps[j].elim == false)
             {
                 temps[j] = temps[l];
+                temps[j].elim = true;
                 l++;
             }
     }
