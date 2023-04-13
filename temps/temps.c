@@ -66,17 +66,15 @@ void sort_cities(void)
     int max = temps[0].temp;
         for (int k = 0; k < NUM_CITIES; k++)
         {
+            int l = 0;
             if (max < temps[k].temp)
             {
                 max = temps[k].temp;
             }
-        }
-        for (int j = 0; j < NUM_CITIES; j++)
-    {
-        if (max == temps[j].temp)
+            if (max == temps[k].temp)
             {
-                temps[j] = temps[l];
+                temps[k] = temps[l];
                 l++;
             }
-    }
+        }
 }
