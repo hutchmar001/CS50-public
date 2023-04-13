@@ -73,18 +73,17 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Selection sort is fastest for finding highest int
+    struct temps temporary;
         for (int j = 0; j < NUM_CITIES; j++)
     {
         for (int k = 0; k < NUM_CITIES; k++)
         {
         if (temps[j].temp < temps[j + 1].temp)
             {
-                temp = temps[j];
+                temporary = temps[j];
                 temps[j] = temps[j + 1];
-                temps[j + 1] = temp;
+                temps[j + 1] = temporary;
             }
-
     }
 }
 }
