@@ -15,6 +15,7 @@ typedef struct
 avg_temp;
 
 avg_temp temps[NUM_CITIES];
+avg_temp temporary[1];
 
 void sort_cities(void);
 
@@ -22,7 +23,6 @@ int main(void)
 {
     temps[0].city = "Austin";
     temps[0].temp = 97;
-    temps[0].elim = false;
 
     temps[1].city = "Boston";
     temps[1].temp = 82;
@@ -51,8 +51,8 @@ int main(void)
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
 
-    temps[10].city = "0";
-    temps[10].temp = 0;
+    temporary[0].city = "0";
+    temporary[0].temp = 0;
 
     sort_cities();
 
@@ -73,9 +73,9 @@ void sort_cities(void)
         {
         if (temps[j].temp < temps[j + 1].temp)
             {
-                temps[10] = temps[j];
+                temporary[0] = temps[j];
                 temps[j] = temps[j + 1];
-                temps[j + 1] = temps[10];
+                temps[j + 1] = temporary[0];
             }
     }
 }
