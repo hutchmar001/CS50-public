@@ -71,11 +71,11 @@ void sort_cities(void)
     {
         for (int k = 0; k < NUM_CITIES; k++)
         {
-        if (temps[j].temp < temps[j + 1].temp)
+        if (temps[k].temp < temps[k + 1].temp)
             {
-                temporary[0] = temps[j];
-                temps[j] = temps[j + 1];
-                temps[j + 1] = temporary[0];
+                temporary[0] = temps[k];
+                temps[k] = temps[k + 1];
+                temps[k + 1] = temporary[0];
             }
     }
 }
