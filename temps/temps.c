@@ -84,12 +84,13 @@ void sort_cities(void)
             {
                 max = temps[k].temp;
             }
-        }
-        if (max == temps[j].temp)
+            if (max == temps[j].temp)
             {
                 temps[j] = temps[l];
                 temps[j].elim = true;
                 l++;
             }
+        }
+
     }
 }
