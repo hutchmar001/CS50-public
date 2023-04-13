@@ -78,6 +78,7 @@ void sort_cities(void)
                 temps[k] = temps[k + 1];
                 temps[k + 1] = temporary[0];
             }
+        // If city has lower temp than city on its right, switch places
     }
 }
 }
