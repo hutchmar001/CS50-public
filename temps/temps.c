@@ -64,11 +64,15 @@ void sort_cities(void)
 {
     // Selection sort is fastest for finding highest int
     int max = temps[0].temp;
-    for (int k = 0; k < NUM_CITIES; k++)
+    for (int j = 0; j < NUM_CITIES; j++)
     {
-        if (max < temps[k].temp)
+        for (int k = 0; k < NUM_CITIES; k++)
         {
-            max = temps[k].temp;
+            if (max < temps[k].temp)
+            {
+                max = temps[k].temp;
+            }
+            
         }
     }
 }
