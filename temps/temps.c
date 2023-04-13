@@ -62,5 +62,13 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Add your code here
+    // Selection sort is fastest for finding highest int
+    int max = candidates[0].votes;
+    for (int k = 0; k < candidate_count; k++)
+    {
+        if (max < candidates[k].votes)
+        {
+            max = candidates[k].votes;
+        }
+    }
 }
