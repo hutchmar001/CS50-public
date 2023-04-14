@@ -36,5 +36,5 @@ int max(int array[], int n)
             mx = array[k];
         }
     }
-    return 0;
+    return mx;
 }
