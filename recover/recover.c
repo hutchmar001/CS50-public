@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
        }
        else
        {
-           if (foundafile) //
+           if (foundafile) // if jpg already found
            {
                fwrite(&buffer[0], 1, 512, img); // keep writing to previous file
            }
