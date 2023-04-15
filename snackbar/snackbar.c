@@ -86,9 +86,6 @@ void add_items(void)
     menu[3].item = "Cheese Dog";
     menu[3].price = 7;
 
-    menu[4].item = "Burger";
-    menu[4].price = 9.5;
-
     menu[5].item = "Fries";
     menu[5].price = 5;
 
@@ -101,7 +98,7 @@ void add_items(void)
     menu[8].item = "Cold Brew";
     menu[8].price = 3;
 
-    menu[9].item = "Burger";
+    menu[9].item = "Water";
     menu[9].price = 9.5;
 
     return;
