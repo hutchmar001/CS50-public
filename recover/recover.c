@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         printf("File cannot be opened for reading.");
         return 1;
     }
-    unsigned char buffer[1000];
+    unsigned char buffer[512];
     int i = 0;
     while (fread(buffer, 1, 512, file) == 512)
 {
@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
         FILE *img = fopen(&jpegs[i], "w");
         fwrite(&buffer[0], 1, 512, img);
         i++;
+        fclose(img);
     }
 }
 }
