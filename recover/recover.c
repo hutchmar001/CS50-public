@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
    while (fread(buffer, 1, 512, file) == 512)
    {
        // read 512 bytes.
-       if (fread(buffer, 1, 512, file) == 512) {
+    //    if (fread(buffer, 1, 512, file) == 512) {
            // New JPEG found
            if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) {
                // create first file
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
            else {
                fwrite(&buffer[0], 1, 512, img);
            }
-       }
+    //    }
    }
    fclose(file);
    return 1;
