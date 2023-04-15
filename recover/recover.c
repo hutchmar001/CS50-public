@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-   FILE *file = fopen(argv[1], "r");
+   FILE *file = fopen(argv[1], "r"); // Open mem card for reading
    if (file == NULL)
    {
        printf("File cannot be opened for reading.");
