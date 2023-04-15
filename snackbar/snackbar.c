@@ -116,6 +116,7 @@ float get_cost(string item)
         if (strcasecmp(item, menu[i].item) == 0)
         {
             cost += menu[i].price;
+            break;
         }
     }
     return cost;
