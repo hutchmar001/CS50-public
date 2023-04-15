@@ -12,21 +12,20 @@ int main(int argc, char *argv[])
        printf("File cannot be opened for reading.");
        return 1;
    }
-   unsigned char buffer[512];
+   unsigned char buffer[512]; // unsigned char b/c dealing with binary data
    int i = 0;
    bool foundTheFile = false;
    char jpegs[50];
    FILE *img = NULL;
-   // if end of file
-   while (fread(buffer, 1, 512, file) == 512) {
-       // New JPEG found
-       if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) {
-           // create first file
+   while (fread(buffer, 1, 512, file) == 512) // Repeat until end of file
+   {
+       if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) // If new jpg found
+       {
            if (i > 0)
            {
                fclose(img);
            }
-           sprintf(&jpegs[0], "%03i.jpg", i);
+           sprintf(&jpegs[0], "%03i.jpg", i); // create first file
            img = fopen(&jpegs[0], "w");
            fwrite(&buffer[0], 1, 512, img);
            foundTheFile = true;
