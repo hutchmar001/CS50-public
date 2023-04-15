@@ -31,36 +31,29 @@ int main(int argc, char *argv[])
    char jpegs[50];
    FILE *img = NULL;
    // if end of file
-   while (fread(buffer, 1, 512, file) == 512)
-   {
-       // read 512 bytes.
-    //    if (fread(buffer, 1, 512, file) == 512) {
-           // New JPEG found
-           if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) {
-               // create first file
-               if (i==0) {
-                   sprintf(&jpegs[i], "%03i.jpg", i);
-                   img = fopen(&jpegs[i], "w");
-                   fwrite(&buffer[0], 1, 512, img);
-               }
-               // write into new file
-               else {
-                   fclose(img);
-                   i++;
-                   sprintf(&jpegs[i], "%03i.jpg", i);
-                   img = fopen(&jpegs[i], "w");
-                   fwrite(&buffer[0], 1, 512, img);
-               }
-           }
-           // Keep writing to the previous file.
-           else {
+   while (fread(buffer, 1, 512, file) == 512) {
+       // New JPEG found
+       if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) {
+           // create first file
+           if (i==0) {
+               sprintf(&jpegs[0], "%03i.jpg", i);
+               img = fopen(&jpegs[0], "w");
                fwrite(&buffer[0], 1, 512, img);
            }
-    //    }
+           // write into new file
+           else {
+               fclose(img);
+               i++;
+               sprintf(&jpegs[0], "%03i.jpg", i);
+               img = fopen(&jpegs[0], "w");
+               fwrite(&buffer[0], 1, 512, img);
+           }
+       }
+       // Keep writing to the previous file.
+       else {
+           fwrite(&buffer[0], 1, 512, img);
+       }
    }
    fclose(file);
-   return 1;
+   return 0;
 }
-
-
-
