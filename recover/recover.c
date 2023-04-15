@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
    }
    unsigned char buffer[512]; // unsigned char b/c dealing with binary data
    int i = 0;
-   bool foundTheFile = false;
+   bool foundafile = false;
    char jpegs[50];
    FILE *img = NULL;
    while (fread(buffer, 1, 512, file) == 512) // Repeat until end of file
@@ -28,17 +28,18 @@ int main(int argc, char *argv[])
            sprintf(&jpegs[0], "%03i.jpg", i); // create first file
            img = fopen(&jpegs[0], "w");
            fwrite(&buffer[0], 1, 512, img);
-           foundTheFile = true;
-            i++;
+           foundafile = true;
+           i++;
        }
-       // Keep writing to the previous file.
-       else {
-           if (foundTheFile) {
-               fwrite(&buffer[0], 1, 512, img);
+       else
+       {
+           if (foundafile) // 
+           {
+               fwrite(&buffer[0], 1, 512, img); // Keep writing to previous file
            }
        }
    }
-   fclose(img);
+   fclose(img); // Close any remaining files
    fclose(file);
    return 0;
 }
