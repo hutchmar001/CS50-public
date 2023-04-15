@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
            {
                fclose(img); // close previous file
            }
-           sprintf(&jpegs[0], "%03i.jpg", i); // create first file
+           sprintf(&jpegs[0], "%03i.jpg", i); // create a file
            img = fopen(&jpegs[0], "w");
            fwrite(&buffer[0], 1, 512, img);
            foundafile = true;
