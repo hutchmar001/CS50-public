@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
    char jpegs[50];
    FILE *img = NULL;
    // if end of file
-   while (!feof(file))
+   while (fread(buffer, 1, 512, file) == 512)
    {
        // read 512 bytes.
        if (fread(buffer, 1, 512, file) == 512) {
