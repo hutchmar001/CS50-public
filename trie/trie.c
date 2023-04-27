@@ -111,6 +111,10 @@ int main(int argc, char *argv[])
 bool check(char* word)
 {
     node* cursor = root;
+    for(int i = 0; i < strlen(word); i++)
+    {
+        word[i] = tolower(word[i]);
+    }
     for(int i = 0; word[i]!='\0'; i++) // Use '\0' instead of NULL
     {
         int position = word[i] - 'a';
