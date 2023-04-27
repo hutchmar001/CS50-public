@@ -114,13 +114,14 @@ bool check(char* word)
     for(int i = 0; word[i]!='\0'; i++) // Use '\0' instead of NULL
     {
         int lowerint = word[i];
+        int position;
         if(123 > lowerint > 96)
         {
-            int position = lowerint - 'a';
+            position = lowerint - 'a';
         }
         else if (91 > lowerint > 64)
         {
-            int position = lowerint - 'a';
+            position = lowerint - 'A';
         }
         else
         {
