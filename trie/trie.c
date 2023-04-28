@@ -113,20 +113,7 @@ bool check(char* word)
     node* cursor = root;
     for(int i = 0; word[i]!='\0'; i++) // Use '\0' instead of NULL
     {
-        int ascii = word[i];
-        int position;
-        if (96 < ascii && ascii < 123)
-        {
-            position = ascii - 'a';
-        }
-        else if (64 < ascii && ascii < 91)
-        {
-            position = ascii - 'A';
-        }
-        else
-        {
-            return false;
-        }
+        int position = word[i] - 'a';
         if (cursor->children[position] == NULL)
         {
             return false;
