@@ -108,10 +108,10 @@ int main(int argc, char *argv[])
 }
 
 // TODO: Complete the check function, return true if found, false if not found
-bool check(char* word)
+bool check(char *word)
 {
-    node* temp = root;
-    for(int i = 0; word[i]!='\0'; i++) // Use '\0' instead of NULL
+    node *temp = root;
+    for (int i = 0; word[i] != '\0'; i++) // Use '\0' instead of NULL
     {
         int position = tolower(word[i]) - 'a';
         if (temp->children[position] == NULL)
