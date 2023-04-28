@@ -115,7 +115,7 @@ bool check(char* word)
     {
         int lowerint = word[i];
         int position;
-        if(96 < lowerint && lowerint < 123)
+        if (96 < lowerint && lowerint < 123)
         {
             position = lowerint - 'a';
         }
@@ -128,15 +128,15 @@ bool check(char* word)
             return false;
         }
         if (cursor->children[position] == NULL)
-            {
-                return false;
-            }
+        {
+            return false;
+        }
         cursor = cursor->children[position];
     }
-    if (cursor!=NULL && cursor->is_word == true)
-        {
-            return true;
-        }
+    if (cursor != NULL && cursor->is_word == true)
+    {
+        return true;
+    }
     return false;
 }
 
