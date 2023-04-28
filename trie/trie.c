@@ -113,8 +113,8 @@ bool check(char* word)
     node* temp = root;
     for(int i = 0; word[i]!='\0'; i++) // Use '\0' instead of NULL
     {
-        int chara = scanf("%c", &)
-        int position = word[i] - int'a';
+        int chara = 'a';
+        int position = word[i] - chara;
         if (temp->children[position] == NULL)
         {
             return false;
