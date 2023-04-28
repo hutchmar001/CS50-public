@@ -115,11 +115,11 @@ bool check(char* word)
     {
         int lowerint = word[i];
         int position;
-        if(123 > lowerint > 96)
+        if(96 < lowerint && lowerint < 123)
         {
             position = lowerint - 'a';
         }
-        else if (91 > lowerint > 64)
+        else if (64 < lowerint && lowerint < 91)
         {
             position = lowerint - 'A';
         }
