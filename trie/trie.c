@@ -137,7 +137,7 @@ bool unload(void)
     return true;
 }
 
-void unloader(node* current)
+void unloader(node *current)
 {
 
     // Iterate over all the children to see if they point to anything and go
