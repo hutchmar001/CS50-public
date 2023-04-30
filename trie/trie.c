@@ -67,11 +67,12 @@ int main(int argc, char *argv[])
 
         for (int i = 0, n = strlen(name); i < n; i++)
         {
+            // Get the relative position in the alphabet list
             int index = tolower(name[i]) - 'a';
             if (cursor->children[index] == NULL)
             {
 
-                // Make node
+                // If child node doesn't exist, make it!
                 node *new = malloc(sizeof(node));
                 new->is_word = false;
                 for (int j = 0; j < SIZE_OF_ALPHABET; j++)
@@ -82,7 +83,7 @@ int main(int argc, char *argv[])
             }
 
             // Go to node which we may have just been made
-            cursor = cursor->children[index];
+            cursor = new;
         }
 
         // if we are at the end of the word, mark it as being a word
