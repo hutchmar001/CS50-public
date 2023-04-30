@@ -58,11 +58,11 @@ person *create_family(int generations)
         int rdnum = rand() % 2;
         if (rdnum == 0)
         {
-            new->alleles[0] = parent0->alleles[0];
+            new->alleles[i] = parent0->alleles[0];
         }
         else
         {
-            new->alleles[0] = parent1->alleles[1];
+            new->alleles[i] = parent1->alleles[1];
         }
         }
     }
