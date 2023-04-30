@@ -53,7 +53,13 @@ person *create_family(int generations)
         new->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-
+        for (int i = 0; i < 2; i++)
+        {
+        int rdnum = rand() % 2;
+        if (rdnum == 0)
+        {
+        }
+        }
     }
 
     // If there are no generations left to create
@@ -63,14 +69,7 @@ person *create_family(int generations)
         new->parents[0] = NULL;
         new->parents[1] = NULL;
         // TODO: Randomly assign alleles
-        for (int i = 0; i < 2; i++)
-        {
-        int rdnum = rand() % 2;
-        if (rdnum == 0)
-        {
-        new->alleles[i] = 
-        }
-        }
+        new->alleles[0] = random
     }
 
     // TODO: Return newly created person
