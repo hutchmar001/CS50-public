@@ -56,8 +56,6 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
         int rdnum = rand() % 2;
-        printf("%i\n", parent0->alleles[0]);
-        printf("%i\n", parent0->alleles[1]);
         if (rdnum == 0)
         {
             new->alleles[i] = parent0->alleles[0];
