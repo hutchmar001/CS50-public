@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -38,7 +38,7 @@ bool load(const char *dictionary)
 {
     char *hashtable[N];
     int x = hash("Paul");
-    printf("%i\n", hashtable[x]);
+    printf("%s\n", hashtable[x]);
     return false;
 }
 
