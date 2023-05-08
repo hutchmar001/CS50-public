@@ -37,6 +37,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     char *hashtable[N];
+    int x = hash("Paul");
     return false;
 }
 
