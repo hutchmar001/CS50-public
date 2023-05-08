@@ -38,7 +38,6 @@ bool load(const char *dictionary)
 {
     char *hashtable[N];
     int x = hash("Paul");
-    printf("%s\n", hashtable[x]);
     return false;
 }
 
