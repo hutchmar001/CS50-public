@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include <stdio.h>
+
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -29,15 +29,18 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    int sum = 0;
+    for(int i = 0; word[i]!= "\0"; i++)
+    {
+        sum += word[i];
+    }
     return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    char *hashtable[N];
-    int x = hash("Paul");
+    // TODO
     return false;
 }
 
