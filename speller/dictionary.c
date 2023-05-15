@@ -22,11 +22,24 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    node *temp = root;
+    for (int i = 0; word[i] != '\0'; i++) // Use '\0' instead of NULL
+    {
+        int position = tolower(word[i]) - 'a';
+        if (temp->children[position] == NULL)
+        {
+            return false;
+        }
+        temp = temp->children[position];
+    }
+    if (temp != NULL && temp->is_word == true)
+    {
+        return true;
+    }
     return false;
 }
 
-// Hashes word to a number 
+// Hashes word to a number
 unsigned int hash(const char *word)
 {
     // TODO
