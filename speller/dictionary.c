@@ -13,10 +13,6 @@ typedef struct node
 }
 node;
 
-// Root of trie
-node *root;
-root = malloc(sizeof(node));
-
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
