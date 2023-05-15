@@ -15,7 +15,7 @@ node;
 
 // Root of trie
 node *root;
-= malloc(sizeof(node));
+root = malloc(sizeof(node));
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
