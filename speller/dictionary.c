@@ -13,6 +13,9 @@ typedef struct node
 }
 node;
 
+// Root of trie
+node *root;
+
 // Allocate root of trie
 root = malloc(sizeof(node));
 
