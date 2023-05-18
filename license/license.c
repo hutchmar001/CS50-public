@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 7, infile) == 7)
     {
         // Save plate number in array
-        fwrite(&plates[idx], 1, sizeof(plates), buffer);
+        fwrite(&plates[idx], 1, sizeof(plates), infile);
         idx++;
     }
 
