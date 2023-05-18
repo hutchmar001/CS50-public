@@ -12,16 +12,16 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char *buffer = (char *)malloc(100 * sizeof(char));
+    char *buffer = (char *)malloc(50 * sizeof(char));
 
     // Create array to store plate numbers
-    char *plates = (char *)malloc(100 * sizeof(char));
+    char *plates = (char *)malloc(50 * sizeof(char));
 
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
 
-    while (fread(buffer, 1, 7, infile) == 7)
+    while (fread(buffer, sizeof(char), 7, infile) == 7)
     {
         // Save plate number in array
         strcpy(&plates[idx], buffer);
