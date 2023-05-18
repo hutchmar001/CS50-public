@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     int idx = 0;
 
-    while (fread(buffer, sizeof(char), 7, infile) == 7)
+    while (fread(&buffer, sizeof(char), 7, infile) == 7)
     {
         // Save plate number in array
         strcpy(&plates[idx], buffer);
