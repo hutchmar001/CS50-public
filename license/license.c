@@ -12,10 +12,10 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char *buffer[1000];
+    char *buffer = (char *)malloc(100 * sizeof(char));
 
     // Create array to store plate numbers
-    char *plates = ()
+    char *plates = (char *)malloc(100 * sizeof(char));
 
     FILE *infile = fopen(argv[1], "r");
 
@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
     {
 
         // Save plate number in array
-        strcpy(plates[idx], *buffer);
+        strcpy(&plates[idx], buffer);
         idx++;
     }
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", plates[i]);
+        printf("%c\n", plates[i]);
     }
 }
