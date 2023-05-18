@@ -32,5 +32,7 @@ int main(int argc, char *argv[])
     {
         printf("%c\n", plates[i]);
     }
+    free(buffer);
+    free(plates);
     fclose(infile);
 }
