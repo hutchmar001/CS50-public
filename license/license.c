@@ -32,4 +32,5 @@ int main(int argc, char *argv[])
     {
         printf("%c\n", plates[i]);
     }
+    fclose(infile);
 }
