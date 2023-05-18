@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 
     FILE *infile = fopen(argv[1], "r");
 
-    int idx = 0;
-
     while (fread(buffer, 1, 7, infile) == 7)
     {
         // Save plate number in array
-        fwrite(&plates[idx], 1, sizeof(plates), infile);
-        idx++;
+        for (int j = 0; j < 8; j++)
+        {
+            strcpy(buffer[j])
+        }
     }
 
     for (int i = 0; i < 8; i++)
