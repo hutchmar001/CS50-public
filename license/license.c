@@ -25,13 +25,14 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
+        int temp = atoi(buffer);
         // Save plate number in array
-        plates[idx] = buffer;
+        plates[idx] = temp;
         idx++;
     }
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", plates[i]);
+        printf("%d\n", plates[i]);
     }
 }
