@@ -53,11 +53,10 @@ int main(int argc, char *argv[])
         return 4;
     }
 
-    if (bi.biHeight >= 0)
-    {
+
         bi.biHeight = -bi.biHeight;
-    }
-    
+
+
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
