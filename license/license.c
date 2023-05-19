@@ -12,10 +12,10 @@ int main(int argc, char *argv[])
     }
     char *plates, *buffer;
     // Create buffer to read into
-    buffer = (char *)malloc(50 * sizeof(char)); //changed
+    buffer = (char *)malloc(8 * sizeof(char)); //changed
 
     // Create array to store plate numbers
-    plates = (char *)malloc(50 * sizeof(char)); //changed
+    plates = (char *)malloc(8 * sizeof(char)); //changed
 
     FILE *infile = fopen(argv[1], "r");
 
