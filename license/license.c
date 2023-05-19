@@ -12,16 +12,16 @@ int main(int argc, char *argv[])
     }
     char *plates, *buffer;
     // Create buffer to read into
-    buffer = malloc(50); //changed
+    buffer = malloc(1000); //changed
 
     // Create array to store plate numbers
-    plates = malloc(50); //changed
+    plates = malloc(1000); //changed
 
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
 
-    while (fread(buffer, 1, 7, infile) == 7)
+    while (fread(&buffer, 1, 7, infile) == 7)
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
