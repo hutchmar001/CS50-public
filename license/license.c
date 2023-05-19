@@ -27,12 +27,15 @@ int main(int argc, char *argv[])
         buffer[6] = '\0';
 
         // Save plate number in array
-        strcpy(&plates[idx], buffer); //changed
+        strcpy(&plates[idx], &buffer[idx]); //changed
         idx++;
     }
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", &plates[i]);
+        printf("%s\n", &plates[i]); //changed
     }
+    free(buffer);
+    free(plates);
+    fclose(infile);
 }
