@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
         printf("Usage: ./read infile\n");
         return 1;
     }
-    
+
     // Create buffer to read into
-    char *buffer = (char *)malloc(50 * sizeof(char));
+    char buffer[7];
 
     // Create array to store plate numbers
     char *plates = (char *)malloc(50 * sizeof(char));
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     {
         printf("%s\n", &plates[i]); //changed
     }
-    free(buffer);
+
     free(plates);
     fclose(infile);
 }
