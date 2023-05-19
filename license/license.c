@@ -10,13 +10,12 @@ int main(int argc, char *argv[])
         printf("Usage: ./read infile\n");
         return 1;
     }
-
+    char *plates, *buffer;
     // Create buffer to read into
-    char buffer[7];
+    buffer = (char *)malloc(50 * sizeof(char)); //changed
 
     // Create array to store plate numbers
-    char *plates;
-    plates = (char *)malloc(50 * sizeof(char));
+    plates = (char *)malloc(50 * sizeof(char)); //changed
 
     FILE *infile = fopen(argv[1], "r");
 
@@ -34,6 +33,6 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < 8; i++)
     {
-        printf("%s\n", plates[i]);
+        printf("%s\n", &plates[i]);
     }
 }
