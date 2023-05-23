@@ -24,16 +24,12 @@ int main(int argc, char *argv[])
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
-
+        printf("%s\n", &buffer[idx]); //changed
         // Save plate number in array
         strncpy(&plates[idx], &buffer[idx], 1); //changed
         idx++;
     }
 
-    for (int i = 0; i < 8; i++)
-    {
-        printf("%s\n", &plates[i]); //changed
-    }
 
     fclose(infile);
 }
