@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         buffer[6] = '\0';
 
         // Save plate number in array
-        strncpy(&plates[idx], buffer); //changed
+        strncpy(&plates[idx], &buffer[idx], 1); //changed
         idx++;
     }
 
