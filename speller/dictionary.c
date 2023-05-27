@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -22,20 +24,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *temp = root;
-    for (int i = 0; word[i] != '\0'; i++) // Use '\0' instead of NULL
-    {
-        int position = tolower(word[i]) - 'a';
-        if (temp->children[position] == NULL)
-        {
-            return false;
-        }
-        temp = temp->children[position];
-    }
-    if (temp != NULL && temp->is_word == true)
-    {
-        return true;
-    }
     return false;
 }
 
@@ -43,13 +31,24 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
-    return toupper(word[0]) - 'A';
+    int total = 0;
+    for (int pos = 0; pos < strlen(word); pos++)
+        total += atoi(&word[pos]);
+    return total % N;
 }
+
+FILE *infile;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
+    infile = fopen(dictionary, "r");
+    if (infile)
+    {
+        printf("Success opening file.\n");
+        return true;
+    }
     return false;
 }
 
@@ -57,7 +56,35 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    int count = 1;
+    int j;
+    char buffer[1000000000];
+    while (infile != NULL)
+    {
+    fread(&buffer, 1, 2, infile);
+    }
+    for (j = 0; j < strlen(buffer); j++)
+    {
+        char txt[1];
+        txt[0] = buffer[j];
+        char blank[1];
+        blank[0] = ' ';
+        int result = memcmp(txt, blank, 1);
+        if (result == 0)
+        {
+            count++;   //if a letter is a blank, add to word count
+        }
+    }
+    fclose(infile);
+    if (count > 0)
+    {
+        printf("%d\n", count);
+        return count;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 // Unloads dictionary from memory, returning true if successful, else false

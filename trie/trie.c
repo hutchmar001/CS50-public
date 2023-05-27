@@ -26,8 +26,7 @@ void unloader(node *current);
 // Root of trie
 node *root;
 
-// Buffer to read dog names into
-char name[MAXCHAR];
+
 
 int main(int argc, char *argv[])
 {
