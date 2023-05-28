@@ -43,7 +43,7 @@ FILE *infile;
 bool load(const char *dictionary)
 {
     // TODO
-    infile = fopen(dictionary, "w");
+    infile = fopen(dictionary, "r");
     if (infile)
     {
         printf("Success opening file.\n");
@@ -60,10 +60,6 @@ unsigned int size(void)
     int j;
     int i;
     char buffer[1000000000];
-    for (i = 0; i < 2; i++)
-    {
-        fprintf(infile, "%d.%s\n", i, buffer);
-    }
     fread(buffer, sizeof(char), 1, infile);
     for (j = 0; j < strlen(buffer); j++)
     {
