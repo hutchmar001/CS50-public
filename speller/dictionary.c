@@ -63,7 +63,7 @@ unsigned int size(void)
     for (i = 0; i < 2; i++)
     {
         scanf("%c", buffer);
-        fprintf(infile,"%d.%s\n", i, buffer);
+        fprintf(infile, "%d.%s\n", i, buffer);
     }
     fread(buffer, sizeof(char), 1, infile);
     for (j = 0; j < strlen(buffer); j++)
