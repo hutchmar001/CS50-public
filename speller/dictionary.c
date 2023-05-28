@@ -62,7 +62,6 @@ unsigned int size(void)
     char buffer[1000000000];
     for (i = 0; i < 2; i++)
     {
-        scanf("%c", buffer);
         fprintf(infile, "%d.%s\n", i, buffer);
     }
     fread(buffer, sizeof(char), 1, infile);
