@@ -37,28 +37,16 @@ unsigned int hash(const char *word)
     return total % N;
 }
 
-FILE *infile;
+
+int count = 1;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
+    FILE *infile;
     infile = fopen(dictionary, "r");
-    if (infile)
-    {
-        printf("Success opening file.\n");
-        return true;
-    }
-    return false;
-}
-
-// Returns number of words in dictionary if loaded, else 0 if not yet loaded
-unsigned int size(void)
-{
-    // TODO
-    int count = 1;
     int j;
-    int i;
     char buffer[1000000000];
     fread(buffer, sizeof(char), 1, infile);
     for (j = 0; j < strlen(buffer); j++)
@@ -74,6 +62,13 @@ unsigned int size(void)
         }
     }
     fclose(infile);
+    return false;
+}
+
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded
+unsigned int size(void)
+{
+    // TODO
     if (count > 0)
     {
         printf("%d\n", count);
@@ -92,3 +87,21 @@ bool unload(void)
     // TODO
     return false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
