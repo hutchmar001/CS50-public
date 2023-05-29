@@ -47,7 +47,7 @@ bool load(const char *dictionary)
     infile = fopen(dictionary, "r");
     int j;
     char word[LENGTH + 1];
-    char buffer[1000000000];
+    char buffer[10000];
     fread(buffer, sizeof(char), 1, infile);
     for (j = 0; j < strlen(buffer); j++)
     {
