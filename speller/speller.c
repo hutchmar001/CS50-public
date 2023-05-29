@@ -12,7 +12,7 @@
 #undef getrusage
 
 // Default dictionary
-#define DICTIONARY "/home/cs50/pset5/dictionaries/large"
+#define DICTIONARY "dictionaries/large"
 
 // Prototype
 double calculate(const struct rusage *b, const struct rusage *a);
