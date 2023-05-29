@@ -12,6 +12,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
+    int hashvalue = NULL;
 }
 node;
 
@@ -66,7 +67,7 @@ bool load(const char *dictionary)
         int hashvalue = hash(word);
         if (hashvalue == 0)
         {
-            
+
         }
     }
     if (infile)
