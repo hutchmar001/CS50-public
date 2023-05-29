@@ -60,6 +60,10 @@ bool load(const char *dictionary)
             count++;   //if a letter is a blank, add to word count
         }
     }
+    while (fscanf(infile, "%s", word) != EOF)
+    {
+        
+    }
     if (infile)
     {
         return true;
