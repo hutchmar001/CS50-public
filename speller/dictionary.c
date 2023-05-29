@@ -60,7 +60,11 @@ bool load(const char *dictionary)
             count++;   //if a letter is a blank, add to word count
         }
     }
-    fclose(infile);
+    if (infile)
+    {
+        return true;
+        fclose(infile);
+    }
     return false;
 }
 
