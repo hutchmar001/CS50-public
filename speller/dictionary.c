@@ -37,14 +37,14 @@ unsigned int hash(const char *word)
     return total % N;
 }
 
-
+FILE *infile;
 int count = 1;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *infile = fopen(dictionary, "r");
+    infile = fopen(dictionary, "r");
     int j;
     char word[LENGTH + 1];
     char buffer[1000000000];
@@ -60,10 +60,6 @@ bool load(const char *dictionary)
         {
             count++;   //if a letter is a blank, add to word count
         }
-    }
-    while (fscanf(infile, "%s", word) != EOF)
-    {
-       
     }
     if (infile)
     {
