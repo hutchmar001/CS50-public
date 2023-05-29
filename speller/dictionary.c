@@ -44,7 +44,7 @@ int count = 1;
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *infile = fopen(dictionary, "r");
+    FILE infile = fopen("/pset5/speller/dictionaries/large", "r");
     int j;
     char buffer[1000000000];
     fread(buffer, sizeof(char), 1, infile);
