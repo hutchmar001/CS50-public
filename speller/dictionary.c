@@ -44,8 +44,7 @@ int count = 1;
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *infile;
-    infile = fopen("dictionary", "r");
+    FILE *infile = fopen("dictionary", "r");
     int j;
     char buffer[1000000000];
     fread(buffer, sizeof(char), 1, infile);
