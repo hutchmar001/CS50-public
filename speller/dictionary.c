@@ -12,7 +12,6 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-    int hashvalue = NULL;
 }
 node;
 
