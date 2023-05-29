@@ -63,11 +63,7 @@ bool load(const char *dictionary)
     }
     while (fscanf(infile, "%s", word) != EOF)
     {
-        int hashvalue = hash(word);
-        if (node->N[hashvalue] == 0)
-        {
-
-        }
+       
     }
     if (infile)
     {
