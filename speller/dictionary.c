@@ -60,11 +60,6 @@ bool load(const char *dictionary)
             count++;   //if a letter is a blank, add to word count
         }
     }
-    if (infile)
-    {
-        return true;
-        fclose(infile);
-    }
     return false;
 }
 
@@ -88,6 +83,11 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    if (infile)
+    {
+        return true;
+        fclose(infile);
+    }
     return false;
 }
 
