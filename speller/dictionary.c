@@ -21,11 +21,11 @@ const unsigned int N = 26;
 
 // Hash table
 node *table[N];
-node *root = table[hash(word)];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    node *root = table[hash(word)];
     node *cursor = root;
     while (cursor != NULL)
     {
