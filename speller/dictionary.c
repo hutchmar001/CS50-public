@@ -59,6 +59,8 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(new_node->word, buffer);
+        new_node->next = head;
+        head = new_node;
     }
     for (int j = 0; j < strlen(buffer); j++)
     {
