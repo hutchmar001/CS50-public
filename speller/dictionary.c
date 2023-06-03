@@ -45,11 +45,12 @@ bool load(const char *dictionary)
 {
     // TODO
     infile = fopen(dictionary, "r");
-    int j;
-    char word[LENGTH + 1];
     char buffer[10000];
-    fscanf(buffer, sizeof(char), 1, infile);
-    for (j = 0; j < strlen(buffer); j++)
+    while (fscanf(infile, "%s", word))
+    {
+        printf("hi");
+    }
+    for (int j = 0; j < strlen(buffer); j++)
     {
         char txt[1];
         txt[0] = buffer[j];
