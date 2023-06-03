@@ -25,8 +25,8 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *root = table[hash(word)];
-    node *cursor = root;
+    node *head = table[hash(word)];
+    node *cursor = head;
     while (cursor != NULL)
     {
         int result = strcasecmp(cursor->word, word); //start here
@@ -65,7 +65,7 @@ bool load(const char *dictionary)
     while (fscanf(infile, "%s", buffer) != EOF)
     {
         node *new_node = malloc(sizeof(node));
-        root = malloc(sizeof(node));
+        node *root = malloc(sizeof(node));
         if (new_node == NULL)
         {
             unload();
@@ -99,7 +99,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    node *cursor = root;
+    node *cursor = table[hash(word)];
     while (cursor != NULL)
     {
         node *temp = cursor;
