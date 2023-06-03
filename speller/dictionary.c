@@ -45,7 +45,7 @@ bool load(const char *dictionary)
 {
     // TODO
     infile = fopen(dictionary, "r");
-    if (!infile)
+    if (!(infile))
     {
         return false;
     }
