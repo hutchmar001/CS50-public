@@ -15,13 +15,13 @@ typedef struct node
     struct node *next;
 }
 node;
-node *root;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
 // Hash table
 node *table[N];
+node *root = table[hash(word)];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -44,10 +44,8 @@ unsigned int hash(const char *word)
 {
     // TODO
     int total = 0;
-    printf("%d\n", total);
     for (int pos = 0; pos < strlen(word); pos++)
         total += atoi(&word[pos]);
-    printf("%d\n", total);
     return total % N;
 }
 
