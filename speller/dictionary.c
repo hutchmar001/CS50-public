@@ -38,8 +38,6 @@ unsigned int hash(const char *word)
 }
 
 FILE *infile;
-node *root;
-root = malloc(sizeof(node));
 int count = 1;
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -55,6 +53,7 @@ bool load(const char *dictionary)
     while (fscanf(infile, "%s", buffer) != EOF)
     {
         node *new_node = malloc(sizeof(node));
+        node *root = malloc(sizeof(node));
         if (new_node == NULL)
         {
             unload();
