@@ -54,6 +54,7 @@ bool load(const char *dictionary)
             unload();
             return false;
         }
+        strcpy(new_node->word, word);
     }
     for (int j = 0; j < strlen(buffer); j++)
     {
