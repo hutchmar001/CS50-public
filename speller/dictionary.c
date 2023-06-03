@@ -46,7 +46,7 @@ bool load(const char *dictionary)
     // TODO
     infile = fopen(dictionary, "r");
     char buffer[10000];
-    while (fscanf(infile, "%s", word))
+    while (fscanf(infile, "%s", buffer) != EOF)
     {
         printf("hi");
     }
