@@ -46,6 +46,7 @@ unsigned int hash(const char *word)
     int total = 0;
     for (int pos = 0; pos < strlen(word); pos++)
         total += atoi(&word[pos]);
+    printf("%d\n", total % N);
     return total % N;
 }
 
