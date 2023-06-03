@@ -98,12 +98,15 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    node *cursor = table[hash(word)];
+    for (int i = 0; i < 27, i++)
+    {
+    node *cursor = table[i];
     while (cursor != NULL)
     {
         node *temp = cursor;
         cursor = cursor->next;
         free(temp);
+    }
     }
     return true;
 }
