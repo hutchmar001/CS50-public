@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     char buffer[10000];
     while (fscanf(infile, "%s", buffer) != EOF)
     {
-        printf("hi");
+        node *new_node = malloc(sizeof(node));
     }
     for (int j = 0; j < strlen(buffer); j++)
     {
