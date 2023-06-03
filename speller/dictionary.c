@@ -45,10 +45,6 @@ bool load(const char *dictionary)
 {
     // TODO
     infile = fopen(dictionary, "r");
-    if (!(infile))
-    {
-        return false;
-    }
     char buffer[45];
     while (fscanf(infile, "%s", buffer) != EOF)
     {
@@ -71,6 +67,10 @@ bool load(const char *dictionary)
         {
             count++;   //if a letter is a blank, add to word count
         }
+    }
+    if !(infile)
+    {
+        return false;
     }
 }
 
