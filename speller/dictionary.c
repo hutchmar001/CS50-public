@@ -28,7 +28,7 @@ bool check(const char *word)
     node *cursor = root;
     while (cursor != NULL)
     {
-        int result = strcasecmp(cursor->word, hashtable[hash(word)]); //start here
+        int result = strcasecmp(cursor->word, table[hash(word)]); //start here
         cursor = cursor->next;
     }
     return false;
