@@ -38,6 +38,7 @@ unsigned int hash(const char *word)
 }
 
 FILE *infile;
+node *root;
 root = malloc(sizeof(node));
 int count = 1;
 
