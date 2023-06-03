@@ -43,8 +43,12 @@ int count = 1;
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
     infile = fopen(dictionary, "r");
+    if (infile == NULL)
+    {
+        printf("Problem opening file.");
+        return false;
+    }
     char buffer[45];
     while (fscanf(infile, "%s", buffer) != EOF)
     {
@@ -68,10 +72,7 @@ bool load(const char *dictionary)
             count++;   //if a letter is a blank, add to word count
         }
     }
-    if !(infile)
-    {
-        return false;
-    }
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
