@@ -99,11 +99,8 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    if (infile)
-    {
-        return true;
-        fclose(infile);
-    }
+    node *cursor = table[hash(word)];
+    node *temp = cursor;
     return false;
 }
 
