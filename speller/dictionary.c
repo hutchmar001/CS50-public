@@ -26,6 +26,10 @@ node *table[N];
 bool check(const char *word)
 {
     node *cursor = root;
+    while (cursor != NULL)
+    {
+        cursor = cursor->next;
+    }
     return false;
 }
 
