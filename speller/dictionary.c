@@ -14,6 +14,8 @@ typedef struct node
     struct node *next;
 }
 node;
+node *new_node = malloc(sizeof(node));
+        node *root = malloc(sizeof(node));
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -24,7 +26,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    node *root = malloc(sizeof(node));
+    node *cursor = root;
     return false;
 }
 
@@ -53,8 +55,7 @@ bool load(const char *dictionary)
     char buffer[45];
     while (fscanf(infile, "%s", buffer) != EOF)
     {
-        node *new_node = malloc(sizeof(node));
-        node *root = malloc(sizeof(node));
+
         if (new_node == NULL)
         {
             unload();
