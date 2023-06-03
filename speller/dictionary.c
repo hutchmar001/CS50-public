@@ -62,18 +62,7 @@ bool load(const char *dictionary)
         strcpy(new_node->word, buffer);
         new_node->next = root;
         root = new_node;
-    }
-    for (int j = 0; j < strlen(buffer); j++)
-    {
-        char txt[1];
-        txt[0] = buffer[j];
-        char blank[1];
-        blank[0] = ' ';
-        int result = memcmp(txt, blank, 1);
-        if (result == 0)
-        {
-            count++;   //if a letter is a blank, add to word count
-        }
+        count++;
     }
     return true;
 }
