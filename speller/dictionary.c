@@ -100,8 +100,12 @@ bool unload(void)
 {
     // TODO
     node *cursor = table[hash(word)];
-    node *temp = cursor;
-    return false;
+    while (cursor != NULL)
+    {
+        node *temp = cursor;
+        cursor = cursor->next;
+        free(temp);
+    }
 }
 
 
