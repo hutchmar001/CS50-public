@@ -50,7 +50,6 @@ unsigned int hash(const char *word)
 
 FILE *infile;
 int count = 0;
-int index;
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
@@ -70,7 +69,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(new_node->word, buffer);
-        index = hash(new_node->word);
+        int index = hash(new_node->word);
         new_node->next = table[index];
         table[index] = new_node;
         count++;
@@ -97,12 +96,15 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    node *cursor = table[index];
+    for (int i = 0; i < N; i++)
+    {
+    node *cursor = table[i];
     while (cursor != NULL)
     {
         node *temp = cursor;
         cursor = cursor->next;
         free(temp);
+    }
     }
     return true;
 }
