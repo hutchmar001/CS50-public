@@ -44,7 +44,9 @@ unsigned int hash(const char *word)
     // TODO
     int total = 0;
     for (int pos = 0; pos < strlen(word); pos++)
+    {
         total += atoi(&word[pos]);
+    }
     return total % N;
 }
 
@@ -99,13 +101,13 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-    node *cursor = table[i];
-    while (cursor != NULL)
-    {
-        node *temp = cursor;
-        cursor = cursor->next;
-        free(temp);
-    }
+        node *cursor = table[i];
+        while (cursor != NULL)
+        {
+            node *temp = cursor;
+            cursor = cursor->next;
+            free(temp);
+        }
     }
     return true;
 }
