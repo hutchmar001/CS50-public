@@ -74,6 +74,7 @@ bool load(const char *dictionary)
         table[index] = new_node;
         count++;
     }
+    fclose(infile);
     return true;
 }
 
