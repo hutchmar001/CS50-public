@@ -70,10 +70,11 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(new_node->word, buffer);
-        new_node->next = root;
-        root = new_node;
         int index = hash(new_node->word);
         printf("%d\n", index);
+        new_node->next = root;
+        root = new_node;
+
         count++;
     }
     return true;
