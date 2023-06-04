@@ -71,6 +71,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(new_node->word, buffer);
+
         new_node->next = root;
         root = new_node;
         count++;
