@@ -73,7 +73,7 @@ bool load(const char *dictionary)
         strcpy(new_node->word, buffer);
         new_node->next = root;
         root = new_node;
-        new_node->word
+         = table[hash(new_node->word)];
         count++;
     }
     return true;
