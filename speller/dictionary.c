@@ -65,6 +65,7 @@ bool load(const char *dictionary)
     while (fscanf(infile, "%s", buffer) != EOF)
     {
         node *new_node = malloc(sizeof(node));
+        new_node = table[hash(word)];
         if (new_node == NULL)
         {
             unload();
