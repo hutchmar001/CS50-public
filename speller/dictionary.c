@@ -61,10 +61,10 @@ bool load(const char *dictionary)
         return false;
     }
     char buffer[45];
+    node *root = malloc(sizeof(node));
     while (fscanf(infile, "%s", buffer) != EOF)
     {
         node *new_node = malloc(sizeof(node));
-        node *root = malloc(sizeof(node));
         if (new_node == NULL)
         {
             unload();
