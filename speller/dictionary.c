@@ -64,9 +64,8 @@ bool load(const char *dictionary)
     node *root = malloc(sizeof(node));
     while (fscanf(infile, "%s", buffer) != EOF)
     {
-        int i = 0;
         node *new_node = malloc(sizeof(node));
-        new_node = table[hash(table[i])];
+        new_node = table[hash(word)];
         if (new_node == NULL)
         {
             unload();
@@ -76,7 +75,6 @@ bool load(const char *dictionary)
         new_node->next = root;
         root = new_node;
         count++;
-        i++;
     }
     return true;
 }
