@@ -72,7 +72,8 @@ bool load(const char *dictionary)
         strcpy(new_node->word, buffer);
         new_node->next = root;
         root = new_node;
-        // ??? = table[hash(new_node->word)];
+        int index = hash(new_node->word);
+        printf("%d\n", index);
         count++;
     }
     return true;
