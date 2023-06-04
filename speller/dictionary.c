@@ -83,7 +83,6 @@ unsigned int size(void)
     // TODO
     if (count > 0)
     {
-        printf("%d\n", count);
         return count;
     }
     else
