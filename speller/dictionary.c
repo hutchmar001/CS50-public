@@ -70,7 +70,6 @@ bool load(const char *dictionary)
             unload();
             return false;
         }
-        new_node = table[hash(buffer)];
         strcpy(new_node->word, buffer);
         new_node->next = root;
         root = new_node;
