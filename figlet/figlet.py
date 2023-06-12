@@ -21,20 +21,20 @@ def checkargcount():
     else:
         {
             print("Invalid usage"),
-            sys.exit()
+            sys.exit(1)
         }
 
 def checkusage():
     if(sys.argv[1] != "-f" and sys.argv[1] != "--font"):
         {
             print("Invalid usage"),
-            sys.exit()
+            sys.exit(1)
         }
     for i in fontlist:
         if(sys.argv[2] == i):
             return
     print("Invalid usage")
-    sys.exit()
+    sys.exit(1)
 
 def randomfont():
     figlet.setFont(font=random.choice(fontlist))
