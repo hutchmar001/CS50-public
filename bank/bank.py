@@ -1,5 +1,11 @@
 greeting = input("Enter a greeting.")
-if (greeting == "hello"):
-    {
-        return 0
-    }
+
+def check(greeting):
+    if (greeting == "hello"):
+        {
+            return True
+        }
+    else
+        {
+            return False
+        }
