@@ -9,7 +9,7 @@ def checkusage():
         {
             print("random")
         }
-    elif(argv[0] != "-f" or argv[0] != "--font"):
+    elif(sys.argv[1] != "-f" or sys.argv[1] != "--font"):
         {
             print("Invalid usage"),
             sys.exit(0)
