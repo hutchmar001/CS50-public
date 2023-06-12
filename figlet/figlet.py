@@ -14,6 +14,9 @@ def checkusage():
             print("specific")
         }
     elif(argv[0] != "-f" or argv[0] != "--font")
+        {
+            
+        }
     else:
         {
             print("Invalid usage"),
