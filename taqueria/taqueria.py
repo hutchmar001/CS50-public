@@ -21,7 +21,7 @@ c = Counter(menu)
 while True:
     try:
         item = input("Please enter a food.\n")
-        i = item.lower
+        i = item.title()
         if i in c:
             print("Present!")
     except EOFError:
