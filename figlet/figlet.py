@@ -1,4 +1,5 @@
 import sys
+import random
 from pyfiglet import Figlet
 
 figlet = Figlet()
@@ -34,8 +35,8 @@ def checkusage():
     sys.exit()
 
 def randomfont():
-    for i in fontlist:
-        figlet.setFont(font=f)
+    f = random.choice(fontlist)
+    figlet.setFont(font=f)
 
 def specfont():
 
