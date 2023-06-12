@@ -3,6 +3,7 @@ from pyfiglet import Figlet
 
 figlet = Figlet()
 n = len(sys.argv)
+print(pyfiglet.FigletFont.getFonts())
 
 def checkusage():
     if(n == 1):
@@ -26,6 +27,7 @@ def checkusage():
 
 
 checkusage()
+
 
 
 
