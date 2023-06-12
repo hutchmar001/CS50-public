@@ -39,8 +39,7 @@ def randomfont():
     figlet.setFont(font=random.choice(fontlist))
 
 def specfont():
-    ft = sys.argv[2],
-    figlet.setFont(font=ft)
+    figlet.setFont(font=sys.argv[2])
 
 checkargcount()
 print(figlet.renderText(x))
