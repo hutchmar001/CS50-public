@@ -9,13 +9,14 @@ def checkusage():
         {
             print("random")
         }
+    elif(argv[0] != "-f" or argv[0] != "--font"):
+        {
+            print("Invalid usage"),
+            sys.exit(0)
+        }
     elif(n == 3):
         {
             print("specific")
-        }
-    elif(argv[0] != "-f" or argv[0] != "--font")
-        {
-            
         }
     else:
         {
