@@ -10,4 +10,7 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-entry = input("Please enter a food. Control-d when done.\n")
+try:
+    item = input()
+except EOFError:
+    ...
