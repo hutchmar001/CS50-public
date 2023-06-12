@@ -12,6 +12,14 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
+
+class Counter(dict):
+    def __missing__(self, key):
+        return 0
+c = Counter()
+c['Taco']
+c['Bob']
+
 while True:
     try:
         item = input("Please enter a food.\n")
