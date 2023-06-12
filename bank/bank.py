@@ -1,6 +1,7 @@
 x = input("Enter a greeting.\n")
 greeting = x.lower()
 
+
 def check(grtg):
     if (greeting == "hello"):
         {
@@ -22,5 +23,6 @@ def check(grtg):
         {
             print("$100")
         }
+
 
 check(greeting)
