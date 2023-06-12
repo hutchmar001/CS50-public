@@ -13,6 +13,6 @@ menu = {
 }
 
 try:
-    item = input()
+    item = input("Please enter a food.\n")
 except EOFError:
     sys.exit(0)
