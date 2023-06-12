@@ -8,7 +8,6 @@ fontlist = figlet.getFonts()
 def checkargcount():
     if(n == 1):
         {
-            checkusage()
             randomfont()
         }
     elif(n == 3):
