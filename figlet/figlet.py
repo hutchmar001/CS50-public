@@ -2,7 +2,7 @@ import sys
 import random
 from pyfiglet import Figlet
 
-x = input()
+x = input("Input: ")
 figlet = Figlet()
 n = len(sys.argv)
 fontlist = figlet.getFonts()
