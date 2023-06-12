@@ -2,4 +2,8 @@ import sys
 from pyfiglet import Figlet
 
 figlet = Figlet()
-n = sys.argv
+n = len(sys.argv)
+if(n == 0):
+    {
+        print("random")
+    }
