@@ -13,7 +13,7 @@ def checkargcount():
         }
     elif(n == 3):
         {
-            checkusage()
+            checkusage(),
             specfont()
         }
     else:
@@ -39,7 +39,7 @@ def randomfont():
     figlet.setFont(font=f)
 
 def specfont():
-
+    print("")
 
 
 checkargcount()
