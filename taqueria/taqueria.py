@@ -25,6 +25,6 @@ while True:
         i = item.title()
         if i in c:
             total += c[i]
-            print("Total: $", "%.2f" % total)
+            print("Total: $", "%.2f" % total, sep=''ta)
     except EOFError:
         sys.exit(0)
