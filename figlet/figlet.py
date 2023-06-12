@@ -9,12 +9,12 @@ fontlist = figlet.getFonts()
 def checkargcount():
     if(n == 1):
         {
-            getinput()
+            getinput(),
             randomfont()
         }
     elif(n == 3):
         {
-            getinput()
+            getinput(),
             checkusage(),
             specfont()
         }
