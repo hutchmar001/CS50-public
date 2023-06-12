@@ -7,7 +7,13 @@ if(n == 1):
     {
         print("random")
     }
-if(n == 3):
+elif(n == 3):
     {
         print("specific")
     }
+else:
+    {
+        print("Invalid usage")
+        sys.exit()
+    }
+
