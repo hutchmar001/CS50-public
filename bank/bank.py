@@ -5,7 +5,7 @@ def check(greeting):
         {
             return True
         }
-    else
+    else:
         {
             return False
         }
