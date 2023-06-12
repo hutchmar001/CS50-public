@@ -5,18 +5,6 @@ figlet = Figlet()
 n = len(sys.argv)
 fontlist = figlet.getFonts()
 
-def checkusage():
-    if(sys.argv[1] != "-f" and sys.argv[1] != "--font"):
-        {
-            print("Invalid usage"),
-            sys.exit(0)
-        }
-    for i in fontlist:
-        if(sys.argv[2] == i):
-            return
-    print("Invalid usage")
-    sys.exit(0)
-
 def checkargcount():
     if(n == 1):
         {
@@ -31,6 +19,19 @@ def checkargcount():
             print("Invalid usage"),
             sys.exit(0)
         }
+
+def checkusage():
+    if(sys.argv[1] != "-f" and sys.argv[1] != "--font"):
+        {
+            print("Invalid usage"),
+            sys.exit(0)
+        }
+    for i in fontlist:
+        if(sys.argv[2] == i):
+            return
+    print("Invalid usage")
+    sys.exit(0)
+
 
 checkargcount()
 checkusage()
