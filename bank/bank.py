@@ -6,7 +6,7 @@ def check(grtg):
         {
             print("$0")
         }
-    elif (greeting == "hello" and len(greeting) > 5):
+    elif (greeting[:5] == "hello" and len(greeting) > 5):
         {
             print("$0")
         }
