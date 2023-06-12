@@ -44,6 +44,7 @@ def specfont():
 
 
 checkargcount()
+print(figlet.renderText(x))
 
 
 
