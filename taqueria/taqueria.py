@@ -25,8 +25,6 @@ while True:
         i = item.title()
         if i in c:
             t += c[i]
-            print(t)
-            total = round(t, 2)
             print("Total: $", total)
     except EOFError:
         sys.exit(0)
