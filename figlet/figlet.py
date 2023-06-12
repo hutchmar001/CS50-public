@@ -3,7 +3,7 @@ from pyfiglet import Figlet
 
 figlet = Figlet()
 n = len(sys.argv)
-print(pyfiglet.FigletFont.getFonts())
+print(figlet.getFonts())
 
 def checkusage():
     if(n == 1):
