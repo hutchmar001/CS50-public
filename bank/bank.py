@@ -1,4 +1,5 @@
-greeting = input("Enter a greeting.\n")
+x = input("Enter a greeting.\n")
+greeting = x.lower()
 
 def check(grtg):
     if (greeting == "hello"):
