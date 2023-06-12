@@ -15,5 +15,5 @@ menu = {
 while True:
     try:
         item = input("Please enter a food.\n")
-    except EOFERROR:
+    except EOFError:
         sys.exit(0)
