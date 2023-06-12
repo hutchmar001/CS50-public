@@ -6,6 +6,10 @@ def check(grtg):
         {
             print("$0")
         }
+    elif (greeting[0] == "h" and greeting[1] != "e"):
+        {
+            print("$20")
+        }
     else:
         {
             print("$100")
