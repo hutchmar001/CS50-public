@@ -18,6 +18,7 @@ class Counter(dict):
         return 0
 c = Counter(menu)
 
+
 while True:
     try:
         item = input("Please enter a food.\n")
