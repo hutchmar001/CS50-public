@@ -11,7 +11,7 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-t = 0.00
+total = 0.00
 
 class Counter(dict):
     def __missing__(self, key):
@@ -24,7 +24,7 @@ while True:
         item = input("Please enter a food.\n")
         i = item.title()
         if i in c:
-            t += c[i]
-            print("Total: $", total)
+            total += c[i]
+            print("Total: $", "%.2f" % total)
     except EOFError:
         sys.exit(0)
