@@ -22,8 +22,10 @@ c = Counter(menu)
 while True:
     try:
         item = input("Please enter a food.\n")
+        total = 0.0
         i = item.title()
         if i in c:
-            print(c[i])
+            total += c[i]
+            print("Total: ", total)
     except EOFError:
         sys.exit(0)
