@@ -1,11 +1,13 @@
 greeting = input("Enter a greeting.")
 
+def check(grtg):
+    if (greeting == "hello"):
+        {
+            return 0
+        }
+    else:
+        {
+            return 100
+        }
 
-if (greeting == "hello"):
-    {
-        return True
-    }
-else:
-    {
-        return False
-    }
+check(greeting)
