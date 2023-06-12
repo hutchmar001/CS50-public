@@ -43,7 +43,7 @@ def specfont():
     figlet.setFont(font=sys.argv[2])
 
 def getinput():
-    x = input("Input: ")
+    global x = input("Input: ")
 
 checkargcount()
 print(figlet.renderText(x))
