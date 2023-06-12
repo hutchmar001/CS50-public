@@ -1,5 +1,5 @@
 greeting = input("Enter a greeting.")
-if (greeting == "hello")
+if (greeting == "hello"):
     {
         return 0
     }
