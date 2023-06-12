@@ -41,7 +41,6 @@ def randomfont():
 def specfont():
     print("")
 
-
 checkargcount()
 print(figlet.renderText(x))
 
