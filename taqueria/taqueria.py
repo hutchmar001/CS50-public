@@ -12,7 +12,7 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-try:
+while (!(EOFError):):
     item = input("Please enter a food.\n")
-except EOFError:
-    sys.exit(0)
+
+sys.exit(0)
