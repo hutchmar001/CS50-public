@@ -17,11 +17,10 @@ class Counter(dict):
     def __missing__(self, key):
         return 0
 c = Counter()
-c['Taco']
-c['Bob']
 
 while True:
     try:
         item = input("Please enter a food.\n")
+        print(c[item])
     except EOFError:
         sys.exit(0)
