@@ -14,7 +14,7 @@ elif(n == 3):
     }
 else:
     {
-        print("Invalid usage")
-        sys.exit()
+        print("Invalid usage"),
+        sys.exit(0)
     }
 
