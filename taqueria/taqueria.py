@@ -24,6 +24,6 @@ while True:
         item = input("Please enter a food.\n")
         i = item.title()
         if i in c:
-            print("Present!")
+            print(i)
     except EOFError:
         sys.exit(0)
