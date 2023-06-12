@@ -14,8 +14,8 @@ def checkargcount():
         }
     elif(n == 3):
         {
-            getinput(),
             checkusage(),
+            getinput(),
             specfont()
         }
     else:
