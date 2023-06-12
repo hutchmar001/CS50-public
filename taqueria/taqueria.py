@@ -21,6 +21,7 @@ c = Counter()
 while True:
     try:
         item = input("Please enter a food.\n")
-        print(c[item])
+        i = item.lower
+        print(c[i])
     except EOFError:
         sys.exit(0)
