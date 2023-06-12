@@ -1,3 +1,5 @@
+import sys
+
 menu = {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
@@ -13,4 +15,4 @@ menu = {
 try:
     item = input()
 except EOFError:
-    ...
+    sys.exit(0)
