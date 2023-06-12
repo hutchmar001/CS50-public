@@ -36,8 +36,7 @@ def checkusage():
     sys.exit()
 
 def randomfont():
-    i = random.choice(fontlist)
-    figlet.setFont(font=i)
+    figlet.setFont(font=random.choice(fontlist))
 
 def specfont():
     print("")
