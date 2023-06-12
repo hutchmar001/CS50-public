@@ -8,11 +8,13 @@ fontlist = figlet.getFonts()
 def checkargcount():
     if(n == 1):
         {
-            print("random")
+            checkusage()
+            randomfont()
         }
     elif(n == 3):
         {
-            print("specific")
+            checkusage()
+            specfont()
         }
     else:
         {
@@ -32,9 +34,13 @@ def checkusage():
     print("Invalid usage")
     sys.exit()
 
+def randomfont():
+
+def specfont():
+
+
 
 checkargcount()
-checkusage()
 
 
 
