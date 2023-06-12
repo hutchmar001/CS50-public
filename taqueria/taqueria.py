@@ -22,6 +22,7 @@ while True:
     try:
         item = input("Please enter a food.\n")
         i = item.lower
-        print(c[i])
+        if i in c:
+            print("Present!")
     except EOFError:
         sys.exit(0)
