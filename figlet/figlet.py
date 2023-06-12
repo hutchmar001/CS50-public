@@ -8,7 +8,7 @@ fontlist = figlet.getFonts()
 def checkfont():
     for i in fontlist:
         if(sys.argv[2] == i):
-            print("valid")
+            return
     print("Invalid usage")
     sys.exit(0)
 
