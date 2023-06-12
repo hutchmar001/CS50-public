@@ -17,20 +17,20 @@ def checkargcount():
     else:
         {
             print("Invalid usage"),
-            sys.exit(0)
+            sys.exit()
         }
 
 def checkusage():
     if(sys.argv[1] != "-f" and sys.argv[1] != "--font"):
         {
             print("Invalid usage"),
-            sys.exit(0)
+            sys.exit()
         }
     for i in fontlist:
         if(sys.argv[2] == i):
             return
     print("Invalid usage")
-    sys.exit(0)
+    sys.exit()
 
 
 checkargcount()
