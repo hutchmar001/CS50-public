@@ -11,7 +11,7 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-total = 0.00
+t = 0.00
 
 class Counter(dict):
     def __missing__(self, key):
