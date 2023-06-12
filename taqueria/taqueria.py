@@ -24,7 +24,8 @@ while True:
         item = input("Please enter a food.\n")
         i = item.title()
         if i in c:
-            total += c[i]
+            t += c[i]
+            total = round(t, 2)
             print("Total: $", total)
     except EOFError:
         sys.exit(0)
