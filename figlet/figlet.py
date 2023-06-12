@@ -7,3 +7,7 @@ if(n == 1):
     {
         print("random")
     }
+if(n == 3):
+    {
+        print("specific")
+    }
