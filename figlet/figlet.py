@@ -2,7 +2,6 @@ import sys
 import random
 from pyfiglet import Figlet
 
-x = input("Input: ")
 figlet = Figlet()
 n = len(sys.argv)
 fontlist = figlet.getFonts()
@@ -10,10 +9,12 @@ fontlist = figlet.getFonts()
 def checkargcount():
     if(n == 1):
         {
+            getinput()
             randomfont()
         }
     elif(n == 3):
         {
+            getinput()
             checkusage(),
             specfont()
         }
@@ -40,6 +41,9 @@ def randomfont():
 
 def specfont():
     figlet.setFont(font=sys.argv[2])
+
+def getinput():
+    x = input("Input: ")
 
 checkargcount()
 print(figlet.renderText(x))
