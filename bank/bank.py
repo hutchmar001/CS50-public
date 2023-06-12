@@ -1,13 +1,13 @@
-greeting = input("Enter a greeting.")
+greeting = input("Enter a greeting.\n")
 
 def check(grtg):
     if (greeting == "hello"):
         {
-            print()
+            print("$0")
         }
     else:
         {
-            return 100
+            print("$100")
         }
 
 check(greeting)
