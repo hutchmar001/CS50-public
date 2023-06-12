@@ -16,7 +16,7 @@ menu = {
 class Counter(dict):
     def __missing__(self, key):
         return 0
-c = Counter()
+c = Counter(menu)
 
 while True:
     try:
