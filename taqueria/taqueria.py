@@ -13,9 +13,12 @@ menu = {
 }
 total = 0.00
 
+
 class Counter(dict):
     def __missing__(self, key):
         return 0
+
+
 c = Counter(menu)
 
 
