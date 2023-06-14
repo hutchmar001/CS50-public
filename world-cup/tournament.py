@@ -33,6 +33,7 @@ def main():
             x = simulate_tournament(teams)
             c = 0
             f = find(counts, 'team', x)
+            print(f)
             if f == -1:
                 dict['team'] = x
                 dict['count'] = c
