@@ -20,8 +20,9 @@ def main():
         for row in reader:
             t = row["team"]
             r = int(row["rating"])
-            teams.append(t)
-            teams.append(r)
+            teams['team'] = t
+            teams['rating'] = r
+    print(teams)
     simulate_tournament(teams)
 
 
