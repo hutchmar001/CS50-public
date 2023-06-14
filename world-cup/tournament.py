@@ -3,7 +3,6 @@
 import csv
 import sys
 import random
-from operator import itemgetter
 
 # Number of simluations to run
 N = 1000
@@ -34,7 +33,7 @@ def main():
         dict = {}
         x = simulate_tournament(teams)
         if x in tms:
-            getter = itemgetter(x)
+            n = counts[x].keys()[0]
             continue
         dict[x] = 0
         counts.append(dict)
