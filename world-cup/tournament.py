@@ -35,7 +35,8 @@ def main():
         if b in tms:
             for x in counts:
                 for y in x:
-                    print(y)
+                    if x.get(y) == b:
+                        print(y)
                     # x.update({y += 1})
             continue
         dict[b] = 0
