@@ -34,8 +34,8 @@ def main():
         if x in counts:
             dict["count"] += 1
             continue
-        dict["team"] = t
-        dict["rating"] = r
+        dict["team"] = x
+        dict["count"] = 0
         counts.append(dict)
 
     # Print each team's chances of winning, according to simulation
