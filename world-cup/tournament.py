@@ -14,15 +14,14 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = {'team': 'rating'}
+    teams = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
             t = row["team"]
             r = int(row["rating"])
-            teams['team'] = t
-            teams['rating'] = r
-    print(teams)
+            teams.append(t)
+            teams.append(r)
     simulate_tournament(teams)
 
 
