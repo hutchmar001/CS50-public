@@ -32,7 +32,7 @@ def main():
             dict = {}
             x = simulate_tournament(teams)
             c = 0
-            if x not in counts:
+            if find(counts, )
                 dict['team'] = x
                 dict['count'] = c
                 counts.append(dict)
