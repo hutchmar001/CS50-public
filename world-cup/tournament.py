@@ -19,8 +19,9 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             t = row["team"]
-            r = row["rating"]
-
+            r = int(row["rating"])
+        teams.append(t)
+    print teams
 
     # TODO: Read teams into memory from file
 
