@@ -38,8 +38,8 @@ def main():
             counts.append(dict)
             continue
         counts[f]['count'] += 1
-    print(counts[15]['count'])
-    print(counts[15]['team'])
+    print(counts[13]['count'])
+    print(counts[13]['team'])
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
