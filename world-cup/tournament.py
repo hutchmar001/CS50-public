@@ -38,9 +38,9 @@ def main():
             tms.update(dict)
 
         while s == 0:
-            for x in counts:
-                for y in x:
-                    if b in tms:
+            if b in tms:
+                for x in counts:
+                    for y in x:
                         x[y] += 1
                         s = 1
                         break
