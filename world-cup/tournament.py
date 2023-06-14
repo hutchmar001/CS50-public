@@ -39,6 +39,7 @@ def main():
         print(dict)
         dict["team"] = x
         dict["count"] = 0
+        counts.update(dict)
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
