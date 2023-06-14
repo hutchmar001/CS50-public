@@ -31,16 +31,16 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
         dict = {}
-        x = simulate_tournament(teams)
-        if x in tms:
-            for y in my_dicts:
-                for y in z:
-                if y.get(z) == x:
-                y.update({z: "value3"})
+        b = simulate_tournament(teams)
+        if b in tms:
+            for x in my_dicts:
+                for y in x:
+                    if x.get(y) == x:
+                    x.update({y: "value3"})
             continue
-        dict[x] = 0
+        dict[b] = 0
         counts.append(dict)
-        tms.append(x)
+        tms.append(b)
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
