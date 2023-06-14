@@ -32,9 +32,7 @@ def main():
         dict = {}
         x = simulate_tournament(teams)
         if x in counts:
-            dict["team"] = x
             dict["count"] += 1
-            counts.append(dict)
             continue
         dict["team"] = t
         dict["rating"] = r
