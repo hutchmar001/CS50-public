@@ -18,12 +18,12 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            dict = {"team, rating"}
+            dict = {}
             t = row["team"]
             r = int(row["rating"])
             dict["team"] = t
             dict["rating"] = r
-            teams.append(dict)      
+            teams.append(dict)
     simulate_tournament(teams)
 
 
