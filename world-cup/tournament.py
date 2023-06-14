@@ -31,18 +31,21 @@ def main():
     for i in range(0, N):
         dict = {}
         b = simulate_tournament(teams)
+        s = 0
         if not counts:
             dict[b] = 0
             counts.append(dict)
-        while True:
+        while s == 0:
             for x in counts:
                 for y in x:
                     if b in x.keys():
                         x[y] += 1
+                        s = 1
                         break
                     else:
                         dict[b] = 0
                         counts.append(dict)
+                        s = 1
                         break
 
     # Print each team's chances of winning, according to simulation
