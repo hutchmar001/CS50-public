@@ -32,14 +32,14 @@ def main():
     for i in range(0, N):
         dict = {}
         b = simulate_tournament(teams)
-        restart = True
-        while restart:
+        restart = 0
+        while restart == 0:
             if b in tms:
                 for x in counts:
                     for y in x:
                         if b in x.keys():
                             x[y] += 1
-                            restart = False
+                            restart = 1
         dict[b] = 0
         counts.append(dict)
         tms.append(b)
