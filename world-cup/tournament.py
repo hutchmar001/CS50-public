@@ -32,12 +32,11 @@ def main():
     for i in range(0, N):
         dict = {}
         b = simulate_tournament(teams)
-        if b in tms:
-            for x in counts:
-                for y in x:
-                    if b in x.keys():
-                        x[y] += 1
-                        break
+        for x in counts:
+            for y in x:
+                if b in x.keys():
+                    x[y] += 1
+                    break
         dict[b] = 0
         counts.append(dict)
         tms.append(b)
