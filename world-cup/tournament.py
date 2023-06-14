@@ -45,7 +45,7 @@ def main():
 
 def find(counts, key, value):
     for i, dic in enumerate(counts):
-        if dic in enumerate(counts):
+        if dic[key] == value:
             return i
     return -1
 
