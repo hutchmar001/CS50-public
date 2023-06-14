@@ -31,7 +31,7 @@ def main():
     for i in range(0, N):
         x = simulate_tournament(teams)
         if x not in counts:
-            counts['team'] = x
+            counts.update(x)
             counts['count'] = 0
             continue
         counts['count'] =+ 1
