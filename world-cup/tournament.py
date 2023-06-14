@@ -39,7 +39,7 @@ def main():
 
         while s == 0:
             if b in tms:
-                dict[b] += 1
+                up_dict = {b:}
                 s = 1
                 break
             else:
