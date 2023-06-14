@@ -36,6 +36,7 @@ def main():
             dict["count"] = 0
             counts.update(dict)
             continue
+        print(dict)
         counts['count'] += 1
 
     # Print each team's chances of winning, according to simulation
