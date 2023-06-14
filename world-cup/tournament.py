@@ -33,10 +33,10 @@ def main():
         dict = {}
         x = simulate_tournament(teams)
         if x in tms:
-            for x in my_dicts:
-                for y in x:
-                if x.get(y) == 'value2':
-                x.update({y: "value3"})
+            for y in my_dicts:
+                for y in z:
+                if y.get(z) == x:
+                y.update({z: "value3"})
             continue
         dict[x] = 0
         counts.append(dict)
