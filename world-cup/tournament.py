@@ -15,14 +15,15 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    dict = {}
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
+            dict = {"team, rating"}
             t = row["team"]
             r = int(row["rating"])
-            teams.append(t)
-            teams.append(r)
+            dict["team"] = t
+            dict["rating"] = r
+            teams.append(dict)      
     simulate_tournament(teams)
 
 
