@@ -28,7 +28,8 @@ def main():
 
     counts = []
     # TODO: Simulate N tournaments and keep track of win counts
-    for i in range(0, N):
+    i = 0
+    while i < N:
             dict = {}
             x = simulate_tournament(teams)
             f = find(counts, 'team', x)
@@ -40,6 +41,7 @@ def main():
             counts[f]['count'] += 1
             print(counts[f]['count'])
             print(counts[f]['team'])
+            i += 1
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
