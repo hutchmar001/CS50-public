@@ -63,7 +63,9 @@ def simulate_tournament(teams):
     # TODO
     while(len(teams) > 1):
         teams = simulate_round(teams)
-    print(teams[])
+    x = teams.get('team')
+    print(x)
+    return x
 
 if __name__ == "__main__":
     main()
