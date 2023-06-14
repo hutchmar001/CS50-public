@@ -34,7 +34,7 @@ def main():
         if x not in counts:
             dict["team"] = t
             dict["count"] = 0
-            dict.update(counts)
+            counts.update(dict)
             continue
         counts['count'] += 1
 
