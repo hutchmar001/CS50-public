@@ -20,7 +20,8 @@ def main():
         for row in reader:
             t = row["team"]
             r = int(row["rating"])
-        teams.append(t)
+            teams.append(t)
+            teams.append(r)
     print(teams)
 
     # TODO: Read teams into memory from file
