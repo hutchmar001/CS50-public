@@ -27,7 +27,6 @@ def main():
 
 
     counts = []
-    tms = []
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
         dict = {}
@@ -39,7 +38,6 @@ def main():
                     break
         dict[b] = 0
         counts.append(dict)
-        tms.append(b)
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
