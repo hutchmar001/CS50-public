@@ -36,7 +36,7 @@ def main():
             for x in counts:
                 for y in x:
                     print(x.get(y))
-                    # print(y)
+                    print(int(y))
                     # x.update({y += 1})
             continue
         dict[b] = 0
