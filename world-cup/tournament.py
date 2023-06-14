@@ -32,6 +32,7 @@ def main():
     for i in range(0, N):
         dict = {}
         b = simulate_tournament(teams)
+        while 
         if b in tms:
             for x in counts:
                 for y in x:
