@@ -33,9 +33,9 @@ def main():
         dict = {}
         b = simulate_tournament(teams)
         if b in tms:
-            for x in my_dicts:
+            for x in counts:
                 for y in x:
-                    x.update({y += 1})
+                    x.update({y = y + 1})
             continue
         dict[b] = 0
         counts.append(dict)
