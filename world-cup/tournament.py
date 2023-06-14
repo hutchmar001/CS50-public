@@ -38,14 +38,13 @@ def main():
                 counts.append(dict)
                 continue
             c += 1
-            counts.update({'count': c})
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
 
-def find
-
+def find(counts, key, value)
+    for 
 
 
 def find(lst, key, value):
