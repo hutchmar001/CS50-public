@@ -26,10 +26,19 @@ def main():
             teams.append(dict)
 
 
-    counts = {}
+    counts = []
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
-            simulate_tournament(teams)
+            dict = {}
+            x = simulate_tournament(teams)
+            c = 0
+            if x not in counts:
+                dict['team'] = x
+                dict['count'] = c
+                counts.append(dict)
+                continue
+            c += 1
+            counts.update({'count': c})
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
