@@ -35,9 +35,9 @@ def main():
         if not counts:
             dict[b] = 0
             counts.append(dict)
-        while s == 0:
-            for x in counts:
-                for y in x:
+        for x in counts:
+            for y in x:
+                while s == 0:
                     if b in x.keys():
                         x[y] += 1
                         s = 1
