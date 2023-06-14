@@ -34,7 +34,7 @@ def main():
         if x in counts:
             dict["team"] = x
             dict["count"] += 1
-            counts.update(dict)
+            counts.append(dict)
             continue
         dict["team"] = t
         dict["rating"] = r
