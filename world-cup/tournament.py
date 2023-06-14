@@ -33,7 +33,7 @@ def main():
         dict = {}
         x = simulate_tournament(teams)
         if x in tms:
-            counts[x] += 1
+            n = counts[x].keys()[0]
             continue
         dict[x] = 0
         counts.append(dict)
