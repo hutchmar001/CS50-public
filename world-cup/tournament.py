@@ -32,6 +32,8 @@ def main():
         dict = {}
         global b
         b = simulate_tournament(teams)
+        if not counts:
+            apend()
         for x in counts:
             for y in x:
                 if b in x.keys():
