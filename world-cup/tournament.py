@@ -32,11 +32,12 @@ def main():
             dict = {}
             x = simulate_tournament(teams)
             c = 0
-            if find(counts, )
-                dict['team'] = x
-                dict['count'] = c
-                counts.append(dict)
+            if find(counts, 'team', x)
                 continue
+            dict['team'] = x
+            dict['count'] = c
+            counts.append(dict)
+            continue
             c += 1
 
     # Print each team's chances of winning, according to simulation
