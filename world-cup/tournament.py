@@ -29,10 +29,11 @@ def main():
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
+        dict = {}
         x = simulate_tournament(teams)
         if x not in counts:
-            counts.update(x)
-            counts['count'] = 0
+            dict["team"] = t
+            dict["count"] = t
             continue
         counts['count'] =+ 1
 
