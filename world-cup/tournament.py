@@ -21,7 +21,7 @@ def main():
             t = row["team"]
             r = int(row["rating"])
         teams.append(t)
-    print teams
+    print(teams)
 
     # TODO: Read teams into memory from file
 
