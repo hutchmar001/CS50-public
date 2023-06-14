@@ -19,7 +19,7 @@ def main():
         reader = csv.DictReader(file)
     line_count = 0
     for row in reader:
-        x = {row["team"]}
+        x = row["team"]
         print(x)
 
     # TODO: Read teams into memory from file
