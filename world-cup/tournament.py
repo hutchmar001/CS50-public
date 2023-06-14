@@ -33,13 +33,13 @@ def main():
             x = simulate_tournament(teams)
             c = 0
             f = find(counts, 'team', x)
-            print(f)
             if f == -1:
                 dict['team'] = x
                 dict['count'] = c
                 counts.append(dict)
                 continue
             counts[f]['count'] += 1
+            print(counts[f]['count'])
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
