@@ -40,7 +40,7 @@ def main():
         while s == 0:
             for x in counts:
                 for y in x:
-                    if tms.get(b) != None:
+                    if b in tms:
                         x[y] += 1
                         s = 1
                         break
