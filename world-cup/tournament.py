@@ -30,6 +30,7 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
         dict = {}
+        global b
         b = simulate_tournament(teams)
         for x in counts:
             for y in x:
@@ -37,12 +38,16 @@ def main():
                     x[y] += 1
                     break
                 else:
-                    dict[b] = 0
-                    counts.append(dict)
+                    apend()
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
+
+def apend():
+    dict[b] = 0
+    counts.append(dict)
+
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
