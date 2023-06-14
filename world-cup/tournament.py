@@ -31,11 +31,10 @@ def main():
     for i in range(0, N):
             dict = {}
             x = simulate_tournament(teams)
-            c = 0
             f = find(counts, 'team', x)
             if f == -1:
                 dict['team'] = x
-                dict['count'] = c
+                dict['count'] = 0
                 counts.append(dict)
                 continue
             counts[f]['count'] += 1
