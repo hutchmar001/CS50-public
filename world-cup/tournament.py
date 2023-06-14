@@ -38,18 +38,18 @@ def main():
             tms.append(dict)
 
         while s == 0:
-            if b in tms[y]:
-                for x in counts:
-                    for y in x:
+            for x in counts:
+                for y in x:
+                    if b == tms[x]:
                         x[y] += 1
                         s = 1
                         break
-            else:
-                dict[b] = 0
-                counts.append(dict)
-                tms.append(dict)
-                s = 1
-                break
+                else:
+                    dict[b] = 0
+                    counts.append(dict)
+                    tms.append(dict)
+                    s = 1
+                    break
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
