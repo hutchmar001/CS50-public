@@ -34,15 +34,16 @@ def main():
         if not counts:
             dict[b] = 0
             counts.append(dict)
-        for x in counts:
-            for y in x:
-                if b in x.keys():
-                    x[y] += 1
-                    break
-                else:
-                    dict[b] = 0
-                    counts.append(dict)
-                    break
+        while True:
+            for x in counts:
+                for y in x:
+                    if b in x.keys():
+                        x[y] += 1
+                        break
+                    else:
+                        dict[b] = 0
+                        counts.append(dict)
+                        break
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
