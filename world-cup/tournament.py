@@ -35,8 +35,7 @@ def main():
         if x in tms:
             counts[0][1] += 1
             continue
-        dict["team"] = x
-        dict["count"] = 0
+        dict[x] = 0
         counts.append(dict)
         tms.append(x)
 
