@@ -35,8 +35,6 @@ def main():
             dict["count"] += 1
             counts.update(dict)
             continue
-        dict["team"] = x
-        dict["count"] = 0
         counts.update(team = x, count = 0)
 
     # Print each team's chances of winning, according to simulation
