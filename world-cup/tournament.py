@@ -25,7 +25,7 @@ def main():
             dict["rating"] = r
             teams.append(dict)
 
-    tms = []
+    tms = {}
     counts = []
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
@@ -35,7 +35,7 @@ def main():
         if not counts:
             dict[b] = 0
             counts.append(dict)
-            tms.append(dict)
+            tms.update(dict)
 
         while s == 0:
             for x in counts:
@@ -48,7 +48,7 @@ def main():
                     else:
                         dict[b] = 0
                         counts.append(dict)
-                        tms.append(dict)
+                        tms.update(dict)
                         s = 1
                         break
 
