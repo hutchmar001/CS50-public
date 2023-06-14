@@ -36,7 +36,6 @@ def main():
             dict["count"] += 1
             counts.update(dict)
             continue
-        print(dict)
         dict["team"] = x
         dict["count"] = 0
         counts.update(dict)
