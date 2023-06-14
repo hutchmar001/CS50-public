@@ -37,7 +37,7 @@ def main():
                 for y in x:
                     if b in x.keys():
                         x[y] += 1
-                        continue
+                        break
         dict[b] = 0
         counts.append(dict)
         tms.append(b)
