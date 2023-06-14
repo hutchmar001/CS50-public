@@ -38,13 +38,14 @@ def main():
         for x in counts:
             for y in x:
                 while s == 0:
-                    if b in tms[b]:
+                    if b in tms[y]:
                         x[y] += 1
                         s = 1
                         break
                     else:
                         dict[b] = 0
                         counts.append(dict)
+                        tms.append(dict)
                         s = 1
                         break
 
