@@ -35,8 +35,9 @@ def main():
         if b in tms:
             for x in counts:
                 for y in x:
-                    x[y] += 1
-            continue
+                    if x[y] == b:
+                        x[y] += 1
+                        continue
         dict[b] = 0
         counts.append(dict)
         tms.append(b)
