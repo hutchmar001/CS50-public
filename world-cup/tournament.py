@@ -36,8 +36,9 @@ def main():
                 if b in x.keys():
                     x[y] += 1
                     break
-        dict[b] = 0
-        counts.append(dict)
+                else:
+                    dict[b] = 0
+                    counts.append(dict)
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
