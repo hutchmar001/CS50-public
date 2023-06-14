@@ -22,7 +22,6 @@ def main():
             r = int(row["rating"])
             teams.append(t)
             teams.append(r)
-    print(teams)
 
 
     counts = {}
@@ -60,6 +59,8 @@ def simulate_tournament(teams):
     # TODO
     while(len(teams) > 1):
         simulate_round(teams)
+    print(teams[0])
+    return teams[0]
 
 if __name__ == "__main__":
     main()
