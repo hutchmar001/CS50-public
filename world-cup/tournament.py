@@ -36,7 +36,7 @@ def main():
             for x in my_dicts:
                 for y in x:
                     if x.get(y) == x:
-                    x.update({y: "value3"})
+                    x.update({y += 1})
             continue
         dict[b] = 0
         counts.append(dict)
