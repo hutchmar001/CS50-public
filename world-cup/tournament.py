@@ -44,14 +44,16 @@ def main():
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
 
 def find(counts, key, value)
-    for 
-
-
-def find(lst, key, value):
-    for i, dic in enumerate(lst):
-        if dic[key] == value:
+    for i, dic in enumerate(counts):
+        if dic in enumerate(counts):
             return i
     return -1
+
+## def find(lst, key, value):
+    ## for i, dic in enumerate(lst):
+        ## if dic[key] == value:
+            ## return i
+    ## return -1
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
