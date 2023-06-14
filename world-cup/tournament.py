@@ -34,7 +34,7 @@ def main():
         dict = {}
         x = simulate_tournament(teams)
         if x in tms:
-            getter = itemgetter
+            getter = itemgetter(x)
             continue
         dict[x] = 0
         counts.append(dict)
