@@ -24,6 +24,7 @@ def main():
             dict["team"] = t
             dict["rating"] = r
             teams.append(dict)
+    print(teams)
     simulate_tournament(teams)
 
 
