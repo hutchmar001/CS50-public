@@ -35,6 +35,7 @@ def main():
         if not counts:
             dict[b] = 0
             counts.append(dict)
+            tms.append(dict)
 
         while s == 0:
             for x in counts:
