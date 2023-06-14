@@ -29,17 +29,17 @@ def main():
     counts = []
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
-            dict = {}
-            x = simulate_tournament(teams)
-            f = find(counts, 'team', x)
-            if f == -1:
-                dict['team'] = x
-                dict['count'] = 0
-                counts.append(dict)
-                continue
-            counts[f]['count'] += 1
-            print(counts[f]['count'])
-            print(counts[f]['team'])
+        dict = {}
+        x = simulate_tournament(teams)
+        f = find(counts, 'team', x)
+        if f == -1:
+            dict['team'] = x
+            dict['count'] = 0
+            counts.append(dict)
+            continue
+        counts[f]['count'] += 1
+    print(counts[15]['count'])
+    print(counts[15]['team'])
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
