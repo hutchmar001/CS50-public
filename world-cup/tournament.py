@@ -14,7 +14,7 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = []              # TODO: Read teams into memory from file
+    teams = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -22,6 +22,7 @@ def main():
             r = int(row["rating"])
             teams.append(t)
             teams.append(r)
+    simulate_tournament(teams)
 
 
     counts = {}
