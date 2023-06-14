@@ -31,25 +31,16 @@ def main():
     for i in range(0, N):
         dict = {}
         x = simulate_tournament(teams)
-        f = find(counts, 'team', x)
         if f == -1:
             dict['team'] = x
             dict['count'] = 0
             counts.append(dict)
             continue
         counts[f]['count'] += 1
-    print(counts[13]['count'])
-    print(counts[13]['team'])
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
-
-def find(counts, key, value):
-    for i, dic in enumerate(counts):
-        if dic[key] == value:
-            return i
-    return -1
 
 def simulate_game(team1, team2):
     """Simulate a game. Return True if team1 wins, False otherwise."""
