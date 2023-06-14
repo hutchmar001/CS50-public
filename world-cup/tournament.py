@@ -38,7 +38,7 @@ def main():
         for x in counts:
             for y in x:
                 while s == 0:
-                    if b in x.keys():
+                    if b in tms[b]:
                         x[y] += 1
                         s = 1
                         break
