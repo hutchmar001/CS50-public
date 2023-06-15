@@ -39,8 +39,9 @@ def main():
 
         while s == 0:
             if b in tms:
-                up_dict = {b:1}
-                
+                for d in counts:
+                    d.update((k, "value3") for k, v in d.iteritems() if k == b)
+
                 s = 1
                 break
             else:
