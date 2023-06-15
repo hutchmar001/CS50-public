@@ -36,7 +36,7 @@ def main():
             dict[b] = 1
             counts.append(dict)
             tms.update(dict)
-            break
+            continue
 
         while s == 0:
             if b in tms:
