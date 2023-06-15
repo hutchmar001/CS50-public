@@ -25,9 +25,9 @@ def main():
             dict["rating"] = r
             teams.append(dict)
 
+    # TODO: Simulate N tournaments and keep track of win counts
     tms = {}
     counts = {}
-    # TODO: Simulate N tournaments and keep track of win counts
     for i in range(0, N):
         dict = {}
         b = simulate_tournament(teams)
