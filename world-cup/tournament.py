@@ -40,7 +40,7 @@ def main():
         while s == 0:
             if b in tms:
                 for d in counts:
-                    d.update((k, "value3") for k, v in d.iteritems() if k == b)
+                    d.update((k, v + 1) for k, v in d.iteritems() if k == b)
 
                 s = 1
                 break
