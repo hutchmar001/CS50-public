@@ -24,7 +24,6 @@ def main():
             teams.append(dict)
 
     # TODO: Simulate N tournaments and keep track of win counts
-    tms = {}
     counts = {}
     for i in range(0, N):
         dict = {}
@@ -33,7 +32,6 @@ def main():
         if not counts:
             dict[b] = 1
             counts.update(dict)
-            tms.update(dict)
         while s == 0:
             if b in counts:
                 counts.update((k, v + 1) for k, v in counts.items() if k == b)
@@ -41,7 +39,6 @@ def main():
             else:
                 dict[b] = 1
                 counts.update(dict)
-                tms.update(dict)
                 s = 1
 
 
