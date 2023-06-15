@@ -40,13 +40,12 @@ def main():
             if b in tms:
                 counts.update((k, v + 1) for k, v in counts.items() if k == b)
                 s = 1
-                break
             else:
                 dict[b] = 1
                 counts.update(dict)
                 tms.update(dict)
                 s = 1
-                break
+
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
