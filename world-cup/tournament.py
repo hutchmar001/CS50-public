@@ -35,7 +35,7 @@ def main():
             counts.update(dict)
             tms.update(dict)
         while s == 0:
-            if b in tms:
+            if b in counts:
                 counts.update((k, v + 1) for k, v in counts.items() if k == b)
                 s = 1
             else:
