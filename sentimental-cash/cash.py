@@ -9,6 +9,7 @@ def get_cents():
         get_cents()
     if cents < 0:
         get_cents()
+    return cents
 
 
 def main():
