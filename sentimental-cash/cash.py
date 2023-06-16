@@ -12,7 +12,7 @@ def get_cents():
 
 
 def calculate_quarters(cents):
-    
+    q = int(floor(cents / 25))
 
 def calculate_dimes(cents):
 def calculate_nickels(cents):
