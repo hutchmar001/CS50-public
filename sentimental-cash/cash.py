@@ -33,17 +33,17 @@ def main():
 
 
 def calculate_quarters(cents):
-    q = int(math.floor(cents / 25.00))
+    q = int(math.floor(cents / 25))
     return q
 
 
 def calculate_dimes(cents):
-    d = int(math.floor(cents / 10.00))
+    d = int(math.floor(cents / 10))
     return d
 
 
 def calculate_nickels(cents):
-    n = int(math.floor(cents / 5.00))
+    n = int(math.floor(cents / 5))
     return n
 
 
