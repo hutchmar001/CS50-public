@@ -5,9 +5,9 @@ import cs50
 def get_input():
     global height
     try:
-        height = int(input("Please enter an integer.\n"))
+        height = int(input("Please enter an integer betwen 1 and 8.\n"))
     except ValueError:
-        print("Please enter a valid integer.")
+        get_input()
     if height not in range(1, 9):
         get_input()
 
