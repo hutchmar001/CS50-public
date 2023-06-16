@@ -29,7 +29,7 @@ def main():
 
 def calculate_quarters(c):
     global q
-    q = int(cents // 25.00)
+    q = int(math.floor(cents / 25.00))
 
 
 def calculate_dimes(c):
