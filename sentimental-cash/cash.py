@@ -2,9 +2,10 @@
 import cs50
 import math
 
+
 def get_cents():
     try:
-        cents = float(input("Please enter a postive amount.\n"))
+        cents = float(input("Enter the dollars and cents.\n"))
     except ValueError:
         get_cents()
     if cents < 0:
