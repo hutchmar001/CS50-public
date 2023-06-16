@@ -1,7 +1,8 @@
 # TODO
 import cs50
 
-def(get_input):
+
+
     try:
         height = int(input("Please enter an integer.\n"))
     except ValueError or height not in range(1, 9):
@@ -15,6 +16,6 @@ def main():
             print("#", end='')
         print("\n")
 
-get_input()
+
 main()
 
