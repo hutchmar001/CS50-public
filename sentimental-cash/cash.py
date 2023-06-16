@@ -7,7 +7,7 @@ def get_cents():
         cents = int(input("Please enter a postive amount.\n"))
     except ValueError:
         get_cents()
-    if height < 0:
+    if cents < 0:
         get_cents()
 
 
