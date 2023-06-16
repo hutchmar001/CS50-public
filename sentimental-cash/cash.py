@@ -16,40 +16,40 @@ def main():
     global cents
     cents = get_cents()
 
-    calculate_quarters(cents)
-    cents = cents - q * 25
+    quarters = calculate_quarters(cents)
+    cents = cents - quarters * 25
 
-    calculate_dimes(cents)
-    cents = cents - d * 10
+    dimes = calculate_dimes(cents)
+    cents = cents - dimes * 10
 
-    calculate_nickels(cents)
-    cents = cents - n * 5
+    nickels = calculate_nickels(cents)
+    cents = cents - nickels * 5
 
-    calculate_pennies(cents)
-    cents = cents - p
+    pennies = calculate_pennies(cents)
+    cents = cents - pennies
 
     coins = q + d + n + p
     print(coins)
 
 
 def calculate_quarters(cents):
-    global q
     q = int(math.floor(cents / 25.00))
+    return q
 
 
 def calculate_dimes(cents):
-    global d
     d = int(math.floor(cents / 10.00))
+    return d
 
 
 def calculate_nickels(cents):
-    global n
     n = int(math.floor(cents / 5.00))
+    return n
 
 
 def calculate_pennies(cents):
-    global p
     p = int(math.floor(cents))
+    return p
 
 
 main()
