@@ -12,8 +12,7 @@ def get_cents():
 
 
 def main():
-    global cents
-    get_cents()
+    cents = get_cents()
     calculate_quarters(cents)
     cents = cents - q * 25
     calculate_dimes(cents)
