@@ -14,12 +14,16 @@ def get_cents():
 def main():
     global cents
     cents = get_cents()
-    calculate_quarters(cents)
+
+    q = int(math.floor(cents / 25.00))
     cents = cents - q * 25
+
     calculate_dimes(cents)
     cents = cents - d * 10
+
     calculate_nickels(cents)
     cents = cents - n * 5
+
     calculate_pennies(cents)
     cents = cents - p
 
