@@ -4,7 +4,7 @@ import math
 
 def get_cents():
     try:
-        cents = int(input("Please enter a postive amount.\n"))
+        cents = float(input("Please enter a postive amount.\n"))
     except ValueError:
         get_cents()
     if cents < 0:
