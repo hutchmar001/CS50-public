@@ -11,7 +11,7 @@ int main()
         printf("Please enter an integer.\n");
         scanf("%d", &height);
     }
-    for (int h = 1; h <= height; h++)
+    for (ih = 1; h <= height; h++)
     {
         for (int j = 1; j <= height - h; j++)
 
