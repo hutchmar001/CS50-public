@@ -18,17 +18,18 @@ def calculate_quarters(cents):
 
 def calculate_dimes(cents):
     global d
-    d = (int)floor(cents / 25)
+    d = int(floor(cents / 10))
 
 
 def calculate_nickels(cents):
     global n
-    n = (int)floor(cents / 25)
+    n = int(floor(cents / 5))
 
 
 def calculate_pennies(cents):
     global p
-    p = (int)floor(cents / 25)
-    
+    p = int(floor(cents))
+
 
 def main():
+    
