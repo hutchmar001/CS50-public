@@ -29,17 +29,17 @@ def main():
 
 def calculate_quarters(c):
     global q
-    q = int(math.floor(cents / 25))
+    q = int(math.floor(cents / 25.00))
 
 
 def calculate_dimes(c):
     global d
-    d = int(math.floor(cents / 10))
+    d = int(math.floor(cents / 10.00))
 
 
 def calculate_nickels(c):
     global n
-    n = int(math.floor(cents / 5))
+    n = int(math.floor(cents / 5.00))
 
 
 def calculate_pennies(c):
