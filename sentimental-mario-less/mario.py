@@ -1,10 +1,11 @@
 # TODO
 import cs50
 
-try:
-    height = int(input("Please enter an integer.\n"))
-except ValueError or height not in range(1, 9):
-    print("Please enter a valid integer.")
+while True:
+    try:
+        height = int(input("Please enter an integer.\n"))
+    except ValueError or height not in range(1, 9):
+        print("Please enter a valid integer.")
 
 def main():
     for h in range (0, height):
