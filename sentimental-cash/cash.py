@@ -12,11 +12,23 @@ def get_cents():
 
 
 def calculate_quarters(cents):
+    global q
     q = int(floor(cents / 25))
-    return 
+
 
 def calculate_dimes(cents):
+    global d
+    d = (int)floor(cents / 25)
+
+
 def calculate_nickels(cents):
+    global n
+    n = (int)floor(cents / 25)
+
+
 def calculate_pennies(cents):
+    global p
+    p = (int)floor(cents / 25)
+    
 
 def main():
