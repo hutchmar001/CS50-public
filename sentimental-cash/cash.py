@@ -9,7 +9,7 @@ def get_cents():
         get_cents()
     if cents < 0:
         get_cents()
-    return cents
+    return cents * 100
 
 
 def main():
