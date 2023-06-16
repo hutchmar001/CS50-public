@@ -12,6 +12,7 @@ def get_cents():
 
 
 def main():
+    global cents
     cents = get_cents()
     calculate_quarters(cents)
     cents = cents - q * 25
