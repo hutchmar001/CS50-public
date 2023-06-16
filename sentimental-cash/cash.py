@@ -16,7 +16,7 @@ def main():
     global cents
     cents = get_cents()
 
-    q = int(math.floor(cents / 25.00))
+    calculate_quarters(cents)
     cents = cents - q * 25
 
     calculate_dimes(cents)
