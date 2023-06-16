@@ -32,4 +32,15 @@ def calculate_pennies(cents):
 
 
 def main():
-    
+    get_cents()
+    calculate_quarters(cents)
+    cents = cents - q * 25
+    calculate_dimes(cents)
+    cents = cents - d * 10
+    calculate_nickels(cents)
+    cents = cents - n * 5
+    calculate_pennies(cents)
+    cents = cents - p
+
+    coins = q + d + n + p
+    print(coins\n)
