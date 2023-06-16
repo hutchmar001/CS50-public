@@ -1,10 +1,11 @@
 # TODO
 import cs50
 
-height = input("Please enter an integer.\n")
+HEIGHT = input("Please enter an integer.\n")
 
 def main():
     {
-        while height not in range(1, 8):
+        while height < 1 or height > 8:
             print(input("Please enter an integer.\n"))
     }
+
