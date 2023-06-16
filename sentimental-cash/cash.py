@@ -27,22 +27,22 @@ def main():
     print(coins)
 
 
-def calculate_quarters(c):
+def calculate_quarters(cents):
     global q
     q = int(math.floor(cents / 25.00))
 
 
-def calculate_dimes(c):
+def calculate_dimes(cents):
     global d
     d = int(math.floor(cents / 10.00))
 
 
-def calculate_nickels(c):
+def calculate_nickels(cents):
     global n
     n = int(math.floor(cents / 5.00))
 
 
-def calculate_pennies(c):
+def calculate_pennies(cents):
     global p
     p = int(math.floor(cents))
 
