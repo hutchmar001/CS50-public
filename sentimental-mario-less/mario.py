@@ -17,7 +17,7 @@ def main():
             print(" ", end='')
         for k in range (0, h + 1):
             print("#", end='')
-        print("\n")
+        print()
 
 get_input()
 main()
