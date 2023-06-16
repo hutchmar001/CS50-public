@@ -32,7 +32,6 @@ def calculate_pennies(cents):
 
 
 def main():
-    get_cents()
     calculate_quarters(cents)
     cents = cents - q * 25
     calculate_dimes(cents)
@@ -45,4 +44,5 @@ def main():
     coins = q + d + n + p
     print(coins)
 
+get_cents()
 main()
