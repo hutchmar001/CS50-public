@@ -1,11 +1,9 @@
 # TODO
-import stdio
-import stlib
 import cs50
+
+HEIGHT = 0
 
 def main():
     {
-        height = 0
         first = input("Please enter an integer.\n")
-        print(first)
     }
