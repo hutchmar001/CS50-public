@@ -8,8 +8,7 @@ def main():
         input("Please enter an integer.\n")
     for (h = 1, h <= height, h += 1)
     {
-        for (j = 1, j <= height - h, j += 1)
-
+        for j = 1, j <= height - h, j += 1)
         {
             print(" ")
         }
