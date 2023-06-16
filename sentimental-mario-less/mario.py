@@ -1,7 +1,7 @@
 # TODO
 import cs50
 
-HEIGHT = input("Please enter an integer.\n")
+height = input("Please enter an integer.\n")
 
 def main():
     {
