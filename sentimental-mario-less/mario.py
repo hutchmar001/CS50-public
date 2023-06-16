@@ -5,5 +5,5 @@ HEIGHT = 0
 
 def main():
     {
-        first = input("Please enter an integer.\n")
+        print(input("Please enter an integer.\n"))
     }
