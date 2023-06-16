@@ -3,12 +3,12 @@ import cs50
 
 try:
     height = int(input("Please enter an integer.\n"))
-    while height not in range(1, 9):
-        input("Please enter an integer.\n")
-except ValueError:
+except ValueError or :
     print("Please enter a valid integer.")
 
 def main():
+    while height not in range(1, 9):
+        input("Please enter an integer.\n")
     for h in range (0, height):
         for j in range (1, height - h):
             print(" ", end='')
