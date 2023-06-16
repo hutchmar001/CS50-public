@@ -43,4 +43,4 @@ def main():
     cents = cents - p
 
     coins = q + d + n + p
-    print(coins\n)
+    print(coins)
