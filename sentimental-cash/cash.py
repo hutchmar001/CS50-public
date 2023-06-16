@@ -1,25 +1,25 @@
 # TODO
 import cs50
-
+import math
 
 def calculate_quarters(cents):
     global q
-    q = int(floor(cents / 25))
+    q = int(math.floor(cents / 25))
 
 
 def calculate_dimes(cents):
     global d
-    d = int(floor(cents / 10))
+    d = int(math.floor(cents / 10))
 
 
 def calculate_nickels(cents):
     global n
-    n = int(floor(cents / 5))
+    n = int(math.floor(cents / 5))
 
 
 def calculate_pennies(cents):
     global p
-    p = int(floor(cents))
+    p = int(math.floor(cents))
 
 
 def main():
