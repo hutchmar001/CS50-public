@@ -6,5 +6,5 @@ import cs50
 int main()
 {
     height = 0;
-    print("Please enter an integer.\n")
+    first = input("Please enter an integer.\n")
 }
