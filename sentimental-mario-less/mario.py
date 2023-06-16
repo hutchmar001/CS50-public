@@ -9,7 +9,7 @@ def main():
     for h in range (1, height):
         for j in range (1, height - h):
             print(" ")
-        for k in range (1, h - 1):
+        for k in range (0, h - 1):
             print("#")
         print("\n")
 
