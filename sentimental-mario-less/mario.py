@@ -11,13 +11,15 @@ def get_input():
     if height not in range(1, 9):
         get_input()
 
+
 def main():
-    for h in range (0, height):
-        for j in range (1, height - h):
+    for h in range(0, height):
+        for j in range(1, height - h):
             print(" ", end='')
-        for k in range (0, h + 1):
+        for k in range(0, h + 1):
             print("#", end='')
         print()
+
 
 get_input()
 main()
