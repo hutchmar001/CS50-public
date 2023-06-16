@@ -8,9 +8,9 @@ def main():
         input("Please enter an integer.\n")
     for h in range (0, height):
         for j in range (1, height - h):
-            print(" ")
+            print(" ", end='')
         for k in range (0, h + 1):
-            print("#")
+            print("#", end='')
         print("\n")
 
 
