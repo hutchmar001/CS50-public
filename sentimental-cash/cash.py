@@ -3,7 +3,6 @@ import cs50
 import math
 
 def get_cents():
-    global cents
     try:
         cents = int(input("Please enter a postive amount.\n"))
     except ValueError:
@@ -13,6 +12,7 @@ def get_cents():
 
 
 def main():
+    global cents
     get_cents()
     calculate_quarters(cents)
     cents = cents - q * 25
@@ -27,22 +27,22 @@ def main():
     print(coins)
 
 
-def calculate_quarters(cents):
+def calculate_quarters(c):
     global q
     q = int(math.floor(cents / 25))
 
 
-def calculate_dimes(cents):
+def calculate_dimes(c):
     global d
     d = int(math.floor(cents / 10))
 
 
-def calculate_nickels(cents):
+def calculate_nickels(c):
     global n
     n = int(math.floor(cents / 5))
 
 
-def calculate_pennies(cents):
+def calculate_pennies(c):
     global p
     p = int(math.floor(cents))
 
