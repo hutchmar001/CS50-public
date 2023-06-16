@@ -44,3 +44,5 @@ def main():
 
     coins = q + d + n + p
     print(coins)
+
+main()
