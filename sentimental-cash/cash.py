@@ -13,7 +13,6 @@ def get_cents():
 
 def main():
     global cents
-    cents = get_cents()
 
     q = int(math.floor(cents / 25.00))
     cents = cents - q * 25
