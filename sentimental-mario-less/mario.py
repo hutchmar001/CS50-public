@@ -5,7 +5,9 @@ height = int(input("Please enter an integer.\n"))
 
 def main():
     while height not in range(1, 9) or height not int:
-        input("Please enter an integer.\n")
+        try:
+            int(input("Please enter an integer.\n"))
+
     for h in range (0, height):
         for j in range (1, height - h):
             print(" ", end='')
