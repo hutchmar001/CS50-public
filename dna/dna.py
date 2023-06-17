@@ -42,10 +42,6 @@ def main():
     check(database)
 
 
-
-
-
-
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
 
