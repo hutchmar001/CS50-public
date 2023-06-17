@@ -1,6 +1,5 @@
 import csv
 import sys
-from collections import defaultdict
 
 
 def main():
@@ -86,14 +85,14 @@ def longest_match(sequence, subsequence):
 
 
 def check():
-        for index in range(len(databases2)):
-            temp = []
-            for k, v in databases2[index].items():
-                temp.append(v)
-                temp2 = temp[1:]
-                if temp2 == matches:
-                    print(temp[0])
-                    return True
+    for index in range(len(databases2)):
+        temp = []
+        for k, v in databases2[index].items():
+            temp.append(v)
+            temp2 = temp[1:]
+            if temp2 == matches:
+                print(temp[0])
+                return True
         return False
 
 
