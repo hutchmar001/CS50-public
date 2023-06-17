@@ -40,7 +40,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for j in range(0, len(databases)):
-        for value in databases[0].values():
+        for value in databases[j].values():
             print(value)
     return
 
