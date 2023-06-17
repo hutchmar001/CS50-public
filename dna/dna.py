@@ -23,7 +23,7 @@ def main():
             dict["GAAA"] = row["GAAA"]
             dict["TCTG"] = row["TCTG"]
             teams.append(dict)
-    print(teams)
+
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
