@@ -39,7 +39,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    check(database)
+    check(database2)
 
 
 def longest_match(sequence, subsequence):
