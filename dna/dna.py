@@ -5,6 +5,8 @@ from collections import defaultdict
 
 def main():
 
+    global databases2
+    global matches
     # TODO: Check for command-line usage
 
     if len(sys.argv) != 3:
@@ -13,7 +15,6 @@ def main():
     # TODO: Read database file into a variable
 
     databases = []
-    global databases2
     databases2 = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
@@ -40,7 +41,10 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    check()
+    if check():
+        continue
+    else:
+        print("No match.")
 
 
 def longest_match(sequence, subsequence):
