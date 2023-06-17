@@ -1,6 +1,5 @@
 import csv
 import sys
-from collections import defaultdict
 
 
 def main():
@@ -94,7 +93,7 @@ def check():
             if temp2 == matches:
                 print(temp[0])
                 return True
-        return False
+    return False
 
 
 main()
