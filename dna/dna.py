@@ -33,7 +33,7 @@ def main():
 
     for index in range(len(databases)):
         for k, v in databases[index].items():
-            dict_parse = {k: int(v) if v.isnumeric() else continue}
+            dict_parse = {k: int(v) if v.isnumeric() else v = v}
 
 
 
