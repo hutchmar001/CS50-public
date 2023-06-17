@@ -1,5 +1,6 @@
 import csv
 import sys
+from collections import defaultdict
 
 
 def main():
@@ -20,11 +21,10 @@ def main():
         for row in reader:
             databases.append(row)
 
-    for index in range(len(databases)): ## For each dictionary
-        for k, v in databases[index].items(): ## For each item
+    for index in range(len(databases)):
+        for k, v in databases[index].items():
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
-            ## Change all numbers from strings to ints
-            databases2.append(dict_parse) ## Append to new databases
+            databases2.append(dict_parse)
             break
 
     # TODO: Read DNA sequence file into a variable
@@ -37,7 +37,7 @@ def main():
     matches = []
     for key in databases2[0]:
         matches.append(longest_match(sequence, key))
-    matches = matches[1:] ## Cut off unnecessary 0 index
+    matches = matches[1:]
 
     # TODO: Check database for matching profiles
 
@@ -86,14 +86,14 @@ def longest_match(sequence, subsequence):
 
 
 def check():
-    for index in range(len(databases2)): ## For each dictionary
+    for index in range(len(databases2)):
         temp = []
-        for k, v in databases2[index].items(): ## For each item
+        for k, v in databases2[index].items():
             temp.append(v)
-            temp2 = temp[1:] ## Cut off unnecessary "Name" index
-            if temp2 == matches: ## If a match:
-                print(temp[0]) ## Print the "Name" index
-                return True
+            temp2 = temp[1:]
+            if temp2 == matches:
+                print(temp[0])
+                    return True
         return False
 
 
