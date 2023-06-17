@@ -33,7 +33,8 @@ def main():
 
     for index in range(len(databases)):
         for key in databases[index]:
-            for m in matches
+            if key.isdigit():
+                key = int(key)
 
 
 
