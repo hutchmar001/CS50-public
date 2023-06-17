@@ -23,8 +23,9 @@ def main():
         for k, v in databases[index].items():
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
             databases2.append(dict_parse)
+            break
     print(databases2)
-    
+
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as file:
