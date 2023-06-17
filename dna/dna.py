@@ -23,6 +23,7 @@ def main():
     for index in range(len(databases)): ## For each dictionary
         for k, v in databases[index].items(): ## For each item
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
+            ## Change all numbers from strings to ints
             databases2.append(dict_parse)
             break
 
