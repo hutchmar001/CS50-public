@@ -37,10 +37,10 @@ def main():
     matches = []
     for key in databases[0]:
         matches.append(longest_match(sequence, key))
-    print(matches)
 
     # TODO: Check database for matching profiles
-    
+    for value in databases[0].values():
+        print(value)
     return
 
 
