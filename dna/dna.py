@@ -32,8 +32,10 @@ def main():
     # TODO: Check database for matching profiles
     for i in range(0, len(matches)):
         for (k,v) in databases[0].items():
-            if matches[i] == v:
-                print(k)
+            if matches[i] != v:
+                break
+            else:
+                print("good")
     return
 
 
