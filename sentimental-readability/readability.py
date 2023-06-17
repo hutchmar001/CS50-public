@@ -22,9 +22,7 @@ def main():
     count_letters_and_words(text)
     l = letters / words * 100
     s = sentences / words * 100
-    index = 0.058 * l - 0.296 * s - 15.8
-    index = round(index)
-    index = int(index)
+    index = int(round(0.058 * l - 0.296 * s - 15.8))
     if index < 1:
         print("Before Grade 1")
     elif index > 15:
