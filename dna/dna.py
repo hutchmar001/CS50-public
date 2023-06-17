@@ -33,7 +33,7 @@ def main():
     for i in range(0, len(matches)):
         for (k,v) in databases[0].items():
             if matches[i] != v:
-                break
+                continue
             else:
                 print("good")
     return
