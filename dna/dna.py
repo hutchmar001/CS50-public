@@ -13,6 +13,7 @@ def main():
     # TODO: Read database file into a variable
 
     databases = []
+    global databases2
     databases2 = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
