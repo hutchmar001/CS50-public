@@ -39,7 +39,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    check(database2)
+    check()
 
 
 def longest_match(sequence, subsequence):
@@ -80,7 +80,7 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-def check(db):
+def check():
         for index in range(len(databases2)):
             temp = []
             for k, v in databases2[index].items():
