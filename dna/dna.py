@@ -29,16 +29,6 @@ def main():
     with open(sys.argv[2]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            dict = {}
-            dict["name"] = row["name"]
-            dict["AGATC"] = row["AGATC"]
-            dict["TTTTTTCT"] = row["TTTTTTCT"]
-            dict["AATG"] = row["AATG"]
-            dict["TCTAG"] = row["TCTAG"]
-            dict["GATA"] = row["GATA"]
-            dict["TATC"] = row["TATC"]
-            dict["GAAA"] = row["GAAA"]
-            dict["TCTG"] = row["TCTG"]
             sequences.append(dict)
     # TODO: Find longest match of each STR in DNA sequence
 
