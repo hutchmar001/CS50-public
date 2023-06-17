@@ -28,7 +28,6 @@ def main():
 
     with open(sys.argv[2]) as file:
         sequences = file.read()
-        print(sequences)
 
     # TODO: Find longest match of each STR in DNA sequence
 
