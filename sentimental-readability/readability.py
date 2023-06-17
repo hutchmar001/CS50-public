@@ -1,6 +1,7 @@
 # TODO
 import cs50
 
+
 def count_letters_and_words(text):
     global letters
     global words
@@ -17,6 +18,7 @@ def count_letters_and_words(text):
         elif text[i] != '\'' and text[i] != '\"':
             letters += 1
 
+
 def main():
     text = input("Text: ")
     count_letters_and_words(text)
@@ -31,6 +33,6 @@ def main():
         print("Grade", index)
     return 0
 
-main()
 
+main()
 
