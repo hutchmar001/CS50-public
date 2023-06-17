@@ -24,7 +24,7 @@ def main():
         for k, v in databases[index].items(): ## For each item
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
             ## Change all numbers from strings to ints
-            databases2.append(dict_parse)
+            databases2.append(dict_parse) ## Append to new databases
             break
 
     # TODO: Read DNA sequence file into a variable
@@ -37,7 +37,7 @@ def main():
     matches = []
     for key in databases2[0]:
         matches.append(longest_match(sequence, key))
-    matches = matches[1:]
+    matches = matches[1:] ## Cut off unnecessary 0 index
 
     # TODO: Check database for matching profiles
 
@@ -86,13 +86,13 @@ def longest_match(sequence, subsequence):
 
 
 def check():
-    for index in range(len(databases2)):
+    for index in range(len(databases2)): ## For each dictionary
         temp = []
-        for k, v in databases2[index].items():
+        for k, v in databases2[index].items(): ## For each item
             temp.append(v)
-            temp2 = temp[1:]
-            if temp2 == matches:
-                print(temp[0])
+            temp2 = temp[1:] ## Cut off unnecessary "Name" index
+            if temp2 == matches: ## If a match:
+                print(temp[0]) ## Print the "Name" index
                 return True
         return False
 
