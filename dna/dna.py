@@ -39,14 +39,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    for index in range(len(databases2)):
-        temp = []
-        for k, v in databases2[index].items():
-                temp.append(v)
-                temp2 = temp[1:]
-                if temp2 == matches:
-                    print(temp[0])
-                    break
+    check(database)
 
 
 
@@ -89,6 +82,17 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
+
+def check(db):
+        for index in range(len(databases2)):
+            temp = []
+            for k, v in databases2[index].items():
+                temp.append(v)
+                temp2 = temp[1:]
+                if temp2 == matches:
+                    print(temp[0])
+                    break
 
 
 main()
