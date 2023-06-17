@@ -12,9 +12,9 @@ def count_letters_and_words(text):
     for i in range(0, len(text)):
         if text[i] == ' ':
             words += 1
-        elif text[i] == '.' or text[i] == '!' or text[i] == '?':
+        if text[i] == '.' or text[i] == '!' or text[i] == '?':
             sentences += 1
-        elif text[i] != ' ' or text[i] != '\'' or text[i] != '\"' or text[i] != '.' or text[i] != '!' or text[i] != '?':
+        if text[i] == '.' or text[i] == '!' or text[i] == '?' or text[i] == ' ' or text[i] != '\'' or text[i] != '\"':
             letters += 1
 
 def main():
