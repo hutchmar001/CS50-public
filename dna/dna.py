@@ -1,5 +1,6 @@
 import csv
 import sys
+from collections import defaultdict
 
 
 def main():
@@ -15,11 +16,9 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            dict = {}
-            for column in reader:
-                dict.append(column)
-                # dict["name"] = row["name"]
-            databases.append(dict)
+            for (l,m) in row.items():
+                databases[l].append(m)
+    print(databases)
 
     # TODO: Read DNA sequence file into a variable
 
