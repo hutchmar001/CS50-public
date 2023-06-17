@@ -30,10 +30,8 @@ def main():
         sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    keys = databases[0].keys()
-    print(keys)
-    ## for i in range(1, len(keys)):
-        ## longest_match(sequence, keys[i])
+    for key in databases:
+        print(longest_match(sequence, key))
     # TODO: Check database for matching profiles
 
     return
