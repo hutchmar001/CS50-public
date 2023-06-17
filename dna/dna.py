@@ -16,6 +16,8 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             dict = {}
+            reader = csv.reader(dict, delimiter=",")
+            headers = next(reader)
             dict["name"] = row["name"]
             dict["AGATC"] = row["AGATC"]
             dict["TTTTTTCT"] = row["TTTTTTCT"]
