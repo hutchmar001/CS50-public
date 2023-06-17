@@ -38,10 +38,12 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    for index in range(len(databases)):
-        for k, v in databases[index].items():
-            for i in matches
-
+    temp = []
+    for index in range(len(databases2)):
+        for k, v in databases2[index].items():
+              
+                temp.append(v)
+    print(temp)
 
 
 
