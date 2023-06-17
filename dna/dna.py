@@ -13,6 +13,7 @@ def main():
     # TODO: Read database file into a variable
 
     databases = []
+    databases2 = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -21,7 +22,9 @@ def main():
     for index in range(len(databases)):
         for k, v in databases[index].items():
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
-    print(dict_parse)
+            databases2.append(dict_parse)
+    print(databases2)
+    
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as file:
