@@ -41,7 +41,7 @@ def main():
     # TODO: Check database for matching profiles
     for j in range(0, len(databases)):
         for value in databases[j].values():
-            if int(value) == matches[j]:
+            if value == matches[j + 1]:
                 print(databases[j])
     return
 
