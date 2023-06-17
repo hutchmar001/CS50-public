@@ -31,11 +31,9 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    for index in range(len(databases)):
-        for key, value in databases[index].items():
-            if value.isdigit():
-                value = int(value)
-    print(databases)
+    data_parse = {k: int(v) if v.isnumeric() else v for k, v in dict.items()}
+    >>> dict_parse
+    { 'a': 100, 'b': 200, 'c': 300, 'd':'four_hundred', 'e':500}
 
 
 
