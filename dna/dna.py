@@ -39,11 +39,11 @@ def main():
     # TODO: Check database for matching profiles
 
     for index in range(len(databases2)):
+        temp = []
         for k, v in databases2[index].items():
-              temp = []
-              temp.append(v)
-              if temp[1:3] == matches:
-                print(temp[0])
+                temp.append(v)
+                if temp[1:3] == matches:
+                    print(temp[0])
 
 
 
