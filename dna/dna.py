@@ -39,7 +39,7 @@ def main():
     # TODO: Check database for matching profiles
     for index in range(len(databases)):
         for k, v in databases[index].items():
-            for 
+            for i in matches
 
 
 
