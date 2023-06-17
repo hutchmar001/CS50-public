@@ -12,7 +12,7 @@ def main():
 
     # TODO: Read database file into a variable
 
-    databases = defaultdict(list)
+    databases = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
