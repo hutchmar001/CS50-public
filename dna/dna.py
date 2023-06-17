@@ -44,9 +44,9 @@ def main():
         for k, v in databases2[index].items():
                 temp.append(v)
                 temp2 = temp[1:]
-                print(temp2)
                 if temp2 == matches:
                     print(temp[0])
+                    break
 
 
 
