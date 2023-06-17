@@ -33,7 +33,9 @@ def main():
 
     # TODO: Check database for matching profiles
     for (k,v) in databases.items():
-            print(k)
+            c, x = v
+            for kk, vv in c.items():
+                print(kk, vv)
     return
 
 
