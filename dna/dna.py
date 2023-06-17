@@ -17,7 +17,7 @@ def main():
         for row in reader:
             dict = {}
             for column in reader:
-                dict = column
+                dict.append(column)
                 # dict["name"] = row["name"]
             databases.append(dict)
 
