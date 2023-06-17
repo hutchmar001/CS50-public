@@ -18,7 +18,6 @@ def main():
         for row in reader:
             for (l,m) in row.items():
                 databases[l].append(int)
-    print(databases)
 
     # TODO: Read DNA sequence file into a variable
 
