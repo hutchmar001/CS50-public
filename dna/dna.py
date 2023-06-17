@@ -42,7 +42,7 @@ def main():
         temp = []
         for k, v in databases2[index].items():
                 temp.append(v)
-                temp = temp[1:3]
+                temp = temp[1:]
                 print(temp)
                 if temp == matches:
                     print(temp[0])
