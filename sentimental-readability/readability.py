@@ -14,7 +14,7 @@ def count_letters_and_words(text):
             words += 1
         elif text[i] == '.' or text[i] == '!' or text[i] == '?':
             sentences += 1
-        elif text[i] != '\'' or text[i] != '\"':
+        elif or text[i] != '?'text[i] != '\'' or text[i] != '\"' or text[i] != '.' or text[i] != '!' or text[i] != '?':
             letters += 1
 
 def main():
