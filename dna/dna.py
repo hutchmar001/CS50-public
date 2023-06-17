@@ -20,8 +20,8 @@ def main():
         for row in reader:
             databases.append(row)
 
-    for index in range(len(databases)):
-        for k, v in databases[index].items():
+    for index in range(len(databases)): ## For each dictionary
+        for k, v in databases[index].items(): ## For each item
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
             databases2.append(dict_parse)
             break
