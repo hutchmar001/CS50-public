@@ -32,10 +32,8 @@ def main():
         matches.append(longest_match(sequence, key))
 
     # TODO: Check database for matching profiles
-    for (j,k) in row.items():
-            for j in range(1, len(matches)):
-                if  == matches[j]:
-                    print(databases[j])
+    for (k,v) in databases.items():
+            print(k)
     return
 
 
