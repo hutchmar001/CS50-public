@@ -17,7 +17,7 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             for (l,m) in row.items():
-                databases[l].append(m)
+                databases[l].append(int)
     print(databases)
 
     # TODO: Read DNA sequence file into a variable
@@ -33,9 +33,9 @@ def main():
 
     # TODO: Check database for matching profiles
     for (k,v) in databases.items():
-            c, x = v
-            for kk, vv in c.items():
-                print(kk, vv)
+        for i in range(0, len(matches)):
+                if v == matches[i]:
+                    print(v)
     return
 
 
