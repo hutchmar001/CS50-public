@@ -15,9 +15,19 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            reader = csv.reader(file, delimiter=",")
+            dict = {}
+            reader = csv.reader(dict, delimiter=",")
             headers = next(reader)
-        print(headers)
+            dict["name"] = row["name"]
+            dict["AGATC"] = row["AGATC"]
+            dict["TTTTTTCT"] = row["TTTTTTCT"]
+            dict["AATG"] = row["AATG"]
+            dict["TCTAG"] = row["TCTAG"]
+            dict["GATA"] = row["GATA"]
+            dict["TATC"] = row["TATC"]
+            dict["GAAA"] = row["GAAA"]
+            dict["TCTG"] = row["TCTG"]
+            databases.append(dict)
 
     # TODO: Read DNA sequence file into a variable
 
