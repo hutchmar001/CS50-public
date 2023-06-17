@@ -16,7 +16,8 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             dict = {}
-            for l in range(0, EOF):
+            for column in reader:
+                for l in range(0, EOF):
                 dict[l] = row[l]
                 # dict["name"] = row["name"]
             databases.append(dict)
