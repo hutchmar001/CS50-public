@@ -24,7 +24,6 @@ def main():
             dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
             databases2.append(dict_parse)
             break
-    print(databases2)
 
     # TODO: Read DNA sequence file into a variable
 
@@ -34,7 +33,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
 
     matches = []
-    for key in databases[0]:
+    for key in databases2[0]:
         matches.append(longest_match(sequence, key))
 
     # TODO: Check database for matching profiles
