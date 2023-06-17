@@ -32,9 +32,9 @@ def main():
     # TODO: Check database for matching profiles
 
     for index in range(len(databases)):
-        for i in enumerate(databases[index].items()):
-            if i.isdigit():
-                i = int(i)
+        for key in databases[index]:
+            if key.isdigit():
+                key = int(key)
 
 
 
