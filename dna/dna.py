@@ -35,6 +35,7 @@ def main():
         for key, value in databases[index].items():
             if value.isdigit():
                 value = int(value)
+    print(databases)
 
 
 
