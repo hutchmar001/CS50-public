@@ -35,7 +35,7 @@ def main():
     for i in range(0, len(matches)):
         for (k,v) in databases.items():
             if matches[i] == v:
-                print(matches[i])
+                print(k)
     return
 
 
