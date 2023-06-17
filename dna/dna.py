@@ -25,11 +25,11 @@ def main():
             databases.append(dict)
 
     # TODO: Read DNA sequence file into a variable
-    sequences = []
+
     with open(sys.argv[2]) as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            sequences.append(dict)
+        sequences = file.read()
+        print(sequences)
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
