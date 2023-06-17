@@ -30,6 +30,7 @@ def main():
         sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    print(databases.keys())
     for i in range(0, len(databases)):
         longest_match(sequence, "GCT")
     # TODO: Check database for matching profiles
