@@ -76,7 +76,7 @@ int count_sentences(string text)
         int result3 = memcmp(txt, questionmark, 1);
         if (result1 == 0 || result2 == 0 || result3 == 0)
         {
-            count3++;   //if a letter is not ., !, ?, add to sentence count
+            count3++;   //if a letter is ., !, or ?, add to sentence count
         }
     }
     return count3;
