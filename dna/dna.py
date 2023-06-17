@@ -18,6 +18,10 @@ def main():
         for row in reader:
             databases.append(row)
 
+    for index in range(len(databases)):
+        for k, v in databases[index].items():
+            dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
+
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as file:
@@ -31,9 +35,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    for index in range(len(databases)):
-        for k, v in databases[index].items():
-            dict_parse = {k: int(v) if v.isnumeric() else v for k, v in databases[index].items()}
+
 
 
 
