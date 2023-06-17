@@ -27,10 +27,10 @@ def main():
     # TODO: Read DNA sequence file into a variable
 
     with open(sys.argv[2]) as file:
-        sequences = file.read()
+        sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    print(longest_match(sequence, "A"))
     # TODO: Check database for matching profiles
 
     return
