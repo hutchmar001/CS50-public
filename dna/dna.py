@@ -16,10 +16,16 @@ def main():
             dict["name"] = row["name"]
             dict["AGATC"] = row["AGATC"]
             dict["TTTTTTCT"] = row["TTTTTTCT"]
-            
+            dict["AATG"] = row["AATG"]
+            dict["TCTAG"] = row["TCTAG"]
+            dict["GATA"] = row["GATA"]
+            dict["TATC"] = row["TATC"]
+            dict["GAAA"] = row["GAAA"]
+            dict["TCTG"] = row["TCTG"]
             teams.append(dict)
+    print(teams)
     # TODO: Read DNA sequence file into a variable
-name,AGATC,TTTTTTCT,AATG,TCTAG,GATA,TATC,GAAA,TCTG
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
