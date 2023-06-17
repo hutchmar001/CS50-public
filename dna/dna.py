@@ -42,7 +42,7 @@ def main():
     # TODO: Check database for matching profiles
 
     if check():
-        continue
+        sys.exit()
     else:
         print("No match.")
 
@@ -93,7 +93,8 @@ def check():
                 temp2 = temp[1:]
                 if temp2 == matches:
                     print(temp[0])
-                    break
+                    return True
+        return False
 
 
 main()
