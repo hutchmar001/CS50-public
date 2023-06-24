@@ -10,5 +10,6 @@ CREATE TABLE houses (
 );
 
 CREATE TABLE assignments (
-
+    id INTEGER,
+    house TEXT,
 );
