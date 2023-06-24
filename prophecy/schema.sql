@@ -5,7 +5,8 @@ CREATE TABLE students (
 );
 
 CREATE TABLE houses (
-
+    house TEXT,
+    head TEXT,
 );
 
 CREATE TABLE assignments (
