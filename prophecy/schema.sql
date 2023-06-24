@@ -1,3 +1,11 @@
+CREATE TABLE "students" (
+    "id" INTEGER,
+    "student_name" TEXT,
+    "house" TEXT,
+    "head" TEXT,
+    PRIMARY KEY(id)
+);
+
 CREATE TABLE "student" (
     "id" INTEGER,
     "student_name" TEXT,
