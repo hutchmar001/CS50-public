@@ -13,4 +13,6 @@ CREATE TABLE houses (
 CREATE TABLE assignments (
     id INTEGER,
     house TEXT,
+    FOREIGN KEY (id) REFERENCES students(id)
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
 );
