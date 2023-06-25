@@ -1,4 +1,4 @@
-from cs50 import SQL
+import sqlite3
 
 db = sqlite3.connect('roster.db')
 
