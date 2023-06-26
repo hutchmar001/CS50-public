@@ -5,12 +5,12 @@ db = sqlite3.connect('roster.db')
 tables = ["student", "houses", "assignments"]
 
 def get_input():
-    global ipt
+    global height
     try:
-        ipt = int(input("Please enter a valid table.\n"))
+        height = int(input("Please enter a valid table.\n"))
     except ValueError:
         get_input()
-    if ipt not in tables:
+    if height not in tables:
         get_input()
 
 with open('students.csv', "r") as file:
