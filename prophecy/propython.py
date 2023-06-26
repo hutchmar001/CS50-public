@@ -7,7 +7,7 @@ tables = ["student", "houses", "assignments"]
 def get_input():
     global ipt
     try:
-        ipt = int(input("Please enter a valid table.\n"))
+        ipt = input("Please enter a valid table.\n")
     except ValueError:
         get_input()
     if ipt not in tables:
