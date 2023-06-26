@@ -29,13 +29,7 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
-
-if ipt == "houses":
-    r = db.execute('SELECT * FROM houses;')
-elif ipt == "student":
-    r = db.execute('SELECT * FROM student;')
-else:
-    r = db.execute('SELECT * FROM assignments;')
+r = db.execute('SELECT * FROM ' + ipt + ';')
 
 
 results = r.fetchall()
