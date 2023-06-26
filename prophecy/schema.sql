@@ -1,7 +1,7 @@
 CREATE TABLE student (
     id INTEGER,
     student_name TEXT,
-    PRIMARY KEY(student_id)
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE houses (
