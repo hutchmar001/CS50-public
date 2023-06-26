@@ -12,6 +12,7 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO student(id, student_name) VALUES (?,?);', (to_db0, to_db1))
         db.execute('INSERT OR IGNORE INTO houses(house, head) VALUES (?,?);', (to_db2, to_db3))
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
-    results = db.execute('SELECT * FROM student;')
+    r = db.execute('SELECT * FROM student;')
+    results = r.fetchall()
     print(results)
 
