@@ -2,7 +2,7 @@ import csv, sqlite3
 
 db = sqlite3.connect('roster.db')
 
-reader = csv.reader(open('students.csv', 'r'))
+reader = csv.DictReader(open('students.csv', 'r'))
 for row in reader:
     to_db0 = row[0]
     to_db1 = row[1]
