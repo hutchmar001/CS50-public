@@ -1,10 +1,10 @@
-import csv
-from cs50 import SQL
+import csv, sqlite3
 
-db = SQL("sqlite:///roster.db")
+db = sqlite3.connect('roster.db')
+cursor = db.cursor()
 
 reader = csv.reader(open('students.csv', 'r'))
 for row in reader:
     to_db = [(row[0], "utf8"), (row[1], "utf8")]
-    db.execute("INSERT INTO STUDENT(id, student_name) VALUES (?, ?);", to_db)
+    cursor.execute("INSERT INTO STUDENT(id, student_name) VALUES (?, ?);", to_db)
 db.commit()
