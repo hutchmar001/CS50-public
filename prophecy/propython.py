@@ -1,8 +1,10 @@
 import csv, sqlite3
 from tabulate import tabulate
 
+
 db = sqlite3.connect('roster.db')
 tables = ["student", "houses", "assignments"]
+
 
 def get_input():
     global ipt
@@ -13,6 +15,7 @@ def get_input():
     if ipt not in tables:
         get_input()
 get_input()
+
 
 with open('students.csv', "r") as file:
     reader = csv.DictReader(file)
@@ -26,7 +29,15 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
-r = db.execute('SELECT * FROM houses;')
+
+if ipt == "houses":
+    r = db.execute('SELECT * FROM houses;')
+elif ipt == "student":
+    r = db.execute('SELECT * FROM student;')
+else:
+    r = db.execute('SELECT * FROM assignments;')
+
+
 results = r.fetchall()
 print(tabulate(results, tablefmt='fancy_grid'))
 
