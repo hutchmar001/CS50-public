@@ -2,7 +2,7 @@ import csv, sqlite3
 from tabulate import tabulate
 
 
-db = sqlite3.connect('roster.db')
+db = sqlite3.connect('roster.db', timeout=10)
 tables = ["student", "houses", "assignments"]
 
 
