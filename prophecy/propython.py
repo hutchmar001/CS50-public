@@ -2,7 +2,8 @@ import csv, sqlite3
 from tabulate import tabulate
 
 db = sqlite3.connect('roster.db')
-tables = ("student", "houses", assignments")
+tables = ["student", "houses", "assignments"]
+
 def get_input():
     global height
     try:
@@ -24,6 +25,7 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
+get_input()
 r = db.execute('SELECT * FROM houses;')
 results = r.fetchall()
 print(tabulate(results, tablefmt='fancy_grid'))
