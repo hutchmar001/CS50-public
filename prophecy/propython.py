@@ -5,13 +5,14 @@ db = sqlite3.connect('roster.db')
 tables = ["student", "houses", "assignments"]
 
 def get_input():
-    global height
+    global ipt
     try:
-        height = int(input("Please enter a valid table.\n"))
+        ipt = int(input("Please enter a valid table.\n"))
     except ValueError:
         get_input()
-    if height not in tables:
+    if ipt not in tables:
         get_input()
+get_input()
 
 with open('students.csv', "r") as file:
     reader = csv.DictReader(file)
@@ -25,7 +26,6 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
-get_input()
 r = db.execute('SELECT * FROM houses;')
 results = r.fetchall()
 print(tabulate(results, tablefmt='fancy_grid'))
