@@ -3,7 +3,7 @@ from tabulate import tabulate
 
 
 db = sqlite3.connect('roster.db')
-tables = ["student", "houses", "assignments"]
+tables = ["students", "houses", "assignments"]
 
 
 def get_input():
