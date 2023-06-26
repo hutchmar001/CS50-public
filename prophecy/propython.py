@@ -2,6 +2,7 @@ import csv, sqlite3
 from tabulate import tabulate
 
 db = sqlite3.connect('roster.db')
+tables = input("Please enter a valid table.\n)
 
 with open('students.csv', "r") as file:
     reader = csv.DictReader(file)
