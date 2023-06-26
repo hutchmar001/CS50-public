@@ -1,5 +1,5 @@
 CREATE TABLE "student" (
-    "student_id" INTEGER,
+    student_id INTEGER,
     "student_name" TEXT,
     PRIMARY KEY(id)
 );
