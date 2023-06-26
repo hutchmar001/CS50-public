@@ -1,4 +1,4 @@
-import csv, sqlite3
+import csv, SQL
 
 db = SQL("sqlite:///roster.db")
 
