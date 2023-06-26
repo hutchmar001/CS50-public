@@ -29,9 +29,8 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
+
 r = db.execute('SELECT * FROM ' + ipt + ';')
-
-
 results = r.fetchall()
 print(tabulate(results, tablefmt='fancy_grid'))
 
