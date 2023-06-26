@@ -18,7 +18,7 @@ get_input()
 
 
 with open('students.csv', "r") as file:
-    reader = csv.DictReader(file, fieldnames=[id, student_name, house, head])
+    reader = csv.DictReader(file, fieldnames=[id,student_name,house,head])
     for row in reader:
         to_db0 = row['id']
         to_db1 = row['student_name']
