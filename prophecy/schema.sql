@@ -11,7 +11,7 @@ CREATE TABLE "houses" (
 );
 
 CREATE TABLE "assignments" (
-    "id" INTEGER,
+    id INTEGER,
     "assigned_house" TEXT,
     FOREIGN KEY (id) REFERENCES student(student_id)
     FOREIGN KEY (assigned_house) REFERENCES houses(house)
