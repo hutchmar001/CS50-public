@@ -2,7 +2,15 @@ import csv, sqlite3
 from tabulate import tabulate
 
 db = sqlite3.connect('roster.db')
-tables = input("Please enter a valid table.\n)
+tables = ("student", "houses", assignments")
+def get_input():
+    global height
+    try:
+        height = int(input("Please enter a valid table.\n"))
+    except ValueError:
+        get_input()
+    if height not in tables:
+        get_input()
 
 with open('students.csv', "r") as file:
     reader = csv.DictReader(file)
