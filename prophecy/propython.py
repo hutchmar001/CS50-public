@@ -1,4 +1,5 @@
 import csv, sqlite3
+from tabulate import tabulate
 
 db = sqlite3.connect('roster.db')
 
@@ -14,5 +15,5 @@ with open('students.csv', "r") as file:
         db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
     r = db.execute('SELECT * FROM assignments;')
     results = r.fetchall()
-    print(results)
+    print(tabulate(results))
 
