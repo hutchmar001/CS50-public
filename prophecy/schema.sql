@@ -1,5 +1,5 @@
 CREATE TABLE "student" (
-    "id" INTEGER,
+    "student_id" INTEGER,
     "student_name" TEXT,
     PRIMARY KEY(id)
 );
@@ -12,7 +12,7 @@ CREATE TABLE "houses" (
 
 CREATE TABLE "assignments" (
     "id" INTEGER,
-    "house" TEXT,
-    FOREIGN KEY (id) REFERENCES student(id)
-    FOREIGN KEY (house) REFERENCES houses(house)
+    "assigned_house" TEXT,
+    FOREIGN KEY (id) REFERENCES student(student_id)
+    FOREIGN KEY (assigned_house) REFERENCES houses(house)
 );
