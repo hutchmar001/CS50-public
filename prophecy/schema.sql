@@ -12,7 +12,7 @@ CREATE TABLE houses (
 
 CREATE TABLE assignments (
     student_id INTEGER,
-    house TEXT,
+    student_house TEXT,
     FOREIGN KEY (id) REFERENCES students(id),
     FOREIGN KEY (house) REFERENCES houses(house)
 );

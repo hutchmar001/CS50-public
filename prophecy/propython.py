@@ -24,9 +24,9 @@ with open('students.csv', "r") as file:
         to_db1 = row['student_name']
         to_db2 = row['house']
         to_db3 = row['head']
-        db.execute('INSERT OR IGNORE INTO student(id, student_name) VALUES (?,?);', (to_db0, to_db1))
+        db.execute('INSERT OR IGNORE INTO students(id, student_name) VALUES (?,?);', (to_db0, to_db1))
         db.execute('INSERT OR IGNORE INTO houses(house, head) VALUES (?,?);', (to_db2, to_db3))
-        db.execute('INSERT OR IGNORE INTO assignments(id, house) VALUES (?,?);', (to_db0, to_db2))
+        db.execute('INSERT OR IGNORE INTO assignments(student_id, student_house) VALUES (?,?);', (to_db0, to_db2))
     file.close()
 
 
