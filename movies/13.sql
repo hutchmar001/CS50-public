@@ -1,4 +1,4 @@
-SELECT COUNT(*) from
+SELECT COUNT(*) FROM
 (
 SELECT title FROM stars
 INNER JOIN people ON people.id = stars.person_id
