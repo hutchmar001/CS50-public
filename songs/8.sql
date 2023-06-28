@@ -1,4 +1,4 @@
-SELECT name FROM songs
+SELECT songs.name
 FROM songs
 INNER JOIN artists ON songs.artist_id = artists.id
-WHERE artists.name LIKE '%feat.';
+WHERE artists.name LIKE '%feat.%';
