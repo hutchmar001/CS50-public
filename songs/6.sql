@@ -1,4 +1,4 @@
-SELECT *
+SELECT name
 FROM songs
-INNER JOIN artists ON songs.artist_id = artists.id
+INNER JOIN artists ON songs.artist_id = artists.id;
 WHERE
