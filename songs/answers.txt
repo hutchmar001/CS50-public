@@ -1,4 +1,4 @@
 First get the average energy, valence, and danceability numbers of the person's top 100.
-For each song, take each category and assign it a "mood" according to whichever is the closest match.
-For example, if energy for a song is a 0.5, the energy for "purple" is a 0.6, the energy for "green"
-is a 0.9, and the energy for "yellow" is a 0.3, 
+Take each category and assign it a "mood" according to whichever is the closest match.
+For example, if the average energy is a 0.5, the energy for "purple" is a 0.6, the energy for "green"
+is a 0.9, and the energy for "yellow" is a 0.3, then the category gets a "purple".
