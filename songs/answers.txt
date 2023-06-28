@@ -8,3 +8,5 @@ We must take the second-closest matches into account. For example, if the first 
 are "pink", "orange", "yellow" and the second place winners are "pink", "orange", "blue", then
 this person gets a "pink" and "orange", treating each color as an equal vote.
 If this fails, continue in the same way until there are two clear winners.
+
+How to improve? Adding more categories will improve accuracy. 
