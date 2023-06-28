@@ -9,4 +9,6 @@ are "pink", "orange", "yellow" and the second place winners are "pink", "orange"
 this person gets a "pink" and "orange", treating each color as an equal vote.
 If this fails, continue in the same way until there are two clear winners.
 
-How to improve? Adding more categories will improve accuracy. 
+How to improve? Adding more categories will improve accuracy. Perhaps tempo, duration, loudness,
+and speechiness could be taken into account? Also, calculating the winning color for each song, then
+finding the winning color among the top 100 would improve accuracy. at the expense of time.
