@@ -1,2 +1,2 @@
 SELECT COUNT(title) FROM movies
-WHERE 
+WHERE ratings.rating = 10.0;
