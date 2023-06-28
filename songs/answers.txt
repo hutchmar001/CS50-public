@@ -1,1 +1,2 @@
 First get the average energy, valence, and danceability numbers of the person's top 100.
+For each category, 
