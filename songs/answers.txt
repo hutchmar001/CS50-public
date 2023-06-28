@@ -11,4 +11,5 @@ If this fails, continue in the same way until there are two clear winners.
 
 How to improve? Adding more categories will improve accuracy. Perhaps tempo, duration, loudness,
 and speechiness could be taken into account? Also, calculating the winning color for each song, then
-calculating the winning color among the top 100 songs would improve accuracy. at the expense of time.
+finding the winning color among the top 100 would improve accuracy. That may be at the expense of time,
+but if the data concerning the colors of the songs were stored in a database beforehand, it would not be.
