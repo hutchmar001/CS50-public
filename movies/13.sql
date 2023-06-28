@@ -1,4 +1,4 @@
-SELECT COUNT(*), SUM(SUBQUERY) from
+SELECT COUNT(*) from
 (
 SELECT title FROM stars
 INNER JOIN people ON people.id = stars.person_id
