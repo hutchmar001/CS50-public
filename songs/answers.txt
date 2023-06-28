@@ -1,9 +1,9 @@
 First get the average energy, valence, and danceability numbers of the person's top 100.
-Take each category and assign it a "mood" according to whichever is the closest match.
+Take each category and assign it a color according to whichever is the closest match.
 For example, if the average energy is a 0.5, the energy for "purple" is a 0.6, the energy for "green"
 is a 0.9, and the energy for "yellow" is a 0.3, then the category gets a "purple".
 
-Unfortunately there will always be a tie because we need two winners from only three categories.
+Unfortunately there will always be a tie because we need two winning colors from only three categories.
 We must take the second-closest matches into account. For example, if the first place winners
 are "pink", "orange", "yellow" and the second place winners are "pink", "orange", "blue", then
 this person gets a "pink" and "orange", treating each color as an equal vote.
