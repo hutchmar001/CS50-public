@@ -6,4 +6,4 @@ is a 0.9, and the energy for "yellow" is a 0.3, then the category gets a "purple
 In case of a tie (ex. "pink", "orange", "yellow"), then take the second-closest matches into account.
 For example, if the first place winners are "pink", "orange", "yellow" and the second place winners
 are "pink", "red", "blue", then the category gets a "pink", treating each color as an equal vote.
-
+So on and so forth until there is a clear winner.
