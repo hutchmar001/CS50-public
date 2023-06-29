@@ -28,8 +28,16 @@ SELECT * FROM airports;
 
 // Flight was from Fiftyville to LaGuardia Airport in New York City.
 
-SELECT * FROM bakery_security_logs WHERE month = "7" AND day = "28" AND hour = "10" AND minute <= "25";
+SELECT * FROM bakery_security_logs
+WHERE month = "7" AND day = "28" AND hour = "10" AND minute <= "25";
 
-// Possible licence_plates:
+SELECT * FROM people
+WHERE license_plate = "5P2BI95" OR license_plate = "94KL13X" OR license_plate = "6P58WS2" OR license_plate = "4328GD8" OR licens
+e_plate = "G412CB7" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "0NTHK55";
+
+// Suspects and their plates:
 5P2BI95 94KL13X 6P58WS2 4328GD8 G412CB7 L93JTIZ 322W7JE 0NTHK55
-OR license_plate = 
+Vanessa Bruce   Barry   Luca    Sofia   Iman    Diana   Kelsey
+
+
+
