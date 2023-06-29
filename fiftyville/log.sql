@@ -32,3 +32,4 @@ SELECT * FROM bakery_security_logs WHERE month = "7" AND day = "28" AND hour = "
 
 // Possible licence_plates:
 5P2BI95 94KL13X 6P58WS2 4328GD8 G412CB7 L93JTIZ 322W7JE 0NTHK55
+OR license_plate = 
