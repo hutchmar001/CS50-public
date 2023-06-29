@@ -48,13 +48,19 @@ e_plate = "G412CB7" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR
 | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
 | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
 
-SELECT * FROM phone_calls WHERE month = "7" AND day = "28" AND duration < "60";
+SELECT * FROM phone_calls
+WHERE month = "7" AND day = "28" AND duration < "60";
 
 // Narrowed down to:
 Sofia called (996) 555-8899
 Kelsey called (892) 555-8872 and (717) 555-1342
 Bruce called (375) 555-8161
-Diana called (725) 555-32
+Diana called (725) 555-3243
+
+SELECT * FROM passengers
+WHERE flight_id = "36";
+
+
 
 
 
