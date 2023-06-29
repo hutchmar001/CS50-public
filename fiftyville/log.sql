@@ -50,6 +50,10 @@ e_plate = "G412CB7" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR
 
 SELECT * FROM phone_calls WHERE month = "7" AND day = "28" AND duration < "60";
 
+// Narrowed down to:
+Sofia called (996) 555-8899
+Kelsey called 
+
 
 
 
