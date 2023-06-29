@@ -52,7 +52,9 @@ SELECT * FROM phone_calls WHERE month = "7" AND day = "28" AND duration < "60";
 
 // Narrowed down to:
 Sofia called (996) 555-8899
-Kelsey called 
+Kelsey called (892) 555-8872 and (717) 555-1342
+Bruce called (375) 555-8161
+Diana called (725) 555-3243
 
 
 
