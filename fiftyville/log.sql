@@ -62,6 +62,11 @@ WHERE flight_id = "36";
 
 // Narrowed down to Sofia, Kelsey, and Bruce
 
+SELECT * FROM bank_accounts
+WHERE person_id = "398010" OR person_id = "560886" OR person_id = "686048";
+
+// Bruce is the only one with an account there, with an id of 686048. He is the thief!
+
 
 
 
