@@ -67,6 +67,10 @@ WHERE person_id = "398010" OR person_id = "560886" OR person_id = "686048";
 
 // Bruce is the only one with an account there, with an id of 686048. He is the thief!
 
+SELECT * FROM people WHERE phone_number = "(375) 555-8161";
+
+// Bruce called Robin, who is the accomplice!
+
 
 
 
