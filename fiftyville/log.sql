@@ -60,6 +60,8 @@ Diana called (725) 555-3243
 SELECT * FROM passengers
 WHERE flight_id = "36";
 
+// Narrowed down to Sofia, Kelsey, and Bruce
+
 
 
 
