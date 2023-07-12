@@ -2,3 +2,8 @@
     font-family: Papyrus;
     text-decoration: none;
 }
+.Headers {
+    font-family:sans-serif;
+    text-align:left;
+    font-weight: bold;
+}
