@@ -2,7 +2,7 @@
     font-family: Papyrus;
 }
 
-#header1, #header2, h5 {
+#header1, #header2, .nav-link2 {
     text-align: left;
     font-weight: bold;
 }
