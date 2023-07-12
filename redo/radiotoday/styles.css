@@ -8,8 +8,13 @@
     font-weight: bold;
 }
 
+#header1 {
+    margin: 0px;
+    padding: 0px;
+}
+
 #header2 {
-    padding-left: 70px
+    padding-left: 70px;
 }
 
 .links1 {
