@@ -2,7 +2,7 @@
     font-family: Papyrus;
     text-decoration: none;
 }
-#header1 {
+#header1, #header2 {
     font-family: sans-serif;
     text-align: left;
     font-weight: bold;
