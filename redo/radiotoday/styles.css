@@ -68,6 +68,8 @@
     left: 550px;
     top: 330px;
     font-size: 10px;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
 }
 
 .side_links {
@@ -98,3 +100,9 @@
         opacity: 1;
     }
 }
+
+@keyframes flip {
+    0%,80% {
+      transform: rotateX(360deg)
+    }
+  }
