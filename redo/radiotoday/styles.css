@@ -68,7 +68,7 @@
     left: 550px;
     top: 330px;
     font-size: 10px;
-    data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right"
+    data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right";
 }
 
 .side_links {
