@@ -49,6 +49,7 @@
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
     font-size: 40px;
+    right:0
   }
 
 @keyframes blink1 {
