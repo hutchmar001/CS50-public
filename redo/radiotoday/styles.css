@@ -118,6 +118,10 @@
     width: 160px;
 }
 
+.carousel-inner {
+    
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
