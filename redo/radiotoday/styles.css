@@ -123,6 +123,7 @@
     width: 200px;
     left: 700px;
     top: -150px;
+    .transition(.2s ease-in-out left);
 }
 
 @keyframes blink {
