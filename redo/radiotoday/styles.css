@@ -35,8 +35,8 @@
     font-family: sans-serif;
     float: left;
     position: absolute;
-    right: 2px;
-    font-size: 30px;
+    left: 800px;
+    font-size: 60px;
 }
 
 .links1 {
@@ -55,7 +55,7 @@
     width: 160px;
 }
 
-@keyframes blink1 {
+@keyframes blink {
     0% {
         opacity: 1;
     }
