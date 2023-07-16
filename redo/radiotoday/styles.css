@@ -33,5 +33,7 @@
 }
 
 .list-group {
-    padding-top: 300px;
+    padding-top: 50px;
+    font-size: 12px;
+    width: 150px;
 }
