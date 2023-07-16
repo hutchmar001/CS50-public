@@ -123,6 +123,7 @@
     width: 200px;
     left: 700px;
     top: -150px;
+    data-interval: 100;
 }
 
 @keyframes blink {
