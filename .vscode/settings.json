@@ -4,5 +4,6 @@
         "random": "c",
         "limits": "c",
         "algorithm": "c"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
