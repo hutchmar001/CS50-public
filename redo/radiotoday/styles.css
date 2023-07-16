@@ -28,14 +28,16 @@
     position: absolute;
     left: 800px;
     font-size: 30px;
+    color: crimson;
 }
 
-#blink {
+#seventy-five {
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
     position: absolute;
     left: 800px;
     font-size: 60px;
+    color: gold;
 }
 
 #percent {
