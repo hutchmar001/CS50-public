@@ -25,7 +25,6 @@
 
 #save {
     font-family: sans-serif;
-    float:left;
     position: absolute;
     left: 800px;
     font-size: 30px;
@@ -34,14 +33,17 @@
 #blink {
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
-    float: left;
     position: absolute;
     left: 800px;
     font-size: 60px;
 }
 
 #percent {
-    
+    animation: blink 1s steps(1, end) infinite;
+    font-family: sans-serif;
+    position: absolute;
+    left: 870px;
+    font-size: 60px;
 }
 
 .links1 {
