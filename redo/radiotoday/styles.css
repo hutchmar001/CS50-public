@@ -53,13 +53,21 @@
     left: 970px;
 }
 
-#on-clearance {
+#on_clearance {
     font-family: sans-serif;
     position: absolute;
     left: 500px;
     top: 300px;
     font-size: 10px;
     font-weight: bold;
+}
+
+#shop_early {
+    font-family: sans-serif;
+    position: absolute;
+    left: 500px;
+    top: 350px;
+    font-size: 10px;
 }
 
 .side_links {
