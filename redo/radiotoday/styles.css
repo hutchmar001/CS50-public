@@ -34,7 +34,8 @@
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
     float: right;
-    padding-left: 700px;
+    position: absolute;
+    right: 10px;
     font-size: 30px;
 }
 
