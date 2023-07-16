@@ -26,7 +26,6 @@
 #header3 {
     font-family: sans-serif;
     float:right;
-    margin-right:600px;
 }
 
 .links1 {
@@ -44,9 +43,12 @@
     width: 160px;
 }
 
+#.save_message {
+
+}
+
 .blink1 {
     animation: blink 1s steps(1, end) infinite;
-    margin-right: 600px;
   }
 
 @keyframes blink1 {
