@@ -72,6 +72,15 @@
     animation-delay: calc(.2s * var(--i))
 }
 
+#good_through {
+    font-family: sans-serif;
+    position: absolute;
+    left: 500px;
+    top: 360px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
 .side_links {
     font-size: 12px;
     padding-bottom: 40px;
