@@ -31,9 +31,9 @@
 }
 
 #blink {
-
+    animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
-    float: right;
+    float: left;
     position: absolute;
     right: 2px;
     font-size: 30px;
