@@ -46,6 +46,7 @@
 
 .blink1 {
     animation: blink 1s steps(1, end) infinite;
+    margin-right: 600px;
   }
 
 @keyframes blink1 {
