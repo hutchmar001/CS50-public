@@ -23,9 +23,12 @@
     margin: 0px;
 }
 
-#sss {
+#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early, #good_through {
     font-family: sans-serif;
     position: absolute;
+}
+
+#sss {
     left: 500px;
     font-size: 30px;
     color: greenyellow;
@@ -33,8 +36,6 @@
 }
 
 #save {
-    font-family: sans-serif;
-    position: absolute;
     left: 900px;
     font-size: 30px;
     color: crimson;
@@ -42,8 +43,6 @@
 
 #seventy-five, #percent {
     animation: blink 1s steps(1, end) infinite;
-    font-family: sans-serif;
-    position: absolute;
     left: 900px;
     font-size: 60px;
     color: gold;
@@ -54,8 +53,6 @@
 }
 
 #on_clearance {
-    font-family: sans-serif;
-    position: absolute;
     left: 500px;
     top: 300px;
     font-size: 10px;
@@ -63,8 +60,6 @@
 }
 
 #shop_early {
-    font-family: sans-serif;
-    position: absolute;
     left: 550px;
     top: 330px;
     font-size: 10px;
@@ -73,8 +68,6 @@
 }
 
 #good_through {
-    font-family: sans-serif;
-    position: absolute;
     left: 500px;
     top: 360px;
     font-size: 10px;
