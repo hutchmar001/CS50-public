@@ -31,7 +31,7 @@
     color: crimson;
 }
 
-#seventy-five {
+#seventy-five, #percent {
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
     position: absolute;
@@ -41,11 +41,19 @@
 }
 
 #percent {
-    animation: blink 1s steps(1, end) infinite;
-    font-family: sans-serif;
-    position: absolute;
     left: 870px;
-    font-size: 60px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .links1 {
@@ -64,14 +72,3 @@
     width: 160px;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
