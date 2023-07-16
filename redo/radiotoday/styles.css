@@ -26,14 +26,14 @@
 #sss {
     font-family: sans-serif;
     position: absolute;
-    left: 600px;
+    left: 500px;
     font-size: 30px;
 }
 
 #save {
     font-family: sans-serif;
     position: absolute;
-    left: 800px;
+    left: 900px;
     font-size: 30px;
     color: crimson;
 }
@@ -42,13 +42,13 @@
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
     position: absolute;
-    left: 800px;
+    left: 900px;
     font-size: 60px;
     color: gold;
 }
 
 #percent {
-    left: 870px;
+    left: 970px;
 }
 
 @keyframes blink {
