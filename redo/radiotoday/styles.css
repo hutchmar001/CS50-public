@@ -121,6 +121,8 @@
 .carousel-inner {
     height: 200px;
     width: 250px;
+    left: 500px;
+    top: 0px;
 }
 
 @keyframes blink {
