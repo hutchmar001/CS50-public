@@ -8,6 +8,7 @@
 }
 
 #header1 {
+    font-family: sans-serif;
     font-size: 42px;
     margin: 0px;
     padding: 0px;
@@ -22,8 +23,9 @@
     margin: 0px;
 }
 
-#header1, #header3 {
-    font-family: sans-serif;
+#header3 {
+    float:right;
+    margin-right:400px;
 }
 
 .links1 {
