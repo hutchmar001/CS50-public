@@ -25,8 +25,9 @@
 
 #save {
     font-family: sans-serif;
-    float:right;
-    padding-right: 600px;
+    float:left;
+    position: absolute;
+    left: 800px;
     font-size: 30px;
 }
 
@@ -37,6 +38,10 @@
     position: absolute;
     left: 800px;
     font-size: 60px;
+}
+
+#percent {
+    
 }
 
 .links1 {
