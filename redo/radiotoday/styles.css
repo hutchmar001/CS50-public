@@ -31,17 +31,18 @@
 }
 
 #blink {
-    animation: blink 1s steps(1, end) infinite;
+
     font-family: sans-serif;
     float: right;
     position: absolute;
-    right: 28px;
+    right: 2px;
     font-size: 30px;
 }
 
 .links1 {
     font-size: 12px;
     padding-bottom: 40px;
+    margin: 0px;
 }
 
 .nav-link2 {
