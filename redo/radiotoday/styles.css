@@ -44,18 +44,18 @@
     width: 160px;
 }
 
-.blink {
+.blink1 {
     animation: blink 1s steps(1, end) infinite;
   }
 
-@keyframes blink {
+@keyframes blink1 {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     50% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
