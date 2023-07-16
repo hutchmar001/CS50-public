@@ -78,6 +78,7 @@
     font-size: 50px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    color: red;
     text-shadow:
     0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
     0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
@@ -85,6 +86,7 @@
     0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
     left: 500px;
     top: 400px;
+    font-style: italic;
 }
 
 .side_links {
