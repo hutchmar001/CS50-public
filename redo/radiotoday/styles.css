@@ -2,6 +2,10 @@
     font-family: Papyrus;
 }
 
+.nav-link {
+    color: indigo;
+}
+
 #header1, #header2, .nav-link2 {
     text-align: left;
     font-weight: bold;
@@ -65,10 +69,11 @@
     }
 }
 
-.links1 {
+.side_links {
     font-size: 12px;
     padding-bottom: 40px;
     margin: 0px;
+    color: indigo;
 }
 
 .nav-link2 {
