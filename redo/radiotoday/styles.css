@@ -48,7 +48,7 @@
 .blink1 {
     animation: blink 1s steps(1, end) infinite;
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     padding-right: 100px;
     float:right;
   }
