@@ -23,10 +23,11 @@
     margin: 0px;
 }
 
-#header3 {
+#save {
     font-family: sans-serif;
     float:right;
     padding-right: 600px;
+    font-size: 30px;
 }
 
 .links1 {
@@ -44,12 +45,9 @@
     width: 160px;
 }
 
-.save_message {
-    font-family: sans-serif;
-}
-
 .blink1 {
     animation: blink 1s steps(1, end) infinite;
+    font-family: sans-serif;
   }
 
 @keyframes blink1 {
