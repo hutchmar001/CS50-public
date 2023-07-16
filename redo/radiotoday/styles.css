@@ -23,7 +23,7 @@
     margin: 0px;
 }
 
-#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early, #good_through {
+#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early, #good_through, #sizzling {
     font-family: sans-serif;
     position: absolute;
 }
@@ -71,6 +71,13 @@
     left: 500px;
     top: 360px;
     font-size: 10px;
+    font-weight: bold;
+}
+
+#sizzling {
+    left: 500px;
+    top: 400px;
+    font-size: 50px;
     font-weight: bold;
 }
 
