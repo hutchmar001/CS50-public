@@ -53,16 +53,12 @@
     left: 970px;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+#on-clearance {
+    font-family: sans-serif;
+    position: absolute;
+    left: 500px;
+    down: 1000px;
+    font-size: 10px;
 }
 
 .side_links {
@@ -82,3 +78,14 @@
     width: 160px;
 }
 
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
