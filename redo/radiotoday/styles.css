@@ -28,6 +28,8 @@
     position: absolute;
     left: 500px;
     font-size: 30px;
+    color: greenyellow;
+    transform: rotate(-15deg);
 }
 
 #save {
