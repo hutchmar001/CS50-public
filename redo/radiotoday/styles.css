@@ -22,7 +22,7 @@
 }
 
 #sss, #save, #seventy-five, #percent, #on_clearance, #shop_early,
-#good_through, .fire, #in_addition, #more_savings, #we_have {
+#good_through, .fire, #in_addition, #more_savings, #we_have, #save10 {
     font-family: sans-serif;
     position: absolute;
 }
@@ -129,6 +129,13 @@
 }
 
 #carousel {
+    height: 150px;
+    width: 200px;
+    left: 550px;
+    top: -220px;
+}
+
+#save10 {
     height: 150px;
     width: 200px;
     left: 550px;
