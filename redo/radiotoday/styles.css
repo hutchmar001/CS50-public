@@ -8,7 +8,7 @@ body {
     animation: fadeIn 5s;
 }
 
-#header, .nav-link2 {
+h5, .nav-link2 {
     text-align: left;
     font-weight: bold;
 }
@@ -23,7 +23,7 @@ body {
     max-height: 350px;
 }
 
-#header {
+h5 {
     font-family: Allan;
     font-style: italic;
     padding-top: 0px;
