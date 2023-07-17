@@ -135,9 +135,14 @@
     top: -220px;
 }
 
+#paragraph {
+    text-align: center;
+}
+
 #save10 {
     left: 820px;
     top: 600px;
+    text-align: center;
 }
 
 @keyframes blink {
