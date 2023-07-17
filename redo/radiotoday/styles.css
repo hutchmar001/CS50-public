@@ -58,7 +58,7 @@ h5 {
     top: 185px;
     font-size: 60px;
     color: gold;
-    animation: blink 1s steps(1, end) infinite;
+    animation: blink 1s infinite;
 }
 
 #percent {
