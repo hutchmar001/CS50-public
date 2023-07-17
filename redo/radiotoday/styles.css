@@ -136,10 +136,8 @@
 }
 
 #save10 {
-    height: 150px;
-    width: 200px;
-    left: 550px;
-    top: -220px;
+    left: 820px;
+    top: 600px;
 }
 
 @keyframes blink {
