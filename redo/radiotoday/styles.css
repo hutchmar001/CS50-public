@@ -182,9 +182,9 @@ h5 {
   }
 
 @keyframes flicker {
-/* Initial state of animation */
+/* Initial state, see above */
 0%,
-/* Final state of animation */
+/* Final state, same as initial */
 100% {
     text-shadow:
         0 -1px 3px #fff,
