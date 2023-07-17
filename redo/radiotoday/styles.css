@@ -2,6 +2,9 @@
     font-family: Papyrus;
 }
 
+body {
+    padding-bottom: 60px;
+}
 #header, .nav-link2 {
     text-align: left;
     font-weight: bold;
@@ -155,6 +158,8 @@
 #footer {
     position: fixed;
     bottom: 0;
+    height: 60px;
+    overflow: hidden;
 }
 
 @keyframes blink {
