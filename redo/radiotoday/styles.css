@@ -2,9 +2,6 @@
     font-family: Papyrus;
 }
 
-body {
-    padding-bottom: 60px;
-}
 #header, .nav-link2 {
     text-align: left;
     font-weight: bold;
@@ -137,6 +134,7 @@ body {
     width: 200px;
     left: 400px;
     top: -220px;
+    padding-bottom: 60px;
 }
 
 #paragraph {
