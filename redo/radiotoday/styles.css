@@ -167,26 +167,18 @@ h5 {
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0}
-    100% (opacity: 1)
+    0% {opacity: 0;}
+    100% (opacity: 1;)
 }
 
 @keyframes flip {
-    0%,80% {
-      transform: rotateX(360deg)
-    }
+    0%,80% {transform: rotateX(360deg)}
   }
 
 @keyframes flicker {
