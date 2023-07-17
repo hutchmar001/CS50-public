@@ -39,7 +39,7 @@
     color: greenyellow;
     transform: rotate(-15deg);
     border-style: dashed;
-    border-color: black;
+    border-color: grey;
 }
 
 #save {
