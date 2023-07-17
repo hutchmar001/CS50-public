@@ -8,11 +8,6 @@ body {
     animation: fadeIn 5s;
 }
 
-h5, .nav-link2 {
-    text-align: left;
-    font-weight: bold;
-}
-
 .navbar-nav {
     background-color: darkseagreen;
     width: 100%;
@@ -23,13 +18,18 @@ h5, .nav-link2 {
     max-height: 350px;
 }
 
+h5, .nav-link2 {
+    text-align: left;
+    font-weight: bold;
+}
+
 h5 {
     font-family: Allan;
     font-style: italic;
     padding-top: 0px;
     padding-left: 190px;
     padding-bottom: 40px;
-    margin: 0px;
+
 }
 
 #sss, #save, #seventy-five, #percent, #on_clearance, #shop_early,
