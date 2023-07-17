@@ -154,8 +154,7 @@
 
 #footer {
     position: sticky;
-    left: 0px;
-    bottom: 300px;
+    bottom: 0px;
 }
 
 @keyframes blink {
