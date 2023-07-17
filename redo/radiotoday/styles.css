@@ -87,7 +87,7 @@ body {
 
 .fire {
     left: 500px;
-    top: 400px;
+    top: 380px;
     font-size: 50px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -163,6 +163,7 @@ body {
     bottom: 0;
     background-color: darkseagreen;
     width: 100%;
+    margin: 0;
 }
 
 @keyframes blink {
