@@ -121,6 +121,7 @@ body {
     padding-top: 50px;
     font-size: 12px;
     width: 160px;
+    padding-bottom: 0px;
 }
 
 #we_have {
@@ -137,6 +138,7 @@ body {
     width: 200px;
     left: 400px;
     top: -220px;
+    padding-bottom: 0px;
 }
 
 #paragraph {
@@ -147,7 +149,6 @@ body {
     left: 650px;
     top: 600px;
     text-align: center;
-    padding-bottom: 60px;
 }
 
 #footer {
