@@ -7,6 +7,12 @@
     font-weight: bold;
 }
 
+.navbar-nav {
+    background-color: darkseagreen;
+    width: 100%;
+    text-align: center;
+}
+
 #logo {
     max-width: 300px;
     max-height: 350px;
@@ -151,6 +157,7 @@
     bottom: 0;
     background-color: darkseagreen;
     width: 100%;
+    text-align: center;
 }
 
 @keyframes blink {
