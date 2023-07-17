@@ -37,7 +37,7 @@
 #save {
     left: 900px;
     font-size: 30px;
-    color: crimson;
+    color: red;
 }
 
 #seventy-five, #percent {
@@ -125,6 +125,7 @@
     font-size: 30px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    color: red;
 }
 
 #carousel {
