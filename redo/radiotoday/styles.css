@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image:
+    background-image: url("background.jpeg") fixed center;
 }
 
 #header, .nav-link2 {
