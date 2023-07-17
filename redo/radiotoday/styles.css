@@ -154,7 +154,7 @@
 
 #footer {
     position: absolute;
-    bottom: 0;
+    bottom: -10;
 }
 
 @keyframes blink {
