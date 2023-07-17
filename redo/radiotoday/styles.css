@@ -56,6 +56,7 @@ body {
 #seventy-five, #percent {
     animation: blink 1s steps(1, end) infinite;
     left: 900px;
+    top: 185px;
     font-size: 60px;
     color: gold;
 }
