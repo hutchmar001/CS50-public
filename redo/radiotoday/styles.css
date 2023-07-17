@@ -77,7 +77,7 @@ h5 {
     top: 330px;
     font-size: 10px;
     animation: flip 2s infinite;
-    animation-delay: calc(.2s * var(--i))
+    animation-delay: 1s;
 }
 
 #good_through {
