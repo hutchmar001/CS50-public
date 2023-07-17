@@ -150,6 +150,7 @@
 #footer {
     position: fixed;
     bottom: 0;
+    overflow: hidden;
 }
 
 @keyframes blink {
