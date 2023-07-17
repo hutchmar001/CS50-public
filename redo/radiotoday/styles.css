@@ -147,12 +147,7 @@ body {
     left: 650px;
     top: 600px;
     text-align: center;
-}
-
-#copyright {
-    left: 650px;
-    bottom: 600px;
-    text-align: center;
+    bottom-padding: 
 }
 
 #footer {
