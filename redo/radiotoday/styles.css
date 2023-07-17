@@ -30,7 +30,8 @@ h5 {
     padding-bottom: 40px;
 }
 
-.middle {
+#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early,
+#good_through, .fire, #in_addition, #more_savings, #we_have, #save10 {
     font-family: sans-serif;
     position: absolute;
 }
