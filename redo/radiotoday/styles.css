@@ -120,7 +120,7 @@
 }
 
 #we_have {
-    left: 720px;
+    left: 550px;
     top: 550px;
     font-size: 30px;
     font-weight: bold;
@@ -131,7 +131,7 @@
 #carousel {
     height: 150px;
     width: 200px;
-    left: 700px;
+    left: 550px;
     top: -220px;
 }
 
