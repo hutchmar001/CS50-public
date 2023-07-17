@@ -149,7 +149,7 @@
 #footer {
     position: fixed;
     bottom: 0;
-    overflow: hidden;
+    background: 
 }
 
 @keyframes blink {
