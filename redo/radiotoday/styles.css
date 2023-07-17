@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: 
+    background-image:
 }
 
 #header, .nav-link2 {
@@ -14,7 +14,7 @@ body {
 .navbar-nav {
     background-color: darkseagreen;
     width: 100%;
-    text-align: center;
+    position: fixed;
 }
 
 #logo {
