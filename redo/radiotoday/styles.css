@@ -86,6 +86,7 @@
     0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
     0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
     0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+    animation: flicker 2s infinite;
 }
 
 #in_addition {
@@ -145,6 +146,12 @@
     text-align: center;
 }
 
+#copyright {
+    left: 650px;
+    bottom: 600px;
+    text-align: center;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
@@ -182,8 +189,4 @@
         0 -8px 16px #F90,
         0 -12px 24px #C33;
 }
-}
-
-.fire {
-    animation: flicker 2s infinite;
 }
