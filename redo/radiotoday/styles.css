@@ -38,6 +38,8 @@
     font-size: 30px;
     color: greenyellow;
     transform: rotate(-15deg);
+    border-style: dashed;
+    border-color: black;
 }
 
 #save {
