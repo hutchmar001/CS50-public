@@ -152,6 +152,10 @@
     text-align: center;
 }
 
+.mt-auto {
+    position: fixed;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
