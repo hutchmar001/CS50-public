@@ -21,8 +21,8 @@
     margin: 0px;
 }
 
-#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early, 
-#good_through, .fire, #in_addition, #more_savings {
+#sss, #save, #seventy-five, #percent, #on_clearance, #shop_early,
+#good_through, .fire, #in_addition, #more_savings, #we_have {
     font-family: sans-serif;
     position: absolute;
 }
@@ -121,7 +121,7 @@
 
 #we_have {
     left: 700px;
-    top: 400px;
+    top: 600px;
 }
 
 #carousel {
