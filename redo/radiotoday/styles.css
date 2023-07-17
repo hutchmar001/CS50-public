@@ -161,7 +161,7 @@ h5 {
 
 #footer {
     position: fixed;
-    bott
+    bottom: 0;
     background-color: darkseagreen;
     width: 100%;
     margin: 0;
