@@ -149,7 +149,7 @@ body {
     height: 150px;
     width: 200px;
     left: 400px;
-    top: 1000px;
+    bottom: 200px;
 }
 
 #paragraph {
