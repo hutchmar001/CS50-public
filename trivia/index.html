@@ -9,6 +9,19 @@
             // TODO: Add code to check answers to questions
             function function1() {
                 button1.style.backgroundColor = "red";
+                incorrect.style.opacity = 1;
+            }
+            function function2() {
+                button2.style.backgroundColor = "red";
+                incorrect.style.opacity = 1;
+            }
+            function function3() {
+                button3.style.backgroundColor = "red";
+                incorrect.style.opacity = 1;
+            }
+            function function4() {
+                button4.style.backgroundColor = "green";
+                correct.style.opacity = 1;
             }
         </script>
     </head>
@@ -27,6 +40,8 @@
                 <button type="button" onclick="function2()" id="button2">3</button>
                 <button type="button" onclick="function3()" id="button3">5</button>
                 <button type="button" onclick="function4()" id="button4">0</button>
+                <h3 id="incorrect">Incorrect</h3>
+                <h3 id="correct">Correct</h3>
             </div>
 
             <div class="section">
