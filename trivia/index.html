@@ -5,7 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script type="text/javascript">
+        <script>
             // TODO: Add code to check answers to questions
             function function1() {
                 button1.style.backgroundColor = "red";
@@ -26,14 +26,16 @@
             }
             function function5() {
                     answer= document.getElementById('ipt');
+                    try_Again.style.opacity = 1;
                     if (answer == "new england patriots") {
                         document.body.innerHTML = document.body.innerHTML.replace('Try again', 'Correct');
                         }
                     else {
                         continue;
                     }
-                    try.style.opacity = 1;
+
                     }
+
         </script>
     </head>
     <body>
@@ -58,15 +60,15 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                <h3>Which NFL team has the most Super Bowl wins?</h3>
+		        <h3>Which NFL team has the most Super Bowl wins?</h3>
                 <form id="form1">
                     <input type="value" id="ipt" name="iptt">
                 </form>
                 <br>
                 <button onclick="function5()">Submit</button>
-                <h3 id="try">Try again</h3>
-            </div>
+                <h3 id="try_Again">Try again</h3>
 
+            </div>
         </div>
     </body>
 </html>
