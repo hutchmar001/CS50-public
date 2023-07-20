@@ -69,6 +69,12 @@ input[type="text"]:hover {
     opacity: 0.0;
 }
 
+#ipt {
+    color: aqua;
+}
+
 .button:hover {
     background-color: aqua;
 }
+
+
