@@ -28,7 +28,7 @@
             function function5() {
                     answer= document.getElementById('ipt').value;
                     if (answer === 'new england patriots') {
-                        document.getElementById('try_Again').value.replace('Try again', 'Correct');
+                        document.body.innerHTML = document.body.innerHTML.replace('Try again', 'Correct');
                         }
                     try_Again.style.opacity = 1;
 
