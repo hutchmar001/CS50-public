@@ -58,11 +58,9 @@
                 <button type="submit" id="button5">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
                 <script>
-                const ipt = document.getElementById('button5');
-                    if (ipt == "n") {
-                        incorrect2.style.opacity = 1;
-                    }
-                </script>
+                const input = document.getElementById('button5');
+                input.addEventListener("click", validate);
+
             </div>
 
         </div>
