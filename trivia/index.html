@@ -24,9 +24,7 @@
                 document.body.innerHTML = document.body.innerHTML.replace('Incorrect', 'Correct');
                 incorrect.style.opacity = 1;
             }
-            function function5() {
-                document.querySelector("new england")
-            }
+            $(document).on('keydown', 'input[pattern]')
         </script>
     </head>
     <body>
@@ -57,7 +55,7 @@
                     <input type="value">
                 </form>
                 <br>
-                <button type="submit" onclick="function5()" id="button5">Confirm</button>
+                <button type="submit" id="button5">Confirm</button>
             </div>
         </div>
     </body>
