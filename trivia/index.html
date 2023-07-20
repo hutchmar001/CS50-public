@@ -24,10 +24,7 @@
                 document.body.innerHTML = document.body.innerHTML.replace('Incorrect', 'Correct');
                 incorrect.style.opacity = 1;
             }
-            const input = document.getElementById('button5');
-            if (input == "new england patriots") {
-                incorrect2.style.opacity = 1;
-            }
+
         </script>
     </head>
     <body>
@@ -60,7 +57,14 @@
                 <br>
                 <button type="submit" id="button5">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
+                <script>
+                const input = document.getElementById('button5');
+                    if (input == "new england patriots") {
+                        incorrect2.style.opacity = 1;
+                    }
+                </script>
             </div>
+
         </div>
     </body>
 </html>
