@@ -24,7 +24,12 @@
                 document.body.innerHTML = document.body.innerHTML.replace('Incorrect', 'Correct');
                 incorrect.style.opacity = 1;
             }
-
+            function check() {
+                    answer= document.getElementsByName('input')[0].value;
+                    if (answer) {
+                        incorrect2.opacity = 1;
+                    }
+                }
         </script>
     </head>
     <body>
@@ -56,14 +61,6 @@
                 <br>
                 <button type="submit" value="click" id="submit" onclick="check()">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
-                <script>
-                function check() {
-                    answer= document.getElementsByName('input')[0].value;
-                    if (answer) {
-                        incorrect2.opacity = 1;
-                    }
-                }
-                </script>
             </div>
 
         </div>
