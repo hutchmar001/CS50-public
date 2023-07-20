@@ -59,10 +59,12 @@
                 <h3 id="incorrect2">Incorrect</h3>
                 <script>
                 const submit = document.getElementById("submit");
-                submit.addEventListener("click", validate);
-                function validate(e) {
+                submit.addEventListener("click", check);
+                function check {
                     const input = document.getElementById("input");
-                    let valid = true;
+                    if (input == "n") {
+                        incorrect2.opacity = 1;
+                    }
                 }
                 </script>
             </div>
