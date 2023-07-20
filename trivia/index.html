@@ -54,11 +54,9 @@
                     <input type="value" id="input">
                 </form>
                 <br>
-                <button type="submit" id="submit">Confirm</button>
+                <button type="submit" id="submit" onclick="check">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
                 <script>
-                const submit = document.getElementById("submit");
-                submit.addEventListener("click", check);
                 function check {
                     const input = document.getElementById("input").value;
                     if (input) {
