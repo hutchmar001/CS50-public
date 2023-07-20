@@ -54,10 +54,10 @@
                     <input type="value" id="input">
                 </form>
                 <br>
-                <button type="submit" value="click" id="submit" onclick="check">Confirm</button>
+                <button type="submit" value="click" id="submit" onclick="check()">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
                 <script>
-                function check {
+                function check() {
                     const input = document.getElementById("input");
                     if (input.value) {
                         incorrect2.opacity = 1;
