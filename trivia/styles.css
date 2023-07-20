@@ -69,4 +69,6 @@ input[type="text"]:hover {
     opacity: 0.0;
 }
 
-
+.button:hover {
+    background-color: aqua;
+}
