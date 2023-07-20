@@ -50,14 +50,16 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Which NFL team has the most Super Bowl wins?</h3>
-                <input type="value" id="input">
-                <br><br>
+                <form id="form1">
+                    <input type="value" id="input">
+                </form>
+                <br>
                 <button type="submit" value="click" id="submit" onclick="check()">Confirm</button>
                 <h3 id="incorrect2">Incorrect</h3>
                 <script>
                 function check() {
-                    const input = document.getElementById("input");
-                    if (input.value) {
+                    answer = document.form1.value;
+                    if (answer) {
                         incorrect2.opacity = 1;
                     }
                 }
