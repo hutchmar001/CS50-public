@@ -27,11 +27,11 @@
             function function5() {
                     answer= document.getElementById('input');
                     if (answer == "new england patriots") {
-
+                        document.body.innerHTML = document.body.innerHTML.replace('Try again', 'Correct');
                     else {
                         continue;
                     }
-                    incorrect2.style.opacity = 1;
+                    try.style.opacity = 1;
                     }
                 }
         </script>
@@ -64,7 +64,7 @@
                 </form>
                 <br>
                 <button type="button" onclick="function5()" id="button5">Confirm</button>
-                <h3 id="incorrect2">Incorrect</h3>
+                <h3 id="try">Try again</h3>
             </div>
 
         </div>
