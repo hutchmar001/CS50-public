@@ -32,5 +32,8 @@ body {
 }
 
 #copyright {
+    font-family: tektur;
+    color: darkolivegreen;
     text-align: right;
+    bottom: 0;
 }
