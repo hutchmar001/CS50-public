@@ -2,13 +2,16 @@
 .navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
-    background-color: honeydew;
 }
 
 .navbar-brand {
     text-shadow:
     1px 1px 1px grey,
     1px 1px 1px grey;
+}
+
+.sticky-top {
+    background-color: honeydew;
 }
 
 body {
