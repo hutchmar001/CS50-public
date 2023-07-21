@@ -1,4 +1,10 @@
-.navbar-brand {
+.navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
+}
+
+.navbar-brand {
+    text-shadow:
+    1px 1px 1px grey,
+    1px 1px 1px grey;
 }
