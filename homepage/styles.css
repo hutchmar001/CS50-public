@@ -1,3 +1,8 @@
+#nav {
+    position: absolute;
+    top: 0;
+}
+
 .navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
@@ -13,4 +18,5 @@ body {
     background-image: url("dynamic_blue.jpg");
     background-size: cover;
     animation: fadeIn 5s;
+    padding-bottom: 1000px;
 }
