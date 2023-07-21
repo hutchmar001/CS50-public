@@ -8,3 +8,9 @@
     1px 1px 1px grey,
     1px 1px 1px grey;
 }
+
+body {
+    background-image: url("background.jpeg");
+    background-size: cover;
+    animation: fadeIn 5s;
+}
