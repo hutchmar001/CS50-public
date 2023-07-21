@@ -21,10 +21,12 @@ body {
     padding-bottom: 1000px;
 }
 
-#footer {
+.sticky-bottom {
     position: fixed;
     bottom: 0;
     background-color: honeydew;
     width: 100%;
     font-family: tektur;
+    color: darkolivegreen;
+    text-align: center;
 }
