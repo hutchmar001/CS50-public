@@ -30,3 +30,7 @@ body {
     color: darkolivegreen;
     text-align: center;
 }
+
+.copyright {
+    text-align: right;
+}
