@@ -60,4 +60,7 @@ h1:hover, .section:hover {
     margin: 6px;
 }
 
+.flex-column {
+    max-width: 250px;
+  }
 
