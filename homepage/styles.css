@@ -48,6 +48,14 @@ h1 {
 
 }
 
-.section:hover {
-    box-shadow: inset 200px 0 0 0 #ff4000;;
-}
+h1:hover::after {
+
+    height: .2em;
+
+  }
+
+    p {
+
+      font-size: 58px;
+
+    }
