@@ -57,5 +57,7 @@ h1:hover, .section:hover {
 
 .img-fluid {
     height: 150px;
+    margin: 6px;
 }
+
 
