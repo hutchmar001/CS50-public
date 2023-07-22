@@ -55,3 +55,7 @@ h1:hover, .section:hover {
     text-align: center;
 }
 
+.img-fluid {
+    height: 150px;
+}
+
