@@ -43,15 +43,15 @@ h1 {
     padding-top: 50px;
 }
 
-.section {
-    color: white;
-
-}
-
-h1:hover {
+h1:hover, .section:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+
+.section {
+    color: white;
+
+}
 
