@@ -48,14 +48,7 @@ h1 {
 
 }
 
-h1:hover::after {
-
-    height: .2em;
-
+h1:hover {
+    color: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
   }
 
-    p {
-
-      font-size: 58px;
-
-    }
