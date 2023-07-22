@@ -49,8 +49,8 @@ h1 {
 }
 
 h1:hover {
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(red, yellow, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
