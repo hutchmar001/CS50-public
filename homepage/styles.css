@@ -17,7 +17,6 @@
 body {
     background-image: url("dynamic_blue.jpg");
     background-size: cover;
-    animation: fadeIn 5s;
 }
 
 .sticky-bottom {
