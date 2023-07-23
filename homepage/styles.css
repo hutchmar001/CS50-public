@@ -88,9 +88,9 @@ h1:hover, .section:hover {
 	border-top-color: #ddd;
 	content: '';
 	position: absolute;
-		top: 35%;
-		left: 100%;
-        rotate: -90deg;
+    top: 35%;
+    left: 100%;
+    rotate: -90deg;
 }
 
 .speech-bubble-left:after {
@@ -103,7 +103,15 @@ h1:hover, .section:hover {
     opacity: 1;
 }
 
-#sb1:hover {
+#spanpic:hover~#sb2 {
+    opacity: 1;
+}
+
+#programpic:hover~#sb3 {
+    opacity: 1;
+}
+
+#switchpic:hover~#sb4 {
     opacity: 1;
 }
 
