@@ -103,11 +103,11 @@ h1:hover, .section:hover {
     opacity: 1;
 }
 
-#spanpic:hover~#sb2 {
+#spanpic:hover~#sb3 {
     opacity: 1;
 }
 
-#programpic:hover~#sb3 {
+#programpic:hover~#sb2 {
     opacity: 1;
 }
 
