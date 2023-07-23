@@ -80,7 +80,7 @@ h1:hover, .section:hover {
     text-align: center;
     vertical-align: top;
     min-width: 7em;
-    display: none;
+    opacity: 0.0;
 }
 
 .speech-bubble-left:after, .speech-bubble-right:after {
@@ -99,8 +99,8 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
-.paragraph .speech-bubble-right {
-    visibility: visible;
+.img-fluid .speech-bubble-right {
+    opacity: 1;
 }
 
 #sb1 {
