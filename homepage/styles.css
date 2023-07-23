@@ -81,3 +81,15 @@ h1:hover, .section:hover {
     vertical-align: top;
     min-width: 7em;
 }
+
+.speech-bubble:after {
+	border: 1em solid transparent;
+	border-top-color: #ddd;
+	content: '';
+	margin-left: -1em;
+	position: absolute;
+		top: 100%;
+		left: 50%;
+	width: 0;
+	height: 0;
+}
