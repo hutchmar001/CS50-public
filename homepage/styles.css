@@ -134,3 +134,9 @@ h1:hover, .section:hover {
     left: 1018px;
     top: 314px;
 }
+
+table {
+    max-width: 960px;
+    margin: auto;
+    top: 1000px;
+}
