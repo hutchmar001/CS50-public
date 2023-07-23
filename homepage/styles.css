@@ -99,7 +99,7 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
-d-flex flex-column:hover + .speech-bubble-left + .speech-bubble-right {
+img + .speech-bubble-left + .speech-bubble-right {
     visibility: visible;
 }
 
