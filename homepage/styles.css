@@ -89,6 +89,7 @@ h1:hover, .section:hover {
 	border-top-color: #ddd;
 	content: '';
 	position: absolute;
-		top: 100%;
-		left: 50%;
+		top: 50%;
+		left: 90%;
+        rotate: 90deg;
 }
