@@ -93,13 +93,13 @@ h1:hover, .section:hover {
         rotate: -90deg;
 }
 
-#nav:hover~.speech-bubble-left:after {
+.speech-bubble-left:after {
     top: 35%;
 	left: -24%;
     rotate: 90deg;
 }
 
- .speech-bubble-right {
+#content:hover~.speech-bubble-right {
     opacity: 1;
 }
 
