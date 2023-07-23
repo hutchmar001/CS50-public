@@ -88,9 +88,7 @@ h1:hover, .section:hover {
 	border: 1em solid transparent;
 	border-top-color: #ddd;
 	content: '';
-	margin-left: -1em;
 	position: absolute;
 		top: 100%;
 		left: 50%;
-
 }
