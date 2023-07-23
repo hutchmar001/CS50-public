@@ -80,6 +80,7 @@ h1:hover, .section:hover {
     text-align: center;
     vertical-align: top;
     min-width: 7em;
+    visibility: hidden;
 }
 
 .speech-bubble-left:after, .speech-bubble-right:after {
