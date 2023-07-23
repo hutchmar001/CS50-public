@@ -99,7 +99,7 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
-#content:hover~.speech-bubble-right {
+#nav:hover~#sb1 {
     opacity: 1;
 }
 
