@@ -99,7 +99,7 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
-#nav:hover~#sb1 {
+#runpic:hover~#sb1 {
     opacity: 1;
 }
 
