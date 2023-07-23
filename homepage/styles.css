@@ -94,7 +94,7 @@ h1:hover, .section:hover {
 
 .speech-bubble-left:after {
     top: 35%;
-	left: -28%;
+	left: -24%;
     rotate: 90deg;
 }
 
@@ -104,7 +104,7 @@ h1:hover, .section:hover {
 }
 
 #sb2 {
-    left: 1020px;
+    left: 1024px;
     top: 152px;
 }
 
