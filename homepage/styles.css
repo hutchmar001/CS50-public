@@ -99,6 +99,10 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
+a:hover + div {
+    visibility: visible;
+}
+
 #sb1 {
     left: 420px;
     top: 152px;
