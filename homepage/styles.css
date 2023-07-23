@@ -144,6 +144,7 @@ table {
     color: orange;
 }
 
-contact {
-    font-size: 25px;
+#contact {
+    font-size: 30px;
+    text-decoration-line: underline;
 }
