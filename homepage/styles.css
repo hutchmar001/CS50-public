@@ -99,7 +99,7 @@ h1:hover, .section:hover {
     rotate: 90deg;
 }
 
-a:hover + div {
+d-flex flex-column:hover + div {
     visibility: visible;
 }
 
