@@ -98,6 +98,16 @@ h1:hover, .section:hover {
 }
 
 #sb2 {
-    left: 420px;
+    left: 900px;
     top: 152px;
+}
+
+#sb3 {
+    left: 420px;
+    top: 314px;
+}
+
+#sb4 {
+    left: 900px;
+    top: 314px;
 }
