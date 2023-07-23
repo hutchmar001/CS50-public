@@ -76,7 +76,7 @@ h1:hover, .section:hover {
     line-height: 4em;
     margin-bottom: 1em;
     padding: 0 1em;
-    position: relative;
+    position: absolute;
     text-align: center;
     vertical-align: top;
     min-width: 7em;
