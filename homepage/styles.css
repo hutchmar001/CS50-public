@@ -80,6 +80,8 @@ h1:hover, .section:hover {
     text-align: center;
     vertical-align: top;
     min-width: 7em;
+    left: 370px;
+    top: 152px;
 }
 
 .speech-bubble:after {
@@ -90,6 +92,5 @@ h1:hover, .section:hover {
 	position: absolute;
 		top: 100%;
 		left: 50%;
-	width: 0;
-	height: 0;
+
 }
