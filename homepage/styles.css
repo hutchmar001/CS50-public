@@ -103,6 +103,10 @@ h1:hover, .section:hover {
     opacity: 1;
 }
 
+#sb1:hover {
+    opacity: 1;
+}
+
 #sb1 {
     left: 420px;
     top: 152px;
