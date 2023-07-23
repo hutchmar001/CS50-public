@@ -68,7 +68,7 @@ h1:hover, .section:hover {
     max-width: 250px;
   }
 
-.speech-bubble {
+.speech-bubble-left, .speech-bubble-right {
     background: #ddd;
     color: #333;
     display: inline-block;
@@ -82,7 +82,7 @@ h1:hover, .section:hover {
     min-width: 7em;
 }
 
-.speech-bubble:after {
+.speech-bubble-left:after, .speech-bubble-right:after {
 	border: 1em solid transparent;
 	border-top-color: #ddd;
 	content: '';
@@ -90,6 +90,12 @@ h1:hover, .section:hover {
 		top: 35%;
 		left: 100%;
         rotate: -90deg;
+}
+
+.speech-bubble-left:after {
+    top: 35%;
+	left: -28%;
+    rotate: 90deg;
 }
 
 #sb1 {
