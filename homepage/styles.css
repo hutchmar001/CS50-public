@@ -117,7 +117,7 @@ h1:hover, .sectionh:hover {
 }
 
 #sb1 {
-    left: -100px;
+    left: -98px;
     top: 6px;
 }
 
@@ -127,14 +127,14 @@ h1:hover, .sectionh:hover {
 }
 
 #sb3 {
-    left: -100px;
+    left: -98px;
     top: 168px;
 }
 
 #sb4 {
     left: 200px;
     top: 168px;
-    width: 200px;
+    width: 110px;
 }
 
 table {
