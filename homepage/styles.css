@@ -184,6 +184,7 @@ table {
 
 .sectionq {
     color: white;
+    padding-top: 95px;
 }
 
 @keyframes blink {
