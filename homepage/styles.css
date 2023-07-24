@@ -151,11 +151,14 @@ table {
 }
 
 table {
+    border: 2px solid red;
+    border-radius: 4px;
+    width: 50%;
     position: absolute;
     left: 400px;
 }
 
-table, .excel_box {
+.excel_box {
     border: 2px solid red;
     border-radius: 4px;
     width: 50%;
