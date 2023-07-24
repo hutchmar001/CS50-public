@@ -173,6 +173,10 @@ table {
     left: 550px;
 }
 
+#giftdesc1 {
+    color: orange;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
