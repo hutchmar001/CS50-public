@@ -150,15 +150,12 @@ table {
     color: white;
 }
 
-table, .excel_box {
-    border: 2px solid red;
-    border-radius: 4px;
-    width: 50%;
+table {
     position: absolute;
-    left: 500px;
+    left: 400px;
 }
 
-.excel_box {
+table, .excel_box {
     border: 2px solid red;
     border-radius: 4px;
     width: 50%;
