@@ -65,7 +65,8 @@ h1:hover, .sectionh:hover {
 }
 
 .flex-column {
-    max-width: 250px;
+    max-width: 200px;
+    position: relative;
   }
 
 .speech-bubble-left, .speech-bubble-right {
