@@ -182,6 +182,10 @@ table {
     height: 162px;
 }
 
+.sectionq {
+    color: white;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
