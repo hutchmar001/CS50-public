@@ -124,7 +124,8 @@ h1:hover, .sectionh:hover {
 
 #sb2 {
     left: 500px;
-    top: 152px;
+    top: 0px;
+    margin-top: 6px;
 }
 
 #sb3 {
