@@ -47,14 +47,14 @@ h1 {
     padding-top: 50px;
 }
 
-h1:hover, .section:hover {
+h1:hover, .sectionh:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
 
-.section {
+.sectionh, .sectiong {
     color: white;
     text-align: center;
 }
@@ -141,15 +141,37 @@ table {
     position: relative;
     top: 170px;
     font-family: 'space mono';
-    color: orange;
+    color: white;
 }
 
 #contact {
     font-size: 30px;
-    text-decoration-line: underline;
+    color: white;
 }
 
 table {
     border: 2px solid red;
     border-radius: 4px;
+    width: 50%;
+}
+
+.excel_box {
+    border: 2px solid red;
+    border-radius: 4px;
+    width: 50%;
+}
+
+#supplies {
+    animation: blink 1s infinite;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    25% {opacity: 0.6;}
+    50% {opacity: 0.25;}
+    75% {opacity: 0.6;}
+    100% {opacity: 1;}
 }
