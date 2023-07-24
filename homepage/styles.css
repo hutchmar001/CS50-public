@@ -168,6 +168,10 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
+#giftshopset2 {
+    left: 550px;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
