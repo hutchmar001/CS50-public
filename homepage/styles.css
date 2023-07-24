@@ -172,15 +172,11 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-.sectionq2 {
-    left: 350px;
-}
-
 #giftdesc1, #giftdesc2 {
     color: orange;
 }
 
-#giftshopset2, #giftdesc2{
+#giftshopset2, #giftdesc2, .sectionq2{
     left: 200px;
 }
 
