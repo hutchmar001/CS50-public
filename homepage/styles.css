@@ -169,7 +169,7 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-#giftshopset2, #giftdesc2 {
+#giftshopset2, #giftdesc2, .sectionq2 {
     left: 350px;
 }
 
@@ -182,7 +182,7 @@ table {
     height: 162px;
 }
 
-.sectionq {
+.sectionq1, .sectionq2 {
     color: white;
     position: relative;
 }
@@ -191,11 +191,7 @@ table {
     padding-top: 95px;
 }
 
-#form2 {
-    padding-top: 80px;
-}
-
-#form3 {
+#form2, #form3 {
     padding-top: 80px;
 }
 
