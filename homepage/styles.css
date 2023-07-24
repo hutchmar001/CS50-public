@@ -154,6 +154,8 @@ table, .excel_box {
     border: 2px solid red;
     border-radius: 4px;
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #supplies {
