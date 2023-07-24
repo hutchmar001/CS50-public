@@ -173,8 +173,12 @@ table {
     left: 350px;
 }
 
-#giftdesc1 {
+#giftdesc1, #giftdesc2 {
     color: orange;
+}
+
+#giftdesc2 {
+    left: 350px;
 }
 
 .giftspace {
