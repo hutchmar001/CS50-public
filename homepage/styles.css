@@ -187,8 +187,16 @@ table {
     position: relative;
 }
 
-.input {
+#form1 {
     padding-top: 95px;
+}
+
+#form2 {
+    padding-top: 80px;
+}
+
+#form3 {
+    padding-top: 80px;
 }
 
 @keyframes blink {
