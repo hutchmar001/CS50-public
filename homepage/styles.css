@@ -177,6 +177,10 @@ table {
     color: orange;
 }
 
+.giftspace {
+    padding-bottom: 60px;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
