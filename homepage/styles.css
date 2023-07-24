@@ -117,17 +117,18 @@ h1:hover, .sectionh:hover {
 }
 
 #sb1 {
-    left: 420px;
-    top: 152px;
+    left: -100px;
+    top: 0px;
+    margin-top: 6px;
 }
 
 #sb2 {
-    left: 1024px;
+    left: 500px;
     top: 152px;
 }
 
 #sb3 {
-    left: 420px;
+    left: -1000px;
     top: 314px;
 }
 
