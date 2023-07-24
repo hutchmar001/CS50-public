@@ -184,6 +184,10 @@ table {
 
 .sectionq {
     color: white;
+    position: relative;
+}
+
+.input {
     padding-top: 95px;
 }
 
