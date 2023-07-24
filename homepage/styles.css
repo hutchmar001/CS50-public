@@ -169,16 +169,12 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-#giftshopset2 {
+#giftshopset2, #giftdesc2 {
     left: 350px;
 }
 
 #giftdesc1, #giftdesc2 {
     color: orange;
-}
-
-#giftdesc2 {
-    left: 350px;
 }
 
 .giftspace {
