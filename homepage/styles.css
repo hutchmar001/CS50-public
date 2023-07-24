@@ -172,7 +172,7 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-, .sectionq2 {
+.sectionq2 {
     left: 350px;
 }
 
@@ -180,7 +180,7 @@ table {
     color: orange;
 }
 
-#giftshopset2 {
+#giftshopset2, #giftdesc2{
     left: 200px;
 }
 
