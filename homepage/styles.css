@@ -170,7 +170,7 @@ table {
 }
 
 #giftshopset2 {
-    left: 550px;
+    left: 350px;
 }
 
 #giftdesc1 {
@@ -179,6 +179,7 @@ table {
 
 .giftspace {
     padding-bottom: 60px;
+    height: 162px;
 }
 
 @keyframes blink {
