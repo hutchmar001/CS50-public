@@ -196,6 +196,10 @@ table {
     display: inline-block;
 }
 
+.input:invalid {
+    display: block;
+}
+
 #fourofour {
     font-size: 80px;
     text-align: center;
