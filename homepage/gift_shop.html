@@ -17,7 +17,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               ftotal = 2 *(Number(num));
-
               document.getElementById("button1").disabled = false;
             } else {
               document.getElementById("button1").disabled = true;
@@ -29,7 +28,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               htotal = 100000 *(Number(num));
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
               document.getElementById("button2").disabled = false;
             } else {
               document.getElementById("button2").disabled = true;
@@ -41,7 +39,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               gtotal = 30000 *(Number(num));
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
               document.getElementById("button3").disabled = false;
             } else {
               document.getElementById("button3").disabled = true;
@@ -53,7 +50,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               ztotal = 100 *(Number(num));
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
               document.getElementById("button4").disabled = false;
             } else {
               document.getElementById("button4").disabled = true;
@@ -65,7 +61,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               ctotal = 15 *(Number(num));
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
               document.getElementById("button5").disabled = false;
             } else {
               document.getElementById("button5").disabled = true;
@@ -77,7 +72,6 @@
             let remainder = num % 1;
             if (num < 10 && remainder === 0) {
               rtotal = 5 *(Number(num));
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
               document.getElementById("button6").disabled = false;
             } else {
               document.getElementById("button6").disabled = true;
@@ -85,6 +79,26 @@
           }
 
           function sub1() {
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+          }
+
+          function sub2() {
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+          }
+
+          function sub3() {
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+          }
+
+          function sub4() {
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+          }
+
+          function sub5() {
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+          }
+
+          function sub6() {
             document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
           }
 
