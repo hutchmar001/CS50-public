@@ -12,14 +12,16 @@
         </style>
         <script>
           let total = 0;
+          let ftotal = 0;
           function function1() {
             let num = document.getElementById('box1').value;
             let text = document.getElementById('total');
             if (num < 10.00) {
-              total += Number(num);
+              ftotal = Number(num);
+              
             }
           }
-          text.innerHTML = total;
+
         </script>
     </head>
 
