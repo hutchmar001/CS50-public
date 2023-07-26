@@ -38,11 +38,16 @@
 
           function function3() {
             let num = document.getElementById('box3').value;
-            if (num < 10) {
+            let remainder = num % 1;
+            if (num < 10 && remainder === 0) {
               gtotal = 30000 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("button3").disabled = false;
+            } else {
+              document.getElementById("button3").disabled = true;
             }
           }
+
           function function4() {
             let num = document.getElementById('box4').value;
             if (num < 10) {
@@ -74,7 +79,7 @@
             box = box.parentNode;
             } while (box);
             function1();
-              });
+            });
 
           document.addEventListener("click", (evt) => {
             let click = document.getElementById("box2");
@@ -86,8 +91,55 @@
             box = box.parentNode;
             } while (box);
             function2();
-              });
+            });
 
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box3");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function3();
+            });
+
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box4");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function4();
+            });
+
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box5");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function5();
+            });
+
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box6");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function6();
+            });
         </script>
     </head>
 
@@ -111,7 +163,6 @@
         <div class="header">
           <h1>Gift Shop</h1>
         </div>
-
         <div class="container-fluid">
           <div class="sectiong">
             <p class="paragraph" class="text-center" id="supplies">Supplies are running out!</p>
@@ -160,7 +211,7 @@
                     <input type="number" id="box3" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" onclick="function3()">Submit</button>
+                <button class="button" id="button3">Submit</button>
             ` </div>
             </div>
 
@@ -190,7 +241,7 @@
                     <input type="number" id="box4" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" onclick="function4()">Submit</button>
+                <button class="button" id="button4">Submit</button>
             ` </div>
               <div class="sectionq2" id="form2">
                 <h5>Quantity</h5>
@@ -198,7 +249,7 @@
                     <input type="number" id="box5" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" onclick="function5()">Submit</button>
+                <button class="button" id="button5">Submit</button>
             ` </div>
               <div class="sectionq2" id="form3">
                 <h5>Quantity</h5>
@@ -206,7 +257,7 @@
                     <input type="number" id="box6" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" onclick="function6()">Submit</button>
+                <button class="button" id="button6">Submit</button>
             ` </div>
             </div>
           </div>
