@@ -78,27 +78,7 @@
             }
           }
 
-          function sub1() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-          }
-
-          function sub2() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-          }
-
-          function sub3() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-          }
-
-          function sub4() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-          }
-
-          function sub5() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-          }
-
-          function sub6() {
+          function sub() {
             document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
           }
 
@@ -229,7 +209,7 @@
                     <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button1" onclick="sub1()">Submit</button>
+                <button class="button" id="button1" onclick="sub()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form2">
                 <h5>Quantity</h5>
@@ -237,7 +217,7 @@
                     <input type="number" id="box2" class="input" min="0" max="9" pattern="^\d+$">
                     <br><br>
                 </form>
-                <button class="button" id="button2">Submit</button>
+                <button class="button" id="button2" onclick="sub()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form3">
                 <h5>Quantity</h5>
@@ -245,7 +225,7 @@
                     <input type="number" id="box3" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button3">Submit</button>
+                <button class="button" id="button3" onclick="sub()">Submit</button>
             ` </div>
             </div>
 
@@ -276,7 +256,7 @@
                     <input type="number" id="box4" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button4">Submit</button>
+                <button class="button" id="button4" onclick="sub()">Submit</button>
             ` </div>
               <div class="sectionq2" id="form2">
                 <h5>Quantity</h5>
@@ -284,7 +264,7 @@
                     <input type="number" id="box5" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button5">Submit</button>
+                <button class="button" id="button5" onclick="sub()">Submit</button>
             ` </div>
               <div class="sectionq2" id="form3">
                 <h5>Quantity</h5>
@@ -292,7 +272,7 @@
                     <input type="number" id="box6" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button6">Submit</button>
+                <button class="button" id="button6" onclick="sub()">Submit</button>
             ` </div>
             </div>
           </div>
