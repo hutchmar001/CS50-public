@@ -204,6 +204,10 @@ table {
     padding-top: 50px;
 }
 
+#total, #ttl {
+    display: inline-block;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
