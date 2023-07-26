@@ -4,6 +4,13 @@
     box-sizing: border-box;
   }
 
+@media screen and (max-width: 600px) {
+.navbar-brand {
+    float: none;
+    width: 100%;
+}
+}
+
 .navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
