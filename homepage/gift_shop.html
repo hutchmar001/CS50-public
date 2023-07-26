@@ -15,7 +15,7 @@
           function function1() {
             let num = document.getElementById('box1').value;
             if (num < 10.00) {
-              ftotal = parseFloat(Number(num));
+              ftotal = Number(num);
               document.getElementById("total").innerHTML = ftotal + htotal;
             }
           }
