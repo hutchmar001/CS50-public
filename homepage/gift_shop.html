@@ -13,13 +13,12 @@
         <script>
           let ftotal = 0;
           let htotal = 0;
-          const text = document.getElementById('total');
+          document.getElementById("total").innerHTML = ftotal + htotal;
           function function1() {
             let num = document.getElementById('box1').value;
             if (num < 10.00) {
               ftotal = Number(num);
               let total = ftotal + htotal;
-              text.innerHTML = total;
             }
           }
           function function2() {
@@ -27,10 +26,8 @@
             if (num < 10.00) {
               htotal = Number(num);
               let total = ftotal + htotal;
-              text.innerHTML = total;
             }
           }
-          text.innerHTML = "5";
 
 
         </script>
