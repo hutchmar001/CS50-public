@@ -210,6 +210,8 @@ table {
 
 #fourofour {
     font-size: 300px;
+    margin: auto;
+    position: absolute;
 }
 
 @keyframes blink {
