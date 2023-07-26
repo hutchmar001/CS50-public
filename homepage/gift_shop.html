@@ -14,10 +14,9 @@
           function function1() {
             total = document.getElementById('total');
             num = document.getElementById('box1').value;
-            if (num > 9) {
-              break;
+            if (num < 10) {
+              total.textContent = num;
             }
-            total.textContent = num;
           }
         </script>
     </head>
