@@ -198,14 +198,7 @@ table {
 
 #fourofour {
     font-size: 80px;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
     text-align: center;
-    background-image: url('spacer.png');
-    background-image: none !important;
-    padding-bottom: none;
     color: white;
 }
 
