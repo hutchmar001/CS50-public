@@ -179,11 +179,11 @@ table {
     position: relative;
 }
 
-#form1 {
+#form1, #form4 {
     padding-left: 20px;
 }
 
-#form2, #form3 {
+#form2, #form3, #form5, #form6  {
     padding-left: 20px;
     padding-top: 50px;
 }
