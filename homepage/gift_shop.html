@@ -14,7 +14,7 @@
           function function1() {
             total = document.getElementById('total');
             num = document.getElementById('box1').value;
-            total.textContent = "Total: $" + num;
+            total.textContent = num;
           }
         </script>
     </head>
@@ -141,7 +141,7 @@
           <hr>
 
           <div>
-            <h5 id="total">Total: $</h5>
+            <h5>Total: $</h5><h5 id="total"></h5>
             <a href="#"><button class="button" onclick="function2()">Checkout</button></a>
           </div>
         </div>
