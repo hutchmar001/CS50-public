@@ -15,10 +15,6 @@
     1px 1px 1px grey;
 }
 
-.sticky-top {
-    background-color: honeydew;
-}
-
 body {
     background-image: url("dynamic_blue.jpg");
     background-size: cover;
