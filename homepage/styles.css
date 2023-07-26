@@ -48,14 +48,14 @@ h5 {
     color: white;
 }
 
-h1:hover, .sectionh:hover {
+h1:hover, .sectionh:hover, .container {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
 
-.sectionh, .sectiong {
+.sectionh, .sectiong, .container {
     color: white;
     text-align: center;
 }
