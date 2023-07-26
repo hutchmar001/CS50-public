@@ -79,21 +79,8 @@
           }
 
           function sub() {
-
+            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
           }
-
-          document.addEventListener("click", (evt) => {
-            let click = document.getElementById("button1");
-            let box = evt.target;
-            do {
-              if(box == click) {
-                document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-                sub();
-                return;
-            }
-            box = box.parentNode;
-            } while (box);
-            });
 
           document.addEventListener("click", (evt) => {
             let click = document.getElementById("box1");
@@ -222,7 +209,7 @@
                     <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button1">Submit</button>
+                <button class="button" id="button1" onclick="sub()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form2">
                 <h5>Quantity</h5>
