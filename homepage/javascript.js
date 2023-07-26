@@ -1,4 +1,4 @@
-<script>
+
           ftotal = 0; htotal = 0; gtotal = 0; ztotal = 0; ctotal = 0; rtotal = 0;
           function function1() {
             let num = document.getElementById('box1').value;
@@ -141,4 +141,3 @@
             } while (box);
             function6();
             });
-        </script>
