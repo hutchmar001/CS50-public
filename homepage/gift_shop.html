@@ -15,8 +15,7 @@
           function function1() {
             let num = document.getElementById('box1').value;
             let remainder = num % 1;
-            alert(remainder);
-            if (num < 10.00) {
+            if (num < 10.00) && (remainder === 0) {
               ftotal = 2 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
             } else {
