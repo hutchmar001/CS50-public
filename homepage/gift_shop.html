@@ -23,19 +23,13 @@
               document.getElementById("button1").disabled = true;
             }
           }
-
           function function2() {
             let num = document.getElementById('box2').value;
-            let remainder = num % 1;
-            if (num < 10 && remainder === 0) {
+            if (num < 10) {
               htotal = 100000 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-              document.getElementById("button1").disabled = false;
-            } else {
-              document.getElementById("button1").disabled = true;
             }
           }
-
           function function3() {
             let num = document.getElementById('box3').value;
             if (num < 10) {
@@ -65,17 +59,29 @@
             }
           }
           document.addEventListener("click", (evt) => {
-            let click2 = document.getElementById("box2");
+            let click = document.getElementById("box1");
             let box = evt.target;
             do {
-              if(box == click1) {
+              if(box == click) {
                 return;
             }
             box = box.parentNode;
             } while (box);
             function1();
-            });
+              });
 
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box2");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                alert('inside');
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function2();
+              });
 
         </script>
     </head>
