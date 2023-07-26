@@ -4,7 +4,8 @@
     box-sizing: border-box;
   }
 
-.navbar-brand, .navbar-nav {
+
+.navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
 }
@@ -59,7 +60,7 @@ h1:hover, .sectionh:hover {
     color: transparent;
   }
 
-.paragraph, .sectiong {
+.sectionh, .sectiong {
     color: white;
     text-align: center;
 }
