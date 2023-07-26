@@ -2,23 +2,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-div {
-    flex-basis: 100%;
-}
-
-@media (min-width: 600px) {
-    * {
-      flex-wrap: nowrap;
-    }
-
-    div {
-      flex-basis: 40%;
-    }
   }
 
 .navbar-brand, .nav-link {
