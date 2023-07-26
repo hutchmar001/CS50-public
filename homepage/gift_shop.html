@@ -23,7 +23,7 @@
             let num = document.getElementById('box2').value;
             if (num < 10.00) {
               htotal = Number(num);
-              document.getElementById("total").innerHTML = ftotal + htotal;
+              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal).toFixed(2);
             }
           }
 
