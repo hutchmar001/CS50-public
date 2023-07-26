@@ -18,16 +18,19 @@
             let num = document.getElementById('box1').value;
             if (num < 10.00) {
               ftotal = Number(num);
+              let total = ftotal + htotal;
+              alert(total);
             }
           }
           function function2() {
             let num = document.getElementById('box2').value;
             if (num < 10.00) {
               htotal = Number(num);
+              let total = ftotal + htotal;
+              alert(total);
             }
           }
-          let total = ftotal + htotal;
-          alert(total);
+
         </script>
     </head>
 
