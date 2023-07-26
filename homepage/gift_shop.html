@@ -55,6 +55,19 @@
             }
           }
 
+          let companyNameField = document.getElementById('FormField_6_input');
+          let button = document.getElementById('ContinueButton_6');
+          companyNameField.addEventListener('input', validate);
+          function validate(){
+            var companyNameValue = companyNameField.value;
+            var companyRGEX = /[2-9]{1}\d{3}/;
+
+            if(!companyNameValue.match(companyRGEX)) {
+                button.disabled = true;
+            } else {
+                button.disabled = false;
+            }
+          }
 
 
         </script>
