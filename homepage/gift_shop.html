@@ -13,7 +13,8 @@
         <script>
           function function1() {
             total = document.getElementById('total');
-            num = document.getElementById('box1').value;
+            num = document.getElementsByClassName('input').value;
+            alert(num);
             if (num < 10) {
               total.textContent = num;
             }
