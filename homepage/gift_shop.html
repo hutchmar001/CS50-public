@@ -79,7 +79,7 @@
           }
 
           function sub() {
-            document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+
           }
 
           document.addEventListener("click", (evt) => {
@@ -87,7 +87,7 @@
             let box = evt.target;
             do {
               if(box == click) {
-
+                document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
                 sub();
                 return;
             }
