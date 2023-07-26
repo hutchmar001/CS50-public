@@ -55,8 +55,8 @@
             }
           }
 
-          let companyNameField = document.getElementById('FormField_6_input');
-          let button = document.getElementById('ContinueButton_6');
+          let companyNameField = document.getElementById('box1');
+          let button = document.getElementById('button1');
           companyNameField.addEventListener('input', validate);
           function validate(){
             var companyNameValue = companyNameField.value;
@@ -126,7 +126,7 @@
                     <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$" requiered>
                 </form>
                 <br>
-                <button class="button" onclick="function1()">Submit</button>
+                <button class="button" id ="button1" onclick="function1()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form2">
                 <h5>Quantity</h5>
