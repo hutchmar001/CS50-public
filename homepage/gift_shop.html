@@ -59,15 +59,24 @@
             }
           }
           document.addEventListener("click", (evt) => {
-            let click = document.getElementById("box1");
+            let click1 = document.getElementById("box1");
+            let click2 = document.getElementById("box2");
             let box = evt.target;
             do {
-              if(box == click) {
+              if(box == click1) {
                 return;
             }
             box = box.parentNode;
             } while (box);
             function1();
+
+            do {
+            if(box == click2) {
+              return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function2();
               });
 
         </script>
