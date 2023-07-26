@@ -203,7 +203,9 @@ table {
     left: 0;
     right: 0;
     text-align: center;
-    background-size: 0 !important;
+    background-image: url('spacer.png');
+    background-image: none !important;
+    padding-bottom: none;
     color: white;
 }
 
