@@ -57,12 +57,21 @@
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
             }
           }
-          document.addEventListener("click", (evt)) => {
-            let box = document.getElementById("box1");
-            let targetEl = evt.target;
-            if(targetEl == flyoutEl) {
-              function1();
-            }
+          document.addEventListener("click", (evt) => {
+            let click = document.getElementById("box1");
+            let box = evt.target;
+            do {
+          if(box == click) {
+            // This is a click inside, does nothing, just return.
+            alert('inside');
+            return;
+          }
+          // Go up the DOM
+          box = box.parentNode;
+        } while (box);
+        // This is a click outside.
+        alert('outside');
+      });
           }
 
 
