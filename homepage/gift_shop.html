@@ -55,21 +55,9 @@
             }
           }
 
-          let companyNameField = document.getElementById('box1');
+          let boxid = document.getElementById('box1');
           let button = document.getElementById('button1');
-
-          companyNameField.addEventListener('input', validate);
-          function validate(){
-            var companyNameValue = companyNameField.value;
-            var companyRGEX = /^\d+$/;
-
-            if(!companyNameValue.match(companyRGEX)) {
-                button.disabled = true;
-            } else {
-                button.disabled = false;
-            }
-          }
-
+          alert(boxid);
 
         </script>
     </head>
@@ -124,7 +112,7 @@
               <div class="sectionq1" id="form1">
                 <h5>Quantity</h5>
                 <form>
-                    <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$" requiered>
+                    <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
                 <button class="button" id ="button1" onclick="function1()">Submit</button>
