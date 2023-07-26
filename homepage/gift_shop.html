@@ -17,6 +17,8 @@
             if (num < 10.00) {
               ftotal = 2 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("button1").disabled = false;
+              alert('hi');
             }
           }
           function function2() {
@@ -57,10 +59,8 @@
 
           let boxid = document.getElementById('box1');
           let button = document.getElementById('button1');
-          if (boxid > 2) {
-            document.getElementById("button1").disabled = false;
-          )
-          
+
+
         </script>
     </head>
 
