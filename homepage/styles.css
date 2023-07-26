@@ -7,6 +7,7 @@
 .navbar-brand, .nav-link {
     color: darkolivegreen;
     font-family: tektur;
+    text-align: center;
 }
 
 .navbar-brand {
