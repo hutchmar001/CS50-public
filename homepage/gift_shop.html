@@ -60,6 +60,7 @@
           companyNameField.addEventListener('input', validate);
           function validate(){
             var companyNameValue = companyNameField.value;
+            alert(companyNameValue);
             var companyRGEX = /^\d+$/;
 
             if(!companyNameValue.match(companyRGEX)) {
