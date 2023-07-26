@@ -7,11 +7,8 @@
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Tektur&display=swap');
-        </style>
         <script>
-          let ftotal = 0; let htotal = 0; let gtotal = 0; let ztotal = 0; let ctotal = 0; let rtotal = 0;
+          ftotal = 0; htotal = 0; gtotal = 0; ztotal = 0; ctotal = 0; rtotal = 0;
           function function1() {
             let num = document.getElementById('box1').value;
             if (num < 10.00) {
@@ -33,7 +30,7 @@
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
             }
           }
-                    function function4() {
+          function function4() {
             let num = document.getElementById('box4').value;
             if (num < 10.00) {
               ztotal = Number(num);
