@@ -30,6 +30,9 @@
             if (num < 10 && remainder === 0) {
               htotal = 100000 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("button1").disabled = false;
+            } else {
+              document.getElementById("button1").disabled = true;
             }
           }
 
