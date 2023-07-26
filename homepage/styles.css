@@ -197,12 +197,13 @@ table {
 }
 
 #fourofour {
-    font-size: 300px;
+    font-size: 800px;
     margin: auto;
     position: absolute;
     left: 0;
     right: 0;
     text-align: center;
+    color: white;
 }
 
 @keyframes blink {
