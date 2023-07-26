@@ -105,19 +105,7 @@ h1:hover, .sectionh:hover {
     rotate: 90deg;
 }
 
-#runpic:hover~#sb1 {
-    opacity: 1;
-}
-
-#spanpic:hover~#sb2 {
-    opacity: 1;
-}
-
-#programpic:hover~#sb3 {
-    opacity: 1;
-}
-
-#switchpic:hover~#sb4 {
+#runpic:hover~#sb1,#spanpic:hover~#sb2, #programpic:hover~#sb3, #switchpic:hover~#sb4 {
     opacity: 1;
 }
 
