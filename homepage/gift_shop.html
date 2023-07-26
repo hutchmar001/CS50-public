@@ -11,49 +11,30 @@
           @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Tektur&display=swap');
         </style>
         <script>
-          let ftotal, htotal, gtotal, ztotal, ctotal, rtotal = 0;
+          let ftotal, htotal = 0;
+          let gtotal = 0;
           function function1() {
             let num = document.getElementById('box1').value;
             if (num < 10.00) {
               ftotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal).toFixed(2);
             }
           }
           function function2() {
             let num = document.getElementById('box2').value;
             if (num < 10.00) {
               htotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal).toFixed(2);
             }
           }
           function function3() {
             let num = document.getElementById('box3').value;
             if (num < 10.00) {
               gtotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
+              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal).toFixed(2);
             }
           }
-          function function4() {
-            let num = document.getElementById('box4').value;
-            if (num < 10.00) {
-              ztotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-            }
-          }
-          function function5() {
-            let num = document.getElementById('box5').value;
-            if (num < 10.00) {
-              ctotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-            }
-          }
-          function function6() {
-            let num = document.getElementById('box6').value;
-            if (num < 10.00) {
-              rtotal = Number(num);
-              document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-            }
-          }
+
 
 
         </script>
