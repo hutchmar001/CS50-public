@@ -11,13 +11,13 @@
           @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Tektur&display=swap');
         </style>
         <script>
-          total = 0;
+          let total = 0;
           function function1() {
-            dollars = document.getElementById('total');
-            num = document.getElementById('box1').value;
+            let num = document.getElementById('box1').value;
+            let text = document.getElementById('total');
             if (num < 10.00) {
-              total += int(num);
-              dollars.textContent = total;
+              total += Number(num);
+              text.innerHTML = total;
             }
           }
         </script>
@@ -84,7 +84,7 @@
                     <input type="number" id="box2" class="input" min="0" max="99">
                     <br><br>
                 </form>
-                <button class="button" onclick="return function1()">Submit</button>
+                <button class="button" onclick="function1()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form3">
                 <h5>Quantity</h5>
@@ -145,7 +145,7 @@
           <hr>
 
           <div>
-            <h5 id="ttl">Total: $</h5><h5 id="total"></h5>
+            <h5 id="ttl">Total: $</h5><h5 id="total">0</h5>
             <br>
             <a href="#"><button class="button" onclick="function2()">Checkout</button></a>
           </div>
