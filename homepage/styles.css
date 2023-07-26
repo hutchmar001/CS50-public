@@ -203,6 +203,7 @@ table {
     left: 0;
     right: 0;
     text-align: center;
+    background-image: none;
     color: white;
 }
 
