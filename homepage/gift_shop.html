@@ -87,11 +87,12 @@
             let box = evt.target;
             do {
               if(box == click) {
+
+                sub();
                 return;
             }
             box = box.parentNode;
             } while (box);
-            sub();
             });
 
           document.addEventListener("click", (evt) => {
