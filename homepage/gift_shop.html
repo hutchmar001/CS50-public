@@ -58,15 +58,15 @@
             }
           }
           document.addEventListener("click", (evt) => {
-            let click = document.getElementById("box1");
-            let box = evt.target;
+            let flyout = document.getElementById("box1");
+            let tgt = evt.target;
             do {
-              if(box == click) {
+              if(tgt == click) {
                 alert('inside');
                 return;
             }
-            box = box.parentNode;
-            } while (box);
+            tgt = tgt.parentNode;
+            } while (tgt);
             function1();
             });
 
