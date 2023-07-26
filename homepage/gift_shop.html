@@ -11,12 +11,13 @@
           @import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Tektur&display=swap');
         </style>
         <script>
-          total = 0;
+          total = 0.00;
           function function1() {
             dollars = document.getElementById('total');
             num = document.getElementById('box1').value;
-            if (num < 10) {
-              dollars.textContent = num;
+            if (num < 10.00) {
+              total += num;
+              dollars.textContent = total;
             }
           }
         </script>
