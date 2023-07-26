@@ -57,7 +57,7 @@
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
             }
           }
-          document.addEventListener("click", (evt) => {
+          document.addEventListener("click", (evt)) => {
             let box = document.getElementById("box1");
             let targetEl = evt.target;
             if(targetEl == flyoutEl) {
