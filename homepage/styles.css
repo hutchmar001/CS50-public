@@ -24,7 +24,6 @@ body {
 .sticky-bottom {
     position: fixed;
     bottom: 0;
-    background-color: honeydew;
     width: 100%;
     font-family: tektur;
     color: darkolivegreen;
