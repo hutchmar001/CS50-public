@@ -61,17 +61,14 @@
             let click = document.getElementById("box1");
             let box = evt.target;
             do {
-          if(box == click) {
-            // This is a click inside, does nothing, just return.
-            alert('inside');
-            return;
-          }
-          // Go up the DOM
-          box = box.parentNode;
-        } while (box);
-        // This is a click outside.
-        function1();
-      });
+              if(box == click) {
+                alert('inside');
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            function1();
+            });
 
         </script>
     </head>
