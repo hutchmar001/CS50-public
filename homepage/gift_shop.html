@@ -59,6 +59,10 @@
           }
           document.addEventListener("click", (evt) => {
             let box = document.getElementById("box1");
+            let targetEl = evt.target;
+            if(targetEl == flyoutEl) {
+              function1();
+            }
           }
 
 
