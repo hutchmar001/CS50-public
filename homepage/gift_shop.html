@@ -83,6 +83,18 @@
           }
 
           document.addEventListener("click", (evt) => {
+            let click = document.getElementById("button1");
+            let box = evt.target;
+            do {
+              if(box == click) {
+                return;
+            }
+            box = box.parentNode;
+            } while (box);
+            sub();
+            });
+
+          document.addEventListener("click", (evt) => {
             let click = document.getElementById("box1");
             let box = evt.target;
             do {
@@ -209,7 +221,7 @@
                     <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id="button1" onclick="sub()">Submit</button>
+                <button class="button" id="button1">Submit</button>
             ` </div>
               <div class="sectionq1" id="form2">
                 <h5>Quantity</h5>
