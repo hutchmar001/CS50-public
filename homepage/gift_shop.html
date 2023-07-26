@@ -14,8 +14,7 @@
           function function1() {
             total = document.getElementById('total');
             num = document.getElementById('box1').value;
-            if (num < 1 || num > 9) {
-              alert('Please enter a number between 1 and 9.');
+            if (num > 9 || num < 1) {
               break;
             }
             total.textContent = num;
