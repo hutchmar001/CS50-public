@@ -17,7 +17,7 @@
             if (num < 10.00) {
               ftotal = 2 *(Number(num));
               document.getElementById("total").innerHTML = parseFloat(ftotal + htotal + gtotal + ztotal + ctotal + rtotal).toFixed(2);
-              document.getElementById("button1").disabled = false;
+              document.getElementById("button1").disabled = true;
               alert('hi');
             }
           }
@@ -117,7 +117,7 @@
                     <input type="number" id="box1" class="input" min="0" max="9" pattern="^\d+$">
                 </form>
                 <br>
-                <button class="button" id ="button1" onclick="function1()" disabled="false">Submit</button>
+                <button class="button" id ="button1" onclick="function1()">Submit</button>
             ` </div>
               <div class="sectionq1" id="form2">
                 <h5>Quantity</h5>
