@@ -57,10 +57,10 @@
 
           let companyNameField = document.getElementById('box1');
           let button = document.getElementById('button1');
+
           companyNameField.addEventListener('input', validate);
           function validate(){
             var companyNameValue = companyNameField.value;
-            alert(companyNameValue);
             var companyRGEX = /^\d+$/;
 
             if(!companyNameValue.match(companyRGEX)) {
