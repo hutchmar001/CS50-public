@@ -258,6 +258,10 @@ table {
         height: 200px;
         pointer-events: none;
     }
+
+    .container-fluid {
+        
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
