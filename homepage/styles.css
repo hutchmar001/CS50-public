@@ -301,4 +301,9 @@ table {
         position: relative;
         margin: 0 auto;
     }
+
+    .img-fluid {
+        width: 500px;
+        height: 250px;
+    }
 }
