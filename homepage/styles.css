@@ -8,11 +8,6 @@ nav {
     height: 50px;
 }
 
-.nav-link2 {
-    font-size: 14px;
-    position: relative;
-}
-
 .navbar, .sticky-bottom {
     position: fixed;
     width: 100%;
@@ -40,6 +35,8 @@ body {
 
 .sticky-bottom {
     bottom: 0;
+    font-size: 14px;
+    position: relative;
 }
 
 #copyright {
