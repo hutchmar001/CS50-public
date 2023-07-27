@@ -233,7 +233,7 @@ nav {
 }
 
 .nav-link2 {
-    font-size: 12px;
+    font-size: 9.5px;
     position: relative;
     right: 120px;
     top: 40px;
@@ -241,7 +241,7 @@ nav {
 
 #copyright {
     position: relative;
-    left: 100px;
+    left: 40px;
     bottom: 20px;
     font-size: 6px;
 }
