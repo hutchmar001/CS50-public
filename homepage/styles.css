@@ -2,6 +2,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    display: flex;
+    flex-grow: 2;
   }
 
 .navbar-brand, .nav-link {
@@ -11,7 +13,7 @@
 
 .div {
     display: flex;
-    align-items: center;
+    flex-grow: 2;
 }
 
 .navbar-brand {
