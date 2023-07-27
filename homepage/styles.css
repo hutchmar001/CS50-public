@@ -302,6 +302,10 @@ table {
         margin: 0 auto;
     }
 
+    #hobbies {
+        padding-bottom: 50px;
+    }
+
     #these {
         top: 100px;
         right: 30px;
