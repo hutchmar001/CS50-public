@@ -139,7 +139,7 @@ h1:hover {
 
 table {
     top: 170px;
-    left: 500px;
+    left: 300px;
     font-family: 'space mono';
     color: white;
     border: 2px solid red;
@@ -233,6 +233,11 @@ table {
         bottom: 20px;
         font-size: 6px;
     }
+
+    table {
+        top: 180px;
+        left: 2px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
@@ -264,7 +269,6 @@ table {
     }
 
     table {
-        position: absolute;
         top: 180px;
         left: 200px;
     }
