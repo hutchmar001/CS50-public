@@ -247,7 +247,7 @@ nav {
         height: 50px;
     }
 
-    .nav-link {
+    .navbar-nav {
         font-size: 15px;
         position: relative;
         bottom: 40px;
