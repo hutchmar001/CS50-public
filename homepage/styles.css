@@ -5,9 +5,11 @@
   }
 
 .navbar, .sticky-bottom {
+    position: fixed;
     width: 100%;
     font-family: tektur;
     color: darkolivegreen;
+    text-align: center;
 }
 
 .navbar-brand, .nav-link {
