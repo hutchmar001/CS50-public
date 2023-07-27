@@ -284,8 +284,9 @@ table {
     }
 
     table {
+        position: relative;
         top: 180px;
-        left: 200px;
+        left: 300px;
     }
 
     h1 {
