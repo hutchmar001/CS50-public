@@ -81,14 +81,11 @@ h1:hover, .sectionh:hover, .container:hover, {
 .speech-bubble-left, .speech-bubble-right {
     background: #ddd;
     color: #333;
-
     font-size: 14px;
     line-height: 4em;
-    margin-bottom: 1em;
-    padding: 0 1em;
     position: absolute;
     text-align: center;
-    vertical-align: top;
+
     min-width: 7em;
     opacity: 0.0;
 }
