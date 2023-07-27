@@ -279,4 +279,11 @@ table {
         top: 180px;
         left: 200px;
     }
+
+    h1 {
+        position: relative;
+        padding-top: 70px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+    }
 }
