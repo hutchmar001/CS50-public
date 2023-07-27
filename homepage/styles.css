@@ -214,10 +214,10 @@ table {
     }
 
     .navbar-nav {
-        font-size: 15px;
+        font-size: 11px;
         position: relative;
         bottom: 40px;
-        left: 110px;
+        left: 80px;
     }
 
     .nav-link2 {
