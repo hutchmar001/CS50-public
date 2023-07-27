@@ -83,7 +83,6 @@ h1:hover {
 
 .flex-column {
     max-width: 200px;
-    position: relative;
   }
 
 .speech-bubble-left, .speech-bubble-right {
