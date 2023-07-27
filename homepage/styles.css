@@ -79,7 +79,6 @@ h1:hover, .sectionh:hover, .container:hover, {
   }
 
 .speech-bubble-left, .speech-bubble-right {
-    background: #ddd;
     color: #333;
     display: inline-block;
     font-size: 14px;
@@ -104,7 +103,6 @@ h1:hover, .sectionh:hover, .container:hover, {
 }
 
 .speech-bubble-left:after {
-    top: 35%;
 	left: -24%;
     rotate: 90deg;
 }
