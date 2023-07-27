@@ -262,7 +262,6 @@ table {
     div {
         display: flex;
         flex-wrap: wrap;
-        pointer-events: none;
     }
 
     .navbar-nav {
@@ -308,6 +307,10 @@ table {
         position: relative;
         top: 240px;
         left: 300px;
+    }
+
+    .img-fluid {
+        pointer-events: none;
     }
 
 }
