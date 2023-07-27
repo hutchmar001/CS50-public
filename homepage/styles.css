@@ -228,6 +228,7 @@ table {
 
     #copyright {
         position: relative;
+        text-align: right;
         left: 62px;
         bottom: 4px;
         font-size: 4px;
