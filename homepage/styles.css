@@ -210,7 +210,6 @@ table {
     div {
         display: flex;
         flex-wrap: wrap;
-        width: 300px;
     }
 
     .navbar-nav {
@@ -261,7 +260,6 @@ table {
     div {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
     }
 
     .navbar-nav {
