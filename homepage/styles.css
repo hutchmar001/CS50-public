@@ -17,12 +17,7 @@
     font-family: tektur;
 }
 
-@media only screen and (max-width: 700px) {div {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-}
-}
+
 
 .navbar-brand {
     text-shadow:
@@ -225,6 +220,7 @@ table {
 div {
     display: flex;
     flex-wrap: wrap;
+    width: 300px;
 }
 
 nav {
@@ -257,6 +253,7 @@ nav {
     div {
         display: flex;
         flex-wrap: wrap;
+        width: 300px;
     }
 
     nav {
