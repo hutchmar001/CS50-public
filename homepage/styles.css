@@ -304,6 +304,6 @@ table {
 
     .img-fluid {
         display: block;
-        justify-content-left: 
+        justify-content: flex-start;
     }
 }
