@@ -70,6 +70,13 @@ h1:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
+#supplies {
+    animation: blink 1s infinite;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .sectionh, .sectiong, .container {
     color: white;
     text-align: center;
@@ -156,12 +163,7 @@ table {
     border-radius: 4px;
 }
 
-#supplies {
-    animation: blink 1s infinite;
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 #giftdesc1, #giftdesc2 {
     color: orange;
