@@ -43,7 +43,9 @@ body {
 #copyright {
     font-family: tektur;
     color: darkolivegreen;
-    text-align: right;
+    text-align: center;
+    position: relative;
+    right: 400px;
     bottom: 0;
 }
 
