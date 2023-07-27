@@ -31,6 +31,7 @@ body {
     background-image: url("dynamic_blue.jpg");
     background-size: cover;
     margin-bottom: 70px;
+    background-attachment: fixed;
 }
 
 .sticky-bottom {
