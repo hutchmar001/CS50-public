@@ -39,7 +39,7 @@ body {
 
 #copyright {
     position: relative;
-    right: 200px;
+    right: 300px;
 }
 
 h1 {
@@ -228,7 +228,7 @@ table {
 
     #copyright {
         position: relative;
-        left: 60px;
+        left: 120px;
         bottom: 20px;
         font-size: 6px;
     }
@@ -257,7 +257,7 @@ table {
 
     #copyright {
         position: relative;
-        left: 70px;
+        left: 220px;
         bottom: 20px;
         font-size: 10px;
     }
