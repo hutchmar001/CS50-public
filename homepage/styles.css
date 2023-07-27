@@ -221,13 +221,6 @@ table {
     100% {opacity: 1;}
 }
 
-@media only screen and (max-width: 700px){
-div {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    }
-}
 
 nav {
     height: 50px;
@@ -259,7 +252,6 @@ nav {
     div {
         display: flex;
         flex-wrap: wrap;
-        width: 300px;
     }
 
     nav {
