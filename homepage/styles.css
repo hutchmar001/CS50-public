@@ -262,6 +262,7 @@ table {
     div {
         display: flex;
         flex-wrap: wrap;
+        pointer-events: none;
     }
 
     .navbar-nav {
