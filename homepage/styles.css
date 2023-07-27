@@ -52,12 +52,19 @@ h5 {
     color: white;
 }
 
-h1:hover, .sectionh:hover, .container:hover, {
+h1:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-  }
+}
+
+.sectionh:hover, .container:hover {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
 
 .button:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
