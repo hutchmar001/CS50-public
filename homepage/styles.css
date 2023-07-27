@@ -242,6 +242,7 @@ table {
         position: relative;
         right: 120px;
         top: 40px;
+        margin-right: 10px;
     }
 
     #copyright {
