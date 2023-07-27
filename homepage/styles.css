@@ -238,6 +238,11 @@ table {
         top: 180px;
         left: 2px;
     }
+
+    h1 {
+        position: relative;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
