@@ -226,6 +226,6 @@ div {
 }
 
 .nav {
-    flex-shrink: 1.1;
+    height: 10px;
 }
 }
