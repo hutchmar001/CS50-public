@@ -9,6 +9,10 @@
     font-family: tektur;
 }
 
+.div {
+    display: flex;
+}
+
 .navbar-brand {
     text-shadow:
     1px 1px 1px grey,
