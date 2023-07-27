@@ -225,7 +225,7 @@ div {
     flex-wrap: wrap;
 }
 
-nav {
-    flex-shrink: 2;
+nav-link {
+    font-size: 10px;
 }
 }
