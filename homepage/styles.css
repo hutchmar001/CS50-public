@@ -225,7 +225,7 @@ div {
     flex-wrap: wrap;
 }
 
-.nav {
-    height: 10px;
+nav {
+    height: 50px;
 }
 }
