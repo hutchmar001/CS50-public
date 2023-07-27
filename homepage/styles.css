@@ -2,8 +2,6 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: flex;
-    flex-shrink: 2;
   }
 
 .navbar-brand, .nav-link {
@@ -11,9 +9,8 @@
     font-family: tektur;
 }
 
-.div {
+div {
     display: flex;
-    flex-grow: 2;
 }
 
 .navbar-brand {
