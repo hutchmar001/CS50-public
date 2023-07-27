@@ -245,6 +245,11 @@ table {
         padding-bottom: 10px;
         margin: 0 auto;
     }
+
+    .text-center {
+        position: relative;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
