@@ -139,7 +139,7 @@ h1:hover {
 
 table {
     top: 170px;
-    left: 300px;
+    left: 500px;
     font-family: 'space mono';
     color: white;
     border: 2px solid red;
@@ -234,8 +234,7 @@ table {
     }
 
     table {
-        top: 180px;
-        left: 2px;
+        margin: 0 auto;
     }
 
     h1 {
@@ -284,9 +283,8 @@ table {
     }
 
     table {
-        position: fixed;
         top: 180px;
-        left: 3000px;
+        left: 200px;
     }
 
     h1 {
