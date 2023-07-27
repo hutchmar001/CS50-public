@@ -252,7 +252,7 @@ table {
     }
 
     .img-fluid {
-        width: 100%;
+        background-size: 20%;
     }
 }
 
