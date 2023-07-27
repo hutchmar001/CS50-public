@@ -261,7 +261,7 @@ table {
     div {
         display: flex;
         flex-wrap: wrap;
-        width: 300px;
+        justify-content: flex-start;
     }
 
     .navbar-nav {
@@ -300,10 +300,5 @@ table {
     .text-center {
         position: relative;
         margin: 0 auto;
-    }
-
-    div {
-        display: none;
-        justify-content: flex-start;
     }
 }
