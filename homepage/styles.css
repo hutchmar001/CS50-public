@@ -59,6 +59,10 @@ h1:hover, .sectionh:hover, .container:hover, .button:hover {
     color: transparent;
   }
 
+.button:hover {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
 .sectionh, .sectiong, .container {
     color: white;
     text-align: center;
