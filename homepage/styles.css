@@ -239,7 +239,7 @@ table {
         left: 2px;
     }
 
-    .header {
+    h1 {
         position: relative;
         padding-top: 70px;
         padding-bottom: 10px;
@@ -280,7 +280,7 @@ table {
         left: 200px;
     }
 
-    .header {
+    h1 {
         padding-top: 70px;
         padding-bottom: 10px;
         position: relative;
