@@ -225,6 +225,8 @@ table {
 div {
     display: flex;
     flex-wrap: wrap;
+    width: 300px;
+    }
 }
 
 nav {
@@ -257,6 +259,7 @@ nav {
     div {
         display: flex;
         flex-wrap: wrap;
+        width: 300px;
     }
 
     nav {
