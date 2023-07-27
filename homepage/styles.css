@@ -302,7 +302,7 @@ table {
         margin: 0 auto;
     }
 
-    .d-flex {
+    div {
         display: none;
         justify-content: flex-start;
     }
