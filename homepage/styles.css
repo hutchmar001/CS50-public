@@ -34,9 +34,7 @@ body {
 }
 
 .sticky-bottom {
-    bottom: 0;
     font-size: 14px;
-    position: relative;
 }
 
 #copyright {
