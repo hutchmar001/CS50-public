@@ -219,32 +219,32 @@ table {
 }
 
 @media only screen and (max-width: 700px){
-div {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-}
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
 
-.navbar-nav {
-    font-size: 15px;
-    position: relative;
-    bottom: 40px;
-    left: 110px;
-}
+    .navbar-nav {
+        font-size: 15px;
+        position: relative;
+        bottom: 40px;
+        left: 110px;
+    }
 
-.nav-link2 {
-    font-size: 9.5px;
-    position: relative;
-    right: 120px;
-    top: 40px;
-}
+    .nav-link2 {
+        font-size: 9.5px;
+        position: relative;
+        right: 120px;
+        top: 40px;
+    }
 
-#copyright {
-    position: relative;
-    left: 40px;
-    bottom: 20px;
-    font-size: 6px;
-}
+    #copyright {
+        position: relative;
+        left: 40px;
+        bottom: 20px;
+        font-size: 6px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
