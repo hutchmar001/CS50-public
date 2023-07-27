@@ -281,10 +281,10 @@ table {
     }
 
     .header {
-        position: relative;
-        margin: 0 auto;
         padding-top: 70px;
         padding-bottom: 10px;
+        position: relative;
+        margin: 0 auto;
     }
 
     .text-center {
