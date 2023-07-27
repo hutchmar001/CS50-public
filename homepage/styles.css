@@ -286,4 +286,9 @@ table {
         padding-top: 70px;
         padding-bottom: 10px;
     }
+
+    .container {
+        position: relative;
+        margin: 0 auto;
+    }
 }
