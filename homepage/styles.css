@@ -253,4 +253,9 @@ nav {
         bottom: 40px;
         left: 190px;
     }
+
+    #copyright {
+        position: relative;
+        left: 20px;
+    }
 }
