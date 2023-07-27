@@ -248,11 +248,6 @@ table {
         margin: 0 auto;
     }
 
-    .text-center {
-        position: relative;
-        margin: 0 auto;
-    }
-
     .img-fluid {
         width: 500px;
         height: 200px;
@@ -260,7 +255,8 @@ table {
     }
 
     .container-fluid {
-        
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
