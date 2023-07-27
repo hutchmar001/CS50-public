@@ -82,7 +82,7 @@ h1:hover {
 }
 
 .flex-column {
-    max-width: 200px;
+    width: 100px;
     position: relative;
   }
 
