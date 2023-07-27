@@ -219,8 +219,13 @@ table {
     100% {opacity: 1;}
 }
 
-@media only screen and (max-width: 700px) {div {
+@media only screen and (max-width: 700px){
+div {
     display: flex;
     flex-wrap: wrap;
+}
+
+.nav {
+    
 }
 }
