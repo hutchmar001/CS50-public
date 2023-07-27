@@ -163,10 +163,6 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-#giftdesc1, #giftdesc2 {
-    color: orange;
-}
-
 #giftshopset2, #giftdesc2, .sectionq2{
     left: 200px;
 }
@@ -174,6 +170,7 @@ table {
 .giftspace {
     padding-bottom: 60px;
     height: 162px;
+    color: orange;
 }
 
 .sectionq1, .sectionq2 {
