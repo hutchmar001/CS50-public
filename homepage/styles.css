@@ -300,6 +300,8 @@ table {
     .text-center {
         position: relative;
         margin: 0 auto;
+        top: 120px;
+        left: 80px;
     }
 
     #hobbies {
@@ -307,7 +309,6 @@ table {
     }
 
     #these {
-        top: 100px;
-        right: 30px;
+        
     }
 }
