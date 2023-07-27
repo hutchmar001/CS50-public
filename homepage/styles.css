@@ -265,6 +265,8 @@ nav {
 
     #copyright {
         position: relative;
-        left: 500px;
+        left: 120px;
+        bottom: 20px;
+        font-size: 10px;
     }
 }
