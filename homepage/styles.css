@@ -310,7 +310,9 @@ table {
     }
 
     #these {
-
+        position: relative;
+        top: 240px;
+        left: 300px;
     }
 
 }
