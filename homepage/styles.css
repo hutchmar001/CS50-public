@@ -231,11 +231,25 @@ nav {
     height: 50px;
 }
 
-.nav-link {
+.navbar-nav {
     font-size: 15px;
     position: relative;
     bottom: 40px;
     left: 110px;
+}
+
+.nav-link2 {
+    font-size: 12px;
+    position: relative;
+    right: 120px;
+    top: 40px;
+}
+
+#copyright {
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+    font-size: 6px;
 }
 }
 
@@ -265,7 +279,7 @@ nav {
 
     #copyright {
         position: relative;
-        left: 120px;
+        left: 150px;
         bottom: 20px;
         font-size: 10px;
     }
