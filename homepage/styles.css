@@ -238,5 +238,19 @@ nav {
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
-    
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        height: 50px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+        position: relative;
+        bottom: 40px;
+        left: 150px;
+    }
 }
