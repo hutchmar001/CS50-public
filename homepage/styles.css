@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 
-.navbar {
+.navbar, .sticky-bottom {
     position: fixed;
     width: 100%;
     font-family: tektur;
@@ -37,12 +37,7 @@ body {
 }
 
 .sticky-bottom {
-    position: fixed;
     bottom: 0;
-    width: 100%;
-    font-family: tektur;
-    color: darkolivegreen;
-    text-align: center;
 }
 
 #copyright {
