@@ -262,4 +262,10 @@ table {
         bottom: 20px;
         font-size: 10px;
     }
+
+    table {
+        position: relative;
+        top: 250px;
+        right: 2000px;
+    }
 }
