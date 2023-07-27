@@ -8,7 +8,6 @@ nav {
     height: 50px;
     font-family: tektur;
     color: darkolivegreen;
-    text-align: center;
 }
 
 .navbar {
@@ -16,7 +15,7 @@ nav {
     width: 100%;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand, .nav-link, #copyright {
     color: darkolivegreen;
     font-family: tektur;
 }
@@ -38,9 +37,6 @@ body {
 }
 
 #copyright {
-    font-family: tektur;
-    color: darkolivegreen;
-    text-align: center;
     position: relative;
     right: 200px;
     bottom: 0;
