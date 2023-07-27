@@ -302,8 +302,8 @@ table {
         margin: 0 auto;
     }
 
-    .img-fluid {
-        display: block;
+    .d-flex {
+        display: none;
         justify-content: flex-start;
     }
 }
