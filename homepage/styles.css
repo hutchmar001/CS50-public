@@ -225,7 +225,14 @@ div {
     flex-wrap: wrap;
 }
 
+nav {
+    height: 50px;
+}
+
 .nav-link {
-    font-size: 10px;
+    font-size: 15px;
+    position: relative;
+    bottom: 40px;
+    left: 110px;
 }
 }
