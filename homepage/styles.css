@@ -204,7 +204,7 @@ table {
 }
 
     body {
-    min-height: 500px;
+    max-height: 100vh;
 }
 
     div {
