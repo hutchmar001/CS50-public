@@ -330,26 +330,23 @@ table {
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
     div {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+        position: relative;
     }
 
     .navbar-nav {
         font-size: 15px;
-        position: relative;
         bottom: 40px;
         left: 190px;
     }
 
     .nav-link2 {
         font-size: 14px;
-        position: relative;
         right: 200px;
         top: 40px;
     }
 
     #copyright {
-        position: relative;
         right: 22px;
         text-align: right;
     }
@@ -362,18 +359,15 @@ table {
     h1 {
         padding-top: 70px;
         padding-bottom: 10px;
-        position: relative;
         margin: 0 auto;
     }
 
     #hobbies {
-        position: relative;
         top: 120px;
         left: 500px;
     }
 
     #these {
-        position: relative;
         top: 240px;
         left: 300px;
     }
@@ -383,10 +377,7 @@ table {
     }
 
     #supplies {
-        position: relative;
         padding-bottom: 10px;
-        margin: 0 auto;
-        padding-left: 285px;
     }
 
     .sectionq1 {
