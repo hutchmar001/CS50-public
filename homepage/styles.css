@@ -163,7 +163,7 @@ table {
     -webkit-text-fill-color: transparent;
 }
 
-#giftshopset2, #giftdesc2, .sectionq2{
+#giftshopset2, #giftdesc2, {
     left: 200px;
 }
 
