@@ -261,11 +261,7 @@ table {
         width: 300px;
     }
 
-    #hauntedpic {
-        margin-top: 200px;
-    }
-
-    #herculespic {
+    #hauntedpic,#herculespic, #zebrapic, #wrenchpic, #rubberchickenpic {
         margin-top: 200px;
     }
 
