@@ -299,38 +299,31 @@ table {
     }
 
     #zebra {
-        top: -820px;
-        margin-bottom: -820px;
+        bottom: 820px;
     }
 
     #form4 {
-        top: -1228px;
-        margin-bottom: -1228px;
+        bottom: 1228px;
     }
 
     #wrench {
-        top: -570px;
-        margin-bottom: -570px;
+        bottom: 570px;
     }
 
     #form5 {
-        top: -978px;
-        margin-bottom: -978px;
+        bottom: 978px;
     }
 
     #rubberchicken {
-        top: -320px;
-        margin-bottom: -320px;
+        bottom: 320px;
     }
 
     #form6 {
-        top: -733px;
-        margin-bottom: -733px;
+        bottom: 733px;
     }
 
     .bottom {
         top: -700px;
-        margin-bottom: -700px;
     }
 }
 
