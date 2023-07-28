@@ -199,12 +199,9 @@ table {
 }
 
 @media only screen and (max-width: 700px){
-    html {
-    height: 500px;
-}
 
     body {
-    max-height: 100vh;
+    min-height: 50vh;
 }
 
     div {
