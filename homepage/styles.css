@@ -312,7 +312,6 @@ table {
 
     #form5 {
         bottom: 978px;
-        margin-bottom: -7px;
     }
 
     #rubberchicken {
@@ -321,12 +320,10 @@ table {
 
     #form6 {
         bottom: 733px;
-        margin-bottom: -700px;
     }
 
     .bottom {
-        bottom: 700px;
-        margin-bottom: -700px;
+        top: -700px;
     }
 }
 
