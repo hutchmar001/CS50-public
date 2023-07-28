@@ -323,9 +323,7 @@ table {
         top: -700px;
     }
 
-    .button2 {
-        padding-left: 50px;
-    }
+
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
