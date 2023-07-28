@@ -222,7 +222,112 @@ table {
         font-size: 4px;
     }
 
-   
+    table {
+        top: 180px;
+        left: 0px;
+        margin: 0 auto;
+        position: absolute;
+        font-size: 8.7px;
+    }
+
+    h1 {
+        padding-top: 70px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+    }
+
+    .img-fluid {
+        width: 500px;
+        height: 200px;
+        pointer-events: none;
+    }
+
+    .container-fluid {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #supplies {
+        padding-bottom: 5px;
+    }
+
+    #hauntedpic,#herculespic {
+        margin-top: 200px;
+    }
+
+    #zebrapic {
+        margin-top: -700px;
+    }
+
+    #wrenchpic, #rubberchickenpic {
+        margin-top: 200px;
+    }
+
+    #fork, #haunted, #hercules, #zebra, #wrench, #rubberchicken, #form1, #form2, #form3, #form4, #form5, #form6{
+        width: 300px;
+    }
+
+    #fork {
+        bottom: 820px;
+    }
+
+    #form1 {
+        bottom: 1228px;
+    }
+
+    #haunted {
+        bottom: 570px;
+    }
+
+    #form2 {
+        bottom: 978px;
+    }
+
+    #hercules {
+        bottom: 320px;
+    }
+
+    #form3 {
+        bottom: 705px;
+    }
+
+    #hercules {
+        bottom: 320px;
+    }
+
+    #form3 {
+        bottom: 705px;
+    }
+
+    #zebra {
+        bottom: 820px;
+    }
+
+    #form4 {
+        bottom: 1228px;
+    }
+
+    #wrench {
+        bottom: 570px;
+    }
+
+    #form5 {
+        bottom: 978px;
+    }
+
+    #rubberchicken {
+        bottom: 320px;
+    }
+
+    #form6 {
+        bottom: 733px;
+    }
+
+    .bottom {
+        bottom: 700px;
+    }
+}
+
 @media only screen and (max-width: 800px) and (min-width: 701px) {
     div {
         display: flex;
