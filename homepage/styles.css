@@ -405,8 +405,7 @@ table {
         padding-right: 10px;
     }
 
-    .button2::before {
-        content: "\A";
-        white-space: pre;
+    .button2 {
+        right: 50%;
     }
 }
