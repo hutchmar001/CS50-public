@@ -58,8 +58,6 @@ h5 {
     color: white;
 }
 
-
-
 h1:hover, #hello:hover, #these:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
