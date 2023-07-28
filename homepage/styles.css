@@ -323,7 +323,9 @@ table {
         bottom: 725px;
     }
 
-    
+    .bottom {
+        bottom: 700px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
