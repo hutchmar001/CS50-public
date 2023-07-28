@@ -253,11 +253,12 @@ table {
 
     #fork {
         bottom: 450px;
-        margin: 0 auto;
+        width: 300px;
     }
 
     #form1 {
         bottom: 850px;
+        width: 300px;
     }
 
     #haunted {
