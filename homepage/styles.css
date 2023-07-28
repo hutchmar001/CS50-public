@@ -241,6 +241,11 @@ table {
         pointer-events: none;
     }
 
+    #forkpic, #hauntedpic, #herculespic {
+        padding-left: 40%;
+        width: 200px;
+    }
+
     .container-fluid {
         text-align: center;
         margin: 0 auto;
