@@ -34,6 +34,11 @@ body {
     background-attachment: fixed;
 }
 
+.wrapper {
+    display: table;
+    width: 100%;
+}
+
 .sticky-bottom {
     font-size: 14px;
 }
@@ -196,6 +201,10 @@ table {
     color: white;
 }
 
+#flex {
+    display: flex; flex-direction: column;
+}
+
 @keyframes blink {
     0% {opacity: 1;}
     25% {opacity: 0.6;}
@@ -265,13 +274,16 @@ table {
     }
 
     .bottom {
-        display: table-header-group;
+        order: 2;
     }
 
     .sectionq1 {
-        display: table-footer-group;
+        order: 1;
     }
-}
+
+    .sectionq2 {
+        order: 3;
+    }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
     div {
