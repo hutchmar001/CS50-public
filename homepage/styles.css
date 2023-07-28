@@ -251,6 +251,11 @@ table {
         padding-bottom: 5px;
     }
 
+    #fork {
+        bottom: 625px;
+        width: 300px;
+    }
+
     #form1 {
         bottom: 1025px;
         width: 300px;
