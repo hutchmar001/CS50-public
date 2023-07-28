@@ -32,8 +32,11 @@ body {
     background-size: cover;
     margin-bottom: 70px;
     background-attachment: fixed;
-    display:table;
-    width: 100%;
+}
+
+.wrapper {
+    display: table;
+    width: 100%; 
 }
 
 .sticky-bottom {
