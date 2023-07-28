@@ -267,11 +267,11 @@ table {
     }
 
     .bottom {
-        order: 1;
+        display: table-header-group;
     }
 
     .sectionq1 {
-        order: 2;
+        display: table-footer-group;
     }
 }
 
