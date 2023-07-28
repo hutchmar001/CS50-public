@@ -32,8 +32,8 @@ body {
     background-size: cover;
     margin-bottom: 70px;
     background-attachment: fixed;
-    display:flex;
-    flex-flow: column;
+    display:table;
+    width: 100%;
 }
 
 .sticky-bottom {
