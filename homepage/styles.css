@@ -212,24 +212,22 @@ table {
 @media only screen and (max-width: 700px){
     div {
         display: block;
+        position: relative
     }
 
     .navbar-nav {
         font-size: 11px;
-        position: relative;
         bottom: 40px;
         left: 160px;
     }
 
     .nav-link2 {
         font-size: 7px;
-        position: relative;
         right: 170px;
         top: 40px;
     }
 
     #copyright {
-        position: relative;
         text-align: right;
         right: 2px;
         font-size: 4px;
@@ -244,7 +242,6 @@ table {
     }
 
     h1 {
-        position: relative;
         padding-top: 70px;
         padding-bottom: 10px;
         margin: 0 auto;
@@ -262,13 +259,12 @@ table {
     }
 
     #supplies {
-        position: relative;
         padding-bottom: 10px;
         margin: 0 auto;
         padding-left: 5px;
     }
 
-    #haunted {
+    #fork {
         top: -200px;
     }
 
