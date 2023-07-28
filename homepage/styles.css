@@ -269,9 +269,9 @@ table {
         padding-left: 5px;
     }
 
-    .bottom {
+    .giftshop {
         position: absolute;
-        bottom: 100%;
+        top: 100%;
     }
 }
 
