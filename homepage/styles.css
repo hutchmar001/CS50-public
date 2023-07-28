@@ -76,7 +76,14 @@ h1:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
 
-#hello:hover, #these:hover {
+#hello:hover {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+#these:hover {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
