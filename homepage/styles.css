@@ -251,8 +251,11 @@ table {
         padding-bottom: 5px;
     }
 
-    #fork {
-        bottom: 820px;
+    #hauntedpic,#herculespic, #zebrapic, #wrenchpic, #rubberchickenpic {
+        margin-top: 200px;
+    }
+
+    #fork, #haunted, #hercules, #zebra, #wrench, #rubberchicken {
         width: 300px;
     }
 
@@ -261,9 +264,10 @@ table {
         width: 300px;
     }
 
-    #hauntedpic,#herculespic, #zebrapic, #wrenchpic, #rubberchickenpic {
-        margin-top: 200px;
+    #fork {
+        bottom: 820px;
     }
+
 
 }
 
