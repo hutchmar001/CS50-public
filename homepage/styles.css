@@ -265,7 +265,11 @@ table {
     }
 
     #fork {
-        top: -200px;
+        bottom: 434px;
+    }
+
+    #haunted {
+        margin-top: 30px;
     }
 
 }
