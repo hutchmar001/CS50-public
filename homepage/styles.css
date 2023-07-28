@@ -238,7 +238,9 @@ table {
 
     .img-fluid {
         height: 200px;
+        width: 200px;
         pointer-events: none;
+        padding-left: 100px;
     }
 
     .container-fluid {
