@@ -256,6 +256,13 @@ table {
         text-align: center;
         margin: 0 auto;
     }
+
+    #supplies {
+        position: relative;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        padding-left: 60px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
