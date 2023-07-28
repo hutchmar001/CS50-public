@@ -199,6 +199,10 @@ table {
 }
 
 @media only screen and (max-width: 700px){
+    body {
+        height: 675px;
+    }
+
     div {
         position: relative
     }
@@ -324,7 +328,6 @@ table {
 
     .bottom {
         bottom: 700px;
-        margin-bottom: px;
     }
 }
 
