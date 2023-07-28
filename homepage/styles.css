@@ -200,8 +200,7 @@ table {
 
 @media only screen and (max-width: 700px){
     body {
-        overflow: hidden;
-        overflow-clip-margin: content-box 5px;
+        height: 1000px;
     }
 
     div {
