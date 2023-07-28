@@ -313,4 +313,8 @@ table {
         pointer-events: none;
     }
 
+    #supplies {
+        text-align: center;
+
+    }
 }
