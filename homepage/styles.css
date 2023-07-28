@@ -72,10 +72,6 @@ h1:hover {
     color: transparent;
 }
 
-.button:hover {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-}
-
 .sectionh, .sectiong, .container {
     color: white;
     text-align: center;
@@ -143,7 +139,7 @@ h1:hover {
 
 table {
     top: 170px;
-    left: 300px;
+    left: 500px;
     font-family: 'space mono';
     color: white;
     border: 2px solid red;
