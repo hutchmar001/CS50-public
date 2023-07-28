@@ -319,4 +319,8 @@ table {
         margin: 0 auto;
         padding-left: 285px;
     }
+
+    #giftshopset1, #giftshopset2 {
+        padding-right: 20px;
+    }
 }
