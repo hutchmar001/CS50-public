@@ -327,4 +327,8 @@ table {
     #form1, #form2, #form3 {
         display: block;
     }
+
+    .giftspace {
+        padding-left: 20px;
+    }
 }
