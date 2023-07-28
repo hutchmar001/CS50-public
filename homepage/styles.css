@@ -238,7 +238,6 @@ table {
     }
 
     .img-fluid {
-        width: 500px;
         height: 200px;
         pointer-events: none;
     }
