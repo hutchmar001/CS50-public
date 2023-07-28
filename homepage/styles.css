@@ -200,7 +200,7 @@ table {
 
 @media only screen and (max-width: 700px){
     html {
-        height: 100%;
+        max-height: 500px;
     }
 
     body {
@@ -208,7 +208,7 @@ table {
     }
 
     div {
-        position: relative
+        position: relative;
     }
 
     .navbar-nav {
