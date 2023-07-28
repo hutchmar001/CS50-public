@@ -255,9 +255,12 @@ table {
         margin-top: 200px;
     }
 
+    #zebrapic {
+        margin-top: -700px;
+    }
+
     #wrenchpic, #rubberchickenpic {
         margin-top: 200px;
-        
     }
 
     #fork, #haunted, #hercules, #zebra, #wrench, #rubberchicken, #form1, #form2, #form3, #form4, #form5, #form6{
@@ -285,6 +288,38 @@ table {
     }
 
     #form3 {
+        bottom: 705px;
+    }
+
+    #hercules {
+        bottom: 320px;
+    }
+
+    #form3 {
+        bottom: 705px;
+    }
+
+    #zebra {
+        bottom: 820px;
+    }
+
+    #form4 {
+        bottom: 1228px;
+    }
+
+    #wrench {
+        bottom: 570px;
+    }
+
+    #form5 {
+        bottom: 978px;
+    }
+
+    #rubberchicken {
+        bottom: 320px;
+    }
+
+    #form6 {
         bottom: 705px;
     }
 
