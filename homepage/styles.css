@@ -200,6 +200,27 @@ table {
 
 @media only screen and (max-width: 700px){
 
+    div {
+
+    }
+
+    .navbar-nav {
+        font-size: 11px;
+        bottom: 40px;
+        left: 160px;
+    }
+
+    .nav-link2 {
+        font-size: 7px;
+        right: 170px;
+        top: 40px;
+    }
+
+    #copyright {
+        text-align: right;
+        right: 2px;
+        font-size: 4px;
+    }
 
     table {
         top: 180px;
