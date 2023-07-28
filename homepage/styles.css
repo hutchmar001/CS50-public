@@ -259,6 +259,10 @@ table {
         width: 300px;
     }
 
+    #fork {
+        bottom: 820px;
+    }
+
     #form1 {
         bottom: 1228px;
     }
