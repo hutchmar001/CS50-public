@@ -199,12 +199,9 @@ table {
 }
 
 @media only screen and (max-width: 700px){
-    html {
-        max-height: 500px;
-    }
-
     body {
-        height: 100%;
+        overflow: hidden;
+        overflow-clip-margin: content-box 5px;
     }
 
     div {
