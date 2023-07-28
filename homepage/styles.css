@@ -324,11 +324,9 @@ table {
         padding-right: 20px;
     }
 
-    #form1 {
-        padding-bottom: 52px;
-    }
 
-    #form2 {
-        padding-bottom: 30px;
+
+    #form1, #form2, #form3, #giftshopset2 {
+        display: block;
     }
 }
