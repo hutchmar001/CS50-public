@@ -199,6 +199,9 @@ table {
 }
 
 @media only screen and (max-width: 700px){
+    body {
+        overflow: hidden;
+    }
 
     div {
         position: relative
