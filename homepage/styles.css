@@ -244,14 +244,15 @@ table {
 
     .container-fluid {
         text-align: center;
+        margin: 0 auto;
     }
 
     #supplies {
         padding-bottom: 5px;
     }
 
-    #forkpic {
-        margin-top: 0px;
+    #hauntedpic, #herculespic, #wrenchpic, #rubberchickenpic {
+        margin-top: 200px;
     }
 
     #zebrapic {
@@ -314,7 +315,7 @@ table {
         top: -700px;
     }
 
-    .button {
+    #button1, #button2, #button3, #button4, #button5, #button6 {
         margin-left: 10px;
     }
 }
