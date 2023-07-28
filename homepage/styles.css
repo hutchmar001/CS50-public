@@ -406,7 +406,7 @@ table {
     }
 
     .button2::before {
-            content: "\A";
-            white-space: pre;
+        content: "\A";
+        white-space: pre;
     }
 }
