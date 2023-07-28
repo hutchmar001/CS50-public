@@ -330,4 +330,8 @@ table {
     .giftspace {
         padding-left: 20px;
     }
+
+    #total {
+        padding-right: 10px;
+    }
 }
