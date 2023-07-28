@@ -323,4 +323,8 @@ table {
     #giftshopset1, #giftshopset2 {
         padding-right: 20px;
     }
+
+    #form1 {
+        padding-bottom: 52px;
+    }
 }
