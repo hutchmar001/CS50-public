@@ -272,7 +272,15 @@ table {
     }
 
     #form2 {
-        bottom: 800px;
+        bottom: 978px;
+    }
+
+    #hercules {
+        bottom: 320px;
+    }
+
+    #form3 {
+        bottom: -160px;
     }
 
 
