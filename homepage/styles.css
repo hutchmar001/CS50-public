@@ -240,7 +240,6 @@ table {
     .img-fluid {
         height: 200px;
         pointer-events: none;
-        margin-top: 200px;
     }
 
     .container-fluid {
@@ -315,7 +314,7 @@ table {
         top: -700px;
     }
 
-    #button1, #button2, #button3, #button4, #button5, #button6 {
+    .button {
         margin-left: 10px;
     }
 }
