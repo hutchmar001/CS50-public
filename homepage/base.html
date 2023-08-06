@@ -25,13 +25,15 @@
         </div>
       </nav>
 
-        <div class="container">
+      <div class="container">
+        {% block content %}
             <h1>Welcome!</h1>
             <p id="hello">Hello, and welcome to Mark's web page!<br>I hope you enjoy your stay here.
             <br>Be sure to check out the hobbies section so that they can become your hobbies.<br>Buy something at the gift
             shop because I need the money more than you do.<br>If you need to contact someone, then it might be a good idea
             to check out the contact section.</p>
-        </div>
+        {% endblock %}
+      </div>
 
         <footer class="sticky-bottom">
           <nav class="navbar navbar-expand-lg bg-light fixed-bottom">
