@@ -29,6 +29,11 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+                    {% for bd in birthdays %}
+                        <td>
+                            <tr>{{bd.id}}</tr>
+                            <tr>{{bd.name}}</tr>
+                        </td>
                     </tbody>
                 </table>
             </div>
