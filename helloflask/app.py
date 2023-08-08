@@ -10,4 +10,6 @@ def index():
     else:
         print("Form submitted!")
         color = request.form.get("color")
+        if color != 'red' or color != 'blue':
+            return render_template("index.html")
         return render_template("color.html", color=color)
