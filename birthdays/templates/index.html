@@ -30,11 +30,11 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for i in result %}
-                            <td>
-                                <tr>{{i.name}}</tr>
-                                <tr>{{i.month}}</tr>
-                                <tr>{{i.day}}</tr>
-                            </td>
+                            <tr>
+                                <td>{{i.name}}</td>
+                                <td>{{i.month}}</td>
+                                <td>{{i.day}}</td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
