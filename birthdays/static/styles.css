@@ -81,7 +81,10 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
-#name_box {
+.name_box {
     style="width:400px;"
 }
 
+.month_box {
+    style="width:20px;"
+}
