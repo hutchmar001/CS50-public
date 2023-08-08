@@ -29,11 +29,13 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                    {% for bd in birthdays %}
-                        <td>
-                            <tr>{{bd.id}}</tr>
-                            <tr>{{bd.name}}</tr>
-                        </td>
+                        {% for bd in birthdays %}
+                            <td>
+                                <tr>{{bd.name}}</tr>
+                                <tr>{{bd.month}}</tr>
+                                <tr>{{bd.day}}</tr>
+                            </td>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
