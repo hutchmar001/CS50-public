@@ -4,7 +4,11 @@ from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-
+notification.notify(
+title = "Sample Notification",
+message = "This is a sample notification",
+timeout = 10
+)
 # Configure application
 app = Flask(__name__)
 
@@ -32,11 +36,6 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            notification.notify(
-            title = "Sample Notification",
-            message = "This is a sample notification",
-            timeout = 10
-)
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
