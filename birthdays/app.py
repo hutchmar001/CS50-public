@@ -4,9 +4,17 @@ from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-title = "Sample Notification",
-message = "This is a sample notification",
-notification.notify(title="Kivy Notification", message="Plyer Up and Running!", timeout=10)
+if __name__=="__main__":
+
+        notification.notify(
+            title = "HEADING HERE",
+            message=" DESCRIPTION HERE" ,
+
+            # displaying time
+            timeout=2
+)
+        # waiting time
+        time.sleep(7)
 
 # Configure application
 app = Flask(__name__)
