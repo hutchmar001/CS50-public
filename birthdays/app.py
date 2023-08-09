@@ -33,9 +33,9 @@ def index():
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
             def ShowMessageBox(message = "", title = "Message Box", icon = 'INFO'):
-            def draw(self, context):
-            self.layout.label(text=message)
-            ShowMessageBox("This is a message") 
+                def draw(self, context):
+                    self.layout.label(text=message)
+            ShowMessageBox("This is a message")
 
     bpy.context.window_manager.popup_menu(draw, title = title, icon = icon)
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
