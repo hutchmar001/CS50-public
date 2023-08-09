@@ -36,8 +36,7 @@ def index():
                 def draw(self, context):
                     self.layout.label(text=message)
             ShowMessageBox("This is a message")
-
-    bpy.context.window_manager.popup_menu(draw, title = title, icon = icon)
+            return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
