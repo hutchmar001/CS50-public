@@ -3,6 +3,8 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
+import sys
+sys.stdout.write("Hello")
 # Configure application
 app = Flask(__name__)
 
