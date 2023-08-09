@@ -26,7 +26,6 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        sys.stdout.write(__name__)
         # TODO: Add the user's entry into the database
         n = request.form.get("name")
         m = request.form.get("month")
@@ -39,7 +38,7 @@ def index():
             )
             time.sleep(5)
             return redirect("/")
-            # Prints name of value into terminal
+        sys.stdout.write(__name__) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
 
