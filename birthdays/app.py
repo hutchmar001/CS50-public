@@ -1,6 +1,4 @@
 import os
-import warnings
-import sys
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -34,7 +32,7 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if m < 0 or d < 0:
-            warnings.warn('Warning Message: 4')
+            ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
