@@ -6,7 +6,7 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 
 code_2 = "function fun() {
                alert ("This is an alert dialog box");
-            "
+            "{}
 
 # Configure application
 app = Flask(__name__)
