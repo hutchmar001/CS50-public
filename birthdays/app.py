@@ -1,10 +1,11 @@
 import os
 
+import sys
+
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-import sys
-sys.stdout.write("Hello")
+
 # Configure application
 app = Flask(__name__)
 
@@ -32,7 +33,7 @@ def index():
         n = request.form.get("name")
         m = request.form.get("month")
         d = request.form.get("day")
-        print(n)
+        sys.stdout.write("Hello")
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
 
