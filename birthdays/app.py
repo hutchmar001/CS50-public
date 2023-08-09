@@ -1,8 +1,8 @@
-import os, pyautogui, sys
+import os, sys
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
-pyautogui.alert("Always be with Iterathon")
+
 
 # Configure application
 app = Flask(__name__)
@@ -32,7 +32,6 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
@@ -43,5 +42,3 @@ def index():
         # TODO: Display the entries in the database on index.html
         result = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", result=result)
-
-
