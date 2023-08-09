@@ -5,7 +5,7 @@ from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
 if __name__== "__main__":
-
+        sys.stdout.write("hello")
         plyer.notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
