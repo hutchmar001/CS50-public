@@ -1,12 +1,10 @@
 import os, sys, time
 
-import js2py
+from easygui import *
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-code_2 =  function fun() {
-               alert ("This is an alert dialog box");
-            }
+
 
 # Configure application
 app = Flask(__name__)
@@ -34,11 +32,7 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            plyer.notification.notify(
-                title = 'testing',
-                message = 'message',
-                timeout = 10,
-            )
+
             time.sleep(5)
             return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
