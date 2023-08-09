@@ -1,6 +1,6 @@
 import os, sys
-import tkinter
-tkinter._test()
+
+from tkinter import *
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
