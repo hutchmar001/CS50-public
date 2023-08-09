@@ -6,7 +6,7 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 
 title = "Sample Notification",
 message = "This is a sample notification",
-notification.notify(title="Kivy Notification",message="Plyer Up and Running!",app_name="Waentjies",app_icon="icon.png",timeout=10)
+notification.notify(title="Kivy Notification", message="Plyer Up and Running!", timeout=10)
 
 # Configure application
 app = Flask(__name__)
