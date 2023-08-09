@@ -4,9 +4,9 @@ import js2py
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-code_2 = "function fun() {
+code_2 =  function fun() {
                alert ("This is an alert dialog box");
-            "{}
+            }
 
 # Configure application
 app = Flask(__name__)
