@@ -1,9 +1,10 @@
 import os, sys, time
+
 from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-if __name__=="__main__":
+if __name__== "__main__":
         notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
