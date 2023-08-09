@@ -1,4 +1,4 @@
-import os, bpy, sys
+import os, ctypes, sys
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -32,10 +32,7 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            def ShowMessageBox(message = "", title = "Message Box", icon = 'INFO'):
-                def draw(self, context):
-                    self.layout.label(text=message)
-            ShowMessageBox("This is a message")
+            ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
