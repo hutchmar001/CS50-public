@@ -37,7 +37,7 @@ def index():
                 message = 'message',
                 timeout = 10,
             )
-
+            return redirect("/")
             # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
