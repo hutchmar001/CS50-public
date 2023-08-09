@@ -6,7 +6,7 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 
 if __name__== "__main__":
         while True:
-            notification.notify(
+            plyer.facades.notification.Notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
 
