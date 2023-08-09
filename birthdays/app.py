@@ -31,7 +31,7 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            notification.notify(
+            plyer.notification.notify(
                 title = 'testing',
                 message = 'message',
                 timeout = 10,
