@@ -1,7 +1,7 @@
 import os, sys
 
 import tkinter
-
+tkinter._test()
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -14,12 +14,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///birthdays.db")
-
-window = tkinter.Tk()
-
-window.title('Hello Python')
-window.geometry("300x200+10+20")
-window.mainloop()
 
 @app.after_request
 def after_request(response):
