@@ -3,9 +3,7 @@ import os, sys, time
 from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
-
 while True:
-    time.sleep(30)
     notification.notify(
         title = 'testing',
         message = 'message',
