@@ -4,6 +4,9 @@ import js2py
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
+code_2 = "function f(x) {return x+x;}"
+res_2 = js2py.eval_js(code_2)
+sys.stdout.write(res_2) # Prints name of value into terminal
 
 # Configure application
 app = Flask(__name__)
@@ -38,7 +41,6 @@ def index():
             )
             time.sleep(5)
             return redirect("/")
-        sys.stdout.write(__name__) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
 
