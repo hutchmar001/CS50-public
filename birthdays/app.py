@@ -1,9 +1,10 @@
 import os, sys
 
 from tkinter import *
+import tkinter.messagebox
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
-
+tkinter.messagebox.showinfo(message='hi')
 
 # Configure application
 app = Flask(__name__)
