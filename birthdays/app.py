@@ -5,6 +5,7 @@ from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
 if __name__== "__main__":
+
         notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
@@ -34,7 +35,7 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-
+        sys.stdout.write(__name__)
         # TODO: Add the user's entry into the database
         n = request.form.get("name")
         m = request.form.get("month")
