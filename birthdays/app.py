@@ -1,8 +1,8 @@
-import os, ctypes, sys
+import os, pyautogui, sys
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
-
+pyautogui.alert("Always be with Iterathon")
 
 # Configure application
 app = Flask(__name__)
