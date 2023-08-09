@@ -1,4 +1,4 @@
-import os
+import os, ctpes, sys
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -31,7 +31,7 @@ def index():
         n = request.form.get("name")
         m = request.form.get("month")
         d = request.form.get("day")
-        if m < 0 or d < 0:
+        if int(m) < 0 or int(d) < 0:
             ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
