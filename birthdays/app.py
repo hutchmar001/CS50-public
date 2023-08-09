@@ -5,7 +5,6 @@ from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
 if __name__== "__main__":
-        sys.stdout.write("hello")
         plyer.notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
@@ -42,7 +41,7 @@ def index():
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
             return redirect("/")
-        sys.stdout.write("%s\n" % n) # Prints name of value into terminal
+            # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
 
