@@ -1,11 +1,9 @@
 import os, sys, time
-import plyer
 from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
 if __name__=="__main__":
-
         notification.notify(
             title = "HEADING HERE",
             message=" DESCRIPTION HERE" ,
@@ -13,8 +11,6 @@ if __name__=="__main__":
             # displaying time
             timeout=20
 )
-        # waiting time
-        time.sleep(7)
 
 # Configure application
 app = Flask(__name__)
