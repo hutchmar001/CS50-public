@@ -1,6 +1,6 @@
 import os, sys, time
 
-from plyer import notification
+import js2py
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
