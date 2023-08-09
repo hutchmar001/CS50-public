@@ -11,7 +11,7 @@ if __name__=="__main__":
             message=" DESCRIPTION HERE" ,
 
             # displaying time
-            timeout=2
+            timeout=20
 )
         # waiting time
         time.sleep(7)
