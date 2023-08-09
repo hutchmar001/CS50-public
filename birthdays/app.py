@@ -1,7 +1,13 @@
 import os, sys
+import tkinter
 
-from tkinter import *
-from tkinter import messagebox
+root = tkinter.Tk()
+root.title("tkinter example")
+
+label = tkinter.Label(root, text="Hello World!")
+label.pack()
+
+root.mainloop()
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
