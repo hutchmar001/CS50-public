@@ -1,7 +1,7 @@
 import os, sys
 
 import tkinter
-import gi
+
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
