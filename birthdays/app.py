@@ -1,6 +1,6 @@
 import os, sys
 
-import tkinter
+from plyer import notification
 
 
 from cs50 import SQL
