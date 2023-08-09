@@ -1,8 +1,9 @@
 import os, sys
 
+from tkinter import *
+from tkinter import messagebox
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
-
 
 # Configure application
 app = Flask(__name__)
@@ -31,6 +32,7 @@ def index():
         n = request.form.get("name")
         m = request.form.get("month")
         d = request.form.get("day")
+        messagebox.showinfo("showinfo", "Information")
         if int(m) < 0 or int(d) < 0:
             return redirect("/")
         sys.stdout.write("%s\n" % n) # Prints name of value into terminal
