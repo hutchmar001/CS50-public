@@ -4,7 +4,7 @@ import js2py
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-code_2 = "function f(x) {return x+x;}"
+code_2 = "function f(x) {return 2;}"
 
 # Configure application
 app = Flask(__name__)
