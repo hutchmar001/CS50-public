@@ -4,7 +4,7 @@ import js2py
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-code_2 = "alert("Hello! I am an alert box!!");"
+code_2 = "myvar = 'bob';"
 res_2 = js2py.eval_js(code_2)
 # Configure application
 app = Flask(__name__)
