@@ -4,15 +4,14 @@ from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-if __name__== "__main__":
-        while True:
-            plyer.facades.notification.Notification.notify(
-            title = "HEADING HERE",
-            message=" DESCRIPTION HERE" ,
-
-            # displaying time
-            timeout=20
-)
+while True:
+    time.sleep(30)
+    notification.notify(
+        title = 'testing',
+        message = 'message',
+        app_icon = "image.ico",
+        timeout = 10,
+    )
 
 # Configure application
 app = Flask(__name__)
