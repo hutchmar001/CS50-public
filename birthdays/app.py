@@ -1,10 +1,10 @@
 import os, sys
-
+import plyer
 from plyer import notification
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
-notification.notify(
+plyer.notification.notify(
 title = "Sample Notification",
 message = "This is a sample notification",
 timeout = 10
