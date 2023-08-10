@@ -1,6 +1,11 @@
 import os, sys, time
 
 from easygui import *
+title = "GfG-EasyGUI"
+msg = "GeeksforGeeks, Hello World from EasyGUI"
+button = "Let's Go"
+output = msgbox(msg, title, button)
+
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
@@ -30,10 +35,7 @@ def index():
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-            title = "GfG-EasyGUI"
-            msg = "GeeksforGeeks, Hello World from EasyGUI"
-            button = "Let's Go"
-            output = msgbox(msg, title, button)
+
             time.sleep(2)
             return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
