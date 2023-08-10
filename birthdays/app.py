@@ -1,11 +1,9 @@
 import os, sys, time
 
 from easygui import *
-from tkinter import messagebox
 title = "GfG-EasyGUI"
 msg = "GeeksforGeeks, Hello World from EasyGUI"
 button = "Let's Go"
-output = msgbox(msg, title, button)
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
