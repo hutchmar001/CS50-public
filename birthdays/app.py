@@ -1,10 +1,7 @@
 import os, sys, time
 
-from easygui import *
-title = "GfG-EasyGUI"
-msg = "GeeksforGeeks, Hello World from EasyGUI"
-button = "Let's Go"
-easygui.textbox()
+from easygui import msgbox
+msgbox("hi")
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
