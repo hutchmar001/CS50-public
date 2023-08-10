@@ -1,6 +1,6 @@
 import os, sys, time
 
-from easygui import msgbox
+from tkinter import messagebox as tkMessageBox
 msgbox("hi")
 
 from cs50 import SQL
