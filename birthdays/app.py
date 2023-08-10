@@ -33,7 +33,7 @@ def index():
             title = "GfG-EasyGUI"
             msg = "GeeksforGeeks, Hello World from EasyGUI"
             button = "Let's Go"
-            msgbox(msg, title, button)
+            msgbox('msg, title, button')
             time.sleep(2)
             return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
