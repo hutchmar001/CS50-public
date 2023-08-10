@@ -36,7 +36,7 @@ def index():
             msg = "GeeksforGeeks, Hello World from EasyGUI"
             button = "Let's Go"
             msgbox(msg, title, button )
-            time.sleep(5)
+            time.sleep(2)
             return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
