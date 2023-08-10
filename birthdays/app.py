@@ -4,7 +4,7 @@ from easygui import *
 title = "GfG-EasyGUI"
 msg = "GeeksforGeeks, Hello World from EasyGUI"
 button = "Let's Go"
-output = msgbox(msg, title, button)
+output = ccbox(msg, title)
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
