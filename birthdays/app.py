@@ -1,7 +1,7 @@
 import os, sys, time
 
-from tkinter import messagebox as tkMessageBox
-msgbox("hi")
+from tkinter import messagebox
+messagebox.showinfo(title="Greetings", message="Hello, World!")
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
