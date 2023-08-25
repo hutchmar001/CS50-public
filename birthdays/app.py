@@ -44,6 +44,7 @@ def index():
         return render_template("index.html", result=result)
 
 @app.route('/delete/')
-def my_link():
+def delete():
+  db.execute("DELETE FROM birthdays")
   result = db.execute("SELECT * FROM birthdays")
   return render_template("index.html", result=result)
