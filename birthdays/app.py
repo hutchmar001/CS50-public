@@ -1,8 +1,5 @@
 import os, sys, time
 
-from tkinter import messagebox
-messagebox.showinfo(title="Greetings", message="Hello, World!")
-
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
@@ -26,14 +23,14 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+
     if request.method == "POST":
         # TODO: Add the user's entry into the database
         n = request.form.get("name")
         m = request.form.get("month")
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
-
-            time.sleep(2)
+            flash('iasdfasddf')
             return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
