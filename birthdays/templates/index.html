@@ -52,10 +52,9 @@
                             <tr>
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <form action="/my-link/">
-                                    <input type="submit" value="Click me" />
-                                </form>
-                                <td><form action="/my-link/" type="submit" style="background-color:red" href="/my-link/">Delete</form></td>
+                                <td><form action="/my-link/">
+                                    <input type="submit" value="Delete" style="background-color:red"/>
+                                </form></td>
                             </tr>
                         {% endfor %}
                     </tbody>
