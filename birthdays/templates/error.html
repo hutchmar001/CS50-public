@@ -2,8 +2,14 @@
 <html>
   <head></head>
   <body>
-    {% for message in get_flashed_messages() %}
-        <p>{{ message }}</p>
-    {% endfor %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes style="list-style-type: none;">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
   </body>
 </html>
