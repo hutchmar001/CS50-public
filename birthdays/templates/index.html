@@ -51,7 +51,7 @@
                             <tr>
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <td><button class="delete">Delete</button></td>
+                                <td><button class="delete" onclick="document.getElementsByClassName("delete")">Delete</button></td>
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -60,7 +60,7 @@
         </div>
 
         <script>
-            document.getElementsByClassName("delete").addEventListener("click", delete_row);
+
             function delete_row() {
                 db.execute("DELETE FROM birthdays;")
             };
