@@ -42,3 +42,9 @@ def index():
         # TODO: Display the entries in the database on index.html
         result = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", result=result)
+
+@app.route('/my-link/')
+def my_link():
+  print ('I got clicked!')
+
+  return 'Click.'
