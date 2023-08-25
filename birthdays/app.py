@@ -45,6 +45,5 @@ def index():
 
 @app.route('/my-link/')
 def my_link():
-  print ('I got clicked!')
-
-  return 'Click.'
+  result = db.execute("SELECT * FROM birthdays")
+  return render_template("index.html", result=result)
