@@ -6,8 +6,8 @@
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
         <script>
-            function fun() {
-            alert("Welcome to the javaTpoint.com");
+            function Delete() {
+                db.execute("DELETE FROM birthdays")
             }
         </script>
 
@@ -57,14 +57,13 @@
                             <tr>
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <td<button type="submit" onclick = "fun()">Click me</button></td>
+                                <td><button type="submit" onclick="Delete()" style="background-color:red">Delete</button></td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
-
 
     </body>
 </html>
