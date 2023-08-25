@@ -43,7 +43,7 @@ def index():
         result = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", result=result)
 
-@app.route('/my-link/')
+@app.route('/delete/')
 def my_link():
   result = db.execute("SELECT * FROM birthdays")
   return render_template("index.html", result=result)
