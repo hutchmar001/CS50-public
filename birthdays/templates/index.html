@@ -5,13 +5,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
-        <script>
-            function Delete() {
-                db = SQL("sqlite:///birthdays.db");
-                db.execute("DELETE FROM birthdays");
-                return redirect("/");
-            }
-        </script>
 
     </head>
     <body>
