@@ -7,8 +7,9 @@
         <title>Birthdays</title>
         <script>
             function Delete() {
-                db = SQL("sqlite:///birthdays.db")
-                db.execute("DELETE FROM birthdays")
+                db = SQL("sqlite:///birthdays.db");
+                db.execute("DELETE FROM birthdays");
+                return redirect("/");
             }
         </script>
 
