@@ -32,7 +32,7 @@ def index():
         d = request.form.get("day")
         if int(m) < 0 or int(d) < 0:
             flash('hi')
-            return render_template('error.html')
+            return redirect("/")
         sys.stdout.write(__name__) # Prints name of value into terminal
         db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", n, m, d)
         return redirect("/")
