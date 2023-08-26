@@ -5,9 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
-        <script>
-            const button = 
-        </script>
+
     </head>
     <body>
         <div class="header">
@@ -57,7 +55,7 @@
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
                                 <td><form action="/dt1/">
-                                    <input type="submit" value="Delete" style="background-color:red"/>
+                                    <input id="{{i.id}}" type="submit" value="Delete" style="background-color:red"/>
                                 </form></td>
                             </tr>
                         {% endfor %}
