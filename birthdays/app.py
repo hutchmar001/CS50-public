@@ -67,7 +67,7 @@ def edit_name():
 def date():
     id = request.form.get("id")
     m = request.form.get("month")
-    d = request.form.get("day")
+
     if id:
         db.execute("UPDATE birthdays SET month = ? WHERE id = ?", m, id)
     return redirect("/")
