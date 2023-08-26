@@ -56,10 +56,11 @@ def delete():
     return redirect("/")
 
 @app.route('/edit_name', methods=["POST"])
-def delete():
+def edit_name():
     id = request.form.get("id")
+    n = request.form.get("name")
     if id:
-        db.execute("DELETE FROM birthdays WHERE id = ?", id)
+        db.execute("UPDATE birthdays WHERE id = ?", id)
     return redirect("/")
 
 
