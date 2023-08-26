@@ -66,10 +66,10 @@ def edit_name():
 @app.route('/edit_date', methods=["POST"])
 def date():
     id = request.form.get("id")
-    n = request.form.get("month")
+    m = request.form.get("month")
     d = request.form.get("day")
     if id:
-        db.execute("UPDATE birthdays SET month = ? WHERE id = ?", n, id)
+        db.execute("UPDATE birthdays SET month = ? WHERE id = ?", m, id)
     return redirect("/")
 
 
