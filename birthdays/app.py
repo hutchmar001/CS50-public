@@ -60,7 +60,23 @@ def edit_name():
     id = request.form.get("id")
     n = request.form.get("name")
     if id:
-        db.execute("UPDATE birthdays WHERE id = ?", id)
+        db.execute("UPDATE birthdays SET name = ? WHERE id = ?", n, id)
+    return redirect("/")
+
+@app.route('/edit_month', methods=["POST"])
+def edit_month():
+    id = request.form.get("id")
+    n = request.form.get("month")
+    if id:
+        db.execute("UPDATE birthdays SET month = ? WHERE id = ?", n, id)
+    return redirect("/")
+
+@app.route('/edit_day', methods=["POST"])
+def edit_day():
+    id = request.form.get("id")
+    n = request.form.get("day")
+    if id:
+        db.execute("UPDATE birthdays SET day = ? WHERE id = ?", n, id)
     return redirect("/")
 
 
