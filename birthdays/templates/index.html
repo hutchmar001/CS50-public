@@ -53,9 +53,9 @@
                         {% for i in result %}
                             <tr>
                                 <td>
-                                    {{i.name}}<form action="/edit" method="post">
+                                    <form action="/edit" method="post">{{i.name}}
                                         <input name="id" type="hidden" value={{i.id}}>
-                                        <input type="submit" value="Edit" style="background-color:gold">
+                                        <input type="submit" value="Edit" style="background-color:gold; white-space: nowrap">
                                 </form>
                                 </td>
                                 <td>{{i.month}}/{{i.day}}</td>
