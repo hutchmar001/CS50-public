@@ -42,7 +42,7 @@ def index():
         result = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", result=result)
 
-@app.route('/delete/')
+@app.route('/delete_all/')
 def delete():
   db.execute("DELETE FROM birthdays")
   result = db.execute("SELECT * FROM birthdays")
