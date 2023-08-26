@@ -46,6 +46,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Birthday</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,7 +55,7 @@
                             <tr>
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <td>Delete No.<form action="/dt1/">
+                                <td><form action="/dt1/">
                                     <button type="submit" style="background-color:red">{{i.id}}</button>
                                 </form></td>
                             </tr>
