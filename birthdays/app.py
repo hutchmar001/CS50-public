@@ -48,8 +48,3 @@ def delete():
   result = db.execute("SELECT * FROM birthdays")
   return render_template("index.html", result=result)
 
-@app.route('/dt1/')
-def dt1():
-  db.execute("DELETE FROM birthdays WHERE id=1")
-  result = db.execute("SELECT * FROM birthdays")
-  return render_template("index.html", result=result)
