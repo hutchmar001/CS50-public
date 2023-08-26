@@ -6,10 +6,9 @@
         <link href="/static/styles.css" rel="stylesheet">
         <title>Birthdays</title>
         <script>
-            function delete_row(event) {
-                var td = event.target.parentNode;
-                var tr = td.parentNode;
-                tr.parentNode.removeChild(tr);
+            function delete_row(o) {
+                var p=o.parentNode.parentNode;
+                p.parentNode.removeChild(p);
             }
         </script>
     </head>
@@ -62,7 +61,7 @@
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
                                 <td><form>
-                                    <button onclick="delete_row" type="submit" style="background-color:red">{{i.id}}</button>
+                                    <button onclick="delete_row(this) type="submit" style="background-color:red">{{i.id}}</button>
                                 </form></td>
                             </tr>
                         {% endfor %}
