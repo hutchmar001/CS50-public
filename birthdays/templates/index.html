@@ -53,7 +53,7 @@
                         {% for i in result %}
                             <tr>
                                 <td>
-                                    <form action="/edit" method="post">{{i.name}}
+                                    <form action="/edit" method="post"><span>{{i.name}}</span>
                                         <input name="id" type="hidden" value={{i.id}}>
                                         <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:100px; margin-left: 50px">
                                         <input type="submit" value="Edit" style="background-color:gold; margin-left: 10px">
