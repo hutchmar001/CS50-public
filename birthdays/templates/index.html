@@ -52,13 +52,19 @@
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for i in result %}
                             <tr>
-                                <td>{{i.name}}</td>
+                                <td>
+                                    {{i.name}}<form action="/edit" method="post">
+                                        <input name="id" type="hidden" value={{i.id}}>
+                                        <input type="submit" value="Edit" style="background-color:gold">
+                                </form>
+                                </td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <td><form action="/delete" method="post">
+                                <td>
+                                    <form action="/delete" method="post">
                                         <input name="id" type="hidden" value={{i.id}}>
                                         <input type="submit" value="Delete" style="background-color:red">
-                                    </form></td>
-                                
+                                    </form>
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
