@@ -27,9 +27,9 @@
 
                 <h2>Add a Birthday</h2>
                 <form action="/" method="post">
-                    <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:100px;">
-                    <input autocomplete="off" id="month" name="month" placeholder="Month" type="number" style="width:48px;">
-                    <input autocomplete="off" id="day" name="day" placeholder="Day" type="number" style="width:35px;">
+                    <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:100px; font-weight: bold;">
+                    <input autocomplete="off" id="month" name="month" placeholder="Month" type="number" style="width:48px; font-weight: bold;">
+                    <input autocomplete="off" id="day" name="day" placeholder="Day" type="number" style="width:35px; font-weight: bold;">
                     <button type="submit">Register</button>
                 </form>
                 <br>
@@ -62,7 +62,9 @@
                                 <td>
                                     <form action="/edit" method="post">{{i.month}}/{{i.day}}
                                         <input name="id" type="hidden" value={{i.id}}>
-                                        <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:48px; margin-left: 50px">
+                                        <input autocomplete="off" autofocus id="name" name="name" placeholder="Month" type="text" style="width:48px; margin-left: 50px">
+                                        <input type="submit" value="Edit" style="background-color:gold; margin-left: 10px">
+                                        <input autocomplete="off" autofocus id="name" name="name" placeholder="Day" type="text" style="width:35px; margin-left: 50px">
                                         <input type="submit" value="Edit" style="background-color:gold; margin-left: 10px">
                                     </form>
                                 </td>
