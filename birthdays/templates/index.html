@@ -54,8 +54,8 @@
                             <tr>
                                 <td>{{i.name}}</td>
                                 <td>{{i.month}}/{{i.day}}</td>
-                                <td><form action="/dt1/">
-                                    <button type="submit" style="background-color:red">Delete No.{{i.id}}</button>
+                                <td>Delete No.<form action="/dt1/">
+                                    <button type="submit" style="background-color:red">{{i.id}}</button>
                                 </form></td>
                             </tr>
                         {% endfor %}
