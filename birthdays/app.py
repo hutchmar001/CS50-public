@@ -69,7 +69,10 @@ def date():
     m = request.form.get("month")
     d = request.form.get("day")
     if id:
-        db.execute("UPDATE birthdays SET month = ?, day = ? WHERE id = ?", m, d, id)
+        if m:
+            db.execute("UPDATE birthdays SET month = ? WHERE id = ?", m, id)
+        if d:
+            db.execute("UPDATE birthdays SET day = ? WHERE id = ?", d, id)
     return redirect("/")
 
 
