@@ -55,4 +55,11 @@ def delete():
         db.execute("DELETE FROM birthdays WHERE id = ?", id)
     return redirect("/")
 
+@app.route('/edit_name', methods=["POST"])
+def delete():
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM birthdays WHERE id = ?", id)
+    return redirect("/")
+
 
