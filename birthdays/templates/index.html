@@ -55,13 +55,15 @@
                                 <td>
                                     <form action="/edit" method="post">{{i.name}}
                                         <input name="id" type="hidden" value={{i.id}}>
-                                        <input type="submit" value="Edit" style="background-color:gold; margin-left: 50px">
+                                        <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:100px; margin-left: 50px">
+                                        <input type="submit" value="Edit" style="background-color:gold; margin-left: 10px">
                                     </form>
                                 </td>
                                 <td>
                                     <form action="/edit" method="post">{{i.month}}/{{i.day}}
                                         <input name="id" type="hidden" value={{i.id}}>
-                                        <input type="submit" value="Edit" style="background-color:gold; margin-left: 50px">
+                                        <input autocomplete="off" autofocus id="name" name="name" placeholder="Name" type="text" style="width:48px; margin-left: 50px">
+                                        <input type="submit" value="Edit" style="background-color:gold; margin-left: 10px">
                                     </form>
                                 </td>
                                 <td>
