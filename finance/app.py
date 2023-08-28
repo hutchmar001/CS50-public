@@ -121,8 +121,8 @@ def register():
         if p1 != p2:
             return apology("passwords must match", 403)
     else:
-        u = request.form.get("username")
-        h = generate_password_hash(p1)
+
+        h = generate_password_hash(password='hi', method='sha512')
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", u, h)
         return render_template("register.html")
 
