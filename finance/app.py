@@ -116,6 +116,8 @@ def register():
             return apology("must provide password", 403)
         if not request.form.get("password_again"):
             return apology("must provide password", 403)
+        if password != password_again:
+            return apology("passwords must match", 403)
     else:
         return render_template("register.html")
 
