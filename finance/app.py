@@ -109,6 +109,9 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    u = request.form.get("username")
+    p1 = request.form.get("password")
+    p2 = request.form.get("password_again")
     if request.method == "POST":
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -116,12 +119,10 @@ def register():
             return apology("must provide password", 403)
         if not request.form.get("password_again"):
             return apology("must provide password", 403)
-        p1 = request.form.get("password")
-        p2 = request.form.get("password_again")
         if p1 != p2:
             return apology("passwords must match", 403)
     else:
-        db.execute("INSERT INTO users VALUES () )
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", u, h)
         return render_template("register.html")
 
 
