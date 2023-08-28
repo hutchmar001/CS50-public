@@ -122,7 +122,7 @@ def register():
             return apology("passwords must match", 403)
         u = request.form.get("username")
         repeat = db.execute("SELECT * FROM users WHERE username == ?", u)
-        
+        sys.stdout.write(repeat)
         h = generate_password_hash(password=p1)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", u, h)
         return render_template("register.html")
