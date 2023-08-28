@@ -123,6 +123,7 @@ def register():
         u = request.form.get("username")
         h = generate_password_hash(password=p1, method='sha512')
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", u, h)
+        return render_template("register.html")
     else:
         return render_template("register.html")
 
