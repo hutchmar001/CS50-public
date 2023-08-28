@@ -121,11 +121,11 @@ def register():
         if p1 != p2:
             return apology("passwords must match", 403)
         u = request.form.get("username")
-        repeat = db.execute("SELECT COUNT (*) FROM users WHERE username == ?", u)
-        if repeat:
+        repeat = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
+        if repeat > 0:
             return apology("user already exists", 403)
         h = generate_password_hash(password=p1)
-        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", u, h)
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?);", u, h)
         return render_template("register.html")
     else:
         return render_template("register.html")
