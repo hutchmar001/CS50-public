@@ -121,6 +121,7 @@ def register():
         if p1 != p2:
             return apology("passwords must match", 403)
     else:
+        db.execute("INSERT INTO )
         return render_template("register.html")
 
 
