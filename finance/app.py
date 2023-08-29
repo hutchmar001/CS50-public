@@ -51,10 +51,11 @@ def buy():
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
         price = stock["price"]
-        ab = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        
+        a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        a_b = a_balance("cash")
         print(session["user_id"])
         print(a_balance)
+        print(a_b)
         return redirect("/")
 
     else:
