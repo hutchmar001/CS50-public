@@ -107,7 +107,7 @@ def quote():
         sym = request.form.get("symbol")
         stock = lookup(sym)
         print(stock)
-        return render_template("quote.html")
+        return render_template("quoted.html")
 
     else:
         return render_template("quote.html")
