@@ -53,9 +53,7 @@ def buy():
 
         price = stock["price"]
         total_shares = float(request.form.get("shares"))
-        print(total_shares)
         total_price = price * total_shares
-        print(total_price)
 
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
