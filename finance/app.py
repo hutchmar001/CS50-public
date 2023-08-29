@@ -47,6 +47,9 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
+        n = request.form.get("shares")
+        if n < 1:
+            return apology("Enter a number greater than 0", 400)
         return render_template("/")
 
     else:
