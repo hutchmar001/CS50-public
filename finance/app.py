@@ -1,4 +1,4 @@
-import os, time
+import os, datetime
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -62,8 +62,9 @@ def buy():
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
-        ts = time.time()
-        db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?);", u, total_shares, total_price, sym)
+        ct = datetime.datetime.now()
+
+        ## db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?);", u, sym, total_shares, total_price, ct)
         return redirect("/")
 
     else:
