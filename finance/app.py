@@ -60,7 +60,9 @@ def buy():
         if a_b < total_price:
             return apology("You do not have enough money to complete this transaction", 400)
 
-        db.execute("INSERT INTO purchases VALUES ()])
+        user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+        print(user)
+        ## db.execute("INSERT INTO purchases VALUES ()])
         return redirect("/")
 
     else:
