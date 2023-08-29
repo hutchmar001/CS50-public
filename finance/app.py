@@ -51,7 +51,7 @@ def buy():
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
         price = stock["price"]
-        ## a_balance = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
+        a_balance = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
 
         return redirect("/")
 
