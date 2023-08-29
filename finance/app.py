@@ -50,6 +50,7 @@ def buy():
         n = request.form.get("shares")
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
+        
         return redirect("/")
 
     else:
