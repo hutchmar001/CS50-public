@@ -61,8 +61,9 @@ def buy():
             return apology("You do not have enough money to complete this transaction", 400)
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
-        print(user)
-        ## db.execute("INSERT INTO purchases VALUES ()])
+        u = user[0]["username"]
+        print(u)
+        ## db.execute("INSERT INTO purchases VALUES (u, )])
         return redirect("/")
 
     else:
