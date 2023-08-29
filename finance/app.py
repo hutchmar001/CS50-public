@@ -51,6 +51,8 @@ def buy():
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
         price = stock["price"]
+ym = request.form.get("symbol")
+
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
         if a_b < price:
