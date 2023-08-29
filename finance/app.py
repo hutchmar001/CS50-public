@@ -63,7 +63,7 @@ def buy():
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
         print(u)
-        ## db.execute("INSERT INTO purchases VALUES (u, )])
+        db.execute("INSERT INTO purchases VALUES (?, ?, ?);", u, total_price, sym)
         return redirect("/")
 
     else:
