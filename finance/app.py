@@ -42,7 +42,13 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        sym = request.form.get("symbol")
+        stock = lookup(sym)
+        return render_template("/")
+
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
@@ -106,7 +112,6 @@ def quote():
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
-        print(stock)
         return render_template("quoted.html", name = stock)
 
     else:
