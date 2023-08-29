@@ -50,12 +50,16 @@ def buy():
         n = request.form.get("shares")
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
+
         price = stock["price"]
-ym = request.form.get("symbol")
+        total_shares = request.form.get("shares")
+        print(total_shares)
+        total_price = price * total_shares
+        print(total_price)
 
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
-        if a_b < price:
+        if a_b < total_price:
             return apology("You do not have enough money to complete this transaction", 400)
         return redirect("/")
 
