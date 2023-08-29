@@ -124,7 +124,7 @@ def register():
         repeat = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
         ## [{'COUNT (*)': 1}]
         print(repeat[0]["COUNT (*)"])
-        if repeat > 0:
+        if repeat:
             return apology("user already exists", 403)
         h = generate_password_hash(password=p1)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?);", u, h)
