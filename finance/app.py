@@ -122,7 +122,8 @@ def register():
             return apology("passwords must match", 403)
         u = request.form.get("username")
         repeat = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
-        print(repeat) ## [{'COUNT (*)': 1}]
+        ## [{'COUNT (*)': 1}]
+        print(repeat[0]["COUNT (*)"])
         if repeat > 0:
             return apology("user already exists", 403)
         h = generate_password_hash(password=p1)
