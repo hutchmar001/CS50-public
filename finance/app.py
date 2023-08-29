@@ -123,8 +123,8 @@ def register():
         u = request.form.get("username")
         repeat = db.execute("SELECT COUNT (*) FROM users WHERE username = ?;", u)
         ## [{'COUNT (*)': 1}]
-        print(repeat[0]["COUNT (*)"])
-        if repeat:
+        r = repeat[0]["COUNT (*)"]
+        if r>0:
             return apology("user already exists", 403)
         h = generate_password_hash(password=p1)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?);", u, h)
