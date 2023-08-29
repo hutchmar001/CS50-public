@@ -131,7 +131,7 @@ def register():
         h = generate_password_hash(password=p1)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?);", u, h)
         session["user_id", 200] = u
-        return render_template("register.html")
+        return render_template("login.html")
 
     else:
         return render_template("register.html")
