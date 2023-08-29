@@ -114,11 +114,11 @@ def register():
             return apology("must provide username", 403)
         if not request.form.get("password"):
             return apology("must provide password", 403)
-        if not request.form.get("password_again"):
+        if not request.form.get("confirmation"):
             return apology("must provide password", 403)
 
         p1 = request.form.get("password")
-        p2 = request.form.get("password_again")
+        p2 = request.form.get("confirmation")
         if p1 != p2:
             return apology("passwords must match", 403)
 
@@ -127,7 +127,7 @@ def register():
         r = repeat[0]["COUNT (*)"]
         if r > 0:
             return apology("user already exists", 403)
-        
+
         h = generate_password_hash(password=p1)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?);", u, h)
         return render_template("register.html")
