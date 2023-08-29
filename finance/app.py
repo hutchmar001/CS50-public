@@ -52,7 +52,7 @@ def buy():
             return apology("Enter a number greater than 0", 400)
 
         price = stock["price"]
-        total_shares = request.form.get("shares")
+        total_shares = float(request.form.get("shares"))
         print(total_shares)
         total_price = price * total_shares
         print(total_price)
