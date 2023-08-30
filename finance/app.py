@@ -55,7 +55,7 @@ def index():
             getter = itemgetter('cash')
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
-
+            db.execute("INSERT INTO home WHERE id = ?;", session["user_id"])
         return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
     return render_template("home.html")
