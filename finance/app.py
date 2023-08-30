@@ -36,8 +36,9 @@ def after_request(response):
 def index():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-    stocks = db.execute("SELECT stock FROM users WHERE id = ?;", session["user_id"])
-    return render_template("home.html", name = u, stock = stocks)
+    stocks = db.execute("SELECT stock FROM purchases WHERE username = ?;", u)
+    s = stocks[0]["stock"]
+    return render_template("home.html", name = u, stock = s)
 
 
 @app.route("/buy", methods=["GET", "POST"])
