@@ -55,12 +55,14 @@ def index():
             getter = itemgetter('SUM(price)')
             gttr = ([getter(item) for item in total])
             sum = gttr[0]
+            s = usd(sum)
 
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
             getter = itemgetter('cash')
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, sum, ab)
+            a = usd(ab)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
         rows = c.execute('SELECT * FROM home;').fetchall()
         for row in rows:
