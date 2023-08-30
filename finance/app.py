@@ -102,7 +102,37 @@ def buy():
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
-        ct = datetime.datetime.now()
+        ct = datetime.datetime.now()z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?);", u, sym, total_shares, total_price, ct)
         return redirect("/")
 
