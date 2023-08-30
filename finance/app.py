@@ -42,6 +42,7 @@ def index():
     u = user[0]["username"]
     stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
     if stocks:
+        print(stocks)
         for i in stocks:
             st = (i.get('stock'))
 
