@@ -37,6 +37,7 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
+    db.execute("DELETE FROM home")
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
     stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
