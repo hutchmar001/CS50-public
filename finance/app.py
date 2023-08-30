@@ -39,14 +39,14 @@ def index():
     stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
     print(stocks)
     if stocks:
-        for i in stocks:
-            st = stocks[i]["stock"]
+        for key, value in stocks.items():
+            st = stocks[key]["stock"]
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-            sh = shares[i]["SUM(shares)"]
+            sh = shares[key]["SUM(shares)"]
             total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-            sum = total[i]["SUM(price)"]
+            sum = total[key]["SUM(price)"]
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-            ab = a_balance[i]["cash"]
+            ab = a_balance[key]["cash"]
             return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
     return render_template("home.html")
