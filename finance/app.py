@@ -45,7 +45,8 @@ def index():
             print(st)
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             print(shares)
-            sh = (i.get('SUM(shares)'))
+            for key in shares.values:
+                sh = (i.get('SUM(shares)'))
             print(sh)
             total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             sum = total[i]["SUM(price)"]
