@@ -35,6 +35,8 @@ def after_request(response):
 @login_required
 def index():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+    u = user[0]["username"]
+    return render_template("home.html", name = u)
 
 
 @app.route("/buy", methods=["GET", "POST"])
