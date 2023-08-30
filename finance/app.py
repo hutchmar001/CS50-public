@@ -50,6 +50,8 @@ def buy():
             return apology("Stock does not exist", 400)
         n = (request.form.get("shares"))
         values = n.split("/")
+        if len(values) == 2 and all(i.isdigit() for i in values):
+            return apology("Fraction invalid", 400)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
 
