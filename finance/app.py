@@ -60,7 +60,8 @@ def index():
             ab = gttr[0]
         db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, sum, ab)
         rows = c.execute('SELECT * FROM home')
-        print(rows)
+        for row in rows:
+            print(row)
         return render_template('home.html', rows = c.fetchall())
 
     return render_template("home.html")
