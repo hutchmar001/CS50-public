@@ -174,9 +174,9 @@ def quote():
         if stock == None:
             return apology("Invalid ticker", 400)
         s = stock["price"]
-        print(s)
+        price = usd(s)
 
-        return render_template("quoted.html", name = stock)
+        return render_template("quoted.html", name = price)
 
     else:
         return render_template("quote.html")
