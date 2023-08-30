@@ -173,6 +173,8 @@ def quote():
         stock = lookup(sym)
         if stock == None:
             return apology("Invalid ticker", 400)
+        s = stock["price"]
+        print(s)
 
         return render_template("quoted.html", name = stock)
 
