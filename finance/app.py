@@ -36,7 +36,8 @@ def after_request(response):
 def index():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-    stocks = db.execute("SELECT stock FROM purchases WHERE username = ?;", u)
+    stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
+    print(stocks)
     if stocks:
         st = stocks[0]["stock"]
         shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
