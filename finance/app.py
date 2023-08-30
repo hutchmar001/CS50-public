@@ -38,12 +38,9 @@ def index():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
     stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
-    print(stocks)
     if stocks:
         for i in stocks:
-            print(i)
             st = (i.get('stock'))
-            print(st)
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
             gttr = ([getter(item) for item in shares])
@@ -53,13 +50,11 @@ def index():
             getter = itemgetter('SUM(price)')
             gttr = ([getter(item) for item in total])
             sum = gttr[0]
-            print(sum)
 
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
             getter = itemgetter('cash')
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
-            print(ab)
 
         return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
