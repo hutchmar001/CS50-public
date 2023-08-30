@@ -1,3 +1,5 @@
+from __future__ import division
+
 import os, datetime
 
 from cs50 import SQL
@@ -51,7 +53,7 @@ def buy():
         n = request.form.get("shares")
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
-        
+
         price = stock["price"]
         total_shares = float(request.form.get("shares"))
         total_price = price * total_shares
