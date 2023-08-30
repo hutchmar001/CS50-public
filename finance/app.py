@@ -1,4 +1,4 @@
-import os, datetime
+import os, datetime, numbers
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -48,6 +48,7 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
+
         n = (request.form.get("shares"))
         values = n.split("/")
         if len(values) == 2 and all(i.isdigit() for i in values):
