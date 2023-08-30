@@ -40,7 +40,7 @@ def index():
     db.execute("DELETE FROM home")
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-    stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
+    stocks = db.execute("SELECT stock FROM purchases WHERE username = ?;", u)
     if stocks:
         print(stocks)
         for i in stocks:
