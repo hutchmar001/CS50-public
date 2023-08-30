@@ -1,4 +1,4 @@
-import os, datetime
+import os, datetime, sqlite3
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -9,6 +9,8 @@ from operator import itemgetter
 from helpers import apology, login_required, lookup, usd
 
 # Configure application
+conn = sqlite3.connect('finance.db')
+c = conn.cursor()
 app = Flask(__name__)
 
 # Custom filter
@@ -57,7 +59,8 @@ def index():
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
         db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, sum, ab)
-        return render_template("home.html")
+        c.execute('SELECT * FROM home')
+        return render_template('home.html', rows = c.fetchall())
 
     return render_template("home.html")
 
