@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block main %}
-<table action="/" method="get"class="table table-hover" >
+<table action="/" method="get" class="table table-hover" >
     <tbody>
-        {% for row in rows %}
+        {% for i in rows %}
         <tr>
-            <td>{{rows[row]}}</td>
+            <td>{{rows[i]}}</td>
         </tr>
         {% endfor %}
     </tbody>
