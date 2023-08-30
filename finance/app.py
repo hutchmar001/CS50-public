@@ -40,14 +40,14 @@ def index():
     print(stocks)
     if stocks:
         for index in range(len(stocks)):
-            for key in datalist(index):
-                st = stocks[i]["stock"]
+            for key in stocks(index):
+                st = stocks[value]["stock"]
                 shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-                sh = shares[i]["SUM(shares)"]
+                sh = shares[value]["SUM(shares)"]
                 total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-                sum = total[i]["SUM(price)"]
+                sum = total[value]["SUM(price)"]
                 a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-                ab = a_balance[i]["cash"]
+                ab = a_balance[value]["cash"]
                 return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
     return render_template("home.html")
