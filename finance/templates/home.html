@@ -6,12 +6,9 @@
 
 {% block main %}
 <form action="/" method="get">
-    <div class="mb-3">
-        <p>{{name}}</p>
-        <p>{{stock}}</p>
-        <p>{{shares}}</p>
-        <p>{{sum}}</p>
-        <p>{{balance}}</p>
-    </div>
+    <tbody>
+        {% for row in rows %}
+        {% endfor %}
+    </tbody>
 </form>
 {% endblock %}
