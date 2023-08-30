@@ -4,6 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
+from operator import itemgetter
 
 from helpers import apology, login_required, lookup, usd
 
@@ -45,9 +46,9 @@ def index():
             print(st)
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             print(shares)
-            for key in shares.values:
-                sh = (i.get('SUM(shares)'))
-            print(sh)
+            getter = itemgetter('SUM(shares)')
+            print ([getter(item) for item in stocks])
+            ## sh = (i.get('SUM(shares)'))
             total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             sum = total[i]["SUM(price)"]
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
