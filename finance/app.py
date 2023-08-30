@@ -1,5 +1,3 @@
-from __future__ import division
-
 import os, datetime
 
 from cs50 import SQL
@@ -50,7 +48,8 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
-        n = request.form.get("shares")
+        n = request.form.get("shares") * 1.0
+        print(n)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
 
