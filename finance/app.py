@@ -145,8 +145,6 @@ def login():
 @app.route("/logout")
 def logout():
     """Log user out"""
-    # Clear home table
-    db.execute("DELETE FROM home")
 
     # Forget any user_id
     session.clear()
