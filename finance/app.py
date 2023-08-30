@@ -34,8 +34,13 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+    u = user[0]["username"]
+    stocks = db.execute("SELECT stock FROM purchases WHERE username = ?;", u)
+    st = stocks[0]["stock"]
+    shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ?;", st)
+    sh = shares[0]["SUM(shares)"]
+    return render_template("home.html", name = u, stock = st, shares = sh)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -47,7 +52,13 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
-        n = request.form.get("shares")
+
+        n = (request.form.get("shares"))
+        values = n.split("/")
+        if len(values) == 2 and all(i.isdigit() for i in values):
+            return apology("Fraction invalid", 400)
+        if n.isdigit() == False:
+            return apology("Non-numeric invalid", 400)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
 
