@@ -97,6 +97,8 @@ def buy():
         a_b = a_balance[0]["cash"]
         if a_b < total_price:
             return apology("You do not have enough money to complete this transaction", 400)
+        tp = usd(total_price)
+        print(tp)
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
