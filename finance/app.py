@@ -34,8 +34,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
 
 
 @app.route("/buy", methods=["GET", "POST"])
