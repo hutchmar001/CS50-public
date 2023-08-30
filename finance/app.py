@@ -55,8 +55,8 @@ def index():
             getter = itemgetter('cash')
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, sum, ab)
-            return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
+        db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, sum, ab)
+        return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
     return render_template("home.html")
 
