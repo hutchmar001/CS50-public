@@ -62,7 +62,7 @@ def index():
         rows = c.execute('SELECT * FROM home;')
         for row in rows:
             print(row)
-        return render_template('home.html', rows = c.fetchall())
+        return render_template('home.html' ?, rows = c.fetchall())
 
     return render_template("home.html")
 
