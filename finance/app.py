@@ -53,8 +53,8 @@ def buy():
         values = n.split("/")
         if len(values) == 2 and all(i.isdigit() for i in values):
             return apology("Fraction invalid", 400)
-        if !isinstance(n, numbers.Number):
-
+        if not isinstance(n, numbers.Number):
+            return apology("Non-numeric invalid", 400)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
 
