@@ -168,9 +168,9 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         sym = request.form.get("symbol")
-        stock = lookup(sym)
-        if len(stock) == 0:
+        if len(sym) == 0:
             return apology("Blank ticker", 400)
+        stock = lookup(sym)
         if stock == None:
             return apology("Invalid ticker", 400)
 
