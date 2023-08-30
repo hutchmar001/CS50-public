@@ -4,7 +4,6 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-from fractions import Fraction
 
 from helpers import apology, login_required, lookup, usd
 
@@ -49,7 +48,7 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
-        n = float(request.form.get("shares"))
+        n = (request.form.get("shares"))
         print(n)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
