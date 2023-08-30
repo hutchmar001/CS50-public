@@ -32,7 +32,7 @@ def after_request(response):
     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
