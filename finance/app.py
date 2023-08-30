@@ -41,7 +41,7 @@ def index():
     if stocks:
         for index in range(len(stocks)):
             for key in stocks(index):
-                st = stocks[value]["stock"]
+                st = stocks["stock"]
                 shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
                 sh = shares[value]["SUM(shares)"]
                 total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
