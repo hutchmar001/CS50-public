@@ -56,11 +56,10 @@ def index():
             print(sum)
 
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-            ab = a_balance[i]["cash"]
             getter = itemgetter('cash')
-            gttr = ([getter(item) for item in ab])
+            gttr = ([getter(item) for item in a_balance])
             sum = gttr[0]
-            print(sum)
+            print(ab)
 
         return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
