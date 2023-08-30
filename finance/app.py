@@ -39,15 +39,16 @@ def index():
     stocks = db.execute("SELECT ALL stock FROM purchases WHERE username = ?;", u)
     print(stocks)
     if stocks:
-        for key, value in stocks.items():
-            st = stocks[key]["stock"]
-            shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-            sh = shares[key]["SUM(shares)"]
-            total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-            sum = total[key]["SUM(price)"]
-            a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-            ab = a_balance[key]["cash"]
-            return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
+        for index in range(len(stocks)):
+            for key in datalist(index):
+                st = stocks[i]["stock"]
+                shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
+                sh = shares[i]["SUM(shares)"]
+                total = db.execute("SELECT SUM(price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
+                sum = total[i]["SUM(price)"]
+                a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+                ab = a_balance[i]["cash"]
+                return render_template("home.html", name=u, stock=st, shares=sh, sum=sum, balance=ab)
 
     return render_template("home.html")
 
