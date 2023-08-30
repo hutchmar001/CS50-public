@@ -38,7 +38,8 @@ def index():
     u = user[0]["username"]
     stocks = db.execute("SELECT stock FROM purchases WHERE username = ?;", u)
     st = stocks[0]["stock"]
-    sh = db.execute("SELECT SUM(shares) FROM purchases;")
+    shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ?;", st)
+    sh = shares[0]["SUM(shares)"]
     return render_template("home.html", name = u, stock = st, shares = sh)
 
 
