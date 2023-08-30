@@ -1,4 +1,4 @@
-import os, datetime, numbers
+import os, datetime
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -57,7 +57,7 @@ def buy():
         values = n.split("/")
         if len(values) == 2 and all(i.isdigit() for i in values):
             return apology("Fraction invalid", 400)
-        if isinstance(n, str):
+        if n.isdigit() == False:
             return apology("Non-numeric invalid", 400)
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
