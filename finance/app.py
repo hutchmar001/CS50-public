@@ -169,6 +169,11 @@ def quote():
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
+        if len(stock) == 0:
+            return apology("Blank ticker", 400)
+        if stock == None:
+            return apology("Invalid ticker", 400)
+
         return render_template("quoted.html", name = stock)
 
     else:
