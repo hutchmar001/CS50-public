@@ -49,7 +49,7 @@ def buy():
         if stock == None:
             return apology("Stock does not exist", 400)
         n = (request.form.get("shares"))
-        print(n)
+        values = n.split("/")
         if int(n) < 1:
             return apology("Enter a number greater than 0", 400)
 
