@@ -40,6 +40,7 @@ def index():
     print(stocks)
     if stocks:
         for i in stocks:
+            print(i)
             st = stocks[i]["stock"]
             print(st)
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
