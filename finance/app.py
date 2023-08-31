@@ -64,11 +64,11 @@ def index():
             a = usd(ab)
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
-        rows = c.execute('SELECT * FROM home;')
-        for row in rows:
-            print(row)
-        col = [tuple[0] for tuple in rows.description]
-        print (col)
+        c.execute('SELECT * FROM home;')
+
+        result = c.fetchall()
+        print(result)
+
         return render_template('home.html')
 
     return render_template("home.html")
