@@ -42,7 +42,6 @@ def index():
     u = user[0]["username"]
     stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
     if stocks:
-        print(stocks)
         for i in stocks:
             st = (i.get('stock'))
 
@@ -64,9 +63,7 @@ def index():
             a = usd(ab)
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
-        rows = c.execute('SELECT * FROM home;').fetchall()
-        for row in rows:
-            print(row)
+        rows = c.execute('SELECT * FROM home;')
         return render_template('home.html', rows = rows)
 
     return render_template("home.html")
@@ -76,6 +73,9 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+    u = user[0]["username"]
+
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
@@ -99,6 +99,9 @@ def buy():
         a_b = a_balance[0]["cash"]
         if a_b < total_price:
             return apology("You do not have enough money to complete this transaction", 400)
+
+        a_b = a_b - total_price
+        db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
