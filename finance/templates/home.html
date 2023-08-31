@@ -7,9 +7,9 @@
 {% block main %}
 <table action="/" method="get" class="table table-hover" >
     <tbody>
-        <tr>
-            <td>{{rows}}</td>
-        </tr>
+        {% for row in rows%}
+            <p>{row.username}</p>
+        {%endfor%}
     </tbody>
 </table>
 {% endblock %}
