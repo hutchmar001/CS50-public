@@ -64,7 +64,8 @@ def index():
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
         rows = c.execute('SELECT * FROM home;').fetchall()
-        print(rows)
+        for row in rows:
+            print (dict(row))
         return render_template('home.html')
 
     return render_template("home.html")
