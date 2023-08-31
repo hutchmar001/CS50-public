@@ -64,9 +64,8 @@ def index():
             a = usd(ab)
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
-        c.execute('SELECT * FROM home;')
+        result = c.execute('SELECT * FROM home;').fetchall()
 
-        result = c.fetchall()
         print(result)
 
         return render_template('home.html')
