@@ -1,4 +1,4 @@
-import os, datetime, sqlite3
+import os, datetime, sqlite3, select
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -63,7 +63,8 @@ def index():
             a = usd(ab)
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
-        rows = c.execute('SELECT * FROM home;').fetchall()
+        ## rows = c.execute('SELECT * FROM home;').fetchall()
+        rows = c.execute(home.select())
         print(rows)
         return render_template('home.html')
 
