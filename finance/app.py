@@ -10,7 +10,7 @@ from helpers import apology, login_required, lookup, usd
 
 # Configure application
 conn = sqlite3.connect('finance.db', check_same_thread=False)
-c = conn.cursor(dictionary=True)
+c = conn.cursor()
 app = Flask(__name__)
 
 # Custom filter
