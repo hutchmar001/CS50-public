@@ -7,14 +7,14 @@
 {% block main %}
 <form action="/sell" method="post">
 
-        <label for="cars" style="float:center; display: online-block;">Choose a stock:</label>
-        <select name="symbol" id="shares" style="margin-right: 400px; display: online-block;">
+        <label for="cars" style="float:center; display: online-block; width=100px">Choose a stock:</label>
+        <select name="symbol" id="shares" style="margin-right: 400px; display: online-block; width=100px">
             {% for i in result %}
                 <option value="stocks">{{i}}</option>
             {% endfor %}
         </select>
 
-        <div style="display: online-block; too:0;">
+        <div style="display: online-block; top:0;">
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
         <br>
         <button class="btn btn-primary" type="submit">Sell</button>
