@@ -269,7 +269,6 @@ def sell():
         db.execute("UPDATE home SET shares = ? WHERE stock = ?;", shares_update, stock)
 
         a_b = a_b + total_price
-        stock = str(stock)
         print(stock)
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
