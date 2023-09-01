@@ -256,8 +256,7 @@ def sell():
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
 
-        stock = stock["name"].lowercase()
-        print(stock)
+        stock = stock["name"].lower()
         st = db.execute("SELECT shares FROM home WHERE stock = ?;", stock)
         if not st:
             return apology("You do not have any shares of this stock", 400)
@@ -268,8 +267,8 @@ def sell():
         db.execute("UPDATE home SET shares = ? WHERE stock = ?;", shares_update, stock)
 
         a_b = a_b + total_price
-        ## print(stock)
-        ## print(shares_update)
+        print(stock)
+        print(shares_update)
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
         db.execute("INSERT INTO sales VALUES (?, ?, ?, ?, ?, ?);", u, stock, total_shares, price, total_price, ct)
