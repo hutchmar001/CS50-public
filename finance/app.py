@@ -264,7 +264,7 @@ def sell():
         if a_b < total_price:
             return apology("You do not have enough money to complete this transaction", 400)
 
-        a_b = a_b - total_price
+        a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
 
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
