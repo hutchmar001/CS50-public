@@ -60,12 +60,24 @@ def index():
             s = usd(sum)
 
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
-    
 
         c.execute('SELECT * FROM home;')
         lst = []
         for i in c.fetchall():
             lst.append(dict(i))
+
+        a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+            getter = itemgetter('cash')
+            gttr = ([getter(item) for item in a_balance])
+            ab = gttr[0]
+            a = usd(ab)
+
+            value_of_shares = db.execute("SELECT SUM(price) FROM purchases WHERE username = ?;", u)
+            getter = itemgetter('SUM(price)')
+            gttr = ([getter(item) for item in value_of_shares])
+            vs = gttr[0]
+            v = usd(vs)
+            print(v)
 
         return render_template('home.html', lst=lst)
 
