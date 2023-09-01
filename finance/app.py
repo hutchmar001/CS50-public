@@ -59,21 +59,8 @@ def index():
             sum = sh * current_price
             s = usd(sum)
 
-            a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-            getter = itemgetter('cash')
-            gttr = ([getter(item) for item in a_balance])
-            ab = gttr[0]
-            a = usd(ab)
-
-            value_of_shares = db.execute("SELECT SUM(price) FROM purchases WHERE username = ?;", u)
-            getter = itemgetter('SUM(price)')
-            gttr = ([getter(item) for item in value_of_shares])
-            vs = gttr[0]
-            v = usd(vs)
-            print(v)
-
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
-
+    
 
         c.execute('SELECT * FROM home;')
         lst = []
