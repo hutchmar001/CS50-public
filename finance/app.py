@@ -260,7 +260,7 @@ def sell():
 
         st = stock["name"].lower()
         st = db.execute("SELECT shares FROM home WHERE stock = ?;", st)
-        if st == None:
+        if not st:
             return apology("You do not have any shares of this stock", 400)
         shares = st[0]["shares"]
         if shares < total_shares:
