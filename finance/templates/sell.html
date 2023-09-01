@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block main %}
-<form action="/sell" method="post">
-    <label for="cars">Choose a stock:</label>
+<form action="/sell" method="post" float="left">
+    <label for="cars" float="left">Choose a stock:</label>
 
     <select name="symbol" id="shares">
         {% for i in result %}
