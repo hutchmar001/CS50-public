@@ -238,7 +238,6 @@ def sell():
 
     if request.method == "POST":
         sym = request.form.get("symbol")
-        print(sym)
         stock = lookup(sym)
         print(stock)
 
