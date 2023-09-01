@@ -66,12 +66,6 @@ def index():
         for i in c.fetchall():
             lst.append(dict(i))
 
-        a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        getter = itemgetter('cash')
-        gttr = ([getter(item) for item in a_balance])
-        ab = gttr[0]
-        a = usd(ab)
-
         value_of_shares = db.execute("SELECT SUM(price) FROM purchases WHERE username = ?;", u)
         getter = itemgetter('SUM(price)')
         gttr = ([getter(item) for item in value_of_shares])
@@ -79,7 +73,13 @@ def index():
         v = usd(vs)
         print(v)
 
-        return render_template('home.html', lst=lst)
+        a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        getter = itemgetter('cash')
+        gttr = ([getter(item) for item in a_balance])
+        ab = gttr[0]
+        a = usd(ab)
+
+        return render_template('home.html', lst=lst, v=v, a=a)
 
     return render_template("home.html")
 
