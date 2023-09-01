@@ -8,7 +8,9 @@
 <table action="/" method="get" class="table table-hover" >
     <tbody>
         <td>
-                <p>{{lst.sum}}</p>
+            {% for i in lst %}
+                <p>{{i}}</p>
+            {% endfor %}
         </td>
     </tbody>
 </table>
