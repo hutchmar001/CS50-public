@@ -65,9 +65,16 @@ def index():
             ab = gttr[0]
             a = usd(ab)
 
-            total_value = sum + ab
-            print (total_value)
+            value_of_shares = db.execute("SELECT SUM(price) FROM purchases WHERE username = ?;", u)
+            getter = itemgetter('SUM(price)')
+            gttr = ([getter(item) for item in value_of_shares])
+            vs = gttr[0]
+            v = usd(vs)
+            print(v)
+
+
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, cp, s, a)
+
 
         c.execute('SELECT * FROM home;')
         lst = []
