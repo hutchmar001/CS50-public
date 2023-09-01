@@ -270,6 +270,7 @@ def sell():
 
         a_b = a_b + total_price
         print(stock)
+        print(shares_update)
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
         db.execute("INSERT INTO sales VALUES (?, ?, ?, ?, ?, ?);", u, stock, total_shares, price, total_price, ct)
