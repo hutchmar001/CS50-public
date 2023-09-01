@@ -235,7 +235,7 @@ def register():
 def sell():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-
+    print(u)
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
