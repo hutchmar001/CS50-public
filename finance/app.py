@@ -239,7 +239,6 @@ def sell():
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
-        print(stock)
         if stock == None:
             return apology("Stock does not exist", 400)
 
