@@ -6,12 +6,32 @@
 
 {% block main %}
 <table action="/" method="get" class="table table-hover" >
-    <tbody>
-        <td>
-            {% for i in lst %}
-                <p>{{i.username}}{{i.stock}}{{i.shares}}{{i.sum}}{{i.balance}}</p>
-            {% endfor %}
-        </td>
+    <tr>
+        <th>Username</th>
+        <th>Stock</th>
+        <th>Shares</th>
+        <th>Sum</th>
+        <th>Balance</th>
+    </tr>
+    {% for i in lst %}
+        <tr>
+            <td>
+                <p>{{i.username}}</p>
+            </td>
+            <td>
+                <p>{{i.stock}}</p>
+            </td>
+            <td>
+                <p>{{i.shares}}</p>
+            </td>
+            <td>
+                <p>{{i.sum}}</p>
+            </td>
+            <td>
+                <p>{{i.balance}}</p>
+            </td>
+        </tr>
+    {% endfor %}
     </tbody>
 </table>
 {% endblock %}
