@@ -237,5 +237,41 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    """Sell shares of stock"""
-    return render_template("sell.html")
+    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+    u = user[0]["username"]
+
+    if request.method == "POST":
+        sym = request.form.get("symbol")
+        stock = lookup(sym)
+        if stock == None:
+            return apology("Stock does not exist", 400)
+
+        n = (request.form.get("shares"))
+        values = n.split("/")
+        if len(values) == 2 and all(i.isdigit() for i in values):
+            return apology("Fraction invalid", 400)
+        if n.isdigit() == False:
+            return apology("Non-numeric invalid", 400)
+        if int(n) < 1:
+            return apology("Enter a number greater than 0", 400)
+
+        price = stock["price"]
+        total_shares = float(request.form.get("shares"))
+        total_price = price * total_shares
+
+        a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        a_b = a_balance[0]["cash"]
+        if a_b < total_price:
+            return apology("You do not have enough money to complete this transaction", 400)
+
+        a_b = a_b - total_price
+        db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
+
+        user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+        u = user[0]["username"]
+        ct = datetime.datetime.now()
+        db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
+        return redirect("/")
+
+    else:
+        return render_template("sell.html")
