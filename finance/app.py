@@ -55,10 +55,7 @@ def index():
             current_price = stock["price"]
             cp = usd(current_price)
 
-            total = db.execute("SELECT SUM(total_price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
-            getter = itemgetter('SUM(total_price)')
-            gttr = ([getter(item) for item in total])
-            sum = gttr[0]
+            sum = sh * current_price
             s = usd(sum)
 
             a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
