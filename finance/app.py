@@ -241,8 +241,6 @@ def sell():
         print(sym)
         stock = lookup(sym)
         print(stock)
-        if stock == None:
-            return apology("Stock does not exist", 400)
 
         n = (request.form.get("shares"))
         values = n.split("/")
@@ -281,6 +279,5 @@ def sell():
     else:
         stock_select = db.execute("SELECT stock FROM home;")
         result = [ i['stock'] for i in stock_select ]
-        print(result)
 
         return render_template("sell.html", result=result)
