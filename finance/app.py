@@ -45,17 +45,14 @@ def index():
     if stocks:
         for i in stocks:
             st = (i.get('stock'))
+            print(st)
 
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
             gttr = ([getter(item) for item in shares])
             sh = gttr[0]
 
-            share_price = lookup(st)
-            getter = itemgetter('price')
-            gttr = ([getter(item) for item in share_price])
-            sum = gttr[0]
-            sp = usd(sum)
+
 
             total = db.execute("SELECT SUM(total_price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(total_price)')
@@ -68,13 +65,12 @@ def index():
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
             a = usd(ab)
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, sp, s, a)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, st, s, a)
 
         c.execute('SELECT * FROM home;')
         lst = []
         for i in c.fetchall():
             lst.append(dict(i))
-        print(lst)
 
         return render_template('home.html', lst=lst)
 
