@@ -41,6 +41,7 @@ def index():
     db.execute("DELETE FROM home")
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
+
     stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
     if stocks:
         for i in stocks:
@@ -63,6 +64,9 @@ def index():
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
             a = usd(ab)
+
+            total_value = sum + ab
+            print (total_value)
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, cp, s, a)
 
         c.execute('SELECT * FROM home;')
