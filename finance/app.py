@@ -51,7 +51,8 @@ def index():
             gttr = ([getter(item) for item in shares])
             sh = gttr[0]
 
-
+            stock = lookup(st)
+            print(stock)
 
             total = db.execute("SELECT SUM(total_price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(total_price)')
@@ -88,7 +89,6 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
-        print(stock)
 
         n = (request.form.get("shares"))
         values = n.split("/")
