@@ -8,7 +8,7 @@
 <form action="/sell" method="post">
 
         <label for="stocks" style="float:center; display: inline-block;">Choose a stock:</label>
-        <select name="symbol" id="shares" style="display: inline-block;>
+        <select name="symbol" id="shares" style="display: inline-block;">
             {% for i in result %}
                 <option value="stocks">{{i}}</option>
             {% endfor %}
