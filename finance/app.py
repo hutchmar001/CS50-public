@@ -45,7 +45,6 @@ def index():
     if stocks:
         for i in stocks:
             st = (i.get('stock'))
-            print(st)
 
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
@@ -89,6 +88,7 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
+        print(stock)
 
         n = (request.form.get("shares"))
         values = n.split("/")
