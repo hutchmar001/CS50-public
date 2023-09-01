@@ -239,7 +239,6 @@ def sell():
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
-        print(stock)
 
         n = (request.form.get("shares"))
         values = n.split("/")
@@ -257,7 +256,8 @@ def sell():
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
 
-        stock = stock["name"]
+        stock = stock["name"].lowercase()
+        print(stock)
         st = db.execute("SELECT shares FROM home WHERE stock = ?;", stock)
         if not st:
             return apology("You do not have any shares of this stock", 400)
