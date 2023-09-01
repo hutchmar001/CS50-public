@@ -267,10 +267,10 @@ def sell():
             return apology("You do not have enough shares to sell", 400)
         shares_update = shares - total_shares
         print(shares_update)
+        db.execute("UPDATE home SET shares = ? WHERE username = ?;", shares_update, u)
 
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
-        db.execute("UPDATE home SET shares = ? WHERE username = ?;", shares_update, u)
         ct = datetime.datetime.now()
         db.execute("INSERT INTO sales VALUES (?, ?, ?, ?, ?, ?);", u, stock, total_shares, price, total_price, ct)
         return redirect("/")
