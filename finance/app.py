@@ -277,4 +277,5 @@ def sell():
         return redirect("/")
 
     else:
+        
         return render_template("sell.html")
