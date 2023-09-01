@@ -12,7 +12,6 @@
         <th>Shares</th>
         <th>Current Share Price</th>
         <th>Value of shares</th>
-        <th>Account Balance</th>
     </tr>
     {% for i in lst %}
         <tr>
@@ -37,5 +36,12 @@
         </tr>
     {% endfor %}
     </tbody>
+</table>
+
+<table action="/" method="get" class="table table-hover">
+    <tr>
+        <th>Value of Assets</th>
+        <th>Account Balance</th>
+    </tr>
 </table>
 {% endblock %}

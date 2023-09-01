@@ -72,8 +72,7 @@ def index():
             v = usd(vs)
             print(v)
 
-
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, cp, s, a)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
 
 
         c.execute('SELECT * FROM home;')
