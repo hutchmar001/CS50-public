@@ -278,7 +278,7 @@ def sell():
 
     else:
         stock_select = db.execute("SELECT stock FROM home;")
-        stock_list = [x['value'] for x in stock_select]
+        stock_list = [i['value'] for i in stock_select]
 
         print(stock_select)
         print(stock_list)
