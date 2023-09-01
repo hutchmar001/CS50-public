@@ -265,9 +265,9 @@ def sell():
         shares = st[0]["shares"]
         if shares < total_shares:
             return apology("You do not have enough shares to sell", 400)
-        shares_update = shares - total_shares
+        shares_update = int(shares - total_shares)
         print(shares_update)
-        db.execute("UPDATE home SET shares = ? WHERE username = ? AND stock = ?;", shares_update, u, stock)
+        db.execute("UPDATE home SET shares = ? WHERE stock = ?;", shares_update, stock)
 
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
