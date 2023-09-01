@@ -259,7 +259,7 @@ def sell():
         a_b = a_balance[0]["cash"]
 
         stock = stock["name"]
-        st = db.execute("SELECT * FROM home;")
+        st = db.execute("SELECT * FROM home WHERE stock = ?;", stock)
         print(st)
         ## if a_b < total_price:
             ## return apology("You do not have enough money to complete this transaction", 400)
