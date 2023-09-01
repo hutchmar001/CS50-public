@@ -71,7 +71,6 @@ def index():
         gttr = ([getter(item) for item in value_of_shares])
         vs = gttr[0]
         v = usd(vs)
-        print(v)
 
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         getter = itemgetter('cash')
@@ -259,9 +258,10 @@ def sell():
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
 
-        
-        if a_b < total_price:
-            return apology("You do not have enough money to complete this transaction", 400)
+        stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
+        print(stocks)
+        ## if a_b < total_price:
+            ## return apology("You do not have enough money to complete this transaction", 400)
 
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
