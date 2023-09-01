@@ -52,7 +52,9 @@ def index():
             sh = gttr[0]
 
             stock = lookup(st)
-            print(stock)
+            current_price = stock["price"]
+            cp = usd(current_price)
+
 
             total = db.execute("SELECT SUM(total_price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(total_price)')
@@ -65,7 +67,7 @@ def index():
             gttr = ([getter(item) for item in a_balance])
             ab = gttr[0]
             a = usd(ab)
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, st, s, a)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?, ?);", u, st, sh, cp, s, a)
 
         c.execute('SELECT * FROM home;')
         lst = []
