@@ -263,9 +263,6 @@ def sell():
 
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
-
-        user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
-        u = user[0]["username"]
         ct = datetime.datetime.now()
         db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
         return redirect("/")
