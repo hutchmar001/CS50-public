@@ -7,16 +7,15 @@
 {% block main %}
 <form action="/sell" method="post">
 
-        <label for="cars" style="float:center; display: inline-block; width=100px">Choose a stock:</label>
-        <select name="symbol" id="shares" style="margin-right: 400px; display: inline-block; width=100px">
+        <label for="cars" style="float:center; display: inline-block;">Choose a stock:</label>
+        <select name="symbol" id="shares" style="margin-right: 400px; display: inline-block;>
             {% for i in result %}
                 <option value="stocks">{{i}}</option>
             {% endfor %}
         </select>
 
-        <input autocomplete="off" style="position: relative right: 1000 px; autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
-        <br>
-        <button class="btn btn-primary" type="submit">Sell</button>
+        <input autocomplete="off" style="position: relative autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
+        <button class="btn btn-primary" type="submit" style="position: relative right: 100px;">Sell</button>
 
 </form>
 {% endblock %}
