@@ -10,7 +10,7 @@
         <label for="stocks" style="float:center; display: inline-block;">Choose a stock:</label>
         <select name="symbol" id="shares" style="display: inline-block;">
             {% for i in result %}
-                <option value= "stocks">{{i}}</option>
+                <option value= {{i}}>{{i}}</option>
             {% endfor %}
         </select>
 
