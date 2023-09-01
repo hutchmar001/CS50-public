@@ -66,8 +66,8 @@ def index():
         for i in c.fetchall():
             lst.append(dict(i))
 
-        value_of_shares = db.execute("SELECT SUM(price) FROM purchases WHERE username = ?;", u)
-        getter = itemgetter('SUM(price)')
+        value_of_shares = db.execute("SELECT SUM(total_price) FROM purchases WHERE username = ?;", u)
+        getter = itemgetter('SUM(total_price)')
         gttr = ([getter(item) for item in value_of_shares])
         vs = gttr[0]
         v = usd(vs)
