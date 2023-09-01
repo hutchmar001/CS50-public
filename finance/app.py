@@ -51,7 +51,7 @@ def index():
             gttr = ([getter(item) for item in shares])
             sh = gttr[0]
 
-            share_price = db.execute("SELECT price FROM purchases WHERE stock = ? AND username = ?;", st, u)
+            share_price = lookup(st)
             getter = itemgetter('price')
             gttr = ([getter(item) for item in share_price])
             sum = gttr[0]
