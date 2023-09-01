@@ -6,23 +6,18 @@
 
 {% block main %}
 <form action="/sell" method="post">
-    <div>
+
         <label for="cars" style="float:center; margin-right: 400px;">Choose a stock:</label>
-    </div>
-
-    <div>
         <select name="symbol" id="shares" style="margin-right: 400px;">
-        {% for i in result %}
-            <option value="stocks">{{i}}</option>
-        {% endfor %}
+            {% for i in result %}
+                <option value="stocks">{{i}}</option>
+            {% endfor %}
         </select>
-    </div>
 
-    <div class="mb-3" style="float:center; marginTop: -200px;">
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text">
         <br>
         <button class="btn btn-primary" type="submit">Sell</button>
-    </div>
+
 
 </form>
 {% endblock %}
