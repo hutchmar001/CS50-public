@@ -278,5 +278,6 @@ def sell():
 
     else:
         stock_select = db.execute("SELECT stock FROM home;")
+        stock_list = []
         print(stock_select)
         return render_template("sell.html")
