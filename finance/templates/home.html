@@ -7,7 +7,11 @@
 {% block main %}
 <table action="/" method="get" class="table table-hover" >
     <tbody>
-        <td></td>
+        <td>
+            {% for i in lst %}
+                <p>{{lst.username}}</p>
+            {% endfor %}
+        </td>
     </tbody>
 </table>
 {% endblock %}

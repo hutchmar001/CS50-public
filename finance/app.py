@@ -65,11 +65,12 @@ def index():
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, s, a)
 
         c.execute('SELECT * FROM home;')
+        lst = []
+        for i in c.fetchall():
+            lst.append(dict(i))
+        print(lst)
 
-        for r in c.fetchall():
-            print(dict(r))
-
-        return render_template('home.html')
+        return render_template('home.html', lst=lst)
 
     return render_template("home.html")
 
