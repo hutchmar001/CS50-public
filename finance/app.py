@@ -59,7 +59,7 @@ def index():
             sum = sh * current_price
             s = usd(sum)
 
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?);", st, sh, cp, s)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
 
         c.execute('SELECT * FROM home;')
         lst = []
@@ -79,7 +79,7 @@ def index():
         ab = gttr[0]
         a = usd(ab)
 
-        return render_template('home.html', u=u, lst=lst, v=v, a=a)
+        return render_template('home.html', lst=lst, v=v, a=a)
 
     return render_template("home.html")
     # Notice that Current Share Price, Value of Shares, and Value of Assets dynamically change over time.
