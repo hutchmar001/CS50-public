@@ -55,7 +55,6 @@ def index():
             current_price = stock["price"]
             cp = usd(current_price)
 
-
             total = db.execute("SELECT SUM(total_price) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(total_price)')
             gttr = ([getter(item) for item in total])
