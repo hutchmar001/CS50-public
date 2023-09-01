@@ -5,9 +5,11 @@
 {% endblock %}
 
 {% block main %}
+
+<h1>{{u}}</h1>
+<br><br>
 <table action="/" method="get" class="table table-hover" >
     <tr>
-        <th>Username</th>
         <th>Stock</th>
         <th>Shares</th>
         <th>Current Share Price</th>
@@ -15,9 +17,6 @@
     </tr>
     {% for i in lst %}
         <tr>
-            <td>
-                <p>{{i.username}}</p>
-            </td>
             <td>
                 <p>{{i.stock}}</p>
             </td>
@@ -34,7 +33,7 @@
     {% endfor %}
     </tbody>
 </table>
-
+<br>
 <table action="/" method="get" class="table table-hover">
     <tr>
         <th>Value of Assets</th>
