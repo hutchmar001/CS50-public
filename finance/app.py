@@ -81,7 +81,7 @@ def index():
         vs = gttr[0]
         print(vs)
 
-        value_sold = db.execute("SELECT SUM(sum) FROM sales WHERE stock = ? AND username = ?;", st, u)
+        value_sold = db.execute("SELECT SUM(sum) FROM sales AND username = ?;", st, u)
         getter = itemgetter('SUM(sum)')
         gttr = ([getter(item) for item in value_sold])
         vv = gttr[0]
