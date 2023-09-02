@@ -69,7 +69,7 @@ def index():
             s = usd(sum)
 
             db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
-
+UPD
         c.execute('SELECT * FROM home;')
         lst = []
         for i in c.fetchall():
