@@ -11,6 +11,7 @@ from helpers import apology, login_required, lookup, usd
 # Configure application
 conn = sqlite3.connect('finance.db', check_same_thread=False)
 conn.row_factory = sqlite3.Row
+conn.autocommit= True
 c = conn.cursor()
 app = Flask(__name__)
 
