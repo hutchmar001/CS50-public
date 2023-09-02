@@ -110,10 +110,10 @@ def buy():
 
     if request.method == "POST":
         sym = request.form.get("symbol")
-        print(sym)
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
+        sym = stock["symbol"]
 
         n = (request.form.get("shares"))
         values = n.split("/")
@@ -257,6 +257,7 @@ def sell():
     if request.method == "POST":
         sym = request.form.get("symbol")
         stock = lookup(sym)
+        sym = stock["symbol"]
 
         n = (request.form.get("shares"))
         values = n.split("/")
