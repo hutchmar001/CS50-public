@@ -59,7 +59,7 @@ def index():
             if ss != None:
                 sh = sh - ss
             if ss != 0:
-                break;
+                continue;
 
             stock = lookup(st)
             current_price = stock["price"]
