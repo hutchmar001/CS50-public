@@ -46,7 +46,6 @@ def index():
     if stocks:
         for i in stocks:
             st = (i.get('stock'))
-            print(st)
 
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
@@ -80,13 +79,11 @@ def index():
         getter = itemgetter('SUM(total_price)')
         gttr = ([getter(item) for item in value_of_shares])
         vs = gttr[0]
-        print(vs)
 
         value_sold = db.execute("SELECT SUM(sum) FROM sales WHERE username = ?;", u)
         getter = itemgetter('SUM(sum)')
         gttr = ([getter(item) for item in value_sold])
         vv = gttr[0]
-        print(vv)
         if vv != None:
             vs = vs - vv
         vs = usd(vs)
@@ -207,6 +204,7 @@ def quote():
         if len(sym) == 0:
             return apology("Blank ticker", 400)
         stock = lookup(sym)
+        print(stock)
         if stock == None:
             return apology("Invalid ticker", 400)
         s = stock["price"]
