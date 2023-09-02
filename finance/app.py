@@ -84,6 +84,7 @@ def index():
         getter = itemgetter('SUM(sum)')
         gttr = ([getter(item) for item in value_sold])
         vv = gttr[0]
+        print(vv)
         if vv != None:
             vs = vs - vv
         vs = usd(vs)
