@@ -52,6 +52,11 @@ def index():
             gttr = ([getter(item) for item in shares])
             sh = gttr[0]
 
+            shares_sold = db.execute("SELECT SUM(shares) FROM sales WHERE stock = ? AND username = ?;", st, u)
+            getter = itemgetter('SUM(shares)')
+            gttr = ([getter(item) for item in shares])
+            shares_sold = gttr[0]
+
             stock = lookup(st)
             current_price = stock["price"]
             cp = usd(current_price)
