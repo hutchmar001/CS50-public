@@ -47,7 +47,7 @@ def index():
         for i in stocks:
             st = (i.get('stock'))
             stock = lookup(st)
-            s = stock["symbol"]
+            print(stock)
 
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
@@ -69,7 +69,7 @@ def index():
             sum = sh * current_price
             sum = usd(sum)
 
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, s, sh, cp, sum)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, sum)
 
         c.execute('SELECT * FROM home;')
         lst = []
@@ -273,7 +273,7 @@ def sell():
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
 
-        stock = stock["symbol"]
+        stock = stock["name"].lower()
         st = db.execute("SELECT shares FROM home WHERE stock = ?;", stock)
         if not st:
             return apology("You do not have any shares of this stock", 400)
