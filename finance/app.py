@@ -47,7 +47,6 @@ def index():
         for i in stocks:
             st = (i.get('stock'))
             stock = lookup(st)
-            print(stock)
 
             shares = db.execute("SELECT SUM(shares) FROM purchases WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
