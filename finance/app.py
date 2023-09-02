@@ -62,6 +62,7 @@ def index():
                 continue
 
             stock = lookup(st)
+            print(stock)
             current_price = stock["price"]
             cp = usd(current_price)
 
