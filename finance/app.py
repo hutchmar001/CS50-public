@@ -54,7 +54,7 @@ def index():
 
             shares_sold = db.execute("SELECT SUM(shares) FROM sales WHERE stock = ? AND username = ?;", st, u)
             getter = itemgetter('SUM(shares)')
-            gttr = ([getter(item) for item in shares])
+            gttr = ([getter(item) for item in shares_sold])
             shares_sold = gttr[0]
             print(shares_sold)
             sh = sh - shares_sold
