@@ -258,7 +258,7 @@ def sell():
 
         stock = stock["name"].lower()
         st = db.execute("SELECT shares FROM home WHERE stock = ?;", stock)
-        stock = ("'" +{stock}+ "'")
+        stock = f"'{stock}'"
         if not st:
             return apology("You do not have any shares of this stock", 400)
         shares = st[0]["shares"]
