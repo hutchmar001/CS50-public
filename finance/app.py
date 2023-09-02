@@ -112,6 +112,7 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
+        print(stock)
 
         n = (request.form.get("shares"))
         values = n.split("/")
@@ -204,7 +205,6 @@ def quote():
         if len(sym) == 0:
             return apology("Blank ticker", 400)
         stock = lookup(sym)
-        print(stock)
         if stock == None:
             return apology("Invalid ticker", 400)
         s = stock["price"]
