@@ -57,7 +57,6 @@ def index():
             gttr = ([getter(item) for item in shares_sold])
             ss = gttr[0]
             print(ss)
-            sh = sh - ss
 
 
             stock = lookup(st)
