@@ -112,7 +112,7 @@ def buy():
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
-        stock = stock["symbol"]
+        print(stock)
 
         n = (request.form.get("shares"))
         values = n.split("/")
@@ -135,7 +135,7 @@ def buy():
 
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
-        db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?, ?);", u, stock, total_shares, price, total_price, ct)
+        db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
         return redirect("/")
 
     else:
