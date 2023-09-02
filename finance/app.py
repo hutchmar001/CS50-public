@@ -77,7 +77,14 @@ def index():
         getter = itemgetter('SUM(total_price)')
         gttr = ([getter(item) for item in value_of_shares])
         vs = gttr[0]
-        v = usd(vs)
+
+        value_sold = db.execute("SELECT SUM(sum) FROM sales WHERE stock = ? AND username = ?;", st, u)
+        getter = itemgetter('SUM(sum)')
+        gttr = ([getter(item) for item in value_sold])
+        vv = gttr[0]
+        if vv != None:
+            vs = vs - vv
+        vs = usd(vs)
 
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         getter = itemgetter('cash')
@@ -85,7 +92,7 @@ def index():
         ab = gttr[0]
         a = usd(ab)
 
-        return render_template('home.html', u=u, lst=lst, v=v, a=a)
+        return render_template('home.html', u=u, lst=lst, v=vs, a=a)
 
     return render_template("home.html")
     # Notice that Current Share Price, Value of Shares, and Value of Assets dynamically change over time.
