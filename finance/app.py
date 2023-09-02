@@ -275,15 +275,14 @@ def sell():
         a_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         a_b = a_balance[0]["cash"]
 
-        stock = stock["name"].lower()
-        st = db.execute("SELECT shares FROM home WHERE stock = ?;", stock)
+        st = db.execute("SELECT shares FROM home WHERE stock = ?;", sym)
         if not st:
             return apology("You do not have any shares of this stock", 400)
         shares = st[0]["shares"]
         if shares < total_shares:
             return apology("You do not have enough shares to sell", 400)
         shares_update = int(shares - total_shares)
-        db.execute("UPDATE home SET shares = ? WHERE stock = ?;", shares_update, stock)
+        db.execute("UPDATE home SET shares = ? WHERE stock = ?;", shares_update, sym)
 
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
