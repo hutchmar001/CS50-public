@@ -56,7 +56,9 @@ def index():
             getter = itemgetter('SUM(shares)')
             gttr = ([getter(item) for item in shares])
             shares_sold = gttr[0]
+            print(shares_sold)
             sh = sh - shares_sold
+
 
             stock = lookup(st)
             current_price = stock["price"]
