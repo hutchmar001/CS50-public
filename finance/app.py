@@ -66,9 +66,9 @@ def index():
             cp = usd(current_price)
 
             sum = sh * current_price
-            s = usd(sum)
+            sum = usd(sum)
 
-            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, s)
+            db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, sum)
 
         c.execute('SELECT * FROM home;')
         lst = []
