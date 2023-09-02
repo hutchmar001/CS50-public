@@ -110,6 +110,7 @@ def buy():
 
     if request.method == "POST":
         sym = request.form.get("symbol")
+        print(sym)
         stock = lookup(sym)
         if stock == None:
             return apology("Stock does not exist", 400)
