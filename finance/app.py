@@ -156,8 +156,11 @@ def history():
     result = db.execute("SELECT * FROM history WHERE username = ?;", u)
     print(result)
     buy = result[0]["buy"]
-    print(buy)
-
+    stock = result[0]["stock"]
+    shares = result[0]["shares"]
+    price = result[0]["price"]
+    total_price = result[0]["total_price"]
+    time = result[0]["time"]
 
     return render_template('history.html', u=u)
 
