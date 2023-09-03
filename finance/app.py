@@ -169,7 +169,8 @@ def history():
             print(price)
             print(total_price)
             print(time)
-
+        return render_template('history.html', u=u)
+    
     return render_template('history.html', u=u)
 
 
