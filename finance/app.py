@@ -155,12 +155,20 @@ def history():
 
     result = db.execute("SELECT * FROM history WHERE username = ?;", u)
     print(result)
-    buy = result[0]["buy"]
-    stock = result[0]["stock"]
-    shares = result[0]["shares"]
-    price = result[0]["price"]
-    total_price = result[0]["total_price"]
-    time = result[0]["time"]
+    if result:
+        for i in result:
+            buy = result[i]["buy"]
+            stock = result[i]["stock"]
+            shares = result[i]["shares"]
+            price = result[i]["price"]
+            total_price = result[i]["total_price"]
+            time = result[i]["time"]
+            print(buy)
+            print(stock)
+            print(shares)
+            print(price)
+            print(total_price)
+            print(time)
 
     return render_template('history.html', u=u)
 
