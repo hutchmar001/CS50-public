@@ -135,7 +135,7 @@ def buy():
 
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
-        db.execute("INSERT INTO purchases VALUES ('Buy', ?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
+        db.execute("INSERT INTO purchases VALUES ('BUY', ?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
         return redirect("/")
 
     else:
