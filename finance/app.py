@@ -295,6 +295,6 @@ def sell():
 
         return render_template("sell.html", result=result)
 
-## CREATE TABLE TestTable AS
-##SELECT customername, contactname
-##FROM customers;
+select patient_table.patient_id as 'Patient ID' ,patient_table.patient_name
+as 'Patient Name',doctor_table.doctor_id as 'Doctor ID',doctor_table.city as 'Doctor City'
+from patient_table , doctor_table where patient_table.doctor_id=doctor_table.doctor_id
