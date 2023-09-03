@@ -146,7 +146,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    db.execute("DROP TABLE history;")
+    db.execute("DROP TABLE history")
     db.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
     return render_template("history.html")
 
