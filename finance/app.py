@@ -148,7 +148,11 @@ def history():
     """Show history of transactions"""
     db.execute("DROP TABLE history")
     db.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
-    return render_template('history.html', u=u, lst=lst, v=vs, a=a)
+    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
+    u = user[0]["username"]
+    stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
+    print(stocks)
+    return render_template('history.html')
 
 
 @app.route("/login", methods=["GET", "POST"])
