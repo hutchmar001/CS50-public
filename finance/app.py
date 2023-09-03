@@ -135,7 +135,7 @@ def buy():
 
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
-        db.execute("INSERT INTO purchases VALUES (?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
+        db.execute("INSERT INTO purchases VALUES ('Buy', ?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
         return redirect("/")
 
     else:
@@ -295,6 +295,6 @@ def sell():
 
         return render_template("sell.html", result=result)
 
-CREATE TABLE TestTable AS
-SELECT customername, contactname
-FROM customers;
+## CREATE TABLE TestTable AS
+##SELECT customername, contactname
+##FROM customers;
