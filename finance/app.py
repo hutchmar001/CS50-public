@@ -294,3 +294,7 @@ def sell():
         result = [ i['stock'] for i in stock_select ]
 
         return render_template("sell.html", result=result)
+
+CREATE TABLE TestTable AS
+SELECT customername, contactname
+FROM customers;
