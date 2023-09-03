@@ -147,12 +147,15 @@ def buy():
 def history():
     """Show history of transactions"""
     c.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
+    ## Note: UNION in SQL combines two tables flawlessly!
+    ## Notice use of c instead of db
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-    stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
-    print(stocks)
-    c.execute("DROP TABLE history;")
-    return render_template('history.html')
+
+    result = db.execute("SELECT * FROM history WHERE username = ?;", u)
+    print(result)
+    db.execute("DROP TABLE history;")
+    return render_template('history.html', u=u)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -301,4 +304,4 @@ def sell():
 
         return render_template("sell.html", result=result)
 
-## Note: UNION in SQL combines two tables flawlessly!
+
