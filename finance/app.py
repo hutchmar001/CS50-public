@@ -146,7 +146,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    db.execute("DROP TABLE history;")
+    db.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
 
 
 @app.route("/login", methods=["GET", "POST"])
