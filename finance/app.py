@@ -286,7 +286,7 @@ def sell():
         a_b = a_b + total_price
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a_b, u)
         ct = datetime.datetime.now()
-        db.execute("INSERT INTO sales VALUES (?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
+        db.execute("INSERT INTO sales VALUES ('SELL', ?, ?, ?, ?, ?, ?);", u, sym, total_shares, price, total_price, ct)
         return redirect("/")
 
     else:
