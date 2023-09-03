@@ -154,6 +154,8 @@ def history():
 
     result = db.execute("SELECT * FROM history WHERE username = ?;", u)
     print(result)
+    buy = stock["buy"]
+
     db.execute("DROP TABLE history;")
     return render_template('history.html', u=u)
 
