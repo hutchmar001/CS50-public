@@ -146,8 +146,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    db.execute("DROP TABLE history")
-    db.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
+    db.execute("DROP TABLE history; CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales;")
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
     stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE username = ?;", u)
