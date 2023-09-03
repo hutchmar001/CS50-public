@@ -3,3 +3,34 @@
 {% block title %}
     History
 {% endblock %}
+
+{% block main %}
+<table action="/" method="get" class="table table-hover" >
+    <tr>
+        <th>Buy/Sell</th>
+        <th>Username</th>
+        <th>Stock</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Total_price</th>
+        <th>Time</th>
+    </tr>
+    {% for i in lst %}
+        <tr>
+            <td>
+                <p>{{i.stock}}</p>
+            </td>
+            <td>
+                <p>{{i.shares}}</p>
+            </td>
+            <td>
+                <p>{{i.share_price}}</p>
+            </td>
+            <td>
+                <p>{{i.sum}}</p>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
