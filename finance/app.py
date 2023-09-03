@@ -295,6 +295,4 @@ def sell():
 
         return render_template("sell.html", result=result)
 
-select patient_table.patient_id as 'Patient ID' ,patient_table.patient_name
-as 'Patient Name',doctor_table.doctor_id as 'Doctor ID',doctor_table.city as 'Doctor City'
-from patient_table , doctor_table where patient_table.doctor_id=doctor_table.doctor_id
+## Note: UNION in SQL combines two tables flawlessly!
