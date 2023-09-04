@@ -316,7 +316,8 @@ def add_cash():
         u = user[0]["username"]
         amount = (request.form.get("add_cash"))
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        
+        print (type(amount))
+        print (type(cash_balance))
         a = cash_balance + amount
 
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a, u)
