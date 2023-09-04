@@ -159,7 +159,7 @@ def history():
         lst.append(dict(i))
     db.execute("DROP TABLE history;")
     print(lst)
-    return render_template('history.html', u=u, lst=lst)
+    return render_template('history.html', u=u, lst=lst, buy_sell=buy, shares=shares, price=price, sum=total_price, time=time)
 
 
 @app.route("/login", methods=["GET", "POST"])
