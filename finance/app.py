@@ -153,7 +153,7 @@ def history():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
 
-    c.execute("SELECT * FROM history WHERE username = ?;", u)
+    db.execute("SELECT * FROM history WHERE username = ?;", u)
     lst = []
     for i in c.fetchall():
         lst.append(dict(i))
