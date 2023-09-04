@@ -149,11 +149,11 @@ def history():
 
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
-    c.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales WHERE username = ?;", [u])
+    c.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales")
     ## Note: UNION in SQL combines two tables flawlessly!
     ## Notice use of c instead of db
 
-    c.execute("SELECT * FROM history;")
+    c.execute("SELECT * FROM history WHERE username = ?;", [u])
     lst = []
     for i in c.fetchall():
         lst.append(dict(i))
