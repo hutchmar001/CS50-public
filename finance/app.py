@@ -164,12 +164,12 @@ def history():
                 price = result[i]["price"]
                 total_price = result[i]["total_price"]
                 time = result[i]["time"]
-                print(buy)
-                print(stock)
-                print(shares)
-                print(price)
-                print(total_price)
-                print(time)
+            print(buy)
+            print(stock)
+            print(shares)
+            print(price)
+            print(total_price)
+            print(time)
         return render_template('history.html', u=u)
 
     return render_template('history.html', u=u)
