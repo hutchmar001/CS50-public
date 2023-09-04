@@ -153,25 +153,10 @@ def history():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
 
-    result = db.execute("SELECT * FROM history WHERE username = ?;", u)
-    print(result)
-    if result:
-        for i in range(len(result)):
-            for key in result[i]:
-                buy = result[i]["buy"]
-                stock = result[i]["stock"]
-                shares = result[i]["shares"]
-                price = result[i]["price"]
-                total_price = result[i]["total_price"]
-                time = result[i]["time"]
-            print(buy)
-            print(stock)
-            print(shares)
-            print(price)
-            print(total_price)
-            print(time)
-        return render_template('history.html', u=u)
-
+    c.execute("SELECT * FROM history WHERE username = ?;", u)
+    lst = []
+    for i in c.fetchall():
+        lst.append(dict(i))
     return render_template('history.html', u=u)
 
 
