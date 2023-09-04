@@ -157,7 +157,7 @@ def history():
     lst = []
     for i in c.fetchall():
         lst.append(dict(i))
-    return render_template('history.html', u=u)
+    return render_template('history.html', u=u, lst=lst, b/s=, a=a))
 
 
 @app.route("/login", methods=["GET", "POST"])
