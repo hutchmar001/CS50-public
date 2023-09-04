@@ -1,4 +1,6 @@
-import os, datetime, sqlite3
+import os
+import datetime
+import sqlite3
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -100,6 +102,7 @@ def index():
     # Notice that Current Share Price, Value of Shares, and Value of Assets dynamically change over time.
     # Meanwhile Account Balance stays locked to when there was a Buy or Sell.
 
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
@@ -149,8 +152,8 @@ def history():
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
     c.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales")
-    ## Note: UNION in SQL combines two tables flawlessly!
-    ## Notice use of c instead of db
+    # Note: UNION in SQL combines two tables flawlessly!
+    # Notice use of c instead of db
 
     c.execute("SELECT * FROM history WHERE username = ? ORDER BY time ASC;", [u])
     lst = []
@@ -222,10 +225,11 @@ def quote():
         s = stock["price"]
         price = usd(s)
 
-        return render_template("quoted.html", name = price)
+        return render_template("quoted.html", name=price)
 
     else:
         return render_template("quote.html")
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -256,7 +260,6 @@ def register():
 
     else:
         return render_template("register.html")
-
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -303,7 +306,7 @@ def sell():
 
     else:
         stock_select = db.execute("SELECT stock FROM home;")
-        result = [ i['stock'] for i in stock_select ]
+        result = [i['stock'] for i in stock_select]
 
         return render_template("sell.html", result=result)
 
@@ -314,7 +317,7 @@ def add_cash():
     if request.method == "POST":
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
-        
+
         amount = int(request.form.get("add_cash"))
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         cash_balance = cash_balance[0]["cash"]
