@@ -146,7 +146,6 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
     u = user[0]["username"]
     c.execute("CREATE TABLE history AS SELECT * FROM purchases UNION SElECT * FROM sales")
@@ -158,7 +157,7 @@ def history():
     for i in c.fetchall():
         lst.append(dict(i))
     db.execute("DROP TABLE history;")
-    print(lst)
+
     return render_template('history.html', u=u, lst=lst)
 
 
