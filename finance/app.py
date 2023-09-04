@@ -152,7 +152,7 @@ def history():
     ## Note: UNION in SQL combines two tables flawlessly!
     ## Notice use of c instead of db
 
-    c.execute("SELECT * FROM history WHERE username = ?;", [u])
+    c.execute("SELECT * FROM history WHERE username = ? ORDER BY time ASC;", [u])
     lst = []
     for i in c.fetchall():
         lst.append(dict(i))
