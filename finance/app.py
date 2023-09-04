@@ -314,7 +314,7 @@ def add_cash():
     if request.method == "POST":
         user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
         u = user[0]["username"]
-        db.execute("SELECT stock FROM home;")
+        db.execute("UPDATE users SET cash = 10000;")
         return render_template("/")
 
     return render_template("addcash.html")
