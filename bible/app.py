@@ -8,8 +8,6 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from operator import itemgetter
 
-from helpers import apology, login_required, lookup, usd
-
 # Configure application
 conn = sqlite3.connect('kjv.sqlite', check_same_thread=False)
 conn.row_factory = sqlite3.Row
