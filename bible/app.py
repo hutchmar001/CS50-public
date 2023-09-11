@@ -44,9 +44,9 @@ def search():
     if request.method == "POST":
 
         search = request.form.get("search")
-        cash_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
-        cash_balance = cash_balance[0]["cash"]
-        a = cash_balance + amount
+        search = db.execute("SELECT * FROM verses WHERE id = ?;", search)
+        s = search[0]["search"]
+        print(s)
 
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a, u)
         return redirect("/")
