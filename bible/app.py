@@ -46,9 +46,12 @@ def search():
         search = request.form.get("search")
         s = db.execute("SELECT * FROM verses WHERE text LIKE '%olive%';")
         print(s)
-        s = s[0]["id"]
+        id = s[0]["id"]
+        book = s[0]["book"]
+        chapter = s[0]["chapter"]
+        verse = s[0]["verse"]
+        text = s[0]["text"]
 
-        print(s)
 
         return redirect("/")
 
