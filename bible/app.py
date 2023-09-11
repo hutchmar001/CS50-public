@@ -34,8 +34,6 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    stocks = db.execute("SELECT * FROM verses WHERE id = 1;")
-    print(stocks)
     return render_template("home.html")
 
 
