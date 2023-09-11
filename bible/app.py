@@ -37,3 +37,18 @@ def index():
     stocks = db.execute("SELECT * FROM verses WHERE id = 1;")
     print(stocks)
     return render_template("home.html")
+
+
+@app.route("/choose_verse", methods=["GET", "POST"])
+def add_cash():
+    if request.method == "POST":
+
+        amount = int(request.form.get("add_cash"))
+        cash_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
+        cash_balance = cash_balance[0]["cash"]
+        a = cash_balance + amount
+
+        db.execute("UPDATE users SET cash = ? WHERE username = ?;", a, u)
+        return redirect("/")
+
+    return render_template("addcash.html")
