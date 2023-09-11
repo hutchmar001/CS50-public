@@ -47,7 +47,6 @@ def search():
         s = db.execute("SELECT * FROM verses WHERE text LIKE '%olive%';")
         print(s)
         s = s[0]["id"]
-        b = s[0]["book"]
 
         print(b)
 
