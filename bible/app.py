@@ -48,7 +48,7 @@ def search():
         print(s)
         s = s[0]["id"]
 
-        print(b)
+        print(s)
 
         return redirect("/")
 
