@@ -43,7 +43,7 @@ def index():
 def search():
     if request.method == "POST":
 
-        amount = int(request.form.get("add_cash"))
+        search = request.form.get("search")
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])
         cash_balance = cash_balance[0]["cash"]
         a = cash_balance + amount
