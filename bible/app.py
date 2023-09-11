@@ -51,4 +51,4 @@ def search():
         db.execute("UPDATE users SET cash = ? WHERE username = ?;", a, u)
         return redirect("/")
 
-    return render_template("addcash.html")
+    return render_template("search.html")
