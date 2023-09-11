@@ -51,6 +51,6 @@ def search():
         text = s[0]["text"]
 
 
-        return redirect("/", id=id, book=book, chapter=chapter, verse=verse, text=text)
+        return render_template('home.html', id=id, book=book, chapter=chapter, verse=verse, text=text)
 
     return render_template("search.html")
