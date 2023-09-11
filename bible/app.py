@@ -45,7 +45,7 @@ def search():
 
         search = request.form.get("search")
         search = db.execute("SELECT * FROM verses WHERE id = ?;", search)
-        s = search[1]["book"]
+        s = search[0]["id"]
         print(search)
         print(s)
 
