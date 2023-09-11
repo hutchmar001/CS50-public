@@ -10,10 +10,11 @@
 <br><br>
 <table action="/" method="get" class="table table-hover" >
     <tr>
-        <th>Stock</th>
-        <th>Shares</th>
-        <th>Current Share Price</th>
-        <th>Value of shares</th>
+        <th>Id</th>
+        <th>Book</th>
+        <th>Chapter</th>
+        <th>Verse</th>
+        <th>Text</th>
     </tr>
     {% for i in lst %}
         <tr>
@@ -34,14 +35,4 @@
     </tbody>
 </table>
 <br>
-<table action="/" method="get" class="table table-hover">
-    <tr>
-        <th>Value of Assets</th>
-        <th>Account Balance</th>
-    </tr>
-    <tr>
-        <td>{{v}}</p>
-        <td>{{a}}</td>
-    </tr>
-</table>
 {% endblock %}
