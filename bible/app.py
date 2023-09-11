@@ -44,10 +44,11 @@ def search():
     if request.method == "POST":
 
         search = request.form.get("search")
-        s = db.execute("SELECT * FROM verses WHERE id = ?;", search)
+        s = db.execute("SELECT * FROM verses WHERE text LIKE '%?%';", search)
         s = s[0]["id"]
+        b = s[0]["book"]
         print(search)
-        print(s)
+        print(b)
 
         return redirect("/")
 
