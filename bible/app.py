@@ -34,8 +34,5 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    db.execute("DELETE FROM home")
-    user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
-    u = user[0]["username"]
 
     return render_template("home.html")
