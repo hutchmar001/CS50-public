@@ -33,7 +33,6 @@ def after_request(response):
 
 
 @app.route("/", methods=["GET", "POST"])
-@login_required
 def index():
     db.execute("DELETE FROM home")
     user = db.execute("SELECT username FROM users WHERE id = ?;", session["user_id"])
