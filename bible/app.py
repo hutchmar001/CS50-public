@@ -39,8 +39,8 @@ def index():
     return render_template("home.html")
 
 
-@app.route("/choose_verse", methods=["GET", "POST"])
-def add_cash():
+@app.route("/search", methods=["GET", "POST"])
+def search():
     if request.method == "POST":
 
         amount = int(request.form.get("add_cash"))
