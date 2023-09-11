@@ -44,7 +44,7 @@ def search():
     if request.method == "POST":
 
         search = request.form.get("search")
-        s = db.execute("SELECT * FROM verses WHERE text LIKE ?;", search)
+        s = db.execute("SELECT * FROM verses WHERE text LIKE '%' + ? + '%';", search)
         print(s)
         s = s[0]["id"]
         b = s[0]["book"]
