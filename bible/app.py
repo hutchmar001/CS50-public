@@ -44,8 +44,8 @@ def search():
     if request.method == "POST":
 
         search = request.form.get("search")
-        search = db.execute("SELECT * FROM verses WHERE id = ?;", search)
-        s = search[0]["id"]
+        s = db.execute("SELECT * FROM verses WHERE id = ?;", search)
+        s = s[0]["id"]
         print(search)
         print(s)
 
