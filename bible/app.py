@@ -45,10 +45,10 @@ def search():
 
         search = request.form.get("search")
         search = db.execute("SELECT * FROM verses WHERE id = ?;", search)
-        s = search[0]["search"]
+        s = search[0]["id"]
+        print(search)
         print(s)
 
-        db.execute("UPDATE users SET cash = ? WHERE username = ?;", a, u)
         return redirect("/")
 
     return render_template("search.html")
