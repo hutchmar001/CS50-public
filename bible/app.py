@@ -47,7 +47,7 @@ def search():
         s = db.execute("SELECT * FROM verses WHERE text LIKE '%?%';", search)
         s = s[0]["id"]
         b = s[0]["book"]
-        print(search)
+
         print(b)
 
         return redirect("/")
