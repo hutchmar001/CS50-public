@@ -55,4 +55,4 @@ def search():
 
         return redirect("/")
 
-    return render_template("search.html")
+    return render_template("search.html", id=id, book=book, chapter=chapter, verse=verse, text=text)
