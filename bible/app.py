@@ -44,11 +44,7 @@ def search():
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
         if s:
             for i in s:
-                no = s[i]["id"]
-                book = s[i]["book"]
-                chapter = s[i]["chapter"]
-                verse = s[i]["verse"]
-                text = s[i]["text"]
+                print(i)
                 return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
 
     return render_template("search.html")
