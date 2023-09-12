@@ -51,6 +51,11 @@ def search():
                 text = i["text"]
                 db.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", no, book, chapter, verse, text)
 
+        c.execute('SELECT * FROM results;')
+        lst = []
+        for i in c.fetchall():
+            lst.append(dict(i))
+
         return render_template('home.html', lst=lst)
 
     return render_template("search.html")
