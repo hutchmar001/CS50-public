@@ -44,7 +44,7 @@ def search():
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
         if s:
             for i in s:
-                no = s[i]["id"]
+                no = i["id"]
                 book = s[i]["book"]
                 chapter = s[i]["chapter"]
                 verse = s[i]["verse"]
