@@ -49,7 +49,8 @@ def search():
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
+                db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, sum)
 
-        return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
-db.execute("INSERT INTO home VALUES (?, ?, ?, ?, ?);", u, st, sh, cp, sum)
+        return render_template('home.html', lst=lst)
+
     return render_template("search.html")
