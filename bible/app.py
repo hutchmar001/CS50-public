@@ -42,14 +42,13 @@ def search():
     if request.method == "POST":
         db.execute("DELETE FROM verses;")
         search = request.form.get("search")
-        s = db.execute("SELECT * FROM verses WHERE text LIKE '%" & ? & "%';", search)
+        s = db.execute("SELECT * FROM verses WHERE text LIKE '%" & item & "%';", search)
         print(s)
         no = s[0]["id"]
         book = s[0]["book"]
         chapter = s[0]["chapter"]
         verse = s[0]["verse"]
         text = s[0]["text"]
-        '%" & item & "%' ", con)
 
 
         return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
