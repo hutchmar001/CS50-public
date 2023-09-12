@@ -49,6 +49,7 @@ def search():
         chapter = s[0]["chapter"]
         verse = s[0]["verse"]
         text = s[0]["text"]
+        '%" & item & "%' ", con)
 
 
         return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
