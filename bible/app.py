@@ -39,17 +39,19 @@ def index():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    db.execute("DELETE FROM results;")
     if request.method == "POST":
         search = request.form.get("search")
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
         if s:
+            num = 0
             for i in s:
-                no = i["id"]
                 book = i["book"]
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
-                db.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", no, book, chapter, verse, text)
+                db.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
+                num += 1
 
         c.execute('SELECT * FROM results;')
         lst = []
