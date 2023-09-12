@@ -49,17 +49,6 @@ def search():
             num = 1
             for i in s:
                 book = i["book"]
-                if book == 1:
-                    book = "Genesis"
-                if book == 2:
-                    book = "Exodus"
-                if book == 3:
-                    book = "Leviticus"
-                if book == 4:
-                    book = "Numbers"
-                if book == 5:
-                    book = "Dueteronomy"
-
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
