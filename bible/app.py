@@ -49,7 +49,7 @@ def search():
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
-                db.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", no, book, chapter, verse, text)
+                db.execute("INSERT INTO results VALUES (?, ?, ?, ?);", book, chapter, verse, text)
 
         c.execute('SELECT * FROM results;')
         lst = []
