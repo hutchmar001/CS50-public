@@ -40,7 +40,7 @@ def index():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     if request.method == "POST":
-        db.execute("DELETE FROM verses;")
+        ## db.execute("DELETE FROM verses;")
         search = request.form.get("search")
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
         print(s)
