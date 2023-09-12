@@ -42,7 +42,9 @@ def search():
     db.execute("DELETE FROM results;")
     if request.method == "POST":
         search = request.form.get("search")
-        s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
+        s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
+
         if s:
             num = 1
             for i in s:
