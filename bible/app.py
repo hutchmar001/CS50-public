@@ -49,6 +49,9 @@ def search():
             num = 1
             for i in s:
                 book = i["book"]
+                if book == 1:
+                    book = "genesis"
+
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
