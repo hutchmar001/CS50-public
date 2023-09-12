@@ -42,13 +42,13 @@ def search():
     if request.method == "POST":
         search = request.form.get("search")
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('%' + search + '%',))
-        no = s[0]["id"]
-        book = s[0]["book"]
-        chapter = s[0]["chapter"]
-        verse = s[0]["verse"]
-        text = s[0]["text"]
-
-
-        return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
+        if s:
+            for i in s:
+                no = s[i]["id"]
+                book = s[i]["book"]
+                chapter = s[i]["chapter"]
+                verse = s[i]["verse"]
+                text = s[i]["text"]
+                return render_template('home.html', no=no, book=book, chapter=chapter, verse=verse, text=text)
 
     return render_template("search.html")
