@@ -39,7 +39,7 @@ def index():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    # db.execute("DELETE FROM results;")
+    db.execute("DELETE FROM results;")
     if request.method == "POST":
         search = request.form.get("search")
         s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
@@ -50,7 +50,15 @@ def search():
             for i in s:
                 book = i["book"]
                 if book == 1:
-                    book = "genesis"
+                    book = "Genesis"
+                if book == 2:
+                    book = "Exodus"
+                if book == 3:
+                    book = "Leviticus"
+                if book == 4:
+                    book = "Numbers"
+                if book == 5:
+                    book = "Dueteronomy"
 
                 chapter = i["chapter"]
                 verse = i["verse"]
