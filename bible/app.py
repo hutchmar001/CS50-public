@@ -13,7 +13,7 @@ conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
 conn1.row_factory = sqlite3.Row
 c1 = conn1.cursor()
 
-conn2 = sqlite3.connect('databases/quran.sqlite', check_same_thread=False)
+conn2 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
 conn2.row_factory = sqlite3.Row
 c2 = conn2.cursor()
 app = Flask(__name__)
@@ -25,7 +25,7 @@ Session(app)
 
 # Configure CS50 Library to use SQLite databases
 db1 = SQL("sqlite:///databases/kjv.sqlite")
-db2 = SQL("sqlite:///databases/quran.sqlite")
+db2 = SQL("sqlite:///databases/quran.sqlite3")
 
 
 @app.after_request
