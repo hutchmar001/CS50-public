@@ -9,7 +9,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from operator import itemgetter
 
 # Configure application
-conn = sqlite3.connect('kjv.sqlite', check_same_thread=False)
+conn = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
 app = Flask(__name__)
@@ -20,7 +20,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///kjv.sqlite")
+db = SQL("sqlite:///databases/kjv.sqlite")
 
 
 @app.after_request
