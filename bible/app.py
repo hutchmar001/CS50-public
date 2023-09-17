@@ -9,8 +9,8 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from operator import itemgetter
 
 # Configure application
-conn = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
-conn.row_factory = sqlite3.Row
+conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
+conn1.row_factory = sqlite3.Row
 c = conn.cursor()
 app = Flask(__name__)
 
