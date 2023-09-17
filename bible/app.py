@@ -8,10 +8,14 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from operator import itemgetter
 
-# Configure application
+# Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
 conn1.row_factory = sqlite3.Row
-c = conn.cursor()
+c1 = conn1.cursor()
+
+conn2 = sqlite3.connect('databases/quran.sqlite', check_same_thread=False)
+conn2.row_factory = sqlite3.Row
+c2 = conn2.cursor()
 app = Flask(__name__)
 
 # Configure session to use filesystem (instead of signed cookies)
@@ -19,8 +23,9 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-# Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///databases/kjv.sqlite")
+# Configure CS50 Library to use SQLite databases
+db1 = SQL("sqlite:///databases/kjv.sqlite")
+db2 = SQL("sqlite:///databases/quran.sqlite")
 
 
 @app.after_request
@@ -39,10 +44,10 @@ def index():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    db.execute("DELETE FROM results;")
+    db1.execute("DELETE FROM results;")
     if request.method == "POST":
         search = request.form.get("search")
-        s = db.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        s = db1.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
 
         if s:
@@ -52,12 +57,12 @@ def search():
                 chapter = i["chapter"]
                 verse = i["verse"]
                 text = i["text"]
-                db.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
+                db1.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
                 num += 1
 
-        c.execute('SELECT * FROM results;')
+        c1.execute('SELECT * FROM results;')
         lst = []
-        for i in c.fetchall():
+        for i in c1.fetchall():
             lst.append(dict(i))
 
         return render_template('home.html', lst=lst)
