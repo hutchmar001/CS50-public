@@ -45,11 +45,14 @@ def index():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     db1.execute("DELETE FROM results;")
+    db2.execute("DELETE FROM results;")
+
     if request.method == "POST":
         search = request.form.get("search")
+
+        # Bible
         s = db1.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
-
         if s:
             num = 1
             for i in s:
@@ -64,6 +67,24 @@ def search():
         lst = []
         for i in c1.fetchall():
             lst.append(dict(i))
+
+        # Quran
+        s = db2.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+
+        if s:
+            num = 1
+            for i in s:
+                book = i["book_name"]
+                chapter = i["chapter"]
+                verse = i["verse"]
+                text = i["text"]
+                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
+                num += 1
+
+        c2.execute('SELECT * FROM results;')
+        lst2 = []
+        for i in c2.fetchall():
+            lst2.append(dict(i))
 
         return render_template('home.html', lst=lst)
 
