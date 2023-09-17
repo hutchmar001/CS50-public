@@ -26,6 +26,7 @@ Session(app)
 # Configure CS50 Library to use SQLite databases
 db1 = SQL("sqlite:///databases/kjv.sqlite")
 db2 = SQL("sqlite:///databases/quran.sqlite")
+print(db2)
 
 
 @app.after_request
