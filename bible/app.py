@@ -45,7 +45,7 @@ def index():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     db1.execute("DELETE FROM results;")
-    # db2.execute("DELETE FROM results;")
+    db2.execute("DELETE FROM results;")
 
     if request.method == "POST":
         search = request.form.get("search")
@@ -85,6 +85,8 @@ def search():
         for i in c2.fetchall():
             lst2.append(dict(i))
 
+        db1.execute("DELETE FROM results;")
+        db2.execute("DELETE FROM results;")
         return render_template('home.html', lst=lst)
 
     return render_template("search.html")
