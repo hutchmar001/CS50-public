@@ -74,11 +74,10 @@ def search():
         if s:
             num = 1
             for i in s:
-                book = i["book_name"]
-                chapter = i["chapter"]
+                surah = i["surah"]
                 verse = i["verse"]
                 text = i["text"]
-                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
+                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
                 num += 1
 
         c2.execute('SELECT * FROM results;')
