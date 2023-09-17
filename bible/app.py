@@ -68,7 +68,6 @@ def search():
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
-        print(s)
         if s:
             num = 1
             for i in s:
