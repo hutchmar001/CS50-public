@@ -81,6 +81,7 @@ def search():
         lst2 = []
         for i in c2.fetchall():
             lst2.append(dict(i))
+        print(lst2)
 
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
