@@ -77,6 +77,7 @@ def search():
                 surah = i["sura"]
                 verse = i["verse"]
                 text = i["text"]
+                print(text)
                 db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
                 num += 1
 
