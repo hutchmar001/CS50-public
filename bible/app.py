@@ -17,7 +17,7 @@ conn2 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
 conn2.row_factory = sqlite3.Row
 c2 = conn2.cursor()
 
-conn3 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
+conn3 = sqlite3.connect('databases/bg.db', check_same_thread=False)
 conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
@@ -31,7 +31,7 @@ Session(app)
 # Configure CS50 Library to use SQLite databases
 db1 = SQL("sqlite:///databases/kjv.sqlite")
 db2 = SQL("sqlite:///databases/quran.sqlite3")
-db3 = SQL("sqlite:///databases/q.sqlite3")
+db3 = SQL("sqlite:///databases/bg.db")
 
 
 @app.after_request
@@ -76,6 +76,22 @@ def search():
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
         # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
+        if s:
+            num = 1
+            for i in s:
+                surah = i["sura"]
+                verse = i["verse"]
+                text = i["text"]
+                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
+                num += 1
+
+        c2.execute('SELECT * FROM results;')
+        lst2 = []
+        for i in c2.fetchall():
+            lst2.append(dict(i))
+
+        # Bhagavad Gita
+        s = db3.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
         if s:
             num = 1
             for i in s:
