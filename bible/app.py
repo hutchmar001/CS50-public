@@ -98,7 +98,7 @@ def search():
                 chapter = i["Chapter"]
                 verse = i["Verse"]
                 text = i["text"]
-                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
+                db3.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
                 num += 1
 
         c3.execute('SELECT * FROM results;')
