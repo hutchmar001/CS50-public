@@ -95,16 +95,16 @@ def search():
         if s:
             num = 1
             for i in s:
-                surah = i["Chapter"]
+                chapter = i["Chapter"]
                 verse = i["Verse"]
                 text = i["text"]
-                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
+                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
                 num += 1
 
-        c2.execute('SELECT * FROM results;')
-        lst2 = []
-        for i in c2.fetchall():
-            lst2.append(dict(i))
+        c3.execute('SELECT * FROM results;')
+        lst3 = []
+        for i in c3.fetchall():
+            lst3.append(dict(i))
 
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
