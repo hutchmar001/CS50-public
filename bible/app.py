@@ -92,6 +92,7 @@ def search():
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        print(s)
         if s:
             num = 1
             for i in s:
