@@ -108,6 +108,7 @@ def search():
 
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
+        db3.execute("DELETE FROM results;")
         return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3)
 
     return render_template("search.html")
