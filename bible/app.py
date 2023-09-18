@@ -68,6 +68,7 @@ def search():
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         if s:
             num = 1
             for i in s:
@@ -83,7 +84,7 @@ def search():
             lst2.append(dict(i))
 
         db1.execute("DELETE FROM results;")
-        # db2.execute("DELETE FROM results;")
+        db2.execute("DELETE FROM results;")
         return render_template('home.html', lst=lst, lst2=lst2)
 
     return render_template("search.html")
