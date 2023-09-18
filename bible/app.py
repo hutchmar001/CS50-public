@@ -105,7 +105,6 @@ def search():
         lst3 = []
         for i in c3.fetchall():
             lst3.append(dict(i))
-        print(lst3)
 
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
