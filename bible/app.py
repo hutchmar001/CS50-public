@@ -109,7 +109,20 @@ def search():
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
         db3.execute("DELETE FROM results;")
-        if lst && lst2 && lst3:
+
+        if lst and lst2 and lst3:
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3)
+        if lst and lst2:
+            return render_template('home.html', lst=lst, lst2=lst2)
+        if lst and lst3:
+            return render_template('home.html', lst=lst, lst3=lst3)
+        if lst2 and lst3:
+            return render_template('home.html', lst2=lst2, lst3=lst3)
+        if lst:
+            return render_template('home.html', lst=lst)
+        if lst2:
+            return render_template('home.html', lst2=lst2)
+        if lst3:
+            return render_template('home.html', lst3=lst3)
 
     return render_template("search.html")
