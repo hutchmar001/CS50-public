@@ -55,7 +55,11 @@ def search():
         search = request.form.get("search")
 
         # Bible
-        s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ' %'), ('% ' + search + '%'), ('%(' + search + ')%'))
+         s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                    OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                    OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
+                    ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%' + search + ']%'), \
+                    ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
         if s:
             num = 1
@@ -73,7 +77,11 @@ def search():
             lst.append(dict(i))
 
         # Quran
-        s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ' %'), ('% ' + search + '%'), ('%(' + search + ')%'))
+         s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                    OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                    OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
+                    ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%' + search + ']%'), \
+                    ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
         if s:
@@ -92,10 +100,10 @@ def search():
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-                        OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-                        OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
-                        ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%' + search + ']%'), \
-                        ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+                    OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                    OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
+                    ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%' + search + ']%'), \
+                    ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
 
         if s:
             num = 1
