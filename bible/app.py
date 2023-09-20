@@ -57,10 +57,10 @@ def search():
         # Bible
          s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
                     OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-                    OR text LIKE ? OR text LIKE ?", \
-                    ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
-                    ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), \
-                    ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+                    OR text LIKE ? OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), \
+                    ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), \
+                    ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), \
+                    ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
         if s:
             num = 1
