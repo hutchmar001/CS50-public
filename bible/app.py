@@ -114,16 +114,16 @@ def search():
         if lst and lst2 and lst3:
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none")
         if lst and lst2:
-            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none")
+            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none")
         if lst and lst3:
-            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible")
+            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none")
         if lst2 and lst3:
-            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible")
+            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none")
         if lst:
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none")
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none")
         if lst2:
-            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none")
+            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none")
         if lst3:
-            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible")
+            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none")
 
     return render_template("search.html")
