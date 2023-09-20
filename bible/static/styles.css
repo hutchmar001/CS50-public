@@ -1,3 +1,5 @@
 * {
-    background-image: blue;
+    background-image: url("/images/christian.jpeg");
+    background-size: cover;
+    animation: fadeIn 5s;
 }
