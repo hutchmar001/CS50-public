@@ -92,9 +92,11 @@ def search():
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-                        OR text LIKE ? OR text LIKE ? OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), \
-                        ('%"' + search + '%'), ('%' + search + '?%'), ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%(' + search + ')%'))
-        print(s)
+                        OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+                        OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), \
+                        ('%"' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%' + search + ']%'), \
+                        ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+
         if s:
             num = 1
             for i in s:
