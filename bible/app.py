@@ -91,7 +91,7 @@ def search():
             lst2.append(dict(i))
 
         # Bhagavad Gita
-        s = db3.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE", ('% ' + search + ' %'), ('% ' + search + ' %',)
         print(s)
         if s:
             num = 1
