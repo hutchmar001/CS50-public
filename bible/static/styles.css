@@ -1,5 +1,6 @@
 body {
-    background-image: url("/static/christian.jpg") fixed;
+    background-image: url("/static/christian.jpg");
     background-size: cover;
+    position: sticky;
     animation: fadeIn 5s;
 }
