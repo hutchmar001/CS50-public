@@ -45,7 +45,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("home.html", visibility1="hidden", visibility2="visible", visibility3="visible")
+    return render_template("home.html", visibility1="hidden", visibility2="hidden", visibility3="hidden")
 
 
 @app.route("/search", methods=["GET", "POST"])
