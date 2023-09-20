@@ -121,6 +121,6 @@ def search():
         if lst:
             return render_template('home.html', lst=lst, visibility="visible")
         if lst2:
-            return render_template('home.html', lst2=lst2, visibility="visible")
+            return render_template('home.html', lst2=lst2, h1.style.visibility="visible")
 
     return render_template("search.html")
