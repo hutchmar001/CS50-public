@@ -113,14 +113,14 @@ def search():
         if lst and lst2 and lst3:
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, visibility1="visible", visibility2="visible", visibility3="visible")
         if lst and lst2:
-            return render_template('home.html', lst=lst, lst2=lst2, visibility1="visible", visibility2="visible")
+            return render_template('home.html', lst=lst, lst2=lst2, visibility1="visible", visibility2="visible", visibility3="hidden")
         if lst and lst3:
-            return render_template('home.html', lst=lst, lst3=lst3, visibility1="visible", visibility3="visible")
+            return render_template('home.html', lst=lst, lst3=lst3, visibility1="visible", visibility2="hidden", visibility3="visible")
         if lst2 and lst3:
-            return render_template('home.html', lst2=lst2, lst3=lst3, visibility2="visible", visibility3="visible")
+            return render_template('home.html', lst2=lst2, lst3=lst3, visibility1="hidden", visibility2="visible", visibility3="visible")
         if lst:
-            return render_template('home.html', lst=lst, visibility1="visible")
+            return render_template('home.html', lst=lst, visibility1="visible", visibility2="hidden", visibility3="hidden")
         if lst2:
-            return render_template('home.html', lst2=lst2, visibility2="visible")
+            return render_template('home.html', lst2=lst2, visibility1="visible", visibility2="hidden", visibility3="hidden")
 
     return render_template("search.html")
