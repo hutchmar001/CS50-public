@@ -45,7 +45,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("home.html")
+    return render_template("home.html", visibility="hidden")
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -111,8 +111,7 @@ def search():
         db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
-            d.getElementById("header").style.visibility = "visible";
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3)
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, visibility="visible")
         if lst and lst2:
             return render_template('home.html', lst=lst, lst2=lst2, visibility="visible")
         if lst and lst3:
