@@ -111,6 +111,6 @@ def search():
         db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, visibility="visible")
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, visibility="hidden")
 
     return render_template("search.html")
