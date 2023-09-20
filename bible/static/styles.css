@@ -1,7 +1,6 @@
 body {
-    background-image: url("/static/christian.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: brightness(3);
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("/static/christian.jpg");
 }
