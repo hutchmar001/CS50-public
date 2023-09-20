@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/christian.jpg");
+    background-image: url("/static/christian.jpg");
     background-size: cover;
     animation: fadeIn 5s;
 }
