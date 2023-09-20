@@ -76,7 +76,6 @@ def search():
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
         # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
-        print(s)
         if s:
             num = 1
             for i in s:
@@ -93,6 +92,7 @@ def search():
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ?", ('% ' + search + ' %',))
+        print(s)
         if s:
             num = 1
             for i in s:
