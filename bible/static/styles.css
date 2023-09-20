@@ -1,4 +1,4 @@
-* {
+body {
     background-image: url("/images/christian.jpg");
     background-size: cover;
     animation: fadeIn 5s;
