@@ -45,7 +45,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("home.html", visibility1="hidden", visibility2="hidden", visibility3="hidden")
+    return render_template("home.html", display1="none", display2="none", display3="none")
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -112,18 +112,18 @@ def search():
         db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, visibility1="visible", visibility2="visible", visibility3="visible")
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible")
         if lst and lst2:
-            return render_template('home.html', lst=lst, lst2=lst2, visibility1="visible", visibility2="visible", visibility3="hidden")
+            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none")
         if lst and lst3:
-            return render_template('home.html', lst=lst, lst3=lst3, visibility1="visible", visibility2="hidden", visibility3="visible")
+            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible")
         if lst2 and lst3:
-            return render_template('home.html', lst2=lst2, lst3=lst3, visibility1="hidden", visibility2="visible", visibility3="visible")
+            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible")
         if lst:
-            return render_template('home.html', lst=lst, visibility1="visible", visibility2="hidden", visibility3="hidden")
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none")
         if lst2:
-            return render_template('home.html', lst2=lst2, visibility1="hidden", visibility2="visible", visibility3="hidden")
+            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none")
         if lst3:
-            return render_template('home.html', lst3=lst3, visibility1="hidden", visibility2="hidden", visibility3="visible")
+            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible")
 
     return render_template("search.html")
