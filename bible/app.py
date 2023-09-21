@@ -118,7 +118,7 @@ def search():
         db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
-            stock_select = db.execute("SELECT stock FROM home;")
+            result = [1="Bible", 2="Quran", 3="Bhagavad Gita"]
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", result=result)
         if lst and lst2:
             return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block")
