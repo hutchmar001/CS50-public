@@ -9,7 +9,7 @@
 <br><br>
 <table action="/" method="get" class="table table-hover">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
-        <option value= "home">All</option>
+        <option value= "All">All</option>
         {% for i in result %}
             <option value= {{i}}>{{i}}</option>
         {% endfor %}
