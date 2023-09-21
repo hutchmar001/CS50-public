@@ -7,14 +7,12 @@ body {
 
 #bible {
     background-image: url("/static/cross.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #quran {
     background-image: url("/static/islam.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+
+#hindu {
+    background-image: url("/static/hindu.png");
 }

@@ -9,23 +9,23 @@
 <br><br>
 <table action="/hindu" method="get" class="table table-hover">
     <tbody>
-        <h1>Quran</h1>
+        <h1>Bhagavad Gita</h1>
         <tr>
             <th>Number</th>
-            <th>Surah</th>
+            <th>Chapter</th>
             <th>Verse</th>
             <th>Text</th>
         </tr>
-        {% for i in lst2 %}
+        {% for i in lst3 %}
         <tr>
             <td>
-                <p>{{i.num}}</p>
+                <p>{{i.Number}}</p>
             </td>
             <td>
-                <p>{{i.sura}}</p>
+                <p>{{i.Chapter}}</p>
             </td>
             <td>
-                <p>{{i.verse}}</p>
+                <p>{{i.Verse}}</p>
             </td>
             <td>
                 <p>{{i.text}}</p>
