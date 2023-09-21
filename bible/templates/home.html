@@ -9,7 +9,9 @@
 <br><br>
 <table action="/" method="get" class="table table-hover">
     <select name="books" id="books" style="display:{{ display_select }}">
-        <option value= 1</option>
+        {% for i in result %}
+            <option value= {{i}}>{{i}}</option>
+        {% endfor %}
     </select>
 
     <h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
