@@ -56,6 +56,7 @@ def search():
         db1.execute("DELETE FROM results;")
         db2.execute("DELETE FROM results;")
         db3.execute("DELETE FROM results;")
+
         # Bible
         s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
