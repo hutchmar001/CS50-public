@@ -140,6 +140,7 @@ def search():
 
     return render_template("search.html")
 
+
 @app.route("/All", methods=["GET"])
 def All():
     result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -184,7 +185,6 @@ def All():
         return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", result=result)
 
 
-
 @app.route("/Bible", methods=["GET"])
 def Bible():
     result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -194,6 +194,7 @@ def Bible():
         lst.append(dict(i))
     return render_template('Bible.html', lst=lst, result=result)
 
+
 @app.route("/Quran", methods=["GET"])
 def Quran():
     result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -202,6 +203,7 @@ def Quran():
     for i in c2.fetchall():
         lst.append(dict(i))
     return render_template('Quran.html', lst=lst, result=result)
+
 
 @app.route("/Bhagavad", methods=["GET"])
 def Bhagavad():
