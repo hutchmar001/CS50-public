@@ -161,4 +161,9 @@ def Quran():
 
 @app.route("/Bhagavad", methods=["GET"])
 def Bhagavad():
-    return render_template("Bhagavad.html")
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+    c3.execute('SELECT * FROM results;')
+    lst = []
+    for i in c3.fetchall():
+        lst.append(dict(i))
+    return render_template('Bhagavad.html', lst=lst, result=result)
