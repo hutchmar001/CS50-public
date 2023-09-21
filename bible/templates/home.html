@@ -100,5 +100,12 @@
         {% endfor %}
     </tbody>
 </table>
+
+<select name="books" id="books" style="display: inline-block;">
+    {% for i in result %}
+        <option value= {{i}}>{{i}}</option>
+    {% endfor %}
+</select>
+
 <br><br>
 {% endblock %}
