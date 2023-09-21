@@ -101,7 +101,7 @@
     </tbody>
 </table>
 
-<select name="books" id="books" style="display: none">
+<select name="books" id="books" style="display:{{ display_select }}">
     {% for i in result %}
         <option value= {{i}}>{{i}}</option>
     {% endfor %}
