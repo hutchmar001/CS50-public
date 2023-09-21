@@ -152,7 +152,12 @@ def Bible():
 
 @app.route("/Quran", methods=["GET"])
 def Quran():
-    return render_template("Quran.html")
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+    c2.execute('SELECT * FROM results;')
+    lst = []
+    for i in c2.fetchall():
+        lst.append(dict(i))
+    return render_template('Quran.html', lst=lst, result=result)
 
 @app.route("/Bhagavad", methods=["GET"])
 def Bhagavad():
