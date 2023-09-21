@@ -141,14 +141,14 @@ def search():
 
     return render_template("search.html")
 
-@app.route("/bible", methods=["GET"])
-def bible():
-    return render_template("bible.html")
+@app.route("/Bible", methods=["GET"])
+def Bible():
+    return render_template("Bible.html")
 
-@app.route("/quran", methods=["GET"])
-def quran():
-    return render_template("quran.html")
+@app.route("/Quran", methods=["GET"])
+def Quran():
+    return render_template("Quran.html")
 
-@app.route("/hindu", methods=["GET"])
-def hindu():
-    return render_template("hindu.html")
+@app.route("/Hindu", methods=["GET"])
+def Hindu():
+    return render_template("Hindu.html")
