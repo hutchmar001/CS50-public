@@ -7,14 +7,16 @@
 {% block main %}
 <body id="bible">
 <br><br>
+
+<select name="books" method="post" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
+    <option value="">Select...</option>
+    <option value= "search">All</option>
+    {% for i in result %}
+        <option value= {{i}}>{{i}}</option>
+    {% endfor %}
+</select>
+
 <table action="/Bible" method="get" class="table table-hover">
-    <select name="books" method="post" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
-        <option value="">Select...</option>
-        <option value= "search">All</option>
-        {% for i in result %}
-            <option value= {{i}}>{{i}}</option>
-        {% endfor %}
-    </select>
 
     <tbody>
         <h1>Bible</h1>
