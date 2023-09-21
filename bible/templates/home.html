@@ -7,14 +7,16 @@
 {% block main %}
 
 <br><br>
+
+<select name="books" id="books" method=style="display:{{ display_select }}" onchange="location = this.value;">
+    <option value="">Select...</option>
+    <option value= "search">All</option>
+    {% for i in result %}
+        <option value= {{i}}>{{i}}</option>
+    {% endfor %}
+</select>
+
 <table action="/" method="get" class="table table-hover">
-    <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
-        <option value="">Select...</option>
-        <option value= "search">All</option>
-        {% for i in result %}
-            <option value= {{i}}>{{i}}</option>
-        {% endfor %}
-    </select>
 
     <h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
     <br>
