@@ -132,6 +132,10 @@ def search():
         if lst3:
             return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none", display_select="inline-block")
 
+        {% for i in result %}
+                <option value= {{i}}>{{i}}</option>
+        {% endfor %}
+    
     return render_template("search.html")
 
 @app.route("/bible", methods=["GET"])
