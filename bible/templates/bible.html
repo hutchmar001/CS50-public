@@ -4,7 +4,7 @@
     Bible Results
 {% endblock %}
 
-<body>
+    <body>
     <nav class="bg-light border navbar navbar-expand-md navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><span class="red">Holy Book Comparison</span></a>
@@ -19,6 +19,7 @@
         </div>
     </nav>
 
+    <main class="container-fluid py-5 text-center">
     <br><br>
     <table action="/bible" method="get" class="table table-hover" >
     <tbody>
@@ -51,5 +52,6 @@
         {% endfor %}
     </tbody>
     </table>
+    </main>
 
 </body>
