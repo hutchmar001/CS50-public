@@ -11,7 +11,7 @@
 <form name="add" method="post">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
         <option value="">Select...</option>
-        <option value= "search">All</option>
+        <option value= "All">All</option>
         {% for i in result %}
             <option value= {{i}}>{{i}}</option>
         {% endfor %}
