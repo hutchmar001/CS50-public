@@ -144,6 +144,10 @@ def search():
 @app.route("/Bible", methods=["GET"])
 def Bible():
     result = ["Bible", "Quran", "Bhagavad Gita"]
+    c1.execute('SELECT * FROM results;')
+    lst = []
+    for i in c1.fetchall():
+        lst.append(dict(i))
     return render_template('Bible.html', lst=lst, result=result)
 
 @app.route("/Quran", methods=["GET"])
