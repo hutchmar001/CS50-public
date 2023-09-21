@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quran Results
+{% endblock %}
+
+{% block main %}
+<body id="quran">
+<br><br>
+<table action="/quran" method="get" class="table table-hover">
+    <tbody>
+        <h1>Quran</h1>
+        <tr>
+            <th>Number</th>
+            <th>Surah</th>
+            <th>Verse</th>
+            <th>Text</th>
+        </tr>
+        {% for i in lst2 %}
+        <tr>
+            <td>
+                <p>{{i.num}}</p>
+            </td>
+            <td>
+                <p>{{i.sura}}</p>
+            </td>
+            <td>
+                <p>{{i.verse}}</p>
+            </td>
+            <td>
+                <p>{{i.text}}</p>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+{% endblock %}

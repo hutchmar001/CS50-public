@@ -137,3 +137,11 @@ def search():
 @app.route("/bible", methods=["GET"])
 def bible():
     return render_template("bible.html")
+
+@app.route("/quran", methods=["GET"])
+def quran():
+    return render_template("quran.html")
+
+@app.route("/hindu", methods=["GET"])
+def hindu():
+    return render_template("hindu.html")
