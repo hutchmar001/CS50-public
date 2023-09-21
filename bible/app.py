@@ -149,6 +149,6 @@ def Bible():
 def Quran():
     return render_template("Quran.html")
 
-@app.route("/Hindu", methods=["GET"])
-def Hindu():
-    return render_template("Hindu.html")
+@app.route("/Bhagavad", methods=["GET"])
+def Bhagavad():
+    return render_template("Bhagavad.html")
