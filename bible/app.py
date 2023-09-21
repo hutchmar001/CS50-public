@@ -137,7 +137,7 @@ def search():
             return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", result=result)
         if lst3:
             result = ["Bhagavad Gita"]
-            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none", display_select="inline-block", result=result)
+            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", result=result)
 
     return render_template("search.html")
 
