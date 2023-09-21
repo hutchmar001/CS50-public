@@ -8,6 +8,7 @@
 <body id="bible">
 <br><br>
 
+<form name="add" method="post">
 <select name="books" method="post" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
     <option value="">Select...</option>
     <option value= "search">All</option>
@@ -15,6 +16,7 @@
         <option value= {{i}}>{{i}}</option>
     {% endfor %}
 </select>
+</form>
 
 <table action="/Bible" method="get" class="table table-hover">
 
