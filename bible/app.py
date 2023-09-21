@@ -141,6 +141,10 @@ def search():
 
     return render_template("search.html")
 
+@app.route("/All", methods=["GET"])
+def All():
+
+
 @app.route("/Bible", methods=["GET"])
 def Bible():
     result = ["Bible", "Quran", "Bhagavad Gita"]
