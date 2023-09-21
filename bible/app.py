@@ -143,6 +143,25 @@ def search():
 
 @app.route("/All", methods=["GET"])
 def All():
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+
+    c1.execute('SELECT * FROM results;')
+    lst = []
+    for i in c1.fetchall():
+        lst.append(dict(i))
+
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+    c2.execute('SELECT * FROM results;')
+    lst2 = []
+    for i in c2.fetchall():
+        lst2.append(dict(i))
+
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+    c3.execute('SELECT * FROM results;')
+    lst3 = []
+    for i in c3.fetchall():
+        lst3.append(dict(i))
+
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
         return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", result=result)
