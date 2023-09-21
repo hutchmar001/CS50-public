@@ -133,3 +133,7 @@ def search():
             return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none")
 
     return render_template("search.html")
+
+@app.route("/bible", methods=["GET"])
+def bible():
+    return render_template("bible.html")
