@@ -3,7 +3,7 @@
 {% block title %}
     Bible Results
 {% endblock %}
-<html lang="en">
+
     <body>
     <nav class="bg-light border navbar navbar-expand-md navbar-light">
         <div class="container-fluid">
@@ -19,6 +19,7 @@
         </div>
     </nav>
 
+    <main>
     <br><br>
     <table action="/bible" method="get" class="table table-hover" >
     <tbody>
@@ -51,7 +52,6 @@
         {% endfor %}
     </tbody>
     </table>
+    </main>
 
 </body>
-
-</html>
