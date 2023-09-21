@@ -53,7 +53,9 @@ def search():
 
     if request.method == "POST":
         search = request.form.get("search")
-
+        db1.execute("DELETE FROM results;")
+        db2.execute("DELETE FROM results;")
+        db3.execute("DELETE FROM results;")
         # Bible
         s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
@@ -112,10 +114,6 @@ def search():
         lst3 = []
         for i in c3.fetchall():
             lst3.append(dict(i))
-
-        # db1.execute("DELETE FROM results;")
-        # db2.execute("DELETE FROM results;")
-        # db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
