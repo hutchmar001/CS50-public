@@ -113,9 +113,9 @@ def search():
         for i in c3.fetchall():
             lst3.append(dict(i))
 
-        db1.execute("DELETE FROM results;")
-        db2.execute("DELETE FROM results;")
-        db3.execute("DELETE FROM results;")
+        # db1.execute("DELETE FROM results;")
+        # db2.execute("DELETE FROM results;")
+        # db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
