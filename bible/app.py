@@ -43,7 +43,7 @@ def after_request(response):
     return response
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
     return render_template("home.html", display1="none", display2="none", display3="none", display_select="none")
 
@@ -143,6 +143,7 @@ def search():
 
 @app.route("/All", methods=["GET"])
 def All():
+    return render_template("home.html", display1="none", display2="none", display3="none", display_select="none")
 
 
 @app.route("/Bible", methods=["GET"])
