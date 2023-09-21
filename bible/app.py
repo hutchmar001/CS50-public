@@ -143,6 +143,8 @@ def search():
 
 @app.route("/Bible", methods=["GET"])
 def Bible():
+    result = ["Bible", "Quran", "Bhagavad Gita"]
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", result=result)
     return render_template("Bible.html")
 
 @app.route("/Quran", methods=["GET"])
