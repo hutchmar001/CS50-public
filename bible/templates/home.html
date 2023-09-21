@@ -8,11 +8,16 @@
 
 <br><br>
 <table action="/" method="get" class="table table-hover">
+    <select name="books" id="books" style="display:{{ display_select }}">
+        <option value= 1</option>
+    </select>
+
     <h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
     <br>
     <form action="/search" method="get">
         <button class="btn btn-primary" style="display:{{ display_title }}">Let's go!</button>
     </form>
+
     <tbody>
         <h1 style="display:{{ display1 }}">Bible</h1>
         <tr style="display:{{ display1 }}">
@@ -100,11 +105,5 @@
         {% endfor %}
     </tbody>
 </table>
-
-<select name="books" id="books" style="display:{{ display_select }}">
-
-        <option value= 1</option>
-</select>
-
 <br><br>
 {% endblock %}

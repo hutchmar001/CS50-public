@@ -16,3 +16,8 @@ body {
 #hindu {
     background-image: url("/static/hindu.png");
 }
+
+#books {
+    position: relative;
+    bottom: 75px;
+}

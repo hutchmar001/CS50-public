@@ -45,7 +45,7 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("home.html", display1="none", display2="none", display3="none" display_select="none)
+    return render_template("home.html", display1="none", display2="none", display3="none", display_select="none")
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -118,19 +118,19 @@ def search():
         db3.execute("DELETE FROM results;")
 
         if lst and lst2 and lst3:
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none")
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block")
         if lst and lst2:
-            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none")
+            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block")
         if lst and lst3:
-            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none")
+            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block")
         if lst2 and lst3:
-            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none")
+            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block")
         if lst:
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none")
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block")
         if lst2:
-            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none")
+            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block")
         if lst3:
-            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none")
+            return render_template('home.html', lst3=lst3, display1= "none", display2="none", display3="visible", display_title="none", display_select="inline-block")
 
     return render_template("search.html")
 
