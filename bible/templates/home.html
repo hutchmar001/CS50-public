@@ -8,7 +8,7 @@
 
 <br><br>
 
-<select name="books" id="books" method=style="display:{{ display_select }}" onchange="location = this.value;">
+<select name="books" id="books" method="post" style="display:{{ display_select }}" onchange="location = this.value;">
     <option value="">Select...</option>
     <option value= "search">All</option>
     {% for i in result %}
