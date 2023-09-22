@@ -229,22 +229,9 @@ def verse():
         db3.execute("DELETE FROM results;")
 
         # Bible
-        s = db1.execute("SELECT * FROM verses WHERE id == 1")
+        s = db1.execute("SELECT * FROM verses WHERE id == 1 OR id == 2")
         print(s)
-        if s:
-            num = 1
-            for i in s:
-                book = i["book_name"]
-                chapter = i["chapter"]
-                verse = i["verse"]
-                text = i["text"]
-                db1.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
-                num += 1
 
-        c1.execute('SELECT * FROM results;')
-        lst = []
-        for i in c1.fetchall():
-            lst.append(dict(i))
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
