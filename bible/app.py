@@ -143,6 +143,7 @@ def search():
 
 @app.route("/All", methods=["GET"])
 def All():
+    # This route is solely created to deal with the "All" page
     result = ["Bible", "Quran", "Bhagavad Gita"]
 
     c1.execute('SELECT * FROM results;')
