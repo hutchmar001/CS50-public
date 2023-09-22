@@ -214,3 +214,98 @@ def Bhagavad():
     for i in c3.fetchall():
         lst.append(dict(i))
     return render_template('Bhagavad.html', lst=lst, result=result)
+
+
+@app.route("/verse", methods=["GET", "POST"])
+def verse():
+
+    if request.method == "POST":
+        bible_name = request.form.get("bible_name")
+        bible_chapter = request.form.get("bible_chapter")
+        bible_verse = request.form.get("bible_verse")
+
+        db1.execute("DELETE FROM results;")
+        db2.execute("DELETE FROM results;")
+        db3.execute("DELETE FROM results;")
+
+        # Bible
+        s = db1.execute("SELECT * FROM verses WHERE id == 1")
+        print(s)
+        if s:
+            num = 1
+            for i in s:
+                book = i["book_name"]
+                chapter = i["chapter"]
+                verse = i["verse"]
+                text = i["text"]
+                db1.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
+                num += 1
+
+        c1.execute('SELECT * FROM results;')
+        lst = []
+        for i in c1.fetchall():
+            lst.append(dict(i))
+
+        # Quran
+        s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+            OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+        # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
+        # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
+        if s:
+            num = 1
+            for i in s:
+                surah = i["sura"]
+                verse = i["verse"]
+                text = i["text"]
+                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
+                num += 1
+
+        c2.execute('SELECT * FROM results;')
+        lst2 = []
+        for i in c2.fetchall():
+            lst2.append(dict(i))
+
+        # Bhagavad Gita
+        s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+            OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+
+        if s:
+            num = 1
+            for i in s:
+                chapter = i["Chapter"]
+                verse = i["Verse"]
+                text = i["text"]
+                db3.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
+                num += 1
+
+        c3.execute('SELECT * FROM results;')
+        lst3 = []
+        for i in c3.fetchall():
+            lst3.append(dict(i))
+
+        if lst and lst2 and lst3:
+            result = ["Bible", "Quran", "Bhagavad Gita"]
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst and lst2:
+            result = ["Bible", "Quran"]
+            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst and lst3:
+            result = ["Bible", "Bhagavad Gita"]
+            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst2 and lst3:
+            result = ["Quran", "Bhagavad Gita"]
+            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst:
+            result = ["Bible"]
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst2:
+            result = ["Quran"]
+            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
+        if lst3:
+            result = ["Bhagavad Gita"]
+            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
+
+    return render_template("verse.html")
+

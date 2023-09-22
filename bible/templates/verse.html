@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+<form action="/verse" method="post">
+
+    <div class="mb-3">
+        <img src="/static/cross.gif" alt="cross" width="150px" height="150px" style="display:{{ display_img }}">
+
+        <h5 style="display: inline-block; padding: 10px" >Book Name</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="bible_name" type="text" style="display: inline-block">
+
+        <h5 style="display: inline-block; padding: 10px" >Chapter</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="bible_chapter" type="text" style="display: inline-block">
+
+        <h5 style="display: inline-block; padding: 10px" >Verse</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="bible_verse" type="text" style="display: inline-block">
+        <div>
+            <button class="btn btn-primary" type="submit" style="top: 220px; position: absolute">Search</button>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <img src="/static/allah.png" alt="Muslim man and crescent" width="120px" height="150px" style="display:{{ display_img }}">
+        <h5 style="display: inline-block; padding: 10px" >Sura</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="book" type="text" style="display: inline-block">
+
+        <h5 style="display: inline-block; padding: 10px" >Verse</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="book" type="text" style="display: inline-block">
+        <div>
+            <button class="btn btn-primary" type="submit" style="top: 386px; position: absolute">Search</button>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <img src="/static/om.png" alt="om symbol" width="150px" height="170px" style="display:{{ display_img }}">
+        <h5 style="display: inline-block; padding: 10px" >Chapter</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="book" type="text" style="display: inline-block">
+
+        <h5 style="display: inline-block; padding: 10px" >Verse</h5>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="book" name="book" type="text" style="display: inline-block">
+        <div>
+            <button class="btn btn-primary" type="submit" style="top: 562px; position: absolute">Search</button>
+        </div>
+    </div>
+
+</form>
+{% endblock %}
