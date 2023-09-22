@@ -258,10 +258,10 @@ def verse():
             return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if quran_sura:
-            lst = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
-            if not lst:
+            lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
+            if not lst2:
                 return render_template("verse.html")
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('home.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
