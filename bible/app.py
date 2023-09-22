@@ -225,10 +225,11 @@ def verse():
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-        print(bible_name)
-        if bible_name != "1 Samuel" or bible_name != "2 Samuel" or bible_name != "1 Kings" or bible_name != "2 Kings" or bible_name != "1 Chronicles" or bible_name != "2 Chronicles" or bible_name != "1 Corinthians" or bible_name != "2 Corinthians" or bible_name != "1 Thessalonians" or bible_name != "2 Thessalonians" or bible_name != "1 Timothy" or bible_name != "2 Timothy" or bible_name != "1 Peter" or bible_name != "2 Peter" or bible_name != "1 John" or bible_name != "2 John" or bible_name != "3 John":
+        if bible_name != "1 Samuel" and bible_name != "2 Samuel" and bible_name != "1 Kings" and bible_name != "2 Kings" and bible_name != "1 Chronicles" and bible_name != "2 Chronicles" and bible_name != "1 Corinthians" and bible_name != "2 Corinthians" and bible_name != "1 Thessalonians" and bible_name != "2 Thessalonians" and bible_name != "1 Timothy" and bible_name != "2 Timothy" and bible_name != "1 Peter" and bible_name != "2 Peter" and bible_name != "1 John" and bible_name != "2 John" and bible_name != "3 John":
             bible_name = bible_name.capitalize()
+        
 
+        print(bible_name)
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
             if not lst:
