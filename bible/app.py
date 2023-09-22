@@ -255,7 +255,7 @@ def verse():
         quran_verse = request.form.get("quran_verse")
 
         if quran_sura and quran_verse:
-            lst = db2.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", quran_sura, quran_verse)
+            lst = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
             if not lst:
                 return render_template("verse.html")
             return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
