@@ -241,9 +241,6 @@ def verse():
         if bible_name and bible_verse:
             return render_template("verse.html")
 
-        if bible_chapter and bible_verse:
-            return render_template("verse.html")
-
         else:
             return render_template("verse.html")
 
