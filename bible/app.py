@@ -222,10 +222,10 @@ def verse():
     if request.method == "POST":
 
         # Bible
-        bible_name = request.form.get("bible_name").capitalize()
+        bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-        
+        if bible_name != "1 Samuel" or bible_name != "2 Samuel" or bible_name != "1 Kings" or bible_name != "2 Kings" or bible_name != "1 Chronicles" or bible_name != "2 Chronicles" or bible_name != "1 Samuel"
 
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
