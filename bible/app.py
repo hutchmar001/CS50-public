@@ -252,10 +252,10 @@ def verse():
         quran_verse = request.form.get("quran_verse")
 
         if quran_sura and quran_verse:
-            lst = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
-            if not lst:
+            lst2 = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
+            if not lst2:
                 return render_template("verse.html")
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('home.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if quran_sura:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
