@@ -226,9 +226,8 @@ def verse():
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
         print(bible_name)
-        #if bible_name == "1 john":
-            # bible_name.replace("1 john", "1 John")
-
+        if bible_name != "1 Samuel" or bible_name != "2 Samuel" or bible_name != "1 Kings" or bible_name != "2 Kings" or bible_name != "1 Chronicles" or bible_name != "2 Chronicles" or bible_name != "1 Corinthians" or bible_name != "2 Corinthians" or bible_name != "1 Thessalonians" or bible_name != "2 Thessalonians" or bible_name != "1 Timothy" or bible_name != "2 Timothy" or bible_name != "1 Peter" or bible_name != "2 Peter" or bible_name != "1 John" or bible_name != "2 John" or bible_name != "3 John":
+            bible_name = bible_name.capitalize()
 
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
