@@ -118,7 +118,7 @@ def search():
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", result=result)
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
         if lst and lst2:
             result = ["Bible", "Quran"]
             return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", result=result)
