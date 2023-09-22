@@ -223,9 +223,9 @@ def verse():
 
         # Bible
         bible_name = request.form.get("bible_name").capitalize()
-        print(bible_name)
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
+        
 
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
