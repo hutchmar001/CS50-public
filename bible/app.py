@@ -224,16 +224,11 @@ def verse():
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
 
-        db1.execute("DELETE FROM results;")
-        db2.execute("DELETE FROM results;")
-        db3.execute("DELETE FROM results;")
-
         # Bible
         s = db1.execute("SELECT * FROM verses WHERE id == 1 OR id == 2")
         print(s)
         result = ["Bible"]
         return render_template('home.html', lst=s, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", result=result)
-
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
