@@ -222,7 +222,7 @@ def verse():
     if request.method == "POST":
 
         # Bible
-        bible_name = request.form.get("bible_name").capitalize()
+        bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
         print(bible_name)
