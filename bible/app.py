@@ -239,13 +239,13 @@ def verse():
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
             if not lst:
                 return render_template("verse.html")
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if bible_name:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             if not lst:
                 return render_template("verse.html")
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Quran
         quran_sura = request.form.get("quran_sura")
