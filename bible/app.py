@@ -226,8 +226,8 @@ def verse():
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
         print(bible_name)
-        if bible_name == "1 john":
-            bible_name.replace("1 john", "1 John")
+        #if bible_name == "1 john":
+            # bible_name.replace("1 john", "1 John")
 
 
         if bible_name and bible_chapter and bible_verse:
