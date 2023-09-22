@@ -225,8 +225,6 @@ def verse():
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-        if bible_name != "1 Samuel" and bible_name != "2 Samuel" and bible_name != "1 Kings" and bible_name != "2 Kings" and bible_name != "1 Chronicles" and bible_name != "2 Chronicles" and bible_name != "1 Corinthians" and bible_name != "2 Corinthians" and bible_name != "1 Thessalonians" and bible_name != "2 Thessalonians" and bible_name != "1 Timothy" and bible_name != "2 Timothy" and bible_name != "1 Peter" and bible_name != "2 Peter" and bible_name != "1 John" and bible_name != "2 John" and bible_name != "3 John":
-            bible_name = bible_name.capitalize()
         bible_name = bible_name.title()
 
         print(bible_name)
