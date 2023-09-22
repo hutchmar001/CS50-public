@@ -251,24 +251,24 @@ def verse():
             return render_template("verse.html")
 
         # Quran
-        s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-        # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
-        # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
-        if s:
-            num = 1
-            for i in s:
-                surah = i["sura"]
-                verse = i["verse"]
-                text = i["text"]
-                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
-                num += 1
+        quran_sura = request.form.get("quran_sura")
+        quran_verse = request.form.get("quran_verse")
 
-        c2.execute('SELECT * FROM results;')
-        lst2 = []
-        for i in c2.fetchall():
-            lst2.append(dict(i))
+        if quran_sura and quran_verse:
+            lst = db2.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", quran_sura, quran_verse)
+            if not lst:
+                return render_template("verse.html")
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+
+        if bible_name:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
+            if not lst:
+                return render_template("verse.html")
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+
+        else:
+            return render_template("verse.html")
+
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
