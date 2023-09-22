@@ -220,11 +220,16 @@ def Bhagavad():
 def verse():
 
     if request.method == "POST":
+
+        # Bible
         bible_name = request.form.get("bible_name").capitalize()
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
 
-        # Bible
+        if bible_name and bible_chapter and bible_verse:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+
         if bible_name and bible_chapter:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
             return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
