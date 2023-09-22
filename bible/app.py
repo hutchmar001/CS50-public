@@ -239,7 +239,7 @@ def verse():
             return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         else:
-            
+            return redirect(/home.html)
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
