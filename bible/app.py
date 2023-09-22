@@ -223,6 +223,7 @@ def verse():
 
         # Bible
         bible_name = request.form.get("bible_name").capitalize()
+        print(bible_name)
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
 
