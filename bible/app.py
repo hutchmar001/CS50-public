@@ -232,7 +232,7 @@ def verse():
         s = db1.execute("SELECT * FROM verses WHERE id == 1 OR id == 2")
         print(s)
         result = ["Bible"]
-        return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
+        return render_template('home.html', lst=s, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", result=result)
 
 
         # Quran
