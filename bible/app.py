@@ -223,10 +223,10 @@ def verse():
         bible_name = request.form.get("bible_name").capitalize()
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
+        result = ["Bible"]
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
-        result = ["Bible"]
         return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", result=result)
 
         # Quran
