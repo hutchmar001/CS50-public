@@ -227,7 +227,6 @@ def verse():
         bible_verse = request.form.get("bible_verse")
         bible_name = bible_name.title()
 
-        print(bible_name)
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
             if not lst:
@@ -257,13 +256,13 @@ def verse():
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
             if not lst2:
                 return render_template("verse.html")
-            return render_template('home.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if quran_sura:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
                 return render_template("verse.html")
-            return render_template('home.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Bhagavad Gita
         s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
