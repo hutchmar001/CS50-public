@@ -223,11 +223,15 @@ def verse():
         bible_name = request.form.get("bible_name").capitalize()
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-        result = ["Bible"]
 
         # Bible
-        lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
-        return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", result=result)
+        if bible_name and bible_chapter:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+
+        if bible_name:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Quran
         s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
