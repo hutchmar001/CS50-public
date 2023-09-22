@@ -241,8 +241,6 @@ def verse():
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
-
-
         else:
             return render_template("verse.html")
 
