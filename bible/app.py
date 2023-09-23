@@ -195,7 +195,7 @@ def verse():
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
                 return render_template("verse.html")
-            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Quran.html', lst2=lst2, display_title="none", display_select="none", display_img="none")
 
         # Bhagavad Gita
         hindu_chapter = request.form.get("hindu_chapter")
@@ -205,13 +205,13 @@ def verse():
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ? AND Verse == ?", hindu_chapter, hindu_verse)
             if not lst3:
                 return render_template("verse.html")
-            return render_template('Bhagavad.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none")
 
         if hindu_chapter:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
             if not lst3:
                 return render_template("verse.html")
-            return render_template('Bhagavad.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none")
 
     return render_template("verse.html")
 
