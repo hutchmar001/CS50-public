@@ -3,7 +3,7 @@ import sqlite3
 from cs50 import SQL
 from flask import Flask, render_template, request
 from flask_session import Session
-from common import Cache
+from common import cache
 
 # Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
