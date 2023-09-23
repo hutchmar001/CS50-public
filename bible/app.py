@@ -265,8 +265,8 @@ def verse():
             return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Bhagavad Gita
-        quran_sura = request.form.get("quran_sura")
-        quran_verse = request.form.get("quran_verse")
+        hindu_chapter = request.form.get("hindu_chapter")
+        hindu_verse = request.form.get("hindu_verse")
 
         if hindu_chapter and hindu_verse:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ? AND Verse == ?", hindu_chapter, hindu_verse)
