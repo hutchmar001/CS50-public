@@ -71,8 +71,7 @@ def search():
         lst3 = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-        session = lst
-        print(session)
+
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
@@ -102,7 +101,6 @@ def search():
 def All():
     # This route is solely created to deal with the "All" page
     result = ["Bible", "Quran", "Bhagavad Gita"]
-    print(session)
 
     result = ["Bible", "Quran", "Bhagavad Gita"]
     c2.execute('SELECT * FROM results;')
