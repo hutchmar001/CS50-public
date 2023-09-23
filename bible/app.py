@@ -100,20 +100,6 @@ def search():
 
 @app.route("/All", methods=["GET"])
 def All():
-    # This route is solely created to deal with the "All" page
-    result = ["Bible", "Quran", "Bhagavad Gita"]
-
-    result = ["Bible", "Quran", "Bhagavad Gita"]
-    c2.execute('SELECT * FROM results;')
-    lst2 = []
-    for i in c2.fetchall():
-        lst2.append(dict(i))
-
-    result = ["Bible", "Quran", "Bhagavad Gita"]
-    c3.execute('SELECT * FROM results;')
-    lst3 = []
-    for i in c3.fetchall():
-        lst3.append(dict(i))
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
