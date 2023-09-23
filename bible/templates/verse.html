@@ -7,7 +7,17 @@
 {% block main %}
 <form action="/verse" method="post">
 
-    <div class="mb-3">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes style="color:red; text-align:center; font-size:20px; list-style-type:none">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+        <div class="mb-3">
         <img src="/static/cross.gif" alt="cross" width="150px" height="150px" style="display:{{ display_img }}">
 
         <h5 style="display: inline-block; padding: 10px" >Book Name</h5>
