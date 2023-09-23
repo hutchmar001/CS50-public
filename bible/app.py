@@ -64,43 +64,16 @@ def search():
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
 
         # Quran
-        s = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        lst2 = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
-        if s:
-            num = 1
-            for i in s:
-                surah = i["sura"]
-                verse = i["verse"]
-                text = i["text"]
-                db2.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, surah, verse, text)
-                num += 1
-
-        c2.execute('SELECT * FROM results;')
-        lst2 = []
-        for i in c2.fetchall():
-            lst2.append(dict(i))
 
         # Bhagavad Gita
-        s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        lst3 = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-
-        if s:
-            num = 1
-            for i in s:
-                chapter = i["Chapter"]
-                verse = i["Verse"]
-                text = i["text"]
-                db3.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
-                num += 1
-
-        c3.execute('SELECT * FROM results;')
-        lst3 = []
-        for i in c3.fetchall():
-            lst3.append(dict(i))
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
