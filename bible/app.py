@@ -229,25 +229,25 @@ def verse():
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
             if not lst:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if bible_name and bible_verse and not bible_chapter:
-            flash('Please enter a valid query.', category='error')
+            flash('Please enter a valid query.')
             return redirect("/verse")
 
         if bible_name and bible_chapter:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
             if not lst:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if bible_name:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             if not lst:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
@@ -258,14 +258,14 @@ def verse():
         if quran_sura and quran_verse:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
             if not lst2:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if quran_sura:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Quran.html', lst2=lst2, display_title="none", display_select="none", display_img="none")
 
