@@ -266,38 +266,16 @@ def verse():
 
         # Bhagavad Gita
         if hindu_chapter and hindu_verse:
-            lst3 = db3.execute("SELECT * FROM verses WHERE chapter == ? AND verse == ?", hindu_chapter, hindu_verse)
+            lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ? AND Verse == ?", hindu_chapter, hindu_verse)
             if not lst3:
                 return render_template("verse.html")
-            return render_template('Hindu.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Hindu.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if hindu_chapter:
-            lst3 = db3.execute("SELECT * FROM verses WHERE chapter == ?", hindu_chapter)
-            if not lst2:
+            lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
+            if not lst3:
                 return render_template("verse.html")
-            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
-
-        if lst and lst2 and lst3:
-            result = ["Bible", "Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst and lst2:
-            result = ["Bible", "Quran"]
-            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst and lst3:
-            result = ["Bible", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst2 and lst3:
-            result = ["Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst:
-            result = ["Bible"]
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst2:
-            result = ["Quran"]
-            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result)
-        if lst3:
-            result = ["Bhagavad Gita"]
-            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
+            return render_template('Quran.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
     return render_template("verse.html")
 
