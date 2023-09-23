@@ -1,12 +1,9 @@
-import os
-import datetime
 import sqlite3
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
-from werkzeug.security import check_password_hash, generate_password_hash
-from operator import itemgetter
+
 
 # Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
