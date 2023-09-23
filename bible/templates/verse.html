@@ -5,11 +5,15 @@
 {% endblock %}
 
 {% block main %}
-
-{% for message in get_flashed_messages() %}
-    <h2>{{ message }}</h2>
-{% endfor %}
-
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
     <form action="/verse" method="post">
 
         <div class="mb-3">
