@@ -265,23 +265,12 @@ def verse():
             return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         # Bhagavad Gita
-        s = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+        if hindu_chapter and hindu_verse:
+            lst3 = db3.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", hindu_chapter, hindu_verse)
+            if not lst3:
+                return render_template("verse.html")
+            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
-        if s:
-            num = 1
-            for i in s:
-                chapter = i["Chapter"]
-                verse = i["Verse"]
-                text = i["text"]
-                db3.execute("INSERT INTO results VALUES (?, ?, ?, ?);", num, chapter, verse, text)
-                num += 1
-
-        c3.execute('SELECT * FROM results;')
-        lst3 = []
-        for i in c3.fetchall():
-            lst3.append(dict(i))
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
