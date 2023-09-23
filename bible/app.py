@@ -229,20 +229,17 @@ def verse():
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
             if not lst:
-                session.pop('_flashes', None)
                 flash('Please enter a valid query.')
                 return render_template("verse.html")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
         if bible_name and bible_verse and not bible_chapter:
-            session.pop('_flashes', None)
             flash('Please enter a valid query.')
             return render_template("verse.html")
 
         if bible_name and bible_chapter:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
             if not lst:
-                session.pop('_flashes', None)
                 flash('Please enter a valid query.')
                 return render_template("verse.html")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
@@ -250,7 +247,6 @@ def verse():
         if bible_name:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             if not lst:
-                session.pop('_flashes', None)
                 flash('Please enter a valid query.')
                 return render_template("verse.html")
             return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
