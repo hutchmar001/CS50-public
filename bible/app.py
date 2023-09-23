@@ -19,6 +19,7 @@ conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': 'cache-dir'})
 
 # Configure session to use filesystem (instead of signed cookies)
