@@ -71,6 +71,7 @@ def search():
             OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
 
         cache.set("lst", lst)
+
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
@@ -98,7 +99,7 @@ def search():
 
 @app.route("/All", methods=["GET"])
 def All():
-
+    my_value = cache.get("list")
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
         return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
