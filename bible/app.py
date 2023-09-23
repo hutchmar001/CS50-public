@@ -103,7 +103,6 @@ def All():
     # This route is solely created to deal with the "All" page
     result = ["Bible", "Quran", "Bhagavad Gita"]
     print(session)
-    lst=session
 
     result = ["Bible", "Quran", "Bhagavad Gita"]
     c2.execute('SELECT * FROM results;')
