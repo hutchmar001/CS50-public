@@ -269,7 +269,7 @@ def verse():
             lst3 = db3.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", hindu_chapter, hindu_verse)
             if not lst3:
                 return render_template("verse.html")
-            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Hindu.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
 
         if lst and lst2 and lst3:
