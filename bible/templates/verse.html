@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block main %}
-<form action="/verse" method="post">
 
-    {% for message in get_flashed_messages() %}
-        <h2>{{ message }}</h2>
-    {% endfor %}
+{% for message in get_flashed_messages() %}
+    <h2>{{ message }}</h2>
+{% endfor %}
+
+    <form action="/verse" method="post">
 
         <div class="mb-3">
         <img src="/static/cross.gif" alt="cross" width="150px" height="150px" style="display:{{ display_img }}">
