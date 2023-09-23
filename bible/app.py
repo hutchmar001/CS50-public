@@ -58,22 +58,11 @@ def search():
         db3.execute("DELETE FROM results;")
 
         # Bible
-        s = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ?", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
-        if s:
-            num = 1
-            for i in s:
-                book = i["book_name"]
-                chapter = i["chapter"]
-                verse = i["verse"]
-                text = i["text"]
-                db1.execute("INSERT INTO results VALUES (?, ?, ?, ?, ?);", num, book, chapter, verse, text)
-                num += 1
-
-        c1.execute('SELECT * FROM results;')
-        lst = []
+ 
         for i in c1.fetchall():
             lst.append(dict(i))
 
