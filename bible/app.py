@@ -130,9 +130,12 @@ def All():
 
 @app.route("/Bible", methods=["GET"])
 def Bible():
-    result = ["Bible", "Quran", "Bhagavad Gita"]
     lst = cache.get("lst")
-    return render_template('Bible.html', lst=lst, result=result)
+    lst2 = cache.get("lst2")
+    lst3 = cache.get("lst3")
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result)
 
 
 @app.route("/Quran", methods=["GET"])
