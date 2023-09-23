@@ -8,14 +8,14 @@
 
     {% with messages = get_flashed_messages() %}
     {% if messages %}
-        <ul class=flashes>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
+        <ul class=flashes style="color:red; text-align:center; font-size:20px; list-style-type:none">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
         </ul>
     {% endif %}
     {% endwith %}
-    
+
     <form action="/verse" method="post">
 
         <div class="mb-3">

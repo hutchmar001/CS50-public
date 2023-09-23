@@ -276,16 +276,16 @@ def verse():
         if hindu_chapter and hindu_verse:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ? AND Verse == ?", hindu_chapter, hindu_verse)
             if not lst3:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none")
 
         if hindu_chapter:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
             if not lst3:
-                flash('Please enter a valid query.', category='error')
+                flash('Please enter a valid query.')
                 return redirect("/verse")
             return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none")
-    
+
     return render_template("verse.html")
 
