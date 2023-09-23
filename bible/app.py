@@ -53,6 +53,7 @@ def search():
 
     if request.method == "POST":
         search = request.form.get("search")
+        global lst, lst2, lst3
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
