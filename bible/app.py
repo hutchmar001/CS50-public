@@ -287,5 +287,8 @@ def verse():
                 return redirect("/verse")
             return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none")
 
+        flash('Please enter a valid query.')
+        return redirect("/verse")
+    
     return render_template("verse.html")
 
