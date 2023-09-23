@@ -33,9 +33,3 @@ table tr {
 table tr td:first-child::before {
     content: counter(rowNumber);
 }
-
-#bible_name {
-    display: inline-block;
-    width: 50px;
-
-}
