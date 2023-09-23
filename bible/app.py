@@ -137,7 +137,24 @@ def Bible():
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
         return render_template('Bible.html', lst=lst, result=result)
-
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('Bible.html', lst=lst, result=result)
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result)
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result)
+    if lst:
+        result = ["Bible"]
+        return render_template('Bible.html', lst=lst, result=result)
+    if lst2:
+        result = ["Quran"]
+        return render_template('Bible.html', lst=lst, result=result)
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result)
 
 @app.route("/Quran", methods=["GET"])
 def Quran():
