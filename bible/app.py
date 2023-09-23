@@ -131,31 +131,22 @@ def All():
 @app.route("/Bible", methods=["GET"])
 def Bible():
     result = ["Bible", "Quran", "Bhagavad Gita"]
-    c1.execute('SELECT * FROM results;')
-    lst = []
-    for i in c1.fetchall():
-        lst.append(dict(i))
+    lst = cache.get("lst")
     return render_template('Bible.html', lst=lst, result=result)
 
 
 @app.route("/Quran", methods=["GET"])
 def Quran():
     result = ["Bible", "Quran", "Bhagavad Gita"]
-    c2.execute('SELECT * FROM results;')
-    lst = []
-    for i in c2.fetchall():
-        lst.append(dict(i))
-    return render_template('Quran.html', lst=lst, result=result)
+    lst2 = cache.get("lst2")
+    return render_template('Quran.html', lst2=lst2, result=result)
 
 
 @app.route("/Bhagavad", methods=["GET"])
 def Bhagavad():
     result = ["Bible", "Quran", "Bhagavad Gita"]
-    c3.execute('SELECT * FROM results;')
-    lst = []
-    for i in c3.fetchall():
-        lst.append(dict(i))
-    return render_template('Bhagavad.html', lst=lst, result=result)
+    lst3 = cache.get("lst3")
+    return render_template('Bhagavad.html', lst3=lst3, result=result)
 
 
 @app.route("/verse", methods=["GET", "POST"])
