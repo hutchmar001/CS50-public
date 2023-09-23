@@ -3,7 +3,7 @@ import sqlite3
 from cs50 import SQL
 from flask import Flask, render_template, request
 from flask_session import Session
-
+from common import Cache
 
 # Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
@@ -19,6 +19,7 @@ conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
 app = Flask(__name__)
+cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': Path('/tmp')})
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
