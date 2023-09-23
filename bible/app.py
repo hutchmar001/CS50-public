@@ -19,7 +19,7 @@ conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
 app = Flask(__name__)
-cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': Path('/bible')})
+cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': 'cache-dir'})
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
