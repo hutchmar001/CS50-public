@@ -53,9 +53,6 @@ def search():
 
     if request.method == "POST":
         search = request.form.get("search")
-        db1.execute("DELETE FROM results;")
-        db2.execute("DELETE FROM results;")
-        db3.execute("DELETE FROM results;")
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
@@ -104,11 +101,7 @@ def search():
 def All():
     # This route is solely created to deal with the "All" page
     result = ["Bible", "Quran", "Bhagavad Gita"]
-
-    c1.execute('SELECT * FROM results;')
-    lst = []
-    for i in c1.fetchall():
-        lst.append(dict(i))
+    print(lst)
 
     result = ["Bible", "Quran", "Bhagavad Gita"]
     c2.execute('SELECT * FROM results;')
