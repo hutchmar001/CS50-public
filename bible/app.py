@@ -1,7 +1,7 @@
 import sqlite3
 
 from cs50 import SQL
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 from flask_session import Session
 from common import cache
 
