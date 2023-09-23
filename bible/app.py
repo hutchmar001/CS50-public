@@ -278,7 +278,7 @@ def verse():
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
             if not lst3:
                 return render_template("verse.html")
-            return render_template('Quran.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Hindu.html', lst3=lst3, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
 
     return render_template("verse.html")
 
