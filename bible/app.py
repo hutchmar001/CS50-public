@@ -158,16 +158,60 @@ def Bible():
 
 @app.route("/Quran", methods=["GET"])
 def Quran():
-    result = ["Bible", "Quran", "Bhagavad Gita"]
+    lst = cache.get("lst")
     lst2 = cache.get("lst2")
-    return render_template('Quran.html', lst2=lst2, result=result)
+    lst3 = cache.get("lst3")
+
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst:
+        result = ["Bible"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst2:
+        result = ["Quran"]
+        return render_template('Quran.html', lst2=lst2, result=result)
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('Quran.html', lst2=lst2, result=result)
 
 
 @app.route("/Bhagavad", methods=["GET"])
 def Bhagavad():
-    result = ["Bible", "Quran", "Bhagavad Gita"]
+    lst = cache.get("lst")
+    lst2 = cache.get("lst2")
     lst3 = cache.get("lst3")
-    return render_template('Bhagavad.html', lst3=lst3, result=result)
+
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst:
+        result = ["Bible"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst2:
+        result = ["Quran"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result)
 
 
 @app.route("/verse", methods=["GET", "POST"])
