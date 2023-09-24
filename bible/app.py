@@ -55,7 +55,10 @@ def search():
         if not search:
             flash('Please enter a valid query.')
             return redirect("/search")
-
+        if search == " ":
+            flash('Please enter a valid query.')
+            return redirect("/search")
+        
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
