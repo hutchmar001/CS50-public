@@ -52,6 +52,9 @@ def search():
 
     if request.method == "POST":
         search = request.form.get("search")
+        if not search:
+            flash('Please enter a valid query.')
+            return redirect("/search")
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
@@ -97,7 +100,9 @@ def search():
             result = ["Bhagavad Gita"]
             return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
 
-    flash('No Results')
+        flash('No Results')
+        return redirect("/search")
+
     return render_template("search.html")
 
 
