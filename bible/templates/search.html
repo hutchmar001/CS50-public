@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block main %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes style="color:red; text-align:center; font-size:20px; list-style-type:none; position: absolute; right: 40%">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
 <form action="/search" method="post">
     <div class="mb-3">
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="search" name="search" type="text">
