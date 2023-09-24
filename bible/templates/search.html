@@ -6,12 +6,15 @@
 
 {% block main %}
 
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <div class="alert"style="position:fixed; left: 50%; transform: translate(-50%, 0);">
-            {{ message }}
-        </div>
-    {% endif %}
+{% with msg = get_flashed_messages() %}
+{% if msg %}
+{% for message in msg %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
 {% endwith %}
 
 <form action="/search" method="post">
