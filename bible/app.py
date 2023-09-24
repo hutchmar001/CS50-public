@@ -97,6 +97,7 @@ def search():
             result = ["Bhagavad Gita"]
             return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result)
 
+    flash('Please enter a valid query.')
     return render_template("search.html")
 
 
@@ -289,6 +290,6 @@ def verse():
 
         flash('Please enter a valid query.')
         return redirect("/verse")
-    
+
     return render_template("verse.html")
 
