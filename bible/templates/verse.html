@@ -6,11 +6,13 @@
 
 {% block main %}
 
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <div class="alert alert-warning fade show" role="alert">
-            <strong>{{ message }}</strong>
-        </div>
+{% with msg = get_flashed_messages() %}
+    {% if msg %}
+        {% for message in msg %}
+            <div class="alert alert-warning fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
     {% endif %}
 {% endwith %}
 

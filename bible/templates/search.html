@@ -7,13 +7,13 @@
 {% block main %}
 
 {% with msg = get_flashed_messages() %}
-{% if msg %}
-{% for message in msg %}
-<div class="alert alert-warning fade show" role="alert">
-  <strong>{{ message }}</strong>
-</div>
-{% endfor %}
-{% endif %}
+    {% if msg %}
+        {% for message in msg %}
+            <div class="alert alert-warning fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
 {% endwith %}
 
 <form action="/search" method="post">
