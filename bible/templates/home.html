@@ -123,8 +123,10 @@
     function highlight(search) {
     var search = {{search|tojson}};
     // Works great for passing Flask value to Javascript
-    document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
-    search.setAttribute('style', 'color: purple')
+    document.body.innerHTML = document.body.innerHTML.replace(
+        new RegExp(search + '(?!([^<]+)?<)', 'gi'),
+        '<b style="background-color:#ff0;font-size:100%">$&</b>'
+    );
 }
 </script>
 
