@@ -123,7 +123,7 @@
     function highlight(search) {
         function highlight_words(search) {
         const page = document.body.innerHTML;
-        document.body.innerHTML = page.replace(new RegExp(search, "fox"), (match) => `<mark>${match}</mark>`);
+        document.body.innerHTML = page.replace(new RegExp(search, "gi"), (match) => `<mark>${match}</mark>`);
         }
     }
 </script>
