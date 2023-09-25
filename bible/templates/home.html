@@ -121,9 +121,8 @@
 
 <script>
     function highlight(search) {
-    var currTR = z.parentNode.parentNode;
-    var newTR = document.createElement("tr");
-    document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
+    var s = search.parentNode.parentNode;
+    document.body.innerHTML = document.body.innerHTML.replace(s, "faux");
     ;
 }
     search = search;
