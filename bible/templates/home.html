@@ -123,10 +123,7 @@
     function highlight(search) {
     var search = {{search|tojson}};
     // Works great for passing Flask value to Javascript
-    search = "(\\b"+
-    word.replace(/([{}()[\]\\.?*+^$|=!:~-])/g, "\\$1")
-        + "\\b)";
-    );
+    document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
 }
 </script>
 
