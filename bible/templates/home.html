@@ -119,8 +119,11 @@
 </table>
 <br><br>
 
+<meta id="my-data" data-other="{{search}}">
+
 <script>
     function highlight(search) {
+    var search = $('#my-data').data();
     document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
     ;
 }
