@@ -121,10 +121,7 @@
 
 <script>
     function highlight(search) {
-        var search = {{search|tojson}};
-        // Works great for passing Flask value to Javascript
-        const page = document.body.innerHTML;
-        document.body.innerHTML = page.replace(new RegExp(search, "fox"), (match) => `<mark>${match}</mark>`);
+        document.body.innerHTML = document.body.innerHTML.replace(new RegExp(search, "fox"), (match) => `<mark>${match}</mark>`);
     }
 </script>
 
