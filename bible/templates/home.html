@@ -7,20 +7,16 @@
 {% block main %}
 <script>
     function highlight(text) {
-        var inputText = document.body.innerHTML;
-        var innerHTML = inputText.innerHTML;
-        var index = innerHTML.indexOf(text);
-        if (index >= 0) {
-        innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
-        inputText.innerHTML = innerHTML;
-    }
+    document.body.innerHTML = document.body.innerHTML.replace(
+        new RegExp(text + '(?!([^<]+)?<)', 'gi'),
+        '<b style="background-color:#ff0;font-size:100%">$&</b>'
+    );
+}
     highlight("figs");
 }
 </script>
 
-<button onclick="highlight({{search}})">Highlight</button>
-
-<br><br>
+<button onclick="highlight('fox')">Highlight</button>
 
 <form name="add" method="post">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
