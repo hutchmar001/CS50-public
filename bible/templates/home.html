@@ -123,7 +123,7 @@
     function highlight(search) {
     var search = {{search|tojson}};
     // Works great for passing Flask value to Javascript
-    search.innerHTML = "<span style='color:#FF0000'> search </span>";
+    search.style.color = 'red';
 }
 </script>
 
