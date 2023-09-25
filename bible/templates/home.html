@@ -120,12 +120,12 @@
 <br><br>
 
 <script>
-        function highlight_words(search) {
-            const page = document.body.innerHTML;
-            document.body.innerHTML = page.replace(new RegExp("fox", "fox"), (match) => `<mark>${match}</mark>`);
-        }
+    function highlight(search) {
+        const page = document.body.innerHTML;
+        document.body.innerHTML = page.replace(new RegExp(search, "fox"), (match) => `<mark>${match}</mark>`);
+    }
 </script>
 
-<button id={{search}} onclick=highlight({{search}})>Highlight</button>
+<button id={{search}} onclick= highlight('fox')>Highlight</button>
 {% endblock %}
 
