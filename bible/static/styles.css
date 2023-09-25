@@ -34,7 +34,6 @@ table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
- mark {
-    background: orange;
-    color: black;
-}
+.highlight {
+    background-color: yellow;
+  }
