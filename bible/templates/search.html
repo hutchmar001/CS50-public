@@ -22,4 +22,17 @@
     </div>
     <button class="btn btn-primary" type="submit">Search</button>
 </form>
+
+<script>
+    function highlight(text) {
+    var inputText = document.getElementById("search");
+    var innerHTML = inputText.innerHTML;
+    var index = innerHTML.indexOf(text);
+    if (index >= 0) {
+        inputText.innerHTML=innerHTML.split(text).join('<span class="highlight">'+text+'</span>');
+    }
+}
+</script>
+
+<button onclick="highlight('fox')">Highlight</button>
 {% endblock %}
