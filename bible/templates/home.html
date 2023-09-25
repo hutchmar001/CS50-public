@@ -7,7 +7,7 @@
 {% block main %}
 <script>
     function highlight(text) {
-        var inputText = document.getElementById("inputText");
+        var inputText = document.body.innerHTML;
         var innerHTML = inputText.innerHTML;
         var index = innerHTML.indexOf(text);
         if (index >= 0) {
@@ -19,9 +19,6 @@
 
 <button onclick="highlight({{search}})">Highlight</button>
 
-<div id="inputText">
-  The fox went over the fence
-</div>
 <br><br>
 
 <form name="add" method="post">
