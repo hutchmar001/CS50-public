@@ -35,5 +35,5 @@ table tr td:first-child::before {
 }
 
 mark {
-    color: green;
+    color: crimson;
 }
