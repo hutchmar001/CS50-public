@@ -124,8 +124,9 @@
     document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
     ;
 }
+    search = {{search}};
 </script>
 
-<button onclick="highlight({{{search}}})">Highlight</button>
+<button onclick="highlight(search)">Highlight</button>
 {% endblock %}
 
