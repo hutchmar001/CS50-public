@@ -121,15 +121,13 @@
 
 <script>
     function highlight(search) {
-        var s = document.getElementById("search");
-        var innerHTML = s.innerHTML;
-        var index = innerHTML.indexOf(search);
-        if (index >= 0) {
-            s.innerHTML=innerHTML.split(search).join('<span class="highlight">'+search+'</span>');
+        function highlight_words(search) {
+        const page = document.body.innerHTML;
+        document.body.innerHTML = page.replace(new RegExp(search, "fox"), (match) => `<mark>${match}</mark>`);
         }
     }
 </script>
 
-<button id="search" onclick=highlight({{search}})>Highlight</button>
+<button id={{search}} onclick=highlight({{search}})>Highlight</button>
 {% endblock %}
 
