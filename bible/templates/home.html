@@ -121,10 +121,12 @@
 
 <script>
     function highlight(search) {
-    var search = {{search|tojson}};
-    // Works great for passing Flask value to Javascript
-    document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
-}
+        var s = document.getElementById("search");
+        var innerHTML = s.innerHTML;
+        var index = innerHTML.indexOf(search);
+        if (index >= 0) {
+            s.innerHTML=innerHTML.split(search).join('<span class="highlight">'+search+'</span>');
+        }
 </script>
 
 <button id={{search}} onclick=highlight({{search}})>Highlight</button>
