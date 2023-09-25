@@ -122,6 +122,7 @@
 <script>
     function highlight(search) {
     var search = {{search|tojson}};
+    // Works great for passing 
     document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
     ;
 }
