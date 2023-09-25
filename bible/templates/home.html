@@ -124,6 +124,7 @@
         var search = {{search|tojson}};
         // Works great for passing Flask value to Javascript
         document.body.innerHTML = document.body.innerHTML.replace(search, "<mark>{{search}}</mark>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (highlight, 'g'), span); 
     }
 </script>
 
