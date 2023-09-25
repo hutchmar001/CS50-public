@@ -5,16 +5,7 @@
 {% endblock %}
 
 {% block main %}
-<script>
-    function highlight(text) {
-    document.body.innerHTML = document.body.innerHTML.replace(
-        new RegExp(text + '(?!([^<]+)?<)', 'gi'),
-        '<b style="background-color:#ff0;font-size:100%">$&</b>'
-    );
-}
-</script>
 
-<button onclick="highlight('fox')">Highlight</button>
 
 <form name="add" method="post">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
@@ -127,5 +118,15 @@
     </tbody>
 </table>
 <br><br>
+<script>
+    function highlight(text) {
+    document.body.innerHTML = document.body.innerHTML.replace(
+        new RegExp(text + '(?!([^<]+)?<)', 'gi'),
+        '<b style="background-color:#ff0;font-size:100%">$&</b>'
+    );
+}
+</script>
+
+<button onclick="highlight('fox')">Highlight</button>
 {% endblock %}
 
