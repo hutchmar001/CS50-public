@@ -4,8 +4,6 @@
     Home
 {% endblock %}
 
-<meta id="my-data" data-search="{{search}}">
-
 {% block main %}
 
 
@@ -121,12 +119,10 @@
 </table>
 <br><br>
 
-
-
 <script>
     function highlight(search) {
-    var s = $('#my-data').data();
-    document.body.innerHTML = document.body.innerHTML.replace(s, "faux");
+    var search = {{search|tojson}};
+    document.body.innerHTML = document.body.innerHTML.replace(search, "faux");
     ;
 }
 </script>
