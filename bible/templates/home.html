@@ -17,7 +17,7 @@
     </select>
 </form>
 
-<button id={{search_lower}} onclick="highlight({{search_lower}}); highlight({{search_upper}})" style="display:{{ display_hlight }}">Highlight</button>
+<button id={{search_upper}} onclick="highlight_l({{search_lower}}); highlight_u({{search_upper}})" style="display:{{ display_hlight }}">Highlight</button>
 
 <table action="/" method="get" class="table table-hover">
 
@@ -122,10 +122,16 @@
 <br><br>
 
 <script>
-    function highlight(search_lower) {
+    function highlight_l(search_lower) {
         var search_lower = {{search_lower|tojson}}
         // Works great for passing Flask value to Javascript
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+    }
+
+    function highlight_u(search_upper) {
+        var search_upper = {{search_upper|tojson}}
+        // Works great for passing Flask value to Javascript
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
     }
 </script>
 

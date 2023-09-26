@@ -59,7 +59,7 @@ def search():
             flash('Please enter a valid query.')
             return redirect("/search")
         search_lower = search.lower()
-        search_lower = search.upper()
+        search_upper = search.upper()
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
@@ -91,19 +91,19 @@ def search():
             return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst and lst3:
             result = ["Bible", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper))
+            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst2 and lst3:
             result = ["Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper))
+            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst:
             result = ["Bible"]
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper))
+            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst2:
             result = ["Quran"]
-            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper))
+            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst3:
             result = ["Bhagavad Gita"]
-            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper))
+            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
 
         flash('No Results')
         return redirect("/search")
