@@ -59,6 +59,7 @@ def search():
             flash('Please enter a valid query.')
             return redirect("/search")
         search_lower = search.lower()
+        print(search_lower)
 
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
