@@ -135,6 +135,10 @@
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
     }
 
+    function dehighlight() {
+        window.alert("Hello");
+}
+
     window.onload=function() {
         var input = document.getElementById('search_upper');
         var clickCounter = 0;
@@ -142,8 +146,9 @@
         clickCounter++;
         if (clickCounter % 2 != 0) {
             highlight_u();
-        window.alert("Hello");
-
+            return;
+        else if (clickCounter % 2 == 0) {
+            return;
     }
 };
 
