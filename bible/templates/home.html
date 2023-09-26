@@ -17,7 +17,7 @@
     </select>
 </form>
 
-<button id="search_upper" onclick="highlight_u();" style="display:{{ display_hlight }}">Highlight</button>
+<button id="search_upper" style="display:{{ display_hlight }}">Highlight</button>
 
 <table action="/" method="get" class="table table-hover">
 
@@ -140,6 +140,7 @@
         var clickCounter = 0;
         input.onclick = function () {
         clickCounter++;
+        highlight_u();
         if (clickCounter == 2) {
             window.alert("Hello");
     }
