@@ -17,7 +17,7 @@
     </select>
 </form>
 
-<button id={{search_upper}} onclick="highlight_u();" style="display:{{ display_hlight }}">Highlight</button>
+<button id="search_upper" onclick="highlight_u();" style="display:{{ display_hlight }}">Highlight</button>
 
 <table action="/" method="get" class="table table-hover">
 
@@ -136,7 +136,7 @@
     }
 
     window.onload=function() {
-        var input = document.getElementById('testing');
+        var input = document.getElementById('search_upper');
         var clickCounter = 0;
         input.onclick = function () {
         clickCounter++;
