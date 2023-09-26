@@ -44,8 +44,8 @@ def after_request(response):
 
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("home.html", display1="none", display2="none", display3="none", display_select="none", display_img="inline", display_hlight="none", search_upper="")
-    # set search to "" to avoid JSON error
+    return render_template("home.html", display1="none", display2="none", display3="none", display_select="none", display_img="inline", display_hlight="none", search_upper="", search_lower="")
+    # set searches to "" to avoid JSON error
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -58,7 +58,7 @@ def search():
         if search == " ":
             flash('Please enter a valid query.')
             return redirect("/search")
-
+        search_lower = search.lower()
         search_upper = search.title()
 
         # Bible
@@ -85,7 +85,7 @@ def search():
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper = search_upper)
+            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
         if lst and lst2:
             result = ["Bible", "Quran"]
             return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper)
