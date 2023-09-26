@@ -124,11 +124,11 @@
 <script>
 
 
-    function highlight_u(search_upper, search_lower) {
+    function highlight_u(search_upper, search_upper) {
         var search_upper = {{search_upper|tojson}};
         // Works great for passing Flask value to Javascript
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
-        highlight_l(search_lower)
+        highlight_l(search_upper)
     }
 
     function highlight_l(search_lower) {
