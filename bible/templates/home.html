@@ -124,7 +124,6 @@
 <script>
     function highlight(search) {
         var search = {{search|tojson}}
-        result = search.toUpperCase();
         // Works great for passing Flask value to Javascript
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search, 'g'), "<mark>{{search}}</mark>");
     }
