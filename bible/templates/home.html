@@ -140,9 +140,11 @@
         var clickCounter = 0;
         input.onclick = function () {
         clickCounter++;
-        if (clickCounter % 2 == 0) {
+        if (clickCounter % 2 != 0) {
+            highlight_u();
+        else:
             window.alert("Hello");
-        highlight_u();
+
     }
 };
 
