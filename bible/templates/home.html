@@ -6,7 +6,7 @@
 
 {% block main %}
 
-<p>The button was pressed <span id="displayCount">0</span> times.</p>
+
 <form name="add" method="post">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
         <option value="">Select...</option>
@@ -120,8 +120,26 @@
     </tbody>
 </table>
 <br><br>
-
+<p>The button was pressed <span id="displayCount">0</span> times.</p>
 <script>
+    function highlight_u() {
+        var search_upper = {{search_upper|tojson}}
+        // Works great for passing Flask value to Javascript
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+        highlight_l()
+    }
+
+    function highlight_l() {
+        var search_lower = {{search_lower|tojson}}
+        // Works great for passing Flask value to Javascript
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+    }
+
+    function dehighlight() {
+        window.alert("Hello");
+}
+
+    window.onload=function() {
     var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
@@ -134,26 +152,7 @@
     } else {
         highlight_u();
     }
-
-    function highlight_u() {
-        var search_upper = {{search_upper|tojson}};
-        // Works great for passing Flask value to Javascript
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
-        highlight_l()
-    }
-
-    function highlight_l() {
-        var search_lower = {{search_lower|tojson}};
-        // Works great for passing Flask value to Javascript
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
-    }
-
-    function dehighlight() {
-        window.alert("Hello");
-}
-
-
-
+};
 }
 </script>
 
