@@ -6,7 +6,6 @@
 
 {% block main %}
 
-<p>The button was pressed <span id="displayCount" >0</span> times.</p>
 <form name="add" method="post">
     <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
         <option value="">Select...</option>
@@ -141,11 +140,9 @@
 
     var button = document.getElementById("search_upper");
     var count = 0;
-    var display = document.getElementById("displayCount");
 
     function inc(){
     count ++;
-    display.innerHTML = count;
     if (count % 2 == 0) {
         dehighlight();
     } else {
