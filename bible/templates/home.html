@@ -141,9 +141,9 @@
 
     var button = document.getElementById("search_upper");
     var count = 0;
+    var display = document.getElementById("displayCount");
 
     button.onclick = function(){
-    var display = document.getElementById("displayCount");
     count += 1;
     display.innerHTML = count;
     if (count % 2 == 0) {
@@ -152,7 +152,6 @@
         highlight_u();
     }
 };
-
 </script>
 
 
