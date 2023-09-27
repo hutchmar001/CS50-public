@@ -122,19 +122,17 @@
 <br><br>
 
 <script>
-    var eo;
     var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
 
     button.onclick = function(){
     count++;
+    display.innerHTML = count;
     if (count % 2 == 0) {
-        eo = "even";
+        dehighlight();
     } else {
-        eo = "odd";
-    }
-    display.innerHTML = eo;
+        highlight_u();
     }
 
     function highlight_u() {
