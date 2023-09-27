@@ -135,12 +135,12 @@
     }
 
     function dehighlight_u() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<span>{{search_upper}}</span>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_upper}}</pre>");
         dehighlight_l()
     }
 
     function dehighlight_l() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<span>{{search_lower}}</span>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<pre>{{search_lower}}</pre>");
     }
 
     var count = 0;
