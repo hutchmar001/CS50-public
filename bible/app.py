@@ -82,6 +82,8 @@ def search():
         cache.set("lst", lst)
         cache.set("lst2", lst2)
         cache.set("lst3", lst3)
+        cache.set("search_lower", search_lower)
+        cache.set("search_upper", search_upper)
 
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -202,6 +204,8 @@ def Bhagavad():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
     lst3 = cache.get("lst3")
+    search_lower = cache.get("search_lower")
+    search_upper = cache.get("search_upper")
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
