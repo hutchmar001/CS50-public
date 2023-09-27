@@ -146,10 +146,10 @@
         clickCounter++;
         if (clickCounter % 2 != 0) {
             highlight_u();
+            return;
         }
-        else {
-            dehighlight();
-    }
+        window.alert("Hello");
+        dehighlight();
 };
 
 }
