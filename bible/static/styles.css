@@ -33,8 +33,3 @@ table tr {
 table tr td:first-child::before {
     content: counter(rowNumber);
 }
-
-span {
-    color: crimson;
-    background: yellow;
-}
