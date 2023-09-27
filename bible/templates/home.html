@@ -122,6 +122,19 @@
 <br><br>
 
 <script>
+    window.onload=function() {
+    var count = 0;
+    var button = document.getElementById("search_upper");
+    var display = document.getElementById("displayCount");
+
+    button.onclick = function(){
+    count++;
+    display.innerHTML = count;
+    if (count % 2 != 0) {
+        highlight_u();
+    }
+    }
+
     function highlight_u() {
         var search_upper = {{search_upper|tojson}}
         // Works great for passing Flask value to Javascript
@@ -139,18 +152,7 @@
         window.alert("Hello");
 }
 
-    window.onload=function() {
-    var count = 0;
-    var button = document.getElementById("search_upper");
-    var display = document.getElementById("displayCount");
 
-    button.onclick = function(){
-    count++;
-    display.innerHTML = count;
-    if (count % 2 != 0) {
-        highlight_u();
-    }
-    }
 
 }
 </script>
