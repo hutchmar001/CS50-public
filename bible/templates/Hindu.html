@@ -8,7 +8,13 @@
 <body id="bhagavad">
 <br><br>
 
-
+<select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
+    <option value="">Select...</option>
+    <option value= "All">All</option>
+    {% for i in result %}
+        <option value= {{i}}>{{i}}</option>
+    {% endfor %}
+</select>
 <br><br><br>
 <button type="button">Click Me!</button>
 <table action="/Bhagavad" method="get" class="table table-hover">
