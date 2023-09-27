@@ -140,11 +140,6 @@
 }
 
     window.onload=function() {
-
-        var display = document.getElementById("displayCount");
-        var input = document.getElementById('search_upper');
-        var clickCounter = 0;
-
     var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
@@ -152,7 +147,7 @@
     button.onclick = function(){
     count++;
     display.innerHTML = count;
-    if (clickCounter % 2 != 0) {
+    if (count % 2 != 0) {
         highlight_u();
     }
     }
