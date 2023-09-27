@@ -122,7 +122,6 @@
 <br><br>
 
 <script>
-    window.onload=function() {
     var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
@@ -130,12 +129,11 @@
     button.onclick = function(){
     count++;
     display.innerHTML = count;
-    if (display.innerHTML % 2 == 0) {
+    if (count % 2 == 0) {
         dehighlight();
+    } else {
+        highlight_u();
     }
-    dehighlight();
-    }
-}
 
     function highlight_u() {
         var search_upper = {{search_upper|tojson}}
