@@ -17,35 +17,7 @@
 </select>
 <br><br><br>
 <button type="button">Click Me!</button>
-<table action="/Bhagavad" method="get" class="table table-hover">
 
-    <button onclick="inc(id)" style="background: crimson;">Highlight</button>
-    <tbody>
-        <h1>Bhagavad Gita</h1>
-        <tr>
-            <th>Number</th>
-            <th>Chapter</th>
-            <th>Verse</th>
-            <th>Text</th>
-        </tr>
-        {% for i in lst3 %}
-        <tr>
-            <td>
-                <p>{{i.num}}</p>
-            </td>
-            <td>
-                <p>{{i.Chapter}}</p>
-            </td>
-            <td>
-                <p>{{i.Verse}}</p>
-            </td>
-            <td>
-                <p>{{i.text}}</p>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
 </body>
 
 <script>
