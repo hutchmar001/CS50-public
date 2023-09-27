@@ -122,13 +122,14 @@
 <br><br>
 
 <script>
-    var count = 0;
     window.onload=function() {
+    var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
+
+    button.onclick = function(){
     count++;
     display.innerHTML = count;
-    element.addEventListener("click", function);
     if (count % 2 != 0) {
         highlight_u();
     }
@@ -150,6 +151,9 @@
     function dehighlight() {
         window.alert("Hello");
 }
+
+
+
 }
 </script>
 
