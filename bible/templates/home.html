@@ -130,8 +130,8 @@
     button.onclick = function(){
     count++;
     display.innerHTML = count;
-    if (display.innerHTML % 2 != 0) {
-        highlight_u();
+    if (display.innerHTML % 2 == 0) {
+        dehighlight();
     }
     }
 
