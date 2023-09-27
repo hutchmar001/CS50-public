@@ -118,28 +118,30 @@ def All():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
     lst3 = cache.get("lst3")
+    search_lower = cache.get("search_lower")
+    search_upper = cache.get("search_upper")
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
-        return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst and lst2:
         result = ["Bible", "Quran"]
-        return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst and lst3:
         result = ["Bible", "Bhagavad Gita"]
-        return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst2 and lst3:
         result = ["Quran", "Bhagavad Gita"]
-        return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst:
         result = ["Bible"]
-        return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst2:
         result = ["Quran"]
-        return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
     if lst3:
         result = ["Bhagavad Gita"]
-        return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper="", search_lower="")
+        return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
 
 
 @app.route("/Bible", methods=["GET"])
@@ -204,8 +206,6 @@ def Bhagavad():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
     lst3 = cache.get("lst3")
-    search_lower = cache.get("search_lower")
-    search_upper = cache.get("search_upper")
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
