@@ -137,12 +137,10 @@
     function dehighlight_u() {
 
         const matches = document.querySelectorAll("mark");
-        const boxes = document.querySelectorAll('.box');
-        boxes.forEach(box => {
-        box.remove();
+        matches.forEach(mark => {
+        mark.remove();
         });
-        
-        document.body.innerHTML = document.body.innerHTML.remove (new RegExp (search_upper, 'g'));
+
         // document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_upper}}</pre>");
         dehighlight_l()
     }
