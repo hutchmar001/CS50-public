@@ -140,10 +140,14 @@
 }
 
     window.onload=function() {
+        <p>The button was pressed <span id="displayCount">0</span> times.</p>
+        var display = document.getElementById("displayCount");
+
         var input = document.getElementById('search_upper');
         var clickCounter = 0;
         input.onclick = function () {
         clickCounter++;
+        display.innerHTML = click_Counter;
         if (clickCounter % 2 != 0) {
             highlight_u();
             return;
