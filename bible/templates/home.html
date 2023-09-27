@@ -135,19 +135,20 @@
     }
 
     function dehighlight_u() {
-
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_upper}}</pre>");
         const matches = document.querySelectorAll("mark");
         matches.forEach(mark => {
         mark.remove();
         });
-
-        // document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_upper}}</pre>");
         dehighlight_l()
     }
 
     function dehighlight_l() {
-        document.body.innerHTML = document.body.innerHTML.remove (new RegExp (search_lower, 'g'));
-        // document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<pre>{{search_lower}}</pre>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<pre>{{search_lower}}</pre>");
+        const matches = document.querySelectorAll("mark");
+        matches.forEach(mark => {
+        mark.remove();
+        });
     }
 
     var count = 0;
