@@ -139,13 +139,12 @@
         window.alert("Hello");
 }
 
-    window.onload=function() {
-    var count = 0;
     var button = document.getElementById("search_upper");
-    var display = document.getElementById("displayCount");
+    var count = 0;
 
     button.onclick = function(){
-    count++;
+    var display = document.getElementById("displayCount");
+    count += 1;
     display.innerHTML = count;
     if (count % 2 == 0) {
         dehighlight();
@@ -153,7 +152,7 @@
         highlight_u();
     }
 };
-}
+
 </script>
 
 
