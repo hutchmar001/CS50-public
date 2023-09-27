@@ -34,6 +34,6 @@ table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
-mark {
+span {
     color: crimson;
 }
