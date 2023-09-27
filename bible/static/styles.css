@@ -37,3 +37,7 @@ table tr td:first-child::before {
 p {
     display: inline;
 }
+
+mark {
+    background: crimson;
+}
