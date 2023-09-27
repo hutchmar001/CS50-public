@@ -128,12 +128,12 @@
 
     button.onclick = function(){
     count++;
-    display.innerHTML = count;
     if (count % 2 == 0) {
-        dehighlight();
+        eo = even;
     } else {
-        highlight_u();
+        eo = odd;
     }
+    display.innerHTML = eo;
 
     function highlight_u() {
         var search_upper = {{search_upper|tojson}};
