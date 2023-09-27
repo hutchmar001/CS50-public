@@ -36,4 +36,5 @@ table tr td:first-child::before {
 
 span {
     color: crimson;
+    background: yellow;
 }
