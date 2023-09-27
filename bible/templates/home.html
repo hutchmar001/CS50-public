@@ -122,6 +122,7 @@
 <br><br>
 
 <script>
+    var eo;
     var count = 0;
     var button = document.getElementById("search_upper");
     var display = document.getElementById("displayCount");
@@ -129,11 +130,12 @@
     button.onclick = function(){
     count++;
     if (count % 2 == 0) {
-        eo = even;
+        eo = "even";
     } else {
-        eo = odd;
+        eo = "odd";
     }
     display.innerHTML = eo;
+    }
 
     function highlight_u() {
         var search_upper = {{search_upper|tojson}};
