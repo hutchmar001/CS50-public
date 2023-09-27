@@ -126,21 +126,21 @@
     // Works great for passing Flask value to Javascript
 
     function highlight_u() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<span class="highlight">{{search_upper}}</span>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<span>{{search_upper}}</span>");
         highlight_l()
     }
 
     function highlight_l() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<span class="highlight">{{search_lower}}</span>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<span>{{search_lower}}</span>");
     }
 
     function dehighlight_u() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_upper}}</pre>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<span>{{search_upper}}</span>");
         dehighlight_l()
     }
 
     function dehighlight_l() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<pre>{{search_lower}}</pre>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<span>{{search_lower}}</span>");
     }
 
     var button = document.getElementById("search_upper");

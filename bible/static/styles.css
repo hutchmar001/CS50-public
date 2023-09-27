@@ -34,7 +34,7 @@ table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
-highlight {
+span {
     color: crimson;
     background: yellow;
 }
