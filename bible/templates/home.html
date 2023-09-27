@@ -129,6 +129,7 @@
     button.onclick = function(){
     count++;
     display.innerHTML = count;
+    document.body.insertAdjacentHTML('beforeend', count);
     if (count % 2 == 0) {
         dehighlight();
     } else {
