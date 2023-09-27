@@ -135,8 +135,9 @@
     }
 
     function dehighlight_u() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
+        // document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
         const matches = document.querySelectorAll("mark");
+        var obj = new Mark(matches);
         matches.forEach(mark => {
         mark.unmark();
         });
@@ -144,7 +145,7 @@
     }
 
     function dehighlight_l() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<p>{{search_lower}}</p>");
+        // document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<p>{{search_lower}}</p>");
         const matches = document.querySelectorAll("mark");
         matches.forEach(mark => {
         mark.unmark();
