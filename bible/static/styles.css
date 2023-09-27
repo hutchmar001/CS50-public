@@ -37,3 +37,8 @@ table tr td:first-child::before {
 mark {
     color: crimson;
 }
+
+.unmark {
+    background: red;
+    color: white;
+  }
