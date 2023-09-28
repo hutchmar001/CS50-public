@@ -59,8 +59,8 @@
     const matches = document.querySelectorAll("div");
 
     function highlight() {
-        matches.innerHTML = matches.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
-        matches.innerHTML = matches.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
     }
 
     function dehighlight() {
