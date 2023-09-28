@@ -59,8 +59,7 @@
     function highlight() {
         var u = document.getElementsByClassName("mydiv");
         for(var i = 0; i < u.length; i++) {
-            var text = u[i];
-            text.innerHTML = "hello";
+            u[i].innerHTML = "hello";
             //text.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
             //text.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
     }
