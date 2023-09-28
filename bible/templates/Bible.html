@@ -43,7 +43,7 @@
                 <p>{{i.verse}}</p>
             </td>
             <td>
-                <div id="mydiv">
+                <div>
                     <p>{{i.text}}</p>
                 </div>
             </td>
@@ -59,8 +59,8 @@
     // Works great for passing Flask value to Javascript
 
     function highlight() {
-        document.getElementById("mydiv").innerHTML = document.getElementById("mydiv").innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
-        document.getElementById("mydiv").innerHTML = document.getElementById("mydiv").innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
+        document.getElementById("bible").innerHTML = document.getElementById("bible").innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
+        document.getElementById("bible").innerHTML = document.getElementById("bible").innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
     }
 
     function dehighlight() {
