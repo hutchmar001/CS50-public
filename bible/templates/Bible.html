@@ -31,21 +31,19 @@
         {% for i in lst %}
         <tr>
             <td>
-                <p>{{i.number}}</p>
+                <span>{{i.number}}</span>
             </td>
             <td>
-                <p>{{i.book_name}}</p>
+                <span>{{i.book_name}}</span>
             </td>
             <td>
-                <p>{{i.chapter}}</p>
+                <span>{{i.chapter}}</span>
             </td>
             <td>
-                <p>{{i.verse}}</p>
+                <span>{{i.verse}}</span>
             </td>
             <td>
-                <div>
-                    <p>{{i.text}}</p>
-                </div>
+                <p>{{i.text}}</p>
             </td>
         </tr>
         {% endfor %}
