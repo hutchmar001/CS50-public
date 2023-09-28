@@ -41,3 +41,7 @@ p {
 mark {
     background: crimson;
 }
+
+ins {
+    background-color: black;
+}
