@@ -56,6 +56,8 @@
     var search_lower = {{search_lower|tojson}};
     // Works great for passing Flask value to Javascript
 
+    const matches = document.querySelectorAll("div");
+
     function highlight() {
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
