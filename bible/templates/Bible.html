@@ -42,8 +42,8 @@
             <td>
                 <p>{{i.verse}}</p>
             </td>
-            <td >
-                <p>{{i.text}}</p>
+            <td>
+                <p name="mydiv">{{i.text}}</p>
             </td>
         </tr>
         {% endfor %}
@@ -57,13 +57,13 @@
     // Works great for passing Flask value to Javascript
 
     function highlight() {
-        document.getElementsByName('mydiv').innerHTML = document.getElementsByName('mydiv').innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
-        document.getElementsByName('mydiv').innerHTML = document.getElementsByName('mydiv').innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        document.getElementsByClassName('mydiv').innerHTML = document.getElementsByClassName('mydiv').innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+        document.getElementsByClassName('mydiv').innerHTML = document.getElementsByClassName('mydiv').innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
     }
 
     function dehighlight() {
-        document.getElementsByName('mydiv').innerHTML = document.getElementsByName('mydiv').innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
-        document.getElementsByName('mydiv').innerHTML = document.getElementsByName('mydiv').innerHTML.replace (new RegExp (search_lower, 'g'), "<p>{{search_lower}}</p>");
+        document.getElementsByClassName('mydiv').innerHTML = document.getElementsByClassName('mydiv').innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
+        document.getElementsByClassName('mydiv').innerHTML = document.getElementsByClassName('mydiv').innerHTML.replace (new RegExp (search_lower, 'g'), "<p>{{search_lower}}</p>");
 
         const matches = document.querySelectorAll("mark");
         matches.forEach(mark => {
