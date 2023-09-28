@@ -43,7 +43,7 @@
                 <p>{{i.verse}}</p>
             </td>
             <td>
-                <p class="hi">{{i.text}}</p>
+                <p>{{i.text}}</p>
             </td>
         </tr>
         {% endfor %}
@@ -59,7 +59,6 @@
     function highlight() {
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
         document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
-        document.getElementsByClassName("hi").innerHTML = document.getElementsByClassName("hi").innerHTML.replace ("LORD", "hello");
     }
 
     function dehighlight() {
