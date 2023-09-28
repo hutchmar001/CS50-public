@@ -252,7 +252,7 @@ def verse():
             if not lst:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none")
+            return render_template('Bible.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", search_upper=search_upper, search_lower=search_lower)
 
         if bible_name and bible_verse and not bible_chapter:
             flash('Please enter a valid query.')
