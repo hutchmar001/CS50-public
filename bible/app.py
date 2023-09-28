@@ -281,14 +281,14 @@ def verse():
             if not lst2:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", search_upper="", search_lower="")
+            return render_template('Quran.html', lst2=lst2, display1="visible", display2="none", display3="none", display_title="none", display_select="none", display_img="none", display_highlight="none", search_upper="", search_lower="")
 
         if quran_sura:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Quran.html', lst2=lst2, display_title="none", display_select="none", display_img="none", search_upper="", search_lower="")
+            return render_template('Quran.html', lst2=lst2, display_title="none", display_select="none", display_img="none", display_highlight="none", search_upper="", search_lower="")
 
         # Bhagavad Gita
         hindu_chapter = request.form.get("hindu_chapter")
@@ -299,14 +299,14 @@ def verse():
             if not lst3:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none", search_upper="", search_lower="")
+            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none", display_highlight="none", search_upper="", search_lower="")
 
         if hindu_chapter:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
             if not lst3:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none", search_upper="", search_lower="")
+            return render_template('Bhagavad.html', lst3=lst3, display_title="none", display_select="none", display_img="none", display_highlight="none", search_upper="", search_lower="")
 
         flash('Please enter a valid query.')
         return redirect("/verse")
