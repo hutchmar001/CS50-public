@@ -64,20 +64,20 @@ def search():
         # Bible
         lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? LIMIT 10 OFFSET 10;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
 
         # Quran
         lst2 = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? LIMIT 10 OFFSET 10;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
         # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
         # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
 
         # Bhagavad Gita
         lst3 = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
             OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? LIMIT 10 OFFSET 10;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
 
         cache.set("lst", lst)
         cache.set("lst2", lst2)
