@@ -14,7 +14,7 @@ conn2 = sqlite3.connect('bible/databases/quran.sqlite3', check_same_thread=False
 conn2.row_factory = sqlite3.Row
 c2 = conn2.cursor()
 
-conn3 = sqlite3.connect('databases/bg.sqlite', check_same_thread=False)
+conn3 = sqlite3.connect('bible/databases/bg.sqlite', check_same_thread=False)
 conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
