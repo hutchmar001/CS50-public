@@ -16,8 +16,8 @@
 </select>
 <br><br><br>
 
-<table action="/Bible" method="get" class="table table-hover">
-
+<article class="content">
+    <table action="/Bible" method="get" class="table table-hover">
     <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
     <tbody>
         <h1>Bible</h1>
@@ -49,7 +49,9 @@
         {% endfor %}
     </tbody>
 </table>
+</article>
 </body>
+
 
 <script>
     var search_upper = {{search_upper|tojson}};
