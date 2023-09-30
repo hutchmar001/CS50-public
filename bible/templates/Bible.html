@@ -123,5 +123,15 @@ for (let i = 1; i <= totalPages; i++) {
 table.parentNode.insertBefore(pagination, table.nextSibling);
 showPage(currentPage);
 
+const pageLinks = document.querySelectorAll('.pagination li');
+  for (let i = 0; i < totalPages; i++) {
+    if (i === page - 1) {
+      pageLinks[i].classList.add('active');
+    } else {
+      pageLinks[i].classList.remove('active');
+    }
+  }
+}
+
 </script>
 {% endblock %}
