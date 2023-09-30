@@ -62,5 +62,5 @@ div {
 }
 
 .pagination {
-    overflow: scroll;
+    overflow: auto;
 }
