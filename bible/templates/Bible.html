@@ -16,7 +16,7 @@
 </select>
 <br><br><br>
 
-<article class="content">
+<div class="content">
     <table action="/Bible" method="get" class="table table-hover">
     <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
     <thead>
@@ -51,7 +51,7 @@
         {% endfor %}
     </tbody>
 </table>
-</article>
+</div>
 </body>
 
 
@@ -136,7 +136,7 @@
     paginationDiv.appendChild(pageButton);
     }
 
-    content.appendChild(paginationContainer);
+    content.appendChild(paginationContainer); // Button container appended to content
     showPage(currentPage);
 
 </script>
