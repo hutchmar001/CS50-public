@@ -314,5 +314,5 @@ def verse():
     return render_template("verse.html")
 
 @app.route("/paginate", methods=["GET"])
-def All():
+def paginate():
     return render_template("pagination.html")
