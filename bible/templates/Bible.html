@@ -94,7 +94,6 @@
     let totalPages;
     let paginationContainer;
     let paginationDiv;
-    let pageButton;
     const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 
     function showPage(page) {
@@ -114,7 +113,7 @@
     }
 
     for (let i = 0; i < totalPages; i++) {
-    pageButton = document.createElement('button');
+    const pageButton = document.createElement('button');
     pageButton.textContent = i + 1;
     pageButton.addEventListener('click', () => {
         currentPage = i;
