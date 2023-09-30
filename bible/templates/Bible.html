@@ -17,42 +17,41 @@
 <br><br><br>
 
 <article class="content">
-    <table>
-      <thead>
+    <table action="/Bible" method="get" class="table table-hover">
+    <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
+    <thead>
+        <h1>Bible</h1>
         <tr>
-          <th>Grade 1</th>
-          <th>Grade 2</th>
-          <th>Grade 3</th>
-          <th>Grade 4</th>
-          <th>Grade 5</th>
+            <th>Number</th>
+            <th>Book</th>
+            <th>Chapter</th>
+            <th>Verse</th>
+            <th>Text</th>
         </tr>
-      </thead>
-      <tbody>
+    </thead>
+    <tbody>
+        {% for i in lst %}
         <tr>
-          <td>Faith Andrew</td>
-          <td>Angela Christopher`</td>
-          <td>David Elias</td>
-          <td>Samuel Thomas</td>
-          <td>Richard Elias</td>
+            <td>
+                <p>{{i.number}}</p>
+            </td>
+            <td>
+                <p><b>{{i.book_name}}</b></p>
+            </td>
+            <td>
+                <p>{{i.chapter}}</p>
+            </td>
+            <td>
+                <p>{{i.verse}}</p>
+            </td>
+            <td>
+                <p>{{i.text}}</p>
+            </td>
         </tr>
-        <tr>
-            <td>Fatih</td>
-            <td>Angie`</td>
-            <td>Dada</td>
-            <td>Sam</td>
-            <td>Ritter</td>
-        </tr>
-        <tr>
-            <td>drew</td>
-            <td>Christopher`</td>
-            <td>Elias</td>
-            <td>Thomas</td>
-            <td>Elias</td>
-          </tr>
-        ⋮
-      </tbody>
-    </table>
-  </article>
+        {% endfor %}
+    </tbody>
+</table>
+</article>
 </body>
 
 
@@ -90,7 +89,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const content = document.querySelector('.content');
-  const itemsPerPage = 1;
+  const itemsPerPage = 5;
   let currentPage = 0;
   const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 
