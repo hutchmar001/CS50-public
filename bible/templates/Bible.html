@@ -19,7 +19,7 @@
 <article class="content">
     <table action="/Bible" method="get" class="table table-hover">
     <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
-    <thead></thead><tbody>
+    <thead>
         <h1>Bible</h1>
         <tr>
             <th>Number</th>
@@ -28,6 +28,8 @@
             <th>Verse</th>
             <th>Text</th>
         </tr>
+    </thead>
+    <tbody>
         {% for i in lst %}
         <tr>
             <td>
