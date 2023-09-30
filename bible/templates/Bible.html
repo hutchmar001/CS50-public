@@ -16,6 +16,8 @@
 </select>
 <br><br><br>
 
+<button onclick="f()" style="background: crimson; display:{{ display_highlight }}">Test</button>
+
 <article class="content">
     <table action="/Bible" method="get" class="table table-hover">
     <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
@@ -87,8 +89,12 @@
         }
     };
 
-function () {
+function f() {
     alert("Hello! I am an alert box!!");
+    const content = document.querySelector('.content');
+    const itemsPerPage = 5;
+    let currentPage = 0;
+    const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 }
 
 
