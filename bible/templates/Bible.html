@@ -94,6 +94,7 @@
     let totalPages;
     let paginationContainer;
     let paginationDiv;
+    let pageButton;
     const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 
     function showPage(page) {
@@ -113,13 +114,14 @@
     }
 
     for (let i = 0; i < totalPages; i++) {
-    const pageButton = document.createElement('button');
+    pageButton = document.createElement('button');
     pageButton.textContent = i + 1;
     pageButton.addEventListener('click', () => {
         currentPage = i;
         showPage(currentPage);
         updateActiveButtonStates();
     });
+    paginationDiv.appendChild(pageButton);
     }
 
     function updateActiveButtonStates() {
@@ -135,7 +137,7 @@
 
     createPageButtons();
     content.appendChild(paginationContainer);
-    paginationDiv.appendChild(pageButton);
+
     showPage(currentPage);
 
 </script>
