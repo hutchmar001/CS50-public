@@ -91,6 +91,7 @@
     const content = document.querySelector('.content');
     const itemsPerPage = 5;
     let currentPage = 0;
+    let totalPages;
     const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 
     function showPage(page) {
@@ -103,7 +104,7 @@
     }
 
     function createPageButtons() {
-    const totalPages = Math.ceil(items.length / itemsPerPage);
+    totalPages = Math.ceil(items.length / itemsPerPage);
     const paginationContainer = document.createElement('div');
     const paginationDiv = document.body.appendChild(paginationContainer);
     paginationContainer.classList.add('pagination');
