@@ -79,19 +79,16 @@
     var count = 0;
 
     function inc(){
-    count ++;
-    if (count % 2 == 0) {
-        dehighlight();
-    } else {
-        highlight();
-    }
+        count ++;
+        if (count % 2 == 0) {
+            dehighlight();
+        } else {
+            highlight();
+        }
     };
 
 document.addEventListener('DOMContentLoaded', function () {
-  const content = document.querySelector('.content');
-  const itemsPerPage = 5;
-  let currentPage = 0;
-  const items = Array.from(content.getElementsByTagName('tr')).slice(1);
+
 }
 
 
