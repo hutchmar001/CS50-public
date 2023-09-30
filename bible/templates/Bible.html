@@ -114,7 +114,7 @@
     }
 
     function updateActiveButtonStates() {
-    const pageButtons = document.querySelectorAll('.pagination button');
+    const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
     pageButtons.forEach((button, index) => {
         if (index === currentPage) {
         button.classList.add('active');
@@ -133,7 +133,7 @@
         showPage(currentPage); // Shows content of clicked page
         updateActiveButtonStates();
     });
-    paginationDiv.appendChild(pageButton); // Each button 
+    paginationDiv.appendChild(pageButton); // Each button appended to HTML body
     }
 
     content.appendChild(paginationContainer); // Button container appended to content
