@@ -59,6 +59,22 @@ mark {
 /* Add a grey background color on mouse-over */
   .pagination a:hover:not(.active) {background-color: #ddd;}
 
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
 tr.hide {
     display: none;
+}
+
+th,
+td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+
+th {
+background-color: #f2f2f2;
 }
