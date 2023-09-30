@@ -7,17 +7,6 @@
 {% block main %}
 <body id="bible">
 
-<div class="pagination">
-    <a href="#">&laquo;</a>
-    <a class="active" href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">4</a>
-    <a href="#">5</a>
-    <a href="#">6</a>
-    <a href="#">&raquo;</a>
-</div>
-
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
     <option value="">Select...</option>
     <option value= "All">All</option>
@@ -94,5 +83,19 @@
     }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+  const content = document.querySelector('.pagination');
+  const itemsPerPage = 5;
+  let currentPage = 0;
+  const items = Array.from(content.getElementsByTagName('tr')).slice(1);
+
+function showPage(page) {
+  const startIndex = page * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  items.forEach((item, index) => {
+    item.classList.toggle('hidden', index < startIndex || index >= endIndex);
+  });
+  updateActiveButtonStates();
+}
 </script>
 {% endblock %}
