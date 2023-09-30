@@ -110,9 +110,9 @@ for (let i = 0; i < totalPages; i++) {
     const pageButton = document.createElement('button');
     pageButton.textContent = i + 1;
     pageButton.addEventListener('click', () => {
-  currentPage = i;
-  showPage(currentPage);
-  updateActiveButtonStates();
+    currentPage = i;
+    showPage(currentPage);
+    updateActiveButtonStates();
 });
 
 content.appendChild(paginationContainer);
