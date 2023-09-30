@@ -130,10 +130,10 @@
     pageButton.textContent = i + 1; // Updates number on button
     pageButton.addEventListener('click', () => {
         currentPage = i;
-        showPage(currentPage); // shows content of clicked page
+        showPage(currentPage); // Shows content of clicked page
         updateActiveButtonStates();
     });
-    paginationDiv.appendChild(pageButton);
+    paginationDiv.appendChild(pageButton); // Each button 
     }
 
     content.appendChild(paginationContainer); // Button container appended to content
