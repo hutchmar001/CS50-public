@@ -313,3 +313,6 @@ def verse():
 
     return render_template("verse.html")
 
+@app.route("/paginate", methods=["GET"])
+def All():
+    return render_template("pagination.html")
