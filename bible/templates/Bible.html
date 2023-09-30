@@ -94,56 +94,5 @@
     }
 };
 
-const table = document.querySelector('table');
-const rowsPerPage = 2; // Change this to set the number of rows per page
-let currentPage = 1;
-const totalRows = table.tBodies[0].rows.length;
-const totalPages = Math.ceil(totalRows / rowsPerPage);
-
-function showPage(page) {
-  const start = (page - 1) * rowsPerPage;
-  const end = start + rowsPerPage;
-  for (let i = 0; i < totalRows; i++) {
-    if (i < start || i >= end) {
-        table.tBodies[0].rows[i].classList.add('hide');
-    } else {
-      table.tBodies[0].rows[i].classList.remove('hide');
-    }
-  }
-  // Update the navigation links
-  const pageLinks = document.querySelectorAll('.pagination li');
-  for (let i = 0; i < totalPages; i++) {
-    if (i === page - 1) {
-      pageLinks[i].classList.add('active');
-    } else {
-      pageLinks[i].classList.remove('active');
-    }
-  }
-}
-
-// Create the navigation links
-const pagination = document.createElement('ul');
-pagination.classList.add('pagination');
-for (let i = 1; i <= totalPages; i++) {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.textContent = i;
-  a.href = '#';
-  li.appendChild(a);
-  pagination.appendChild(li);
-}
-
-table.parentNode.insertBefore(pagination, table.nextSibling);
-// Show the first page by default
-showPage(currentPage);
-// Add event listeners to the navigation links
-const pageLinks = document.querySelectorAll('.pagination li a');
-for (let i = 0; i < pageLinks.length; i++) {
-  pageLinks[i].addEventListener('click', function(e) {
-    e.preventDefault();
-    currentPage = parseInt(e.target.textContent);
-    showPage(currentPage);
-  });
-
 </script>
 {% endblock %}
