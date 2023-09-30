@@ -61,6 +61,6 @@ div {
     justify-content: center;
 }
 
-pagination {
+.pagination {
     overflow: scroll;
 }
