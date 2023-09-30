@@ -95,7 +95,7 @@
     let paginationContainer;
     let paginationDiv;
     let pageButton;
-    const items = Array.from(content.getElementsByTagName('tr')).slice(1);
+    const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
 
     function showPage(page) {
     const startIndex = page * itemsPerPage;
