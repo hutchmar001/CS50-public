@@ -121,9 +121,6 @@
     });
     }
 
-    content.appendChild(paginationContainer);
-    paginationDiv.appendChild(pageButton);
-
     function updateActiveButtonStates() {
     const pageButtons = document.querySelectorAll('.pagination button');
     pageButtons.forEach((button, index) => {
@@ -136,6 +133,8 @@
     }
 
     createPageButtons();
+    content.appendChild(paginationContainer);
+    paginationDiv.appendChild(pageButton);
     showPage(currentPage);
 
 </script>
