@@ -99,5 +99,16 @@ const rowsPerPage = 5;
 let currentPage = 1;
 const totalPages = Math.ceil(totalRows / rowsPerPage);
 
+function showPage(page) {
+  const start = (page - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+  for (let i = 0; i < totalRows; i++) {
+    if (i < start || i >= end) {
+        table.tBodies[0].rows[i].classList.add('hide');
+    } else {
+      table.tBodies[0].rows[i].classList.remove('hide');
+    }
+  }
+
 </script>
 {% endblock %}
