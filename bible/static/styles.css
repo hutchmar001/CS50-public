@@ -63,4 +63,5 @@ div {
 
 .pagination {
     overflow: auto;
+    width: 700px;
 }
