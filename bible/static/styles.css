@@ -58,6 +58,5 @@ border-collapse: collapse;
   }
 
 div {
-    display: flex;
     justify-content: center;
 }
