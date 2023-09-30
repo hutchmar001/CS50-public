@@ -60,3 +60,7 @@ border-collapse: collapse;
 div {
     justify-content: center;
 }
+
+pagination {
+    overflow: scroll;
+}
