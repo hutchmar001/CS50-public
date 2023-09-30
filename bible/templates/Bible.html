@@ -97,5 +97,24 @@ function showPage(page) {
   });
   updateActiveButtonStates();
 }
+
+function createPageButtons() {
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const paginationContainer = document.createElement('div');
+  const paginationDiv = document.body.appendChild(paginationContainer);
+  paginationContainer.classList.add('pagination');
+
+for (let i = 0; i < totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.textContent = i + 1;
+    pageButton.addEventListener('click', () => {
+  currentPage = i;
+  showPage(currentPage);
+  updateActiveButtonStates();
+});
+
+content.appendChild(paginationContainer);
+paginationDiv.appendChild(pageButton);
 </script>
+
 {% endblock %}
