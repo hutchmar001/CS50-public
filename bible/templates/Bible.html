@@ -113,17 +113,6 @@
     paginationContainer.classList.add('pagination');
     }
 
-    for (let i = 0; i < totalPages; i++) {
-    pageButton = document.createElement('button');
-    pageButton.textContent = i + 1;
-    pageButton.addEventListener('click', () => {
-        currentPage = i;
-        showPage(currentPage);
-        updateActiveButtonStates();
-    });
-    paginationDiv.appendChild(pageButton);
-    }
-
     function updateActiveButtonStates() {
     const pageButtons = document.querySelectorAll('.pagination button');
     pageButtons.forEach((button, index) => {
@@ -136,6 +125,17 @@
     }
 
     createPageButtons();
+    for (let i = 0; i < totalPages; i++) {
+    pageButton = document.createElement('button');
+    pageButton.textContent = i + 1;
+    pageButton.addEventListener('click', () => {
+        currentPage = i;
+        showPage(currentPage);
+        updateActiveButtonStates();
+    });
+    paginationDiv.appendChild(pageButton);
+    }
+    
     content.appendChild(paginationContainer);
 
     showPage(currentPage);
