@@ -6,11 +6,11 @@ from flask_session import Session
 from common import cache
 
 # Configure application for each holy book
-conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
+conn1 = sqlite3.connect('bible/databases/kjv.sqlite', check_same_thread=False)
 conn1.row_factory = sqlite3.Row
 c1 = conn1.cursor()
 
-conn2 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
+conn2 = sqlite3.connect('bible/databases/quran.sqlite3', check_same_thread=False)
 conn2.row_factory = sqlite3.Row
 c2 = conn2.cursor()
 
