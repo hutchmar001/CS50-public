@@ -117,7 +117,7 @@
     const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
     pageButtons.forEach((button, index) => {
         if (index === currentPage) {
-        button.classList.add('active');
+        button.classList.add('active'); // Add certain styling to button of current page
         } else {
         button.classList.remove('active');
         }
@@ -125,7 +125,7 @@
     }
 
     createPageButtons();
-    
+
     for (let i = 0; i < totalPages; i++) {
     pageButton = document.createElement('button');
     pageButton.textContent = i + 1; // Updates number on button
