@@ -136,5 +136,14 @@ const pageLinks = document.querySelectorAll('.pagination li');
 const pagination = document.createElement('ul');
 pagination.classList.add('pagination');
 
+for (let i = 1; i <= totalPages; i++) {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.textContent = i;
+  a.href = '#';
+  li.appendChild(a);
+  pagination.appendChild(li);
+}
+
 </script>
 {% endblock %}
