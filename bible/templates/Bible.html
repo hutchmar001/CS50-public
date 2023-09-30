@@ -16,7 +16,7 @@
 </select>
 <br><br><br>
 
-<button onclick="f()" style="background: crimson; display:{{ display_highlight }}">Test</button>
+<button style="background: crimson; display:{{ display_highlight }}">Test</button>
 
 <article class="content">
     <table action="/Bible" method="get" class="table table-hover">
@@ -89,13 +89,11 @@
         }
     };
 
-function f() {
     alert("Hello! I am an alert box!!");
     const content = document.querySelector('.content');
     const itemsPerPage = 5;
     let currentPage = 0;
     const items = Array.from(content.getElementsByTagName('tr')).slice(1);
-}
 
 function showPage(page) {
   const startIndex = page * itemsPerPage;
