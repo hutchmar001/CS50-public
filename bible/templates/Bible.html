@@ -127,7 +127,7 @@
     createPageButtons();
     for (let i = 0; i < totalPages; i++) {
     pageButton = document.createElement('button');
-    pageButton.textContent = i + 1;
+    pageButton.textContent = i + 1; // Updates number on button
     pageButton.addEventListener('click', () => {
         currentPage = i;
         showPage(currentPage);
