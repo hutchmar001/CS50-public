@@ -117,9 +117,9 @@
     pageButton = document.createElement('button');
     pageButton.textContent = i + 1;
     pageButton.addEventListener('click', () => {
-    currentPage = i;
-    showPage(currentPage);
-    updateActiveButtonStates();
+        currentPage = i;
+        showPage(currentPage);
+        updateActiveButtonStates();
     });
     }
 
@@ -136,7 +136,7 @@
 
     createPageButtons();
     content.appendChild(paginationContainer);
-    paginationDiv.appendChild(pageButton);
+
     showPage(currentPage);
 
 </script>
