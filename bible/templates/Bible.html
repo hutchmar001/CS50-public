@@ -89,13 +89,12 @@
 
 
     const content = document.querySelector('.content');
-    const itemsPerPage = 5;
     let currentPage = 0;
     const items = Array.from(content.getElementsByTagName('tr')).slice(1);
 
     function showPage(page) {
-    const startIndex = page * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+    const startIndex = page * 5;
+    const endIndex = startIndex + 5;
     items.forEach((item, index) => {
         item.classList.toggle('hidden', index < startIndex || index >= endIndex);
     });
@@ -103,7 +102,7 @@
     }
 
     function createPageButtons() {
-    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const totalPages = Math.ceil(items.length / 5);
     const paginationContainer = document.createElement('div');
     const paginationDiv = document.body.appendChild(paginationContainer);
     paginationContainer.classList.add('pagination');
