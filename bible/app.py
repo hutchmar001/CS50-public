@@ -29,9 +29,9 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite databases
-db1 = SQL("sqlite:///databases/kjv.sqlite")
-db2 = SQL("sqlite:///databases/quran.sqlite3")
-db3 = SQL("sqlite:///databases/bg.sqlite")
+db1 = SQL("sqlite:///bible/databases/kjv.sqlite")
+db2 = SQL("sqlite:///bible/databases/quran.sqlite3")
+db3 = SQL("sqlite:///bible/databases/bg.sqlite")
 
 
 @app.after_request
