@@ -22,6 +22,10 @@ body {
     bottom: 90px;
 }
 
+table tr:nth-child(2){
+    counter-reset: rowNumber;
+  }
+
 table tr {
     counter-increment: rowNumber;
 }
