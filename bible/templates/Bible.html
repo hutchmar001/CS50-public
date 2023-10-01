@@ -102,7 +102,7 @@
     const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
 
     function showPage(page) {
-    const startIndex = page * itemsPerPage; // 1st item displayed on current page
+    const startIndex = page * itemsPerPage -1; // 1st item displayed on current page
     const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
     items.forEach((item, index) => {
         item.classList.toggle('hidden', index <= startIndex || index >= endIndex + 1);
