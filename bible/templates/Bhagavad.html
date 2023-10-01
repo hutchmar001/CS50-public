@@ -16,6 +16,12 @@
 </select>
 <br><br><br>
 
+<style>
+    div.content table tbody tr:nth-child(2){
+      counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
+
 <div class="content">
     <table action="/Bhagavad" method="get" class="table table-hover">
         <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
