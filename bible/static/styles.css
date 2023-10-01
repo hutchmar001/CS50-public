@@ -22,7 +22,9 @@ body {
     bottom: 90px;
 }
 
-
+table tr:nth-child(2){
+    counter-reset: rowNumber;
+  }
 
 table tr {
     counter-increment: rowNumber;
@@ -76,4 +78,8 @@ div {
 
 .bible_row {
     counter-increment: rowNumber;
+}
+
+.bible_row td:first-child::before {
+    content: counter(rowNumber);
 }
