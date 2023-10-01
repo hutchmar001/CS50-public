@@ -70,7 +70,6 @@
     function dehighlight() {
         let highlightedTexts = document.getElementsByClassName('text-to-highlight');
         for(let text of highlightedTexts) {
-            // alert(text);
             text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<p>{{search_upper}}</p>");
             text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<p>{{search_lower}}</p>");
         }
