@@ -60,13 +60,20 @@
     // Works great for passing Flask value to Javascript
 
     function highlight() {
-        document.getElementsByClassName("content").innerHTML = document.getElementsByClassName("content").innerHTML.replace (new RegExp (search_upper, 'g'), "<mark>{{search_upper}}</mark>");
-        document.getElementsByClassName("content").innerHTML =  document.getElementsByClassName("content").innerHTML.replace (new RegExp (search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        let textsToHighlight = document.getElementsByClassName('text-to-highlight');
+        for(let text of textsToHighlight) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        }
     }
 
     function dehighlight() {
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_upper, 'g'), "<p>{{search_upper}}</p>");
-        document.body.innerHTML = document.body.innerHTML.replace (new RegExp (search_lower, 'g'), "<p>{{search_lower}}</p>");
+        let highlightedTexts = document.getElementsByClassName('text-to-highlight');
+        for(let text of highlightedTexts) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "{{search_upper}}");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "{{search_lower}}");
+        }
+    }
 
         const matches = document.querySelectorAll("mark");
         matches.forEach(mark => {
