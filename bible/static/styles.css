@@ -73,3 +73,7 @@ div {
     background-color: #FFFFCC;
     counter-reset: rowNumber;
 }
+
+.bible_row {
+    counter-increment: rowNumber;
+}
