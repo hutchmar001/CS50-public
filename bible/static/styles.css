@@ -70,7 +70,3 @@ div {
     display: table;
     width: 100%;
 }
-
-.bible_row tr:nth-child(0) {
-    counter-reset: rowNumber;
-}
