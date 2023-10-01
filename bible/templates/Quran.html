@@ -17,10 +17,10 @@
 <br><br><br>
 
 <style>
-    div.content table tr:nth-child(2){
-      font-size: 40px;
+    div.content table tbody tr:nth-child(2){
+      counter-reset: rowNumber;
     }
-</style>
+</style> <!-- Fixes incrementation -->
 
 <div class="content">
     <table action="/Quran" method="get" class="table table-hover" class="incrementer">
