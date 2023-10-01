@@ -6,15 +6,15 @@ from flask_session import Session
 from common import cache
 
 # Configure application for each holy book
-conn1 = sqlite3.connect('bible/databases/kjv.sqlite', check_same_thread=False)
+conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
 conn1.row_factory = sqlite3.Row
 c1 = conn1.cursor()
 
-conn2 = sqlite3.connect('bible/databases/quran.sqlite3', check_same_thread=False)
+conn2 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
 conn2.row_factory = sqlite3.Row
 c2 = conn2.cursor()
 
-conn3 = sqlite3.connect('bible/databases/bg.sqlite', check_same_thread=False)
+conn3 = sqlite3.connect('databases/bg.sqlite', check_same_thread=False)
 conn3.row_factory = sqlite3.Row
 c3 = conn3.cursor()
 
@@ -29,9 +29,9 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite databases
-db1 = SQL("sqlite:///bible/databases/kjv.sqlite")
-db2 = SQL("sqlite:///bible/databases/quran.sqlite3")
-db3 = SQL("sqlite:///bible/databases/bg.sqlite")
+db1 = SQL("sqlite:///databases/kjv.sqlite")
+db2 = SQL("sqlite:///databases/quran.sqlite3")
+db3 = SQL("sqlite:///databases/bg.sqlite")
 
 
 @app.after_request
