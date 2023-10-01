@@ -71,6 +71,6 @@ div {
     width: 100%;
 }
 
-.bible_row:nth-child(0) {
+.bible_row tr:nth-child(0) {
     counter-reset: rowNumber;
 }
