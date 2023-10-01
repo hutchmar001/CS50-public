@@ -75,9 +75,8 @@
         }
     }
 
-    const matches = document.querySelectorAll("mark");
-    matches.forEach(mark => {
-    mark.remove();
+    const marks = document.querySelectorAll("mark");
+    marks.forEach(mark => mark.outerHTML = mark.innerHTML);
     });
     // Removes all <mark> tags
 
