@@ -22,9 +22,7 @@ body {
     bottom: 90px;
 }
 
-table tr:nth-child(2){
-    counter-reset: rowNumber;
-  }
+
 
 table tr {
     counter-increment: rowNumber;
@@ -73,5 +71,5 @@ div {
 
 .bible_row td:nth-child(1){
     background-color: #FFFFCC;
-    counter-reset: 6;
+    counter-reset: rowNumber;
 }
