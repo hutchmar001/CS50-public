@@ -18,39 +18,39 @@
 
 <div class="content">
     <table action="/Bible" method="get" class="table table-hover">
-    <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
-    <thead>
-        <h1>Bible</h1>
-        <tr>
-            <th>Number</th>
-            <th>Book</th>
-            <th>Chapter</th>
-            <th>Verse</th>
-            <th>Text</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for i in lst %}
-        <tr>
-            <td>
-                <p>{{i.number}}</p>
-            </td>
-            <td>
-                <p><b>{{i.book_name}}</b></p>
-            </td>
-            <td>
-                <p>{{i.chapter}}</p>
-            </td>
-            <td>
-                <p>{{i.verse}}</p>
-            </td>
-            <td>
-                <p class="text-to-highlight">{{i.text}}</p>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        <button onclick="inc(id)" style="background: crimson; display:{{ display_highlight }}">Highlight</button>
+        <thead>
+            <h1>Bible</h1>
+            <tr>
+                <th>Number</th>
+                <th>Book</th>
+                <th>Chapter</th>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in lst %}
+            <tr>
+                <td>
+                    <p>{{i.number}}</p>
+                </td>
+                <td>
+                    <p><b>{{i.book_name}}</b></p>
+                </td>
+                <td>
+                    <p>{{i.chapter}}</p>
+                </td>
+                <td>
+                    <p>{{i.verse}}</p>
+                </td>
+                <td>
+                    <p class="text-to-highlight">{{i.text}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 </body>
 
