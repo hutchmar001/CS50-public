@@ -27,9 +27,15 @@
                 <th>Verse</th>
                 <th>Text</th>
             </tr>
+
             {% for i in lst2 %}
             <tr>
                 <td>
+                    <style>
+                        div.incrementer p:nth-child(0) {
+                          color: blue;
+                        }
+                    </style>
                     <div class="incrementer">
                         <p>{{i.num}}</p>
                     </div>
