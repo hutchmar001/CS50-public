@@ -24,7 +24,11 @@
             <tr>
                 <th>Number</th>
                 <th>Surah</th>
-           <tr>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+            {% for i in lst2 %}
+            <tr>
                 <td>
                     <p>{{i.num}}</p>
                 </td>
@@ -41,11 +45,7 @@
             {% endfor %}
         </tbody>
     </table>
-</div>             <th>Verse</th>
-                <th>Text</th>
-            </tr>
-            {% for i in lst2 %}
-    
+</div>
 </body>
 
 <script>
@@ -72,12 +72,65 @@
     var count = 0;
 
     function inc(){
-    count ++;
-    if (count % 2 == 0) {
-        dehighlight();
-    } else {
-        highlight();
+        count ++;
+        if (count % 2 == 0) {
+            dehighlight();
+        } else {
+            highlight();
+        }
+    };
+
+    // Pagination Code
+    const content = document.querySelector('.content');
+    const itemsPerPage = 20;
+    let currentPage = 0;
+    let totalPages;
+    let paginationContainer;
+    let paginationDiv;
+    let pageButton;
+    const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
+
+    function showPage(page) {
+    const startIndex = page * itemsPerPage; // 1st item displayed on current page
+    const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
+    items.forEach((item, index) => {
+        item.classList.toggle('hidden', index <= startIndex || index >= endIndex + 1);
+    }); // Checks if each row falls in proper index, removes hidden if so
+    updateActiveButtonStates();
     }
-};
+
+    function createPageButtons() {
+    totalPages = Math.ceil(items.length / itemsPerPage);
+    paginationContainer = document.createElement('div'); // Div to contain these buttons
+    paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
+    paginationContainer.classList.add('pagination'); // Give div class of pagination
+    }
+
+    function updateActiveButtonStates() {
+    const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
+    pageButtons.forEach((button, index) => {
+        if (index === currentPage) {
+        button.classList.add('active'); // Add certain styling to button of current page
+        } else {
+        button.classList.remove('active');
+        }
+    });
+    }
+
+    createPageButtons();
+
+    for (let i = 0; i < totalPages; i++) {
+    pageButton = document.createElement('button');
+    pageButton.textContent = i + 1; // Updates number on button
+    pageButton.addEventListener('click', () => {
+        currentPage = i;
+        showPage(currentPage); // Shows content of clicked page
+        updateActiveButtonStates();
+    });
+    paginationDiv.appendChild(pageButton); // Each button appended to HTML body
+    }
+
+    content.appendChild(paginationContainer); // Button container appended to content
+    showPage(currentPage);
 </script>
 {% endblock %}
