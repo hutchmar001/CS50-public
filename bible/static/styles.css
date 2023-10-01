@@ -70,3 +70,8 @@ div {
     display: table;
     width: 100%;
 }
+
+.bible_row td:nth-child(1){
+    background-color: #FFFFCC;
+    counter-reset: 0;
+}
