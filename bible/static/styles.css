@@ -71,15 +71,15 @@ div {
     width: 100%;
 }
 
-.bible_row td:nth-child(1){
-    background-color: #FFFFCC;
-    counter-reset: rowNumber;
-}
+.bible_row tr {
+    list-style-type: none;
+    counter-reset: css-counter 0; /* initializes counter to 0; use -1 for zero-based numbering */
+  }
 
-.bible_row {
-    counter-increment: rowNumber;
-}
+  div p {
+    counter-increment: css-counter 1; /* Increase the counter by 1. */
+  }
 
-.bible_row td:first-child::before {
-    content: counter(rowNumber);
-}
+  div p:before {
+    content: counter(css-counter) ". "; /* Apply counter before children's content. */
+  }
