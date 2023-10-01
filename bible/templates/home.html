@@ -6,6 +6,7 @@
 
 {% block main %}
 
+<div class="content">
 <table action="/" method="get" class="table table-hover">
     <form name="add" method="post">
         <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
@@ -118,6 +119,7 @@
     </tbody>
 </table>
 <br><br>
+</div>
 
 <script>
     var search_upper = {{search_upper|tojson}};
