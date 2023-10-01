@@ -73,8 +73,8 @@ div {
 
 .bible_row {
     list-style-type: none;
-    counter-reset: css-counter 0; /* initializes counter to 0; use -1 for zero-based numbering */
-    background-color: blue;
+    counter-reset: css-counter 5; /* initializes counter to 0; use -1 for zero-based numbering */
+    background-color: purple;
   }
 
 .bible_row p {
@@ -82,5 +82,5 @@ div {
   }
 
 .bible_row p:before {
-    content: counter(css-counter) ". "; /* Apply counter before children's content. */
+    content: counter(css-counter); /* Apply counter before children's content. */
   }
