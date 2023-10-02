@@ -29,6 +29,12 @@
 
     <button onclick="inc(id)" style="display:{{ display_hlight }}; background: crimson;">Highlight</button>
 
+<style>
+    div.content1 table tbody tr:nth-child(2){
+    counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
+
 <div class="content1">
     <table action="/" method="get" class="table table-hover">
         <tbody>
@@ -63,6 +69,12 @@
     </table>
 </div>
 
+<style>
+    div.content2 table tbody tr:nth-child(2){
+      counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
+
 <div class="content2">
     <table action="/" method="get" class="table table-hover">
         <tbody>
@@ -94,6 +106,11 @@
 </div>
 <br><br>
 
+<style>
+    div.content3 table tbody tr:nth-child(2){
+      counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
 
 <div class="content3">
     <table action="/" method="get" class="table table-hover">
