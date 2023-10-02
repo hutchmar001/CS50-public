@@ -202,7 +202,10 @@ function pages(section) {
     totalPages = Math.ceil(items.length / itemsPerPage);
     paginationContainer = document.createElement('div'); // Div to contain these buttons
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
+    if (section === '.content1')
+    {
     paginationContainer.classList.add('pagination'); // Give div class of pagination
+    }
     }
 
     function updateActiveButtonStates() {
