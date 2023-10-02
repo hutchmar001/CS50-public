@@ -70,3 +70,8 @@ div {
     display: table;
     width: 100%;
 }
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
