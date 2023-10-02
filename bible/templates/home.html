@@ -207,6 +207,7 @@ function pages(section) {
 
     function updateActiveButtonStates() {
     const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
+    alert(pageButtons)
     pageButtons.forEach((button, index) => {
         if (index === currentPage) {
         button.classList.add('active'); // Add certain styling to button of current page
