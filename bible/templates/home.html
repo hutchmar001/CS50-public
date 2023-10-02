@@ -221,8 +221,9 @@ function pages(section) {
     for (let i = 0; i < totalPages; i++) {
     pageButton = document.createElement('button');
     pageButton.textContent = i + 1; // Updates number on button
-    if 
-    pageButton.classList.add('disabled');
+    if (totalPages < 2) {
+        pageButton.classList.add('disabled');
+    }
     pageButton.addEventListener('click', () => {
         currentPage = i;
         showPage(currentPage); // Shows content of clicked page
