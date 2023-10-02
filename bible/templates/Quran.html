@@ -134,6 +134,9 @@
     for (let i = 0; i < totalPages; i++) {
     pageButton = document.createElement('button');
     pageButton.textContent = i + 1; // Updates number on button
+    if (totalPages < 2) {
+        pageButton.classList.add('disabled');
+    } // Disables button if only one page of results
     pageButton.addEventListener('click', () => {
         currentPage = i;
         showPage(currentPage); // Shows content of clicked page
