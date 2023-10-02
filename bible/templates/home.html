@@ -156,8 +156,8 @@
 };
 
 // Pagination Code
-
-    const content = document.querySelector('.content1');
+function pages(section) {
+    const content = document.querySelector(section);
     const itemsPerPage = 20;
     let currentPage = 0;
     let totalPages;
@@ -208,8 +208,10 @@
 
     content.appendChild(paginationContainer); // Button container appended to content
     showPage(currentPage);
+}
 
+pages('.content1');
+pages('.content2');
 
-pages(.content1);
 </script>
 {% endblock %}
