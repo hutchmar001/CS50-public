@@ -79,6 +79,7 @@ div {
 .pagination button {
     margin: 0 2px;
     border: 2px solid red;
+    border-radius: 2px;
 }
 
 .active {
