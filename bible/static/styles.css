@@ -69,25 +69,4 @@ div {
     overflow: auto;
     display: table;
     width: 100%;
-    border-radius: 5px;
-}
-
-.pagination button {
-    margin: 0 2px;
-    border: 2px solid red;
-    border-radius: 50%;
-}
-
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.pagination button:hover:not(.active) {
-    background-color: #4CAF50;
-  }
-
-.disabled {
-    pointer-events: none;
-    background-color: DarkGrey;
 }
