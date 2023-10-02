@@ -68,9 +68,7 @@ div {
 .pagination {
     overflow: auto;
     display: table;
-    width: 10px%;
-    height: 10px%;
-    border-radius: 50%;
+    width: 100%;
 }
 
 .active {
