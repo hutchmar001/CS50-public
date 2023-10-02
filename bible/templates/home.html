@@ -6,8 +6,6 @@
 
 {% block main %}
 
-<div class="content">
-<table action="/" method="get" class="table table-hover">
     <form name="add" method="post">
         <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
             <option value="">Select...</option>
@@ -31,6 +29,7 @@
 
     <button onclick="inc(id)" style="display:{{ display_hlight }}; background: crimson;">Highlight</button>
 
+<div class="content1">
     <tbody>
         <h1 style="display:{{ display1 }}">Bible</h1>
         <tr style="display:{{ display1 }}">
@@ -61,6 +60,7 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
 
 <table action="/" method="get" class="table table-hover">
     <tbody>
@@ -119,7 +119,6 @@
     </tbody>
 </table>
 <br><br>
-</div>
 
 <script>
     var search_upper = {{search_upper|tojson}};
@@ -154,7 +153,7 @@
 };
 
 // Pagination Code
-const content = document.querySelector('.content');
+const content = document.querySelector('.content1');
     const itemsPerPage = 20;
     let currentPage = 0;
     let totalPages;
