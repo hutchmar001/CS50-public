@@ -79,17 +79,7 @@ div {
     background-color: #ddd;
 }
 
-.active1 {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.active2 {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.active3 {
+.active {
     background-color: #4CAF50;
     color: white;
 }
