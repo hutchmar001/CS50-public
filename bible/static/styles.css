@@ -78,4 +78,5 @@ div {
 
 .disabled {
     pointer-events: none;
+    background-color: DarkGrey;
 }
