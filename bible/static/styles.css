@@ -71,7 +71,7 @@ div {
     width: 100%;
 }
 
-.pagination a.active {
+.pagination a:hover:not(.active) {background-color: #ddd;} {
     background-color: #4CAF50;
     color: white;
   }
