@@ -71,6 +71,11 @@ div {
     width: 100%;
 }
 
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
 .active {
     background-color: #4CAF50;
     color: white;
