@@ -157,7 +157,7 @@
 
 // Pagination Code
 function pages(section) {
-    const content = document.querySelector(section);
+    const content = document.querySelector(".content1");
     const itemsPerPage = 20;
     let currentPage = 0;
     let totalPages;
@@ -210,6 +210,6 @@ function pages(section) {
     showPage(currentPage);
 }
 
-pages(.section1);
+pages(.content1);
 </script>
 {% endblock %}
