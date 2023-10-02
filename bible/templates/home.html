@@ -203,18 +203,15 @@ function pages(section) {
     paginationContainer = document.createElement('div'); // Div to contain these buttons
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
     paginationContainer.classList.add('pagination'); // Give div class of pagination
-    if (section == '.content1') {
-        paginationContainer.classList.add('active1');
-    }
     }
 
     function updateActiveButtonStates() {
     const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
     pageButtons.forEach((button, index) => {
-        if (index === currentPage) {
-        button.classList.add('active'); // Add certain styling to button of current page
+        if (index === currentPage && section == '.content1') {
+        button.classList.add('active1'); // Add certain styling to button of current page
         } else {
-        button.classList.remove('active');
+        button.classList.remove('active1');
         }
     });
     }
