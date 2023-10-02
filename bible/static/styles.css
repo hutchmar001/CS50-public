@@ -71,6 +71,14 @@ div {
     width: 100%;
 }
 
+.pagination button {
+    margin: 2px;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+
 .active {
     background-color: #4CAF50;
     color: white;
