@@ -218,23 +218,27 @@ function pages(section) {
 
     function updateActiveButtonStates() {
     const pageButtons = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
-    pageButtons.forEach((button, index) => {
-    if (section === '.content1') {
-        if (index === currentPage) {
+    pageButtons2.forEach((button, index) => {
+        if (section === '.content1') {
+            if (index === currentPage) {
             button.classList.add('active'); // Add certain styling to button of current page
             } else {
             button.classList.remove('active');
             }
-        })}
-    }
-    const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
-    pageButtons2.forEach((button, index) => {
-        if (index === currentPage) {
-        button.classList.add('active'); // Add certain styling to button of current page
-        } else {
-        button.classList.remove('active');
         }
     });
+
+    const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
+    pageButtons2.forEach((button, index) => {
+        if (section === '.content2') {
+            if (index === currentPage) {
+            button.classList.add('active'); // Add certain styling to button of current page
+            } else {
+            button.classList.remove('active');
+            }
+        }
+    });
+
     const pageButtons3 = document.querySelectorAll('.pagination3 button'); // Get all pagination buttons
     pageButtons3.forEach((button, index) => {
         if (index === currentPage) {
