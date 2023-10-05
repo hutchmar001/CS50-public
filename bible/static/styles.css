@@ -65,17 +65,31 @@ div {
     justify-content: center;
 }
 
-.pagination {
+.pagination1 {
     overflow: auto;
     display: table;
     width: 100%;
 }
 
-.pagination button {
+.pagination1 button {
     margin: 2px;
 }
 
-.pagination button:hover:not(.active) {
+.pagination1 button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination2 {
+    overflow: auto;
+    display: table;
+    width: 100%;
+}
+
+.pagination2 button {
+    margin: 2px;
+}
+
+.pagination2 button:hover:not(.active) {
     background-color: #ddd;
 }
 

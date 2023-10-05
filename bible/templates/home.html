@@ -204,13 +204,37 @@ function pages(section) {
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
     if (section === '.content1')
     {
-    paginationContainer.classList.add('pagination'); // Give div class of pagination
+    paginationContainer.classList.add('pagination1'); // Give div class of pagination
+    }
+    if (section === '.content2')
+    {
+    paginationContainer.classList.add('pagination2'); // Give div class of pagination
+    }
+    if (section === '.content3')
+    {
+    paginationContainer.classList.add('pagination3'); // Give div class of pagination
     }
     }
 
     function updateActiveButtonStates() {
-    const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
+    const pageButtons = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
     pageButtons.forEach((button, index) => {
+        if (index === currentPage) {
+        button.classList.add('active'); // Add certain styling to button of current page
+        } else {
+        button.classList.remove('active');
+        }
+    });
+    const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
+    pageButtons2.forEach((button, index) => {
+        if (index === currentPage) {
+        button.classList.add('active'); // Add certain styling to button of current page
+        } else {
+        button.classList.remove('active');
+        }
+    });
+    const pageButtons3 = document.querySelectorAll('.pagination3 button'); // Get all pagination buttons
+    pageButtons3.forEach((button, index) => {
         if (index === currentPage) {
         button.classList.add('active'); // Add certain styling to button of current page
         } else {
