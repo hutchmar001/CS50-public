@@ -202,16 +202,13 @@ function pages(section) {
     totalPages = Math.ceil(items.length / itemsPerPage);
     paginationContainer = document.createElement('div'); // Div to contain these buttons
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
-    if (section === '.content1')
-    {
-    paginationContainer.classList.add('pagination1'); // Give div class of pagination
-    } else if (section === '.content2')
-    {
-    paginationContainer.classList.add('pagination2'); // Give div class of pagination
-    } else
-    {
-    paginationContainer.classList.add('pagination3'); // Give div class of pagination
-    }
+    if (section === '.content1') {
+        paginationContainer.classList.add('pagination1'); // Give div class of pagination
+        } else if (section === '.content2') {
+        paginationContainer.classList.add('pagination2'); // Give div class of pagination
+        } else {
+        paginationContainer.classList.add('pagination3'); // Give div class of pagination
+        }
     }
 
     function updateActiveButtonStates() {
