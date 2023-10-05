@@ -115,11 +115,11 @@
     totalPages = Math.ceil(items.length / itemsPerPage);
     paginationContainer = document.createElement('div'); // Div to contain these buttons
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
-    paginationContainer.classList.add('pagination'); // Give div class of pagination
+    paginationContainer.classList.add('pagination2'); // Give div class of pagination
     }
 
     function updateActiveButtonStates() {
-    const pageButtons = document.querySelectorAll('.pagination button'); // Get all pagination buttons
+    const pageButtons = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
     pageButtons.forEach((button, index) => {
         if (index === currentPage) {
         button.classList.add('active'); // Add certain styling to button of current page
