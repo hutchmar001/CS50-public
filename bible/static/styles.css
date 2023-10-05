@@ -93,6 +93,20 @@ div {
     background-color: #ddd;
 }
 
+.pagination3 {
+    overflow: auto;
+    display: table;
+    width: 100%;
+}
+
+.pagination3 button {
+    margin: 2px;
+}
+
+.pagination3 button:hover:not(.active) {
+    background-color: #ddd;
+}
+
 .active {
     background-color: #4CAF50;
     color: white;
