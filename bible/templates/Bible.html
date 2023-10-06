@@ -23,15 +23,13 @@
 </style> <!-- Fixes incrementation -->
 
 <div class="content">
-    <form action="/Bible" method="post">
         <div class="mb-3" style="display: inline;">
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="wpp" type="text" style="display: inline; width: 52px;">
-            <button class="btn btn-primary" type="submit" style="margin: 10px;">Words Per Page</button>
+            <form action="/Bible" method="post">
+                <input autocomplete="off" autofocus class="form-control mx-auto" name="wpp" type="text" style="display: inline; width: 52px;">
+                <button class="btn btn-primary" type="submit" style="margin: 10px;">Words Per Page</button>
+            </form>
+            <button onclick="inc()" style="background: crimson; display:{{ display_hlight }}; margin: 10px;">Highlight</button>
         </div>
-    </form>
-    <form action="/Bible" method="get">
-        <button onclick="inc()" style="background: crimson; display:{{ display_hlight }}; margin: 10px;">Highlight</button>
-    </form>
 
     <table action="/Bible" method="get" class="table table-hover">
         <thead>
