@@ -109,7 +109,7 @@
     const startIndex = page * itemsPerPage; // 1st item displayed on current page
     const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
     items.forEach((item, index) => {
-        item.classList.toggle('hidden', index <= startIndex || index > endIndex);
+        item.classList.toggle('hidden', index < startIndex || index > endIndex);
     }); // Checks if each row falls in proper index, removes hidden if so
     updateActiveButtonStates();
     }
