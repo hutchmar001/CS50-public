@@ -315,7 +315,7 @@ def verse():
 
     return render_template("verse.html")
 
-@app.route("/wpp_bible", methods=["GET"])
+@app.route("/wpp_bible", methods=["GET, POST"])
 def Bible():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
