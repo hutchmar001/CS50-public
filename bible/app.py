@@ -145,7 +145,7 @@ def All():
         return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower)
 
 
-@app.route("/Bible", methods=["GET", "POST"])
+@app.route("/Bible", methods=["GET"])
 def Bible():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
