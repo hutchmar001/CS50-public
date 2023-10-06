@@ -314,3 +314,33 @@ def verse():
         return redirect("/verse")
 
     return render_template("verse.html")
+
+@app.route("/wpp_bible", methods=["GET"])
+def Bible():
+    lst = cache.get("lst")
+    lst2 = cache.get("lst2")
+    lst3 = cache.get("lst3")
+    search_lower = cache.get("search_lower")
+    search_upper = cache.get("search_upper")
+
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst:
+        result = ["Bible"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst2:
+        result = ["Quran"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower)
