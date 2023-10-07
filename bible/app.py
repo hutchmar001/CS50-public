@@ -128,6 +128,8 @@ def All():
         rpp = int(float(rpp))
     except Exception as e:
         print("Exception raised: {}".format(e))
+        flash('Please enter a valid query.')
+        return redirect("/All")
     if not rpp:
         rpp = 20
 
