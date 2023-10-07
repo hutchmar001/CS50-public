@@ -125,8 +125,8 @@ def All():
 
     rpp = request.form.get("rpp")
     rpp = int(float(rpp))
-    print(type(rpp))
-
+    if type(rpp) not int:
+        
     if not rpp:
         rpp = 20
 
