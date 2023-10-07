@@ -125,7 +125,7 @@ def All():
 
     rpp = request.form.get("rpp")
     rpp = int(float(rpp))
-    if type(rpp) not int:
+    if not isinstance(rpp, int):
         flash('Please enter a valid query.')
         return redirect("/All")
     if not rpp:
