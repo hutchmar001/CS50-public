@@ -129,7 +129,7 @@ def All():
     except Exception as e:
         print("Exception raised: {}".format(e))
         flash('Please enter a valid query.')
-        return render_template("search.html")
+        return render_template("sear.html")
     if not rpp:
         rpp = 20
 
