@@ -126,7 +126,8 @@ def All():
     rpp = request.form.get("rpp")
     rpp = int(float(rpp))
     if type(rpp) not int:
-        
+        flash('Please enter a valid query.')
+        return redirect("/All")
     if not rpp:
         rpp = 20
 
