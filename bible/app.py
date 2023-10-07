@@ -124,14 +124,13 @@ def All():
     search_upper = cache.get("search_upper")
 
     rpp = request.form.get("rpp")
+    if not rpp:
+        rpp = 20
     try:
         rpp = int(float(rpp))
     except ValueError:
         flash('Please enter a valid query.')
         return redirect("/All")
-    if not rpp:
-        rpp = 20
-
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
