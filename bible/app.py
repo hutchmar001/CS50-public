@@ -126,9 +126,8 @@ def All():
     rpp = request.form.get("rpp")
     try:
         rpp = int(float(rpp))
-    except TypeError:
-        flash('Please enter a valid query.')
-        return redirect("/All")
+    except Exception as e:
+        print("Exception raised: {}".format(e))
     if not rpp:
         rpp = 20
 
