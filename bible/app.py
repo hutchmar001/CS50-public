@@ -183,8 +183,8 @@ def Bible():
     search_upper = cache.get("search_upper")
 
     rpp = request.form.get("rpp")
-    if not rpp:
-        rpp = 20
+    print("Exception raised: {}".format(e))
+        flash('Please enter a valid query.')
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
