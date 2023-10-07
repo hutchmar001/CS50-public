@@ -264,14 +264,29 @@ def Bhagavad():
         result = ["Bhagavad Gita"]
 
     rpp = request.form.get("rpp")
-    try:
-        rpp = int(float(rpp))
-    except Exception as e:
-        print("Exception raised: {}".format(e))
-        flash('Please enter a valid query.')
-        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
-
-    return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if not rpp:
+        rpp = 20
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst:
+        result = ["Bible"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst2:
+        result = ["Quran"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
 
 
 @app.route("/verse", methods=["GET", "POST"])
