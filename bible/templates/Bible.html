@@ -5,17 +5,18 @@
 {% endblock %}
 
 {% block main %}
-<body id="bible">
 
 {% with msg = get_flashed_messages() %}
     {% if msg %}
         {% for message in msg %}
-            <div class="alert2 alert-warning fade show" role="alert">
+            <div class="alert alert-warning fade show" role="alert">
                 <strong>{{ message }}</strong>
             </div>
         {% endfor %}
     {% endif %}
 {% endwith %}
+
+<body id="bible">
 
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
     <option value="">Select...</option>
