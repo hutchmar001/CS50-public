@@ -126,9 +126,6 @@ def All():
     rpp = request.form.get("rpp")
     try:
         rpp = int(float(rpp))
-    except ValueError:
-        flash('Please enter a valid query.')
-        return redirect("/All")
     except TypeError:
         flash('Please enter a valid query.')
         return redirect("/All")
