@@ -17,21 +17,29 @@
 <br><br><br>
 
 <style>
-    div.content table tbody tr:nth-child(2){
+    div.content table tbody tr:nth-child(1){
       counter-reset: rowNumber;
     }
 </style> <!-- Fixes incrementation -->
 
 <div class="content">
-    <div class="mb-3" style="display: inline;">
-        <form action="/Bible" method="post">
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="wpp" type="text" style="display: inline; width: 52px;">
-            <button class="btn btn-primary" type="submit" style="margin: 10px;">Words Per Page</button>
+    <div class="mb-3" style="display: {{rpp_search}};">
+        <form action="/Bible" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
         </form>
-     </div>
+        <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
+    </div>
+
+    <div class="mb-3" style="display: {{rpp_v}};">
+        <form action="/verse" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+    </div>
 
     <table action="/Bible" method="get" class="table table-hover">
-        <button onclick="inc()" style="background: crimson; display:{{ display_hlight }}; margin: 10px;">Highlight</button>
+
         <thead>
             <h1>Bible</h1>
             <tr>
@@ -104,7 +112,7 @@
 
     // Pagination Code
     const content = document.querySelector('.content');
-    const itemsPerPage = 20;
+    const itemsPerPage = {{rpp}};
     let currentPage = 0;
     let totalPages;
     let paginationContainer;
@@ -114,7 +122,7 @@
 
     function showPage(page) {
     const startIndex = page * itemsPerPage; // 1st item displayed on current page
-    const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
+    const endIndex = startIndex + itemsPerPage -1; // Last item displayed on current page
     items.forEach((item, index) => {
         item.classList.toggle('hidden', index < startIndex || index > endIndex);
     }); // Checks if each row falls in proper index, removes hidden if so

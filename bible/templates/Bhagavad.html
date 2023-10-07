@@ -23,13 +23,20 @@
 </style> <!-- Fixes incrementation -->
 
 <div class="content">
-    <form action="/" method="post">
-        <div class="mb-3" style="display: inline;">
-            <button onclick="inc()" style="background: crimson; display:{{ display_hlight }}; margin: 10px;">Highlight</button>
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="wpp" type="text" style="display: inline; width: 52px;">
-            <button class="btn btn-primary" type="submit" style="margin: 10px;">Words Per Page</button>
-        </div>
-    </form>
+    <div class="mb-3" style="display: {{rpp_search}};">
+        <form action="/Bhagavad" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+        <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
+    </div>
+
+    <div class="mb-3" style="display: {{rpp_v}};">
+        <form action="/verse" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+    </div>
 
     <table action="/Bhagavad" method="get" class="table table-hover">
         <tbody>
@@ -98,7 +105,7 @@
 
     // Pagination Code
     const content = document.querySelector('.content');
-    const itemsPerPage = 20;
+    const itemsPerPage = {{rpp}};
     let currentPage = 0;
     let totalPages;
     let paginationContainer;
