@@ -124,8 +124,9 @@ def All():
     search_upper = cache.get("search_upper")
 
     rpp = request.form.get("rpp")
-    rpp = int(float(rpp))
-    if not isinstance(rpp, int):
+    try:
+        rpp = int(float(rpp))
+    except ValueError:
         flash('Please enter a valid query.')
         return redirect("/All")
     if not rpp:
