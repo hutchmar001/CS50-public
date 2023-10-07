@@ -182,6 +182,7 @@ def Bible():
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
 
+    rpp = request.form.get("rpp")
     try:
         rpp = int(float(rpp))
     except Exception as e:
