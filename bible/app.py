@@ -252,6 +252,23 @@ def Quran():
             result = ["Bhagavad Gita"]
         return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
 
+    if not rpp:
+            rpp = 20
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+    if lst:
+        result = ["Bible"]
+    if lst2:
+        result = ["Quran"]
+    if lst3:
+        result = ["Bhagavad Gita"]
+    return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
 
 @app.route("/Bhagavad", methods=["GET", "POST"])
 def Bhagavad():
