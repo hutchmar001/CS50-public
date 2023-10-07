@@ -199,7 +199,7 @@ def Bible():
             return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         if lst:
             result = ["Bible"]
-            return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=r=20, rpp_v="none")
+            return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         if lst2:
             result = ["Quran"]
             return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
