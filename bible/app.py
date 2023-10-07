@@ -122,7 +122,7 @@ def All():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session.pop('_flashes', None)
+    session['_flashes'].clear()
 
     rpp = request.form.get("rpp")
     try:
@@ -182,7 +182,7 @@ def Bible():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session.pop('_flashes', None)
+    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -216,7 +216,7 @@ def Quran():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session.pop('_flashes', None)
+    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -250,7 +250,7 @@ def Bhagavad():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session.pop('_flashes', None)
+    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
