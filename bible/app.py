@@ -4,7 +4,6 @@ from cs50 import SQL
 from flask import Flask, render_template, request, flash, redirect
 from flask_session import Session
 from common import cache
-import re
 
 # Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
@@ -122,7 +121,6 @@ def All():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session['_flashes'].clear()
 
     rpp = request.form.get("rpp")
     try:
@@ -182,7 +180,6 @@ def Bible():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -216,7 +213,6 @@ def Quran():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -250,7 +246,6 @@ def Bhagavad():
     lst3 = cache.get("lst3")
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
-    session['_flashes'].clear()
 
     if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
