@@ -234,8 +234,6 @@ def Quran():
     except Exception as e:
         print("Exception raised: {}".format(e))
         flash('Please enter a valid query.')
-        if not rpp:
-            rpp = 20
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
         if lst and lst2:
@@ -250,10 +248,8 @@ def Quran():
             result = ["Quran"]
         if lst3:
             result = ["Bhagavad Gita"]
-        return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
+        return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
-    if not rpp:
-            rpp = 20
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
     if lst and lst2:
