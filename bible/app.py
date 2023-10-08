@@ -126,7 +126,9 @@ def All():
     try:
         rpp = int(float(rpp))
     except Exception as e:
-        print("Exception raised: {}".format(e))
+        if rpp:
+            print("Exception raised: {}".format(e))
+            flash('Please enter a valid query.')
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower, rpp=20)
