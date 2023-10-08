@@ -183,20 +183,20 @@ def Bible():
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
 
-    if lst and lst2 and lst3:
-        result = ["Bible", "Quran", "Bhagavad Gita"]
-    if lst and lst2:
-        result = ["Bible", "Quran"]
-    if lst and lst3:
-        result = ["Bible", "Bhagavad Gita"]
-    if lst2 and lst3:
-        result = ["Quran", "Bhagavad Gita"]
     if lst:
         result = ["Bible"]
     if lst2:
         result = ["Quran"]
     if lst3:
         result = ["Bhagavad Gita"]
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
 
     rpp = request.form.get("rpp")
     try:
