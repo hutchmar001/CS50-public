@@ -4,6 +4,7 @@ from cs50 import SQL
 from flask import Flask, render_template, request, flash, redirect
 from flask_session import Session
 from common import cache
+from datetime import timedelta
 
 # Configure application for each holy book
 conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
@@ -26,6 +27,7 @@ app.run(debug=True)
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=5)
 Session(app)
 
 # Configure CS50 Library to use SQLite databases
@@ -201,8 +203,6 @@ def Bible():
         rpp = int(float(rpp))
     except Exception as e:
         print("Exception raised: {}".format(e))
-        session= s.Session()
-        session.clear()
         flash('Please enter a valid query.')
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
