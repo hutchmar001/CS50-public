@@ -127,7 +127,7 @@ def All():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            flash('Please enter a valid query.')
+            flash('Please enter an integer.')
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
             return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower, rpp=20)
@@ -201,7 +201,7 @@ def Bible():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            flash('Please enter a valid query.')
+            flash('Please enter an integer.')
             return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
@@ -235,7 +235,7 @@ def Quran():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            flash('Please enter a valid query.')
+            flash('Please enter an integer.')
             return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
@@ -269,7 +269,7 @@ def Bhagavad():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            flash('Please enter a valid query.')
+            flash('Please enter an integer.')
             return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
