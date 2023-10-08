@@ -234,7 +234,10 @@ def Quran():
     try:
         rpp = int(float(rpp))
     except Exception as e:
-        print("Exception raised: {}".format(e))
+        if rpp:
+            print("Exception raised: {}".format(e))
+            flash('Please enter a valid query.')
+            return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
     return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
@@ -266,7 +269,10 @@ def Bhagavad():
     try:
         rpp = int(float(rpp))
     except Exception as e:
-        print("Exception raised: {}".format(e))
+        if rpp:
+            print("Exception raised: {}".format(e))
+            flash('Please enter a valid query.')
+            return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
     return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
