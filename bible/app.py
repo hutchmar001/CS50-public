@@ -177,9 +177,6 @@ def Bible():
     lst = cache.get("lst")
     lst2 = cache.get("lst2")
     lst3 = cache.get("lst3")
-    print(lst)
-    print(lst2)
-    print(lst3)
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
 
