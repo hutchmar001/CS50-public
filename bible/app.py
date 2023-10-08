@@ -247,7 +247,7 @@ def Bhagavad():
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
 
-     if lst:
+    if lst:
         result = ["Bible"]
     if lst2:
         result = ["Quran"]
