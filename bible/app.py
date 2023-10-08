@@ -203,6 +203,7 @@ def Bible():
         rpp = int(float(rpp))
     except Exception as e:
         print("Exception raised: {}".format(e))
+        flash('Please enter a valid query.')
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
     return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
@@ -299,7 +300,6 @@ def verse():
         bible_name = cache.get("bible_name")
         bible_chapter = cache.get("bible_chapter")
         bible_verse = cache.get("bible_verse")
-
 
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse,)
