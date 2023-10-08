@@ -127,7 +127,6 @@ def All():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            print("Exception raised: {}".format(e))
             flash('Please enter a valid query.')
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -202,7 +201,6 @@ def Bible():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            print("Exception raised: {}".format(e))
             flash('Please enter a valid query.')
             return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
@@ -237,7 +235,6 @@ def Quran():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            print("Exception raised: {}".format(e))
             flash('Please enter a valid query.')
             return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Quran.html', lst2=lst2, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
@@ -272,7 +269,6 @@ def Bhagavad():
         rpp = int(float(rpp))
     except Exception as e:
         if rpp:
-            print("Exception raised: {}".format(e))
             flash('Please enter a valid query.')
             return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
         return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
