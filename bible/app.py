@@ -200,7 +200,6 @@ def Bible():
         rpp = int(float(rpp))
     except Exception as e:
         print("Exception raised: {}".format(e))
-        flash('Please enter a valid query.')
         return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
 
     return render_template('Bible.html', lst=lst, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
