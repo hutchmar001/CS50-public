@@ -21,7 +21,7 @@
 <div><form><input type="text" /><button>Results Per Page</button></form><button>Highlight</button></div>
 <div><form><input type="text" /><button>Results Per Page</button></form></div>
 <h1>Bible</h1>
-{% for i in lst %}{% endfor %}
+{% for i in lst %}
 <table>
 <thead>
 <tr>
@@ -52,6 +52,7 @@
 </tr>
 </tbody>
 </table>
+{% endfor %}
 </div>
 </div>
 <p>{% endblock %}</p>
