@@ -6,12 +6,6 @@
     Holy Book Comparison Bible Results
 </title>
 
-<style>
-    #rpp_search {
-        display: {{rpp_search}};
-    }
-</style>
-
 {% extends "layout.html" %}
 
 {% block main %}
@@ -35,8 +29,9 @@
 </select>
 <br><br><br>
 
+
 <div class="content">
-    <div class="mb-3" id="rpp_search">
+    <div class="mb-3" style="display: {{rpp_search}};">
         <form action="/Bible" method="post" style="display: inline;">
             <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
