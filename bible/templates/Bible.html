@@ -3,7 +3,7 @@
 <html lang="en">
 
 <body id="bible">
-    
+
 {% extends "layout.html" %}
 
 {% block title %}
@@ -44,7 +44,7 @@
 
     <div class="mb-3" style="display: {{rpp_v}};">
         <form action="/verse" method="post" style="display: inline;">
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
         </form>
     </div>
