@@ -30,7 +30,7 @@
 <br><br><br>
 
 <div class="content">
-    <div class="mb-3" style="display: {{ rpp_search }};">
+    <div class="mb-3" style="display: {{rpp_search}};">
         <form action="/Bible" method="post" style="display: inline;">
             <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
@@ -38,7 +38,7 @@
         <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
     </div>
 
-    <div class="mb-3" style="display: {{ rpp_v }};">
+    <div class="mb-3" style="display: {{rpp_v}};">
         <form action="/verse" method="post" style="display: inline;">
             <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
@@ -60,16 +60,16 @@
             {% for i in lst %}
             <tr>
                 <td>
-                    <p>{{ i.number }}</p>
+                    <p>{{i.number}}</p>
                 </td>
                 <td>
-                    <p><b>{{ i.book_name }}</b></p>
+                    <p><b>{{i.book_name}}</b></p>
                 </td>
                 <td>
-                    <p>{{ i.chapter }}</p>
+                    <p>{{i.chapter}}</p>
                 </td>
                 <td>
-                    <p>{{ i.verse }}</p>
+                    <p>{{i.verse}}</p>
                 </td>
                 <td>
                     <p class="text-to-highlight">{{i.text}}</p>
