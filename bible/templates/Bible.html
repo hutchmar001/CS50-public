@@ -5,54 +5,174 @@
 <title>
     Holy Book Comparison Bible Results
 </title>
-<p>{% extends "layout.html" %} {% block main %} {% with msg = get_flashed_messages() %} {% if msg %} {% for message in msg %}</p>
-<div>
-<div><strong>{{ message }}</strong></div>
+
+{% extends "layout.html" %}
+
+{% block main %}
+
+{% with msg = get_flashed_messages() %}
+    {% if msg %}
+        {% for message in msg %}
+            <div class="alert2 alert-warning fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
+    <option value="">Select...</option>
+    <option value= "All">All</option>
+    {% for i in result %}
+        <option value= {{i}}>{{i}}</option>
+    {% endfor %}
+</select>
+<br><br><br>
+
+<div class="content">
+    <div class="mb-3" style="display: {{rpp_search}};">
+        <form action="/Bible" method="post" style="display: inline;">
+            <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+        <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
+    </div>
+
+    <div class="mb-3" style="display: {{rpp_v}};">
+        <form action="/verse" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+    </div>
+
+    <h1>Bible</h1>
+    <table action="/Bible" method="get" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Book</th>
+                <th>Chapter</th>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in lst %}
+            <tr>
+                <td>
+                    <p>{{i.number}}</p>
+                </td>
+                <td>
+                    <p><b>{{i.book_name}}</b></p>
+                </td>
+                <td>
+                    <p>{{i.chapter}}</p>
+                </td>
+                <td>
+                    <p>{{i.verse}}</p>
+                </td>
+                <td>
+                    <p class="text-to-highlight">{{i.text}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-<p>{% endfor %} {% endif %} {% endwith %}</p>
-<div><select>
-<option>Select...</option>
-<option>All</option>
-{% for i in result %}
-<option>{{i}}</option>
-{% endfor %}</select></div>
-<div>
-<div>
-<div><form><input type="text" /><button>Results Per Page</button></form><button>Highlight</button></div>
-<div><form><input type="text" /><button>Results Per Page</button></form></div>
-<h1>Bible</h1>
-{% for i in lst %}
-<table>
-<thead>
-<tr>
-<th>Number</th>
-<th>Book</th>
-<th>Chapter</th>
-<th>Verse</th>
-<th>Text</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<p>{{i.number}}</p>
-</td>
-<td>
-<p><strong>{{i.book_name}}</strong></p>
-</td>
-<td>
-<p>{{i.chapter}}</p>
-</td>
-<td>
-<p>{{i.verse}}</p>
-</td>
-<td>
-<p>{{i.text}}</p>
-</td>
-</tr>
-</tbody>
-</table>
-{% endfor %}
-</div>
-</div>
-<p>{% endblock %}</p>
+</body>
+
+<script>
+    var search_upper = {{search_upper|tojson}};
+    var search_lower = {{search_lower|tojson}};
+    // Works great for passing Flask value to Javascript
+
+    function highlight() {
+        let textsToHighlight = document.getElementsByClassName('text-to-highlight');
+        for(let text of textsToHighlight) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        }
+    }
+
+    function dehighlight() {
+        let highlightedTexts = document.getElementsByClassName('text-to-highlight');
+        for(let text of highlightedTexts) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<p>{{search_upper}}</p>");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<p>{{search_lower}}</p>");
+        }
+        const marks = document.querySelectorAll("mark");
+        marks.forEach(mark => mark.outerHTML = mark.innerHTML);
+        // Removes all <mark> tags
+    }
+
+    var count = 0;
+
+    function inc(){
+        count ++;
+        if (count % 2 == 0) {
+            dehighlight();
+        } else {
+            highlight();
+        }
+    };
+
+    // Pagination Code
+    const content = document.querySelector('.content');
+    const itemsPerPage = {{rpp}};
+    let currentPage = 0;
+    let totalPages;
+    let paginationContainer;
+    let paginationDiv;
+    let pageButton;
+    const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
+
+    function showPage(page) {
+    const startIndex = page * itemsPerPage; // 1st item displayed on current page
+    const endIndex = startIndex + itemsPerPage -1; // Last item displayed on current page
+    items.forEach((item, index) => {
+        item.classList.toggle('hidden', index < startIndex || index > endIndex);
+    }); // Checks if each row falls in proper index, removes hidden if so
+    updateActiveButtonStates();
+    }
+
+    function createPageButtons() {
+    totalPages = Math.ceil(items.length / itemsPerPage);
+    paginationContainer = document.createElement('div'); // Div to contain these buttons
+    paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
+    paginationContainer.classList.add('pagination1'); // Give div class of pagination
+    }
+
+    function updateActiveButtonStates() {
+    const pageButtons = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
+    pageButtons.forEach((button, index) => {
+        if (index === currentPage) {
+        button.classList.add('active'); // Add certain styling to button of current page
+        } else {
+        button.classList.remove('active');
+        }
+    });
+    }
+
+    createPageButtons();
+
+    for (let i = 0; i < totalPages; i++) {
+    pageButton = document.createElement('button');
+    pageButton.textContent = i + 1; // Updates number on button
+    if (totalPages < 2) {
+        pageButton.classList.add('disabled');
+    }
+    pageButton.addEventListener('click', () => {
+        currentPage = i;
+        showPage(currentPage); // Shows content of clicked page
+        updateActiveButtonStates();
+    });
+    paginationDiv.appendChild(pageButton); // Each button appended to HTML body
+    }
+
+    content.appendChild(paginationContainer); // Button container appended to content
+    showPage(currentPage);
+</script>
+
+{% endblock %}
+
+</html>
