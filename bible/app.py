@@ -122,16 +122,6 @@ def All():
     search_lower = cache.get("search_lower")
     search_upper = cache.get("search_upper")
 
-    rpp = request.form.get("rpp")
-    try:
-        rpp = int(float(rpp))
-    except Exception as e:
-        if rpp:
-            flash('Please enter an integer.')
-            all_call()
-
-        all_call()
-
     def all_call():
         if lst and lst2 and lst3:
             result = ["Bible", "Quran", "Bhagavad Gita"]
@@ -154,6 +144,18 @@ def All():
         if lst3:
             result = ["Bhagavad Gita"]
             return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower, rpp=20)
+
+    rpp = request.form.get("rpp")
+    try:
+        rpp = int(float(rpp))
+    except Exception as e:
+        if rpp:
+            flash('Please enter an integer.')
+            all_call()
+
+        all_call()
+
+
 
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
