@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<body id="bible">
+<!DOCTYPE html><html lang="en"><head></head><body id="bible">
 
 <title>
     Holy Book Comparison Bible Results
@@ -24,9 +20,9 @@
 
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
     <option value="">Select...</option>
-    <option value= "All">All</option>
+    <option value="All">All</option>
     {% for i in result %}
-        <option value= {{ i }}>{{ i }}</option>
+        <option value="{{" i="" }}="">{{ i }}</option>
     {% endfor %}
 </select>
 <br><br><br>
@@ -43,13 +39,17 @@
 
     <div class="mb-3" style="display: {{ rpp_v }};">
         <form action="/verse" method="post" style="display: inline;">
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <input autocomplete="off" autofocus="" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
         </form>
     </div>
 
     <h1>Bible</h1>
-    <table action="/Bible" method="get" class="table table-hover">
+
+            {% for i in lst %}
+
+            {% endfor %}
+        <table action="/Bible" method="get" class="table table-hover">
         <thead>
             <tr>
                 <th>Number</th>
@@ -59,9 +59,7 @@
                 <th>Text</th>
             </tr>
         </thead>
-        <tbody>
-            {% for i in lst %}
-            <tr>
+        <tbody><tr>
                 <td>
                     <p>{{ i.number }}</p>
                 </td>
@@ -77,12 +75,10 @@
                 <td>
                     <p class="text-to-highlight">{{ i.text }}</p>
                 </td>
-            </tr>
-            {% endfor %}
-        </tbody>
+            </tr></tbody>
     </table>
 </div>
-</body>
+
 
 <script>
     var search_upper = {{ search_upper|tojson }};
@@ -178,4 +174,4 @@
 
 {% endblock main %}
 
-</html>
+</body></html>
