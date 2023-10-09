@@ -1,1 +1,277 @@
-c
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+{% with msg = get_flashed_messages() %}
+    {% if msg %}
+        {% for message in msg %}
+            <div class="alert2 alert-warning fade show" role="alert">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+    <form name="add" method="post">
+        <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
+            <option value="">Select...</option>
+            <option value= "All">All</option>
+            {% for i in result %}
+                <option value= {{i}}>{{i}}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
+    <br>
+    <form action="/search" method="get">
+        <button class="btn btn-primary" style="display:{{ display_title }}">Let's go!</button>
+    </form>
+    <br><br>
+
+    <img src="/static/cross.gif" alt="cross" width="150" height="150" style="display:{{ display_img }}">
+    <img src="/static/allah.png" alt="Muslim man and crescent" width="120" height="150" style="display:{{ display_img }}">
+    <img src="/static/om.png" alt="om symbol" width="150" height="170" style="display:{{ display_img }}">
+
+    <div class="mb-3" style="display: {{rpp_search}};">
+        <form action="/All" method="post" style="display: inline;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
+        </form>
+        <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
+    </div>
+
+
+<style>
+    div.content1 table tbody tr:nth-child(2){
+    counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
+
+<div class="content1">
+    <table action="/" method="get" class="table table-hover">
+        <tbody>
+            <h1 style="display:{{ display1 }}">Bible</h1>
+            <tr style="display:{{ display1 }}">
+                <th>Number</th>
+                <th>Book</th>
+                <th>Chapter</th>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+            {% for i in lst %}
+            <tr>
+                <td>
+                    <p>{{i.number}}</p>
+                </td>
+                <td>
+                    <p>{{i.book_name}}</p>
+                </td>
+                <td>
+                    <p>{{i.chapter}}</p>
+                </td>
+                <td>
+                    <p>{{i.verse}}</p>
+                </td>
+                <td>
+                    <p class="text-to-highlight">{{i.text}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="content2">
+    <table action="/" method="get" class="table table-hover">
+        <tbody>
+            <h1 style="display:{{ display2 }}">Quran</h1>
+            <tr style="display:{{ display2 }}">
+                <th>Number</th>
+                <th>Surah</th>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+            {% for i in lst2 %}
+            <tr>
+                <td>
+                    <p>{{i.num}}</p>
+                </td>
+                <td>
+                    <p>{{i.sura}}</p>
+                </td>
+                <td>
+                    <p>{{i.verse}}</p>
+                </td>
+                <td>
+                    <p class="text-to-highlight">{{i.text}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br>
+
+<div class="content3">
+    <table action="/" method="get" class="table table-hover">
+        <tbody>
+            <h1 style="display:{{ display3 }}">Bhagavad Gita</h1>
+            <tr style="display:{{ display3 }}">
+                <th>Number</th>
+                <th>Chapter</th>
+                <th>Verse</th>
+                <th>Text</th>
+            </tr>
+            {% for i in lst3 %}
+            <tr>
+                <td>
+                    <p>{{i.Number}}</p>
+                </td>
+                <td>
+                    <p>{{i.Chapter}}</p>
+                </td>
+                <td>
+                    <p>{{i.Verse}}</p>
+                </td>
+                <td>
+                    <p class="text-to-highlight">{{i.text}}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br>
+
+<script>
+    var search_upper = {{search_upper|tojson}};
+    var search_lower = {{search_lower|tojson}};
+    // Works great for passing Flask value to Javascript
+
+    function highlight() {
+        let textsToHighlight = document.getElementsByClassName('text-to-highlight');
+        for(let text of textsToHighlight) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<mark>{{search_upper}}</mark>");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<mark>{{search_lower}}</mark>");
+        }
+    }
+
+    function dehighlight() {
+        let highlightedTexts = document.getElementsByClassName('text-to-highlight');
+        for(let text of highlightedTexts) {
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_upper, 'g'), "<p>{{search_upper}}</p>");
+            text.innerHTML = text.innerHTML.replace(new RegExp(search_lower, 'g'), "<p>{{search_lower}}</p>");
+        }
+        const marks = document.querySelectorAll("mark");
+        marks.forEach(mark => mark.outerHTML = mark.innerHTML);
+        // Removes all <mark> tags
+    }
+
+    var count = 0;
+
+    function inc(){
+        count ++;
+        if (count % 2 == 0) {
+            dehighlight();
+        } else {
+            highlight();
+        }
+    };
+
+// Pagination Code
+function pages(section) {
+    const content = document.querySelector(section);
+    const itemsPerPage = {{rpp}};
+    let currentPage = 0;
+    let totalPages;
+    let paginationContainer;
+    let paginationDiv;
+    let pageButton;
+    const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
+
+    function showPage(page) {
+    const startIndex = page * itemsPerPage - 1; // 1st item displayed on current page
+    const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
+    items.forEach((item, index) => {
+        item.classList.toggle('hidden', index <= startIndex || index > endIndex);
+    }); // Checks if each row falls in proper index, removes hidden if so
+    updateActiveButtonStates();
+    }
+
+    function createPageButtons() {
+    totalPages = Math.ceil(items.length / itemsPerPage);
+    paginationContainer = document.createElement('div'); // Div to contain these buttons
+    paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
+    if (section === '.content1') {
+        paginationContainer.classList.add('pagination1'); // Give div class of pagination
+        } else if (section === '.content2') {
+        paginationContainer.classList.add('pagination2'); // Give div class of pagination
+        } else {
+        paginationContainer.classList.add('pagination3'); // Give div class of pagination
+        }
+    }
+
+    function updateActiveButtonStates() {
+    if (section === '.content1') {
+        const pageButtons1 = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
+        pageButtons1.forEach((button, index) => {
+            if (index === currentPage) {
+            button.classList.add('active'); // Add certain styling to button of current page
+            } else {
+            button.classList.remove('active');
+            }
+        })
+        } else if (section === '.content2') {
+        const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
+        pageButtons2.forEach((button, index) => {
+            if (index === currentPage) {
+            button.classList.add('active'); // Add certain styling to button of current page
+            } else {
+            button.classList.remove('active');
+            }
+        })
+        } else {
+        const pageButtons3 = document.querySelectorAll('.pagination3 button'); // Get all pagination buttons
+        pageButtons3.forEach((button, index) => {
+            if (index === currentPage) {
+            button.classList.add('active'); // Add certain styling to button of current page
+            } else {
+            button.classList.remove('active');
+            }
+        })
+        };
+    }
+
+    createPageButtons();
+
+    for (let i = 0; i < totalPages; i++) {
+    pageButton = document.createElement('button');
+    pageButton.textContent = i + 1; // Updates number on button
+    if (totalPages < 2) {
+        pageButton.classList.add('disabled');
+    }
+    pageButton.addEventListener('click', () => {
+        currentPage = i;
+        showPage(currentPage); // Shows content of clicked page
+        updateActiveButtonStates();
+    });
+    paginationDiv.appendChild(pageButton); // Each button appended to HTML body
+    }
+
+    content.appendChild(paginationContainer); // Button container appended to content
+    showPage(currentPage);
+}
+
+    pages('.content1');
+    pages('.content2');
+    pages('.content3');
+
+</script>
+{% endblock %}
