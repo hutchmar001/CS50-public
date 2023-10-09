@@ -2,6 +2,8 @@
 
 <html lang="en">
 
+<body id="hindu">
+
 {% extends "layout.html" %}
 
 {% block title %}
@@ -19,8 +21,6 @@
         {% endfor %}
     {% endif %}
 {% endwith %}
-
-<body id="hindu">
 
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;">
     <option value="">Select...</option>
