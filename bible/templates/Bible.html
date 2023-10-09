@@ -29,9 +29,14 @@
 </select>
 <br><br><br>
 
+<style>
+    bible_style {
+        display: {{rpp_search}}
+    }
+</style>
 
 <div class="content">
-    <div class="mb-3" style="display: {{rpp_search}};">
+    <div class="mb-3" id="bible_style;">
         <form action="/Bible" method="post" style="display: inline;">
             <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
