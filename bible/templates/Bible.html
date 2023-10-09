@@ -2,6 +2,8 @@
 
 <html lang="en">
 
+<body id="bible">
+    
 {% extends "layout.html" %}
 
 {% block title %}
@@ -20,7 +22,7 @@
     {% endif %}
 {% endwith %}
 
-<body id="bible">
+
 
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
     <option value="">Select...</option>
