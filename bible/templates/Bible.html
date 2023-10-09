@@ -6,6 +6,12 @@
     Holy Book Comparison Bible Results
 </title>
 
+<style>
+    rpp_search {
+        display: {{rpp_search}};
+    }
+</style>
+
 {% extends "layout.html" %}
 
 {% block main %}
@@ -28,12 +34,6 @@
     {% endfor %}
 </select>
 <br><br><br>
-
-<style>
-    rpp_search {
-        display: {{rpp_search}};
-    }
-</style>
 
 <div class="content">
     <div class="mb-3" id="rpp_search">
