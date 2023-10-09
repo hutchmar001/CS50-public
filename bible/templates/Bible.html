@@ -26,7 +26,7 @@
     <option value="">Select...</option>
     <option value= "All">All</option>
     {% for i in result %}
-        <option value= {{i}}>{{i}}</option>
+        <option value= {{ i }}>{{ i }}</option>
     {% endfor %}
 </select>
 <br><br><br>
@@ -75,7 +75,7 @@
                     <p>{{ i.verse }}</p>
                 </td>
                 <td>
-                    <p class="text-to-highlight">{{i.text}}</p>
+                    <p class="text-to-highlight">{{ i.text }}</p>
                 </td>
             </tr>
             {% endfor %}
@@ -121,7 +121,7 @@
 
     // Pagination Code
     const content = document.querySelector('.content');
-    const itemsPerPage = {{rpp}};
+    const itemsPerPage = {{ rpp }};
     let currentPage = 0;
     let totalPages;
     let paginationContainer;
@@ -176,6 +176,6 @@
     showPage(currentPage);
 </script>
 
-{% endblock %}
+{% endblock main %}
 
 </html>
