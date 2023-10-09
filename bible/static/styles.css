@@ -34,11 +34,6 @@ table td {
     border: 1px solid #ddd;
 }
 
-div.content2 table tbody tr:nth-child(2){
-    counter-reset: rowNumber;
-}
-/* Fixes incrementation */
-
 p {
     display: inline;
 }
