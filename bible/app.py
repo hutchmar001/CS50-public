@@ -150,8 +150,8 @@ def All():
                 result = ["Bhagavad Gita"]
                 return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower, rpp=20)
 
-         return render_template("home.html", display1="none", display2="none", display3="none", display_select="none", display_img="inline", search_upper="", search_lower="", rpp_search="none")
-    
+        return render_template("home.html", display1="none", display2="none", display3="none", display_select="none", display_img="inline", search_upper="", search_lower="", rpp_search="none")
+
     if lst and lst2 and lst3:
         result = ["Bible", "Quran", "Bhagavad Gita"]
         return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp)
