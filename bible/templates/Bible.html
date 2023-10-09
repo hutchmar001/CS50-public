@@ -3,7 +3,7 @@
 <html lang="en">
 
 <body id="bible">
-
+    
 {% extends "layout.html" %}
 
 {% block title %}
@@ -22,8 +22,6 @@
     {% endif %}
 {% endwith %}
 
-
-
 <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
     <option value="">Select...</option>
     <option value= "All">All</option>
@@ -33,10 +31,16 @@
 </select>
 <br><br><br>
 
+<style>
+    div.content table tbody tr:nth-child(1){
+      counter-reset: rowNumber;
+    }
+</style> <!-- Fixes incrementation -->
+
 <div class="content">
     <div class="mb-3" style="display: {{rpp_search}};">
         <form action="/Bible" method="post" style="display: inline;">
-            <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
         </form>
         <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
@@ -44,7 +48,7 @@
 
     <div class="mb-3" style="display: {{rpp_v}};">
         <form action="/verse" method="post" style="display: inline;">
-            <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
             <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
         </form>
     </div>
