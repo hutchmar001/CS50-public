@@ -34,19 +34,28 @@ table tr {
     content: counter(rowNumber);
 }
 
-div.content1 table tr td:first-child::before {
-    counter-reset: rowNumber;
+.content1 table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
-div.content2 table tr td:first-child::before {
-    counter-reset: rowNumber;
+.content2 table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
-div.content3 table tr td:first-child::before {
-    counter-reset: rowNumber;
+.content3 table tr td:first-child::before {
     content: counter(rowNumber);
+}
+
+div.content1 {
+    counter-reset: rowNumber;
+}
+
+div.content2 {
+    counter-reset: rowNumber;
+}
+
+div.content3 {
+    counter-reset: rowNumber;
 }
 
 table td {
