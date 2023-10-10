@@ -46,7 +46,6 @@ table tr {
     content: counter(rowNumber);
 }
 
-
 table td {
     border: 1px solid #ddd;
 }
