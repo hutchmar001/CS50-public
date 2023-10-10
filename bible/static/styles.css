@@ -24,7 +24,7 @@ body {
 
 table tr {
     counter-increment: rowNumber;
-    counter-reset: css-counter 10;
+    counter-reset: rowNumber 10;
 }
 
 .content table tr td:nth-child(1)::before {
