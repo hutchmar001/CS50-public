@@ -49,14 +49,15 @@
 
     <h1>Quran</h1>
     <table action="/Quran" method="get" class="table table-hover">
-        <tbody>
+        <thead>
             <tr>
                 <th>Number</th>
                 <th>Surah</th>
                 <th>Verse</th>
                 <th>Text</th>
             </tr>
-
+        </thead>
+        <tbody>
             {% for i in lst2 %}
             <tr>
                 <td>
