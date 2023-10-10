@@ -124,3 +124,40 @@ div {
 .content table tr td:nth-child(1)::before {
     content: counter(rowNumber);
 }
+
+/* Counter for home*/
+.content1 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content2 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content3 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content1 table tr {
+    counter-increment: rowNumber;
+}
+
+.content2 table tr{
+    counter-increment: rowNumber;
+}
+
+.content3 table tr{
+    counter-increment: rowNumber;
+}
+
+.content1 tbody {
+    counter-reset: rowNumber;
+}
+
+.content2 tbody {
+    counter-reset: rowNumber;
+}
+
+.content3 tbody {
+    counter-reset: rowNumber;
+}
