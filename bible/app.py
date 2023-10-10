@@ -288,13 +288,14 @@ def Bhagavad():
     rpp = request.form.get("rpp")
     try:
         rpp = int(float(rpp))
-        print(rpp)
     except Exception as e:
         if rpp:
             flash('Please enter an integer.')
-            return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
+            print(rpp)
+            return render_template('Bhagabad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
+        print(rpp)
         return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
-
+    print(rpp)
     return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
 
 @app.route("/verse", methods=["GET", "POST"])
