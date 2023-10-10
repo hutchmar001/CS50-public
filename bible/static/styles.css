@@ -138,11 +138,11 @@ div {
     content: counter(rowNumber);
 }
 
-div.content1 table tr {
+div.content1 tr {
     counter-increment: rowNumber;
 }
 
-div.content2 table tr{
+div.content2 tr{
     counter-increment: rowNumber;
 }
 
