@@ -288,6 +288,7 @@ def Bhagavad():
     rpp = request.form.get("rpp")
     try:
         rpp = int(float(rpp))
+        print(rpp)
     except Exception as e:
         if rpp:
             flash('Please enter an integer.')
