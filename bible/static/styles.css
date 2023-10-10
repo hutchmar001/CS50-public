@@ -22,45 +22,6 @@ body {
     bottom: 90px;
 }
 
-/* Counter for Bible, Quran, and Bhagavad */
-tbody {
-    counter-reset: rowNumber;
-}
-
-table tr {
-    counter-increment: rowNumber;
-}
-
-.content table tr td:nth-child(1)::before {
-    content: counter(rowNumber);
-}
-
-/* Counter for home*/
-.content1 table tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
-.content2 table tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
-.content3 table tr td:first-child::before {
-    content: counter(rowNumber);
-}
-
-div.content1 tbody {
-    counter-reset: rowNumber;
-}
-
-div.content2 tbody {
-    counter-reset: rowNumber;
-}
-
-div.content3 tbody {
-    counter-reset: rowNumber;
-}
-
-
 table td {
     border: 1px solid #ddd;
 }
@@ -149,4 +110,42 @@ div {
     padding: 20px;
     margin-bottom: 15px;
     width: 100%;
+}
+
+/* Counter for Bible, Quran, and Bhagavad */
+tbody {
+    counter-reset: rowNumber;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+.content table tr td:nth-child(1)::before {
+    content: counter(rowNumber);
+}
+
+/* Counter for home*/
+.content1 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content2 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content3 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+div.content1 tbody {
+    counter-reset: rowNumber;
+}
+
+div.content2 tbody {
+    counter-reset: rowNumber;
+}
+
+div.content3 tbody {
+    counter-reset: rowNumber;
 }
