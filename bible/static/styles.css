@@ -27,7 +27,7 @@ table tr {
 }
 
 .content table tr td:nth-child(1)::before {
-    counter-reset: css-counter 0;
+    counter-reset: css-counter 10;
     content: counter(rowNumber);
 }
 
