@@ -26,7 +26,11 @@ table tr {
     counter-increment: rowNumber;
 }
 
-table tr td:first-child::before {
+.content table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.contentQB table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
