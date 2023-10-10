@@ -117,7 +117,7 @@ div {
     counter-reset: rowNumber;
 }
 
-table tr {
+.content table tr {
     counter-increment: rowNumber;
 }
 
@@ -138,14 +138,26 @@ table tr {
     content: counter(rowNumber);
 }
 
-div.content1 tbody {
+.content1 table tr {
+    counter-increment: rowNumber;
+}
+
+.content2 table tr {
+    counter-increment: rowNumber;
+}
+
+.content3 table tr {
+    counter-increment: rowNumber;
+}
+
+.content1 tbody {
     counter-reset: rowNumber;
 }
 
-div.content2 tbody {
+.content2 tbody {
     counter-reset: rowNumber;
 }
 
-div.content3 tbody {
+.content3 tbody {
     counter-reset: rowNumber;
 }
