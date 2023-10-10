@@ -22,9 +22,9 @@ body {
     bottom: 90px;
 }
 
-table tr {
+.content table tr {
     counter-increment: rowNumber;
-    counter-reset: rowNumber 10;
+    counter-reset: rowNumber 0;
 }
 
 .content table tr td:nth-child(1)::before {
