@@ -22,6 +22,7 @@ body {
     bottom: 90px;
 }
 
+/* Counter for Bible, Quran, and Bhagavad */
 tbody {
     counter-reset: rowNumber;
 }
@@ -34,6 +35,7 @@ table tr {
     content: counter(rowNumber);
 }
 
+/* Counter for home*/
 .content1 table tr td:first-child::before {
     content: counter(rowNumber);
 }
@@ -57,6 +59,7 @@ div.content2 tbody {
 div.content3 tbody {
     counter-reset: rowNumber;
 }
+
 
 table td {
     border: 1px solid #ddd;
