@@ -26,6 +26,9 @@ table tr {
     counter-increment: rowNumber;
 }
 
+table tr td:first-child::before {
+    content: counter(rowNumber);
+}
 
 table td {
     border: 1px solid #ddd;
