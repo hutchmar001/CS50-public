@@ -146,7 +146,7 @@ div {
     counter-increment: rowNumber;
 }
 
-.content3 table tr {
+.content3 table {
     counter-increment: rowNumber;
 }
 
