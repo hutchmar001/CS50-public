@@ -27,6 +27,7 @@ table tr {
 }
 
 .content table tr td:first-child::before {
+    counter-reset: css-counter 1;
     content: counter(rowNumber);
 }
 
