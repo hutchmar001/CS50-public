@@ -32,7 +32,9 @@
 <br><br><br>
 
 
-<div class="content">
+<div class="content" style="table tr td:first-child::before {
+    content: counter(rowNumber);
+}">
     <div class="mb-3" style="display: {{ rpp_search }};">
         <form action="/Bible" method="post" style="display: inline;">
             <input autocomplete="off" class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
