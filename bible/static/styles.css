@@ -46,15 +46,15 @@ table tr {
     content: counter(rowNumber);
 }
 
-div.content1 {
+div.content1 tbody {
     counter-reset: rowNumber;
 }
 
-div.content2 {
+div.content2 tbody {
     counter-reset: rowNumber;
 }
 
-div.content3 {
+div.content3 tbody {
     counter-reset: rowNumber;
 }
 

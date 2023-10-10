@@ -52,7 +52,7 @@
 <div class="content1">
     <h1 style="display:{{ display1 }}">Bible</h1>
     <table class="table table-hover">
-        <tbody>
+        <thead>
             <tr style="display:{{ display1 }}">
                 <th>Number</th>
                 <th>Book</th>
@@ -60,6 +60,8 @@
                 <th>Verse</th>
                 <th>Text</th>
             </tr>
+        </thead>
+        <tbody>
             {% for i in lst %}
             <tr>
                 <td>
@@ -86,13 +88,15 @@
 <div class="content2">
     <h1 style="display:{{ display2 }}">Quran</h1>
     <table class="table table-hover">
-        <tbody>
+        <thead>
             <tr style="display:{{ display2 }}">
                 <th>Number</th>
                 <th>Surah</th>
                 <th>Verse</th>
                 <th>Text</th>
             </tr>
+        </thead>
+        <tbody>
             {% for i in lst2 %}
             <tr>
                 <td>
@@ -117,7 +121,7 @@
 <div class="content3">
     <h1 style="display:{{ display3 }}">Bhagavad Gita</h1>
     <table class="table table-hover">
-        <tbody>
+        <thead>
             <tr style="display:{{ display3 }}">
                 <th>Number</th>
                 <th>Chapter</th>
@@ -125,6 +129,8 @@
                 <th>Text</th>
             </tr>
             {% for i in lst3 %}
+        </thead>
+        <tbody>
             <tr>
                 <td>
                     <p>{{ i.Number }}</p>
