@@ -26,7 +26,7 @@ table tr {
     counter-increment: rowNumber;
 }
 
-.contentB table tr td:first-child::before {
+.content table tr td:first-child::before {
     content: counter(rowNumber);
 }
 
