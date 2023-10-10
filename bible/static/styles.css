@@ -35,12 +35,10 @@ table tr {
 }
 
 .content1 table tr td:first-child::before {
-    counter-reset: rowNumber;
     content: counter(rowNumber);
 }
 
 .content2 table tr td:first-child::before {
-    counter-reset: rowNumber;
     content: counter(rowNumber);
 }
 
