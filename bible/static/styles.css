@@ -23,8 +23,8 @@ body {
 }
 
 .content table tr {
-    counter-increment: rowNumber;
     counter-reset: rowNumber 0;
+    counter-increment: rowNumber;
 }
 
 .content table tr td:nth-child(1)::before {
