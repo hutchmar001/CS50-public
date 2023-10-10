@@ -27,6 +27,7 @@ table tr {
 }
 
 .content table tr td:nth-child(1)::before {
+    counter-reset: rowNumber;
     content: counter(rowNumber);
 }
 
