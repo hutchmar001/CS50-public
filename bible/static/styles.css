@@ -30,6 +30,18 @@ table tr {
     content: counter(rowNumber);
 }
 
+.content1 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content2 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
+.content3 table tr td:first-child::before {
+    content: counter(rowNumber);
+}
+
 .contentQB table tr td:first-child::before {
     content: counter(rowNumber);
 }
