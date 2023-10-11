@@ -306,6 +306,7 @@ def verse():
         except Exception as e:
             rpp = 20
         rpp = 20
+        print(rpp)
 
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
