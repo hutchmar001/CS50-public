@@ -304,9 +304,8 @@ def verse():
         try:
             rpp = int(float(rpp))
         except Exception as e:
-            if rpp:
-                flash('Please enter an integer.')
-                rpp = 20
+            flash('Please enter an integer.')
+            rpp = 20
 
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
