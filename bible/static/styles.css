@@ -112,7 +112,7 @@ div {
     width: 100%;
 }
 
-/* Counter for Bible, Quran, and Bhagavad */
+/* Counter */
 .content tbody {
     counter-reset: rowNumber;
 }
