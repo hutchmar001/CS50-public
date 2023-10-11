@@ -100,5 +100,6 @@ div {
 @media only screen and (max-width: 800px) and (min-width: 701px) {
     img {
         max-width: 10%;
+        max-height: 10%;
       }
 }
