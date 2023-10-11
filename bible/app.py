@@ -291,11 +291,9 @@ def Bhagavad():
     except Exception as e:
         if rpp:
             flash('Please enter an integer.')
-            print(rpp)
             return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
-        print(rpp)
         return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=20, rpp_v="none")
-    print(rpp)
+
     return render_template('Bhagavad.html', lst3=lst3, result=result, search_upper=search_upper, search_lower=search_lower, rpp=rpp, rpp_v="none")
 
 @app.route("/verse", methods=["GET", "POST"])
@@ -303,15 +301,20 @@ def verse():
 
     if request.method == "POST":
         rpp = request.form.get("rpp")
-        if not rpp:
-            rpp = 20
-            bible_name = request.form.get("bible_name")
-            bible_chapter = request.form.get("bible_chapter")
-            bible_verse = request.form.get("bible_verse")
-            bible_name = bible_name.title()
-            cache.set("bible_name", bible_name)
-            cache.set("bible_chapter", bible_chapter)
-            cache.set("bible_verse", bible_verse)
+        try:
+            rpp = int(float(rpp))
+        except Exception as e:
+            if rpp:
+                flash('Please enter an integer.')
+
+        rpp = 20
+        bible_name = request.form.get("bible_name")
+        bible_chapter = request.form.get("bible_chapter")
+        bible_verse = request.form.get("bible_verse")
+        bible_name = bible_name.title()
+        cache.set("bible_name", bible_name)
+        cache.set("bible_chapter", bible_chapter)
+        cache.set("bible_verse", bible_verse)
 
             quran_sura = request.form.get("quran_sura")
             quran_verse = request.form.get("quran_verse")
