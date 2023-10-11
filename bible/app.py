@@ -304,19 +304,17 @@ def verse():
         try:
             rpp = int(float(rpp))
         except Exception as e:
-            flash('Please enter an integer.')
-            rpp = 20
+            if rpp:
+                flash('Please enter an integer.')
+                rpp = 20
 
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-        if bible_name:
-            bible_name = bible_name.title()
-            cache.set("bible_name", bible_name)
-        if bible_chapter:
-            cache.set("bible_chapter", bible_chapter)
-        if bible_verse:
-            cache.set("bible_verse", bible_verse)
+        bible_name = bible_name.title()
+        cache.set("bible_name", bible_name)
+        cache.set("bible_chapter", bible_chapter)
+        cache.set("bible_verse", bible_verse)
 
         quran_sura = request.form.get("quran_sura")
         quran_verse = request.form.get("quran_verse")
@@ -328,7 +326,6 @@ def verse():
         cache.set("hindu_chapter", hindu_chapter)
         cache.set("hindu_verse", hindu_verse)
 
-        # Bible
         bible_name = cache.get("bible_name")
         bible_chapter = cache.get("bible_chapter")
         bible_verse = cache.get("bible_verse")
