@@ -365,7 +365,7 @@ def verse():
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
                 flash('Please enter a valid query.')
-                return redirect("/verse")
+                return redirect("/verse")aszsssssssssssssssssssssssssssssssssssssssssssssssssssssssssZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzzSZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ1qzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzZ
             return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
 
         # Bhagavad Gita
