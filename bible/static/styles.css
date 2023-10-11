@@ -98,7 +98,5 @@ div {
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
-    .mp3: {
-        width: 50%;
-    }
+    <meta name="viewport" content="width=640"/>
 }
