@@ -320,8 +320,8 @@ def verse():
         cache.set("hindu_verse", hindu_verse)
 
         # Query the respective database based on the user's input
-        if bible_name:
-            lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
+        if bible_name and bible_chapter and bible_verse:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
             if not lst:
                 flash('Please enter a valid query for the Bible.')
                 return redirect("/verse")
@@ -332,16 +332,10 @@ def verse():
                 flash('Please enter a valid query for the Bible.')
                 return redirect("/verse")
 
-        if bible_name and bible_chapter and bible_verse:
-            lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
+        if bible_name:
+            lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             if not lst:
                 flash('Please enter a valid query for the Bible.')
-                return redirect("/verse")
-
-        if quran_sura:
-            lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
-            if not lst2:
-                flash('Please enter a valid query for the Quran.')
                 return redirect("/verse")
 
         if quran_sura and quran_verse:
@@ -350,10 +344,10 @@ def verse():
                 flash('Please enter a valid query for the Quran.')
                 return redirect("/verse")
 
-        if hindu_chapter:
-            lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
-            if not lst3:
-                flash('Please enter a valid query for the Bhagavad Gita.')
+        if quran_sura:
+            lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
+            if not lst2:
+                flash('Please enter a valid query for the Quran.')
                 return redirect("/verse")
 
         if hindu_chapter and hindu_verse:
@@ -361,6 +355,13 @@ def verse():
             if not lst3:
                 flash('Please enter a valid query for the Bhagavad Gita.')
                 return redirect("/verse")
+
+        if hindu_chapter:
+            lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
+            if not lst3:
+                flash('Please enter a valid query for the Bhagavad Gita.')
+                return redirect("/verse")
+
 
         # Render the appropriate template based on the user's input
         if bible_name:
