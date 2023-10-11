@@ -303,7 +303,8 @@ def verse():
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
-
+        bible_name = bible_name.title()
+        print(bible_name)
         quran_sura = request.form.get("quran_sura")
         quran_verse = request.form.get("quran_verse")
 
