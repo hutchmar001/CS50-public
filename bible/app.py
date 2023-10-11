@@ -298,15 +298,8 @@ def Bhagavad():
 
 @app.route("/verse", methods=["GET", "POST"])
 def verse():
-    
+
     if request.method == "POST":
-        rpp = request.form.get("rpp")
-        try:
-            rpp = int(float(rpp))
-        except Exception as e:
-            rpp = 20
-        rpp = 20
-        print(rpp)
 
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
