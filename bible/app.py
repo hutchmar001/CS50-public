@@ -328,7 +328,7 @@ def verse():
             if not lst:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         if bible_name and bible_verse and not bible_chapter:
             flash('Please enter a valid query.')
@@ -339,14 +339,14 @@ def verse():
             if not lst:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         if bible_name:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
             if not lst:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         # Quran
         quran_sura = cache.get("quran_sura")
@@ -357,14 +357,14 @@ def verse():
             if not lst2:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         if quran_sura:
             lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
             if not lst2:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         # Bhagavad Gita
         hindu_chapter = cache.get("hindu_chapter")
@@ -375,14 +375,14 @@ def verse():
             if not lst3:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         if hindu_chapter:
             lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
             if not lst3:
                 flash('Please enter a valid query.')
                 return redirect("/verse")
-            return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+            return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
 
         flash('Please enter a valid query.')
         return redirect("/verse")
