@@ -98,5 +98,7 @@ div {
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
-    
+    .image: {
+        width: 30px;
+    }
 }
