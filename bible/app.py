@@ -298,7 +298,7 @@ def Bhagavad():
 
 @app.route("/verse", methods=["GET", "POST"])
 def verse():
-
+    
     if request.method == "POST":
         rpp = request.form.get("rpp")
         try:
