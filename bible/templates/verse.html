@@ -14,7 +14,7 @@
     {% if msg %}
         {% for message in msg %}
             <div class="alert alert-warning fade show" role="alert">
-                <strong>{{ mesmetsage }}</strong>
+                <strong>{{ message }}</strong>
             </div>
         {% endfor %}
     {% endif %}
@@ -23,7 +23,7 @@
     <form action="/verse" method="post">
 
     <div class="mb-3">
-        <img src="/static/cross.gif" alt="cross" width="150" height="150" style="display:{{ display_img }}" class="img">
+        <img src="/static/cross.gif" alt="cross" width="150" height="150" style="display:{{ display_img }}">
 
         <h5 style="display: inline-block; padding: 10px" >Book Name</h5>
         <input autocomplete="off" class="form-control mx-auto" name="bible_name" type="text" style="display: inline-block; width: 135px">
@@ -38,7 +38,7 @@
     </div>
 
     <div class="mb-3">
-        <img src="/static/allah.png" alt="Muslim man and crescent" width="120" height="150" style="display:{{ display_img }}" class="img">
+        <img src="/static/allah.png" alt="Muslim man and crescent" width="120" height="150" style="display:{{ display_img }}">
         <h5 style="display: inline-block; padding: 10px" >Sura</h5>
         <input autocomplete="off" class="form-control mx-auto" name="quran_sura" type="text" style="display: inline-block; width: 52px">
 
@@ -48,7 +48,7 @@
     </div>
 
     <div class="mb-3">
-        <img src="/static/om.png" alt="om symbol" width="150" height="170" style="display:{{ display_img }}" class="img">
+        <img src="/static/om.png" alt="om symbol" width="150" height="170" style="display:{{ display_img }}">
         <h5 style="display: inline-block; padding: 10px" >Chapter</h5>
         <input autocomplete="off" class="form-control mx-auto" name="hindu_chapter" type="text" style="display: inline-block; width: 43px">
 
