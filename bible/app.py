@@ -327,6 +327,7 @@ def verse():
         cache.set("hindu_chapter", hindu_chapter)
         cache.set("hindu_verse", hindu_verse)
 
+        # Bible
         bible_name = cache.get("bible_name")
         bible_chapter = cache.get("bible_chapter")
         bible_verse = cache.get("bible_verse")
