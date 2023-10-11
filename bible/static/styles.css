@@ -53,45 +53,17 @@ div {
     justify-content: center;
 }
 
-.pagination1 {
+.pagination {
     overflow: auto;
     display: table;
     width: 100%;
 }
 
-.pagination1 button {
+.pagination button {
     margin: 2px;
 }
 
-.pagination1 button:hover:not(.active) {
-    background-color: #ddd;
-}
-
-.pagination2 {
-    overflow: auto;
-    display: table;
-    width: 100%;
-}
-
-.pagination2 button {
-    margin: 2px;
-}
-
-.pagination2 button:hover:not(.active) {
-    background-color: #ddd;
-}
-
-.pagination3 {
-    overflow: auto;
-    display: table;
-    width: 100%;
-}
-
-.pagination3 button {
-    margin: 2px;
-}
-
-.pagination3 button:hover:not(.active) {
+.pagination button:hover:not(.active) {
     background-color: #ddd;
 }
 
