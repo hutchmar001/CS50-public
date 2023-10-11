@@ -306,7 +306,7 @@ def verse():
         except Exception as e:
             if rpp:
                 flash('Please enter an integer.')
-            rpp = 20
+                rpp = 20
 
         bible_name = request.form.get("bible_name")
         bible_chapter = request.form.get("bible_chapter")
