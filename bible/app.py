@@ -305,6 +305,7 @@ def verse():
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
         bible_name = bible_name.title()
+        print(bible_name)
         cache.set("bible_name", bible_name)
         cache.set("bible_chapter", bible_chapter)
         cache.set("bible_verse", bible_verse)
