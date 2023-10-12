@@ -326,20 +326,13 @@ def verse():
         except Exception as e:
             if rpp:
                 flash('Please enter an integer.')
-            if not bible_name:
-                bible_name = cache.get("bible_name")
-            if not bible_chapter:
-                bible_chapter = cache.get("bible_chapter")
-            if not bible_verse:
-                bible_verse = cache.get("bible_verse")
-            if not quran_sura:
-                quran_sura = cache.get("quran_sura")
-            if not quran_verse:
-                quran_verse = cache.get("quran_verse")
-            if not hindu_chapter:
-                hindu_chapter = cache.get("hindu_chapter")
-            if not hindu_verse:
-                hindu_verse = cache.get("hindu_verse")
+            bible_name = cache.get("bible_name")
+            bible_chapter = cache.get("bible_chapter")
+            bible_verse = cache.get("bible_verse")
+            quran_sura = cache.get("quran_sura")
+            quran_verse = cache.get("quran_verse")
+            hindu_chapter = cache.get("hindu_chapter")
+            hindu_verse = cache.get("hindu_verse")
 
             if bible_name and bible_chapter and bible_verse:
                 lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
