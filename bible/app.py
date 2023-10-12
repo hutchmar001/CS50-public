@@ -50,7 +50,7 @@ def index():
 @app.route("/search", methods=["GET", "POST"])
 def search():
 
-    if request.method == "POST":
+    if request.method == "GET":
         search = request.form.get("search")
         if not search or search == " ":
             flash('Please enter a valid query.')
@@ -302,7 +302,7 @@ def verse():
         return render_template("verse.html")
 
     bible_name = request.form.get("bible_name")
-    print(bible_name)
+    bible_name = bible_name.title()
     bible_chapter = request.form.get("bible_chapter")
     bible_verse = request.form.get("bible_verse")
 
