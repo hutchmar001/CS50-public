@@ -305,7 +305,7 @@ def verse():
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
 
-        quran_sura = request.form.get("quran_sura")  
+        quran_sura = request.form.get("quran_sura")
         quran_verse = request.form.get("quran_verse")
 
         hindu_chapter = request.form.get("hindu_chapter")
@@ -328,7 +328,8 @@ def verse():
             rpp = 20
             if not bible_name:
                 bible_name = cache.get("bible_name")
-                bible_name = bible_name.title()
+                if bible_name:
+                    bible_name = bible_name.title()
             if not bible_chapter:
                 bible_chapter = cache.get("bible_chapter")
             if not bible_verse:
