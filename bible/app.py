@@ -334,54 +334,7 @@ def verse():
             hindu_chapter = cache.get("hindu_chapter")
             hindu_verse = cache.get("hindu_verse")
 
-            if bible_name and bible_chapter and bible_verse:
-                lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
-                if not lst:
-                    flash('Please enter a valid query for the Bible.')
-                    return redirect("/verse")
-                return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if bible_name and bible_chapter:
-                lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
-                if not lst:
-                    flash('Please enter a valid query for the Bible.')
-                    return redirect("/verse")
-                return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if bible_name:
-                lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
-                if not lst:
-                    flash('Please enter a valid query for the Bible.')
-                    return redirect("/verse")
-                return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if quran_sura and quran_verse:
-                lst2 = db2.execute("SELECT * FROM verses WHERE sura == ? AND verse == ?", quran_sura, quran_verse)
-                if not lst2:
-                    flash('Please enter a valid query for the Quran.')
-                    return redirect("/verse")
-                return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if quran_sura:
-                lst2 = db2.execute("SELECT * FROM verses WHERE sura == ?", quran_sura)
-                if not lst2:
-                    flash('Please enter a valid query for the Quran.')
-                    return redirect("/verse")
-                return render_template('Quran.html', lst2=lst2, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if hindu_chapter and hindu_verse:
-                lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ? AND Verse == ?", hindu_chapter, hindu_verse)
-                if not lst3:
-                    flash('Please enter a valid query for the Bhagavad Gita.')
-                    return redirect("/verse")
-                return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
-
-            if hindu_chapter:
-                lst3 = db3.execute("SELECT * FROM verses WHERE Chapter == ?", hindu_chapter)
-                if not lst3:
-                    flash('Please enter a valid query for the Bhagavad Gita.')
-                    return redirect("/verse")
-                return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=20, rpp_search="none")
+            rpp=20
 
         if bible_name and bible_chapter and bible_verse:
             lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
