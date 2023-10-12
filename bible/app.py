@@ -51,66 +51,68 @@ def index():
 def search():
 
     if request.method == "GET":
-        search = request.form.get("search")
-        if not search or search == " ":
-            flash('Please enter a valid query.')
-            return redirect("/search")
-        search_lower = search.lower()
-        search_upper = search.title()
-        rpp = request.form.get("rpp")
-        if not rpp:
-            rpp = 20
-
-        # Bible
-        lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-        # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
-
-        # Quran
-        lst2 = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-        # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
-        # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
-
-        # Bhagavad Gita
-        lst3 = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
-            OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
-
-        cache.set("lst", lst)
-        cache.set("lst2", lst2)
-        cache.set("lst3", lst3)
-        cache.set("search_lower", search_lower)
-        cache.set("search_upper", search_upper)
-
-        if lst and lst2 and lst3:
-            result = ["Bible", "Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst and lst2:
-            result = ["Bible", "Quran"]
-            return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst and lst3:
-            result = ["Bible", "Bhagavad Gita"]
-            return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst2 and lst3:
-            result = ["Quran", "Bhagavad Gita"]
-            return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst:
-            result = ["Bible"]
-            return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst2:
-            result = ["Quran"]
-            return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-        if lst3:
-            result = ["Bhagavad Gita"]
-            return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
-
-        flash('No Results')
+        return render_template("search.html")
+    
+    search = request.form.get("search")
+    if not search or search == " ":
+        flash('Please enter a valid query.')
         return redirect("/search")
+    search_lower = search.lower()
+    search_upper = search.title()
+    rpp = request.form.get("rpp")
+    if not rpp:
+        rpp = 20
 
-    return render_template("search.html")
+    # Bible
+    lst = db1.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+    # Notice the extra space before/after the %, this ensures that only the complete word is counted as a result
+
+    # Quran
+    lst2 = db2.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+    # Notice: UPDATE verses SET text = substr(text, instr(text, 'N´')+2); was needed to remove extra text in Quran db
+    # Notice: UPDATE results SET text = substr(text, 1, length(text)-2); was needed to remove extra chars at end
+
+    # Bhagavad Gita
+    lst3 = db3.execute("SELECT * FROM verses WHERE text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? OR text LIKE ? \
+        OR text LIKE ?;", ('% ' + search + ' %'), ('%' + search + ',%'), ('%"' + search + '%'), ('%' + search + '?%'), ('%' + search + '!%'), ('%\'' + search + '%'), ('%' + search + '.%'), ('%.' + search + '%'), ('%' + search + ']%'), ('%' + search + ';%'), ('%,' + search + '%'), ('%' + search + '-%'), ('%-' + search + '%'), ('%(' + search + ')%'))
+
+    cache.set("lst", lst)
+    cache.set("lst2", lst2)
+    cache.set("lst3", lst3)
+    cache.set("search_lower", search_lower)
+    cache.set("search_upper", search_upper)
+
+    if lst and lst2 and lst3:
+        result = ["Bible", "Quran", "Bhagavad Gita"]
+        return render_template('home.html', lst=lst, lst2=lst2, lst3=lst3, display1="visible", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst and lst2:
+        result = ["Bible", "Quran"]
+        return render_template('home.html', lst=lst, lst2=lst2, display1="visible", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst and lst3:
+        result = ["Bible", "Bhagavad Gita"]
+        return render_template('home.html', lst=lst, lst3=lst3, display1="visible", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst2 and lst3:
+        result = ["Quran", "Bhagavad Gita"]
+        return render_template('home.html', lst2=lst2, lst3=lst3, display1="none", display2="visible", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst:
+        result = ["Bible"]
+        return render_template('home.html', lst=lst, display1="visible", display2="none", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst2:
+        result = ["Quran"]
+        return render_template('home.html', lst2=lst2, display1="none", display2="visible", display3="none", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+    if lst3:
+        result = ["Bhagavad Gita"]
+        return render_template('home.html', lst3=lst3, display1="none", display2="none", display3="visible", display_title="none", display_select="inline-block", display_img="none", result=result, search_lower = search_lower, search_upper = search_upper, rpp=rpp)
+
+    flash('No Results')
+    return redirect("/search")
+
+
 
 
 @app.route("/All", methods=["GET", "POST"])
