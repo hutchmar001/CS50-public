@@ -334,7 +334,7 @@ def verse():
         hindu_verse = cache.get("hindu_verse")
 
         rpp=20
-
+    print(bible_name)
     if bible_name and bible_chapter and bible_verse:
         lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
         if not lst:
@@ -383,4 +383,3 @@ def verse():
             flash('Please enter a valid query for the Bhagavad Gita.')
             return redirect("/verse")
         return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
-
