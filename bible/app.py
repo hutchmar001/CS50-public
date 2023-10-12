@@ -301,7 +301,8 @@ def verse():
     if request.method == "POST":
 
         bible_name = request.form.get("bible_name")
-        bible_name = bible_name.title()
+        if bible_name:
+            bible_name = bible_name.title()
         bible_chapter = request.form.get("bible_chapter")
         bible_verse = request.form.get("bible_verse")
 
