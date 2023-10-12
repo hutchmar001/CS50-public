@@ -329,8 +329,6 @@ def verse():
             rpp = 20
             if not bible_name:
                 bible_name = cache.get("bible_name")
-                if bible_name:
-                    bible_name = bible_name.title()
             if not bible_chapter:
                 bible_chapter = cache.get("bible_chapter")
             if not bible_verse:
