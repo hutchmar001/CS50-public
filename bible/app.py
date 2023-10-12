@@ -337,13 +337,14 @@ def verse():
             hindu_chapter = request.form.get("hindu_chapter")
             hindu_verse = request.form.get("hindu_verse")
 
-            cache.set("bible_name", bible_name)
-            cache.set("bible_chapter", bible_chapter)
-            cache.set("bible_verse", bible_verse)
-            cache.set("quran_sura", quran_sura)
-            cache.set("quran_verse", quran_verse)
-            cache.set("hindu_chapter", hindu_chapter)
-            cache.set("hindu_verse", hindu_verse)
+            if bible_name or if bible_chapter or if bible_verse or if quran_sura or if quran_verse or if hindu_chapter or if hindu_verse:
+                cache.set("bible_name", bible_name)
+                cache.set("bible_chapter", bible_chapter)
+                cache.set("bible_verse", bible_verse)
+                cache.set("quran_sura", quran_sura)
+                cache.set("quran_verse", quran_verse)
+                cache.set("hindu_chapter", hindu_chapter)
+                cache.set("hindu_verse", hindu_verse)
 
         rpp=20
 
