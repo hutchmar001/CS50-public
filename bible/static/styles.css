@@ -158,11 +158,11 @@ div {
 
     .mb {
         position: relative;
-        bottom: 55px;
+        bottom: 1000px;
     }
 
     .content {
         position: relative;
-        bottom: 80px;
+        bottom: 110px;
     }
 }
