@@ -18,7 +18,7 @@ body {
 }
 
 .books {
-    position: relative;
+    position: fixed;
     margin-top: -100px;
     bottom: 85px;
 }
