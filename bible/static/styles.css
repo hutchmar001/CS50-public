@@ -78,6 +78,7 @@ table {
 
 div {
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .pagination {
