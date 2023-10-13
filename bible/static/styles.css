@@ -1,13 +1,8 @@
-html {
-    min-height: 100%;
-}
-
 body {
     background-image: url("/static/praying.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100%;
 }
 
 #bible {
@@ -30,7 +25,7 @@ body {
 
 .mb {
     position: relative;
-    bottom: 130px;
+    bottom: 120px;
 }
 
 .content {
