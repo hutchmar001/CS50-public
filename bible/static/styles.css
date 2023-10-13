@@ -1,5 +1,6 @@
 html {
     min-height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
-    overflow: hidden;
 }
 
 #bible {
