@@ -3,10 +3,7 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.content::after {
-    overflow: hidden;
+    margin-bottom: 0px;
 }
 
 #bible {
