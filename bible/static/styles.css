@@ -112,6 +112,6 @@ div {
         margin-right: 85px;
       }
     table {
-        max-width: 10%;
+        table-layout: auto;
     }
 }
