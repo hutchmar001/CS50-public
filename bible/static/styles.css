@@ -147,11 +147,12 @@ div {
     }
 
     .books {
-        bottom: 35px;
+        bottom: 555px;
+        right: 130px
     }
 
     .mb {
-        margin-top: -100px;
+        margin-top: -80px;
     }
 
     .content {
