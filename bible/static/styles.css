@@ -60,10 +60,6 @@ div {
     width: 100%;
 }
 
-.pagination button {
-    margin: 2px;
-}
-
 .pagination button:hover:not(.active) {
     background-color: #ddd;
 }
