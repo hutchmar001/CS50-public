@@ -155,12 +155,10 @@ div {
     }
 
     .mb {
-        position: relative;
-        bottom: 85px;
+        margin-top: -120px;
     }
 
     .content {
-        position: relative;
-        bottom: 110px;
+        margin-top: -20px;
     }
 }
