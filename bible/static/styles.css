@@ -3,6 +3,7 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100%
 }
 
 #bible {
@@ -78,10 +79,6 @@ table {
 
 div {
     justify-content: center;
-}
-
-main {
-    margin-bottom: 0px;
 }
 
 .pagination {
