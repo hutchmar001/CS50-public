@@ -1,5 +1,5 @@
-* {
-    overflow-x: hidden;
+html {
+    overflow-x: auto;
   }
 
 body {
