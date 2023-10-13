@@ -23,7 +23,7 @@ main {
 
 .books {
     position: relative;
-    margin-top: -100px;
+    top: -100px;
     bottom: 85px;
 }
 
