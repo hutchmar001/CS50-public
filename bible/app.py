@@ -406,3 +406,6 @@ def verse():
             flash('Please enter a valid query.')
             return redirect("/verse")
         return render_template('Bhagavad.html', lst3=lst3, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
+
+    flash('Please enter a valid query.')
+    return redirect("/verse")
