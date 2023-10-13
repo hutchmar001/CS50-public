@@ -108,9 +108,7 @@ div {
     img {
         max-width: 25%;
         max-height: 25%;
+        margin-left: 85px;
+        margin-right: 85px;
       }
-    img::after{
-        content: "\a";
-
-    }
 }
