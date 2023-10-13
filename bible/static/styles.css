@@ -117,8 +117,9 @@ div {
     table tr td{
         padding: 0;
         margin: 0;
+        font-size: 13px;
     }
     th {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
