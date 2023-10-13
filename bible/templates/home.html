@@ -187,112 +187,112 @@
         }
     };
 
-// Pagination Code
-function pages(section) {
-    const content = document.querySelector(section);
-    const itemsPerPage = {{ rpp }};
-    let currentPage = 0;
-    let totalPages;
-    let paginationContainer;
-    let paginationDiv;
-    let pageButton;
-    const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
+    // Pagination Code
+    function pages(section) {
+        const content = document.querySelector(section);
+        const itemsPerPage = {{ rpp }};
+        let currentPage = 0;
+        let totalPages;
+        let paginationContainer;
+        let paginationDiv;
+        let pageButton;
+        const items = Array.from(content.getElementsByTagName('tr')).slice(1); // Array of all <tr>s, slices off 1st row (header)
 
-    function showPage(page) {
-    const startIndex = page * itemsPerPage - 1; // 1st item displayed on current page
-    const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
-    items.forEach((item, index) => {
-        item.classList.toggle('hidden', index <= startIndex || index > endIndex);
-    }); // Checks if each row falls in proper index, removes hidden if so
-    updateActiveButtonStates();
-    }
-
-    function createPageButtons() {
-    totalPages = Math.ceil(items.length / itemsPerPage);
-    paginationContainer = document.createElement('div'); // Div to contain these buttons
-    paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
-    if (section === '.content1') {
-        paginationContainer.classList.add('pagination1', 'pagination'); // Give div class of pagination
-        } else if (section === '.content2') {
-        paginationContainer.classList.add('pagination2', 'pagination'); // Give div class of pagination
-        } else {
-        paginationContainer.classList.add('pagination3', 'pagination'); // Give div class of pagination
-        }
-    }
-
-    function updateActiveButtonStates() {
-    if (section === '.content1') {
-        const pageButtons1 = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
-        pageButtons1.forEach((button, index) => {
-            if (index === currentPage) {
-            button.classList.add('active'); // Add certain styling to button of current page
-            } else {
-            button.classList.remove('active');
-            }
-        })
-        } else if (section === '.content2') {
-        const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
-        pageButtons2.forEach((button, index) => {
-            if (index === currentPage) {
-            button.classList.add('active'); // Add certain styling to button of current page
-            } else {
-            button.classList.remove('active');
-            }
-        })
-        } else {
-        const pageButtons3 = document.querySelectorAll('.pagination3 button'); // Get all pagination buttons
-        pageButtons3.forEach((button, index) => {
-            if (index === currentPage) {
-            button.classList.add('active'); // Add certain styling to button of current page
-            } else {
-            button.classList.remove('active');
-            }
-        })
-        };
-    }
-
-    createPageButtons();
-
-    for (let i = 0; i < totalPages; i++) {
-    pageButton = document.createElement('button');
-    pageButton.textContent = i + 1; // Updates number on button
-    if (totalPages < 2) {
-        pageButton.classList.add('disabled');
-    }
-    pageButton.addEventListener('click', () => {
-        currentPage = i;
-        showPage(currentPage); // Shows content of clicked page
+        function showPage(page) {
+        const startIndex = page * itemsPerPage - 1; // 1st item displayed on current page
+        const endIndex = startIndex + itemsPerPage; // Last item displayed on current page
+        items.forEach((item, index) => {
+            item.classList.toggle('hidden', index <= startIndex || index > endIndex);
+        }); // Checks if each row falls in proper index, removes hidden if so
         updateActiveButtonStates();
-    });
-    paginationDiv.appendChild(pageButton); // Each button appended to HTML body
+        }
+
+        function createPageButtons() {
+        totalPages = Math.ceil(items.length / itemsPerPage);
+        paginationContainer = document.createElement('div'); // Div to contain these buttons
+        paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
+        if (section === '.content1') {
+            paginationContainer.classList.add('pagination1', 'pagination'); // Give div class of pagination
+            } else if (section === '.content2') {
+            paginationContainer.classList.add('pagination2', 'pagination'); // Give div class of pagination
+            } else {
+            paginationContainer.classList.add('pagination3', 'pagination'); // Give div class of pagination
+            }
+        }
+
+        function updateActiveButtonStates() {
+        if (section === '.content1') {
+            const pageButtons1 = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
+            pageButtons1.forEach((button, index) => {
+                if (index === currentPage) {
+                button.classList.add('active'); // Add certain styling to button of current page
+                } else {
+                button.classList.remove('active');
+                }
+            })
+            } else if (section === '.content2') {
+            const pageButtons2 = document.querySelectorAll('.pagination2 button'); // Get all pagination buttons
+            pageButtons2.forEach((button, index) => {
+                if (index === currentPage) {
+                button.classList.add('active'); // Add certain styling to button of current page
+                } else {
+                button.classList.remove('active');
+                }
+            })
+            } else {
+            const pageButtons3 = document.querySelectorAll('.pagination3 button'); // Get all pagination buttons
+            pageButtons3.forEach((button, index) => {
+                if (index === currentPage) {
+                button.classList.add('active'); // Add certain styling to button of current page
+                } else {
+                button.classList.remove('active');
+                }
+            })
+            };
+        }
+
+        createPageButtons();
+
+        for (let i = 0; i < totalPages; i++) {
+        pageButton = document.createElement('button');
+        pageButton.textContent = i + 1; // Updates number on button
+        if (totalPages < 2) {
+            pageButton.classList.add('disabled');
+        }
+        pageButton.addEventListener('click', () => {
+            currentPage = i;
+            showPage(currentPage); // Shows content of clicked page
+            updateActiveButtonStates();
+        });
+        paginationDiv.appendChild(pageButton); // Each button appended to HTML body
+        }
+
+        content.appendChild(paginationContainer); // Button container appended to content
+        showPage(currentPage);
     }
 
-    content.appendChild(paginationContainer); // Button container appended to content
-    showPage(currentPage);
-}
+    pages('.content1');
+    pages('.content2');
+    pages('.content3');
 
-pages('.content1');
-pages('.content2');
-pages('.content3');
+    let mybutton = document.getElementById("myBtn");
 
-let mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 </script>
 {% endblock main %}
 
