@@ -155,4 +155,14 @@ div {
     .books {
         bottom: 15px;
     }
+
+    .mb {
+        position: relative;
+        bottom: 55px;
+    }
+
+    .content {
+        position: relative;
+        bottom: 80px;
+    }
 }
