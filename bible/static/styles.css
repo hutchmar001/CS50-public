@@ -111,4 +111,7 @@ div {
         margin-left: 85px;
         margin-right: 85px;
       }
+    table {
+        max-width: 25%;
+    }
 }
