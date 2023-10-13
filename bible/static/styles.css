@@ -23,6 +23,11 @@ body {
     bottom: 85px;
 }
 
+.mb-3 {
+    position: relative;
+    bottom: 100px;
+}
+
 table td {
     border: 1px solid #ddd;
 }
