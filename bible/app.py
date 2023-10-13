@@ -312,10 +312,10 @@ def verse():
     hindu_verse = cache.get("hindu_verse")
 
     rpp = request.form.get("rpp")
-    try:
+    try: # if pass, rpp is valid int
         rpp = int(float(rpp))
     except Exception as e:
-        if rpp:
+        if rpp: # rpp is something like asdf
             flash('Please enter an integer.')
             bible_name = cache.get("bible_name")
             bible_chapter = cache.get("bible_chapter")
@@ -327,7 +327,6 @@ def verse():
 
         else:
             bible_name = request.form.get("bible_name")
-            print(bible_name)
             bible_chapter = request.form.get("bible_chapter")
             bible_verse = request.form.get("bible_verse")
 
@@ -337,7 +336,7 @@ def verse():
             hindu_chapter = request.form.get("hindu_chapter")
             hindu_verse = request.form.get("hindu_verse")
 
-            if bible_name or bible_chapter or bible_verse or quran_sura or quran_verse or hindu_chapter or hindu_verse:
+            if bible_name or bible_chapter or bible_verse or quran_sura or quran_verse or hindu_chapter or hindu_verse: # rpp is 1st page load of results
                 cache.set("bible_name", bible_name)
                 cache.set("bible_chapter", bible_chapter)
                 cache.set("bible_verse", bible_verse)
@@ -346,9 +345,18 @@ def verse():
                 cache.set("hindu_chapter", hindu_chapter)
                 cache.set("hindu_verse", hindu_verse)
 
+            bible_name = cache.get("bible_name") # rpp is nothing typed
+            bible_chapter = cache.get("bible_chapter")
+            bible_verse = cache.get("bible_verse")
+            quran_sura = cache.get("quran_sura")
+            quran_verse = cache.get("quran_verse")
+            hindu_chapter = cache.get("hindu_chapter")
+            hindu_verse = cache.get("hindu_verse")
+
         rpp=20
 
     if bible_name and bible_chapter and bible_verse:
+        bible_name = bible_name.title()
         lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ? AND verse == ?", bible_name, bible_chapter, bible_verse)
         if not lst:
             flash('Please enter a valid query for the Bible.')
@@ -356,6 +364,7 @@ def verse():
         return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
 
     if bible_name and bible_chapter:
+        bible_name = bible_name.title()
         lst = db1.execute("SELECT * FROM verses WHERE book_name == ? AND chapter == ?", bible_name, bible_chapter)
         if not lst:
             flash('Please enter a valid query for the Bible.')
@@ -363,6 +372,7 @@ def verse():
         return render_template('Bible.html', lst=lst, display_select="none", search_upper="", search_lower="", rpp=rpp, rpp_search="none")
 
     if bible_name:
+        bible_name = bible_name.title()
         lst = db1.execute("SELECT * FROM verses WHERE book_name == ?", bible_name)
         if not lst:
             flash('Please enter a valid query for the Bible.')
