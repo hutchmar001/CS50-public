@@ -25,12 +25,12 @@ body {
 
 .mb {
     position: relative;
-    bottom: 55px;
+    bottom: 100px;
 }
 
 .content {
     position: relative;
-    bottom: 80px;
+    bottom: 110px;
 }
 
 #myBtn {
