@@ -22,7 +22,7 @@
     {% endif %}
 {% endwith %}
 
-<select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books">
+<select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books" class="books">
     <option value="">Select...</option>
     <option value= "All">All</option>
     {% for i in result %}
