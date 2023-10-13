@@ -80,6 +80,10 @@ div {
     width: 100%;
 }
 
+* {
+    margin: 0;
+}
+
 /* Counter */
 .content tbody {
     counter-reset: rowNumber;
@@ -91,10 +95,6 @@ div {
 
 .content table tr td:nth-child(1)::before {
     content: counter(rowNumber);
-}
-
-* {
-    margin: 0;
 }
 
 @media only screen and (max-width: 800px) and (min-width: 701px) {
@@ -124,5 +124,9 @@ div {
 
     th {
         font-size: 11px;
+    }
+
+    .books {
+        bottom: 15px;
     }
 }
