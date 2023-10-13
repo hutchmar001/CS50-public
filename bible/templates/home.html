@@ -20,34 +20,34 @@
     {% endif %}
 {% endwith %}
 
-    <form name="add" method="post">
-        <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books" class="books">
-            <option value="">Select...</option>
-            <option value= "All">All</option>
-            {% for i in result %}
-                <option value= {{ i }}>{{ i }}</option>
-            {% endfor %}
-        </select>
+<form name="add" method="post">
+    <select name="books" id="books" style="display:{{ display_select }}" onchange="location = this.value;" aria-label="books" title="books" class="books">
+        <option value="">Select...</option>
+        <option value= "All">All</option>
+        {% for i in result %}
+            <option value= {{ i }}>{{ i }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+<h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
+<br>
+<form action="/search" method="get">
+    <button class="btn btn-primary" style="display:{{ display_title }}">Let's go!</button>
+</form>
+<br><br>
+
+<img src="/static/cross.gif" alt="cross" width="150" height="150" style="display:{{ display_img }}">
+<img src="/static/allah.png" alt="Muslim man and crescent" width="120" height="150" style="display:{{ display_img }}">
+<img src="/static/om.png" alt="om symbol" width="150" height="170" style="display:{{ display_img }}">
+
+<div class="mb-3 mb" style="display: {{ rpp_search }};">
+    <form action="/All" method="post" style="display: inline;">
+        <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
+        <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
     </form>
-
-    <h1 style="color: sienna; display:{{ display_title }}">Welcome! Let's search for words in the Bible, Quran, and Bhagavad Gita</h1>
-    <br>
-    <form action="/search" method="get">
-        <button class="btn btn-primary" style="display:{{ display_title }}">Let's go!</button>
-    </form>
-    <br><br>
-
-    <img src="/static/cross.gif" alt="cross" width="150" height="150" style="display:{{ display_img }}">
-    <img src="/static/allah.png" alt="Muslim man and crescent" width="120" height="150" style="display:{{ display_img }}">
-    <img src="/static/om.png" alt="om symbol" width="150" height="170" style="display:{{ display_img }}">
-
-    <div class="mb-3 mb" style="display: {{ rpp_search }};">
-        <form action="/All" method="post" style="display: inline;">
-            <input autocomplete="off" autofocus class="form-control mx-auto" name="rpp" type="text" style="display: inline; width: 52px;">
-            <button class="btn btn-primary" type="submit" style="margin: 10px;">Results Per Page</button>
-        </form>
-        <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
-    </div>
+    <button onclick="inc()" style="background: crimson; margin: 10px;">Highlight</button>
+</div>
 
 <div class="content1 content">
     <h1 style="display:{{ display1 }}">Bible</h1>
