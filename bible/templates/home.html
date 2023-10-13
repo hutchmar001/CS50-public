@@ -206,7 +206,7 @@ function pages(section) {
     updateActiveButtonStates();
     }
 
-    function createPageButtons() {
+function createPageButtons() {
     totalPages = Math.ceil(items.length / itemsPerPage);
     paginationContainer = document.createElement('div'); // Div to contain these buttons
     paginationDiv = document.body.appendChild(paginationContainer); // Append div to HTML body
@@ -219,7 +219,7 @@ function pages(section) {
         }
     }
 
-    function updateActiveButtonStates() {
+function updateActiveButtonStates() {
     if (section === '.content1') {
         const pageButtons1 = document.querySelectorAll('.pagination1 button'); // Get all pagination buttons
         pageButtons1.forEach((button, index) => {
@@ -268,6 +268,25 @@ function pages(section) {
 
     content.appendChild(paginationContainer); // Button container appended to content
     showPage(currentPage);
+
+    let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 }
 
     pages('.content1');
