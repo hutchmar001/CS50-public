@@ -5,6 +5,10 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    overflow: hidden;
+}
+
 #bible {
     background-image: url("/static/cross.png");
 }
