@@ -25,6 +25,11 @@ body {
 
 .mb {
     position: relative;
+    bottom: 90px;
+}
+
+.content {
+    position: relative;
     bottom: 100px;
 }
 
