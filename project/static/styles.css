@@ -53,7 +53,7 @@ p {
 
 #description {
     display: inline-block;
-    transform: scale(.5, 1);
+    transform: scale(5, 1);
 }
 
 mark {
