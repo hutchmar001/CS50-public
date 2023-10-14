@@ -47,14 +47,19 @@ table td {
     border: 1px solid #ddd;
 }
 
-mark {
-    background: crimson;
+p {
+    display: inline;
 }
 
 .description {
     text-indent: 50px;
     font-weight: 700px;
     text-align: left;
+    display: block;
+}
+
+mark {
+    background: crimson;
 }
 
 table {
