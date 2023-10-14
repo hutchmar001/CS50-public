@@ -51,6 +51,11 @@ p {
     display: inline;
 }
 
+#description {
+    display: inline-block;
+    transform: scale(.5, 1);
+}
+
 mark {
     background: crimson;
 }
