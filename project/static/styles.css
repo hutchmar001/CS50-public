@@ -54,7 +54,7 @@ mark {
 .description {
     text-indent: 50px;
     font-weight: 700px;
-    float: left;
+    text-align: left;
 }
 
 table {
