@@ -47,12 +47,13 @@ table td {
     border: 1px solid #ddd;
 }
 
-#description {
-    font-weight: 700px;
-}
-
 mark {
     background: crimson;
+}
+
+.description {
+    text-indent: 50px;
+    font-weight: 700px;"
 }
 
 table {
