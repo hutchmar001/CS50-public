@@ -52,8 +52,8 @@ p {
 }
 
 #description {
-    display: inline-block;
-    transform: scale(5, 1);
+    webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
 }
 
 mark {
