@@ -47,6 +47,10 @@ def index():
     return render_template("home.html", display1="none", display2="none", display3="none", display_select="none", display_img="inline", search_upper="", search_lower="", rpp_search="none")
     # set searches to "" to avoid JSON error
 
+@app.route("/about", methods=["GET"])
+def about():
+    return render_template("about.html")
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
 

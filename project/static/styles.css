@@ -18,17 +18,13 @@ body {
 }
 
 .books {
-    position: absolute;
-    bottom: 90%;
-    left: 40%;
+    position: relative;
+    top: 10px;
 }
 
 .mb {
-    margin-top: -110px;
-}
-
-.content {
-    margin-top: -20px;
+    position: relative;
+    top: 18px;
 }
 
 #myBtn {
@@ -99,9 +95,10 @@ div {
 }
 
 .alert2 {
-    position: absolute;
+    position: relative;
     padding: 20px;
     width: 100%;
+    bottom: 30px;
 }
 
 /* Counter */
@@ -144,18 +141,5 @@ div {
 
     th {
         font-size: 11px;
-    }
-
-    .books {
-        bottom: 555px;
-        right: 130px
-    }
-
-    .mb {
-        margin-top: -80px;
-    }
-
-    .content {
-        margin-top: -20px;
     }
 }
