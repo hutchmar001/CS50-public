@@ -5,19 +5,6 @@ from flask import Flask, render_template, request, flash, redirect
 from flask_session import Session
 from common import cache
 
-# Configure application for each holy book
-conn1 = sqlite3.connect('databases/kjv.sqlite', check_same_thread=False)
-conn1.row_factory = sqlite3.Row
-c1 = conn1.cursor()
-
-conn2 = sqlite3.connect('databases/quran.sqlite3', check_same_thread=False)
-conn2.row_factory = sqlite3.Row
-c2 = conn2.cursor()
-
-conn3 = sqlite3.connect('databases/bg.sqlite', check_same_thread=False)
-conn3.row_factory = sqlite3.Row
-c3 = conn3.cursor()
-
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 cache.init_app(app=app, config={"CACHE_TYPE": "filesystem",'CACHE_DIR': 'cache-dir'})
@@ -27,11 +14,14 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+db1 = sqlite3.connect('databases/kjv.sqlite')
+db2 = sqlite3.connect('databases/quran.sqlite3')
+db3 = sqlite3.connect('databases/bg.sqlite')
+
 # Configure CS50 Library to use SQLite databases
 db1 = SQL("sqlite:///databases/kjv.sqlite")
 db2 = SQL("sqlite:///databases/quran.sqlite3")
 db3 = SQL("sqlite:///databases/bg.sqlite")
-
 
 @app.after_request
 def after_request(response):
