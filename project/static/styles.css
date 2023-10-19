@@ -199,4 +199,14 @@ div {
     h5 {
         font-size: 24px;
     }
+
+    .verse_button {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    #b_chapter {
+        margin-left: 30px;
+        padding-right: 10px"
+    }
 }
